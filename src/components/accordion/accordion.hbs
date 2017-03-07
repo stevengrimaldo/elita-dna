@@ -1,0 +1,19 @@
+<section class="section accordion">
+  <div class="accordion__header">
+    <div class="accordion__header-title">
+      <h3>{{header.title}}</h3>
+    </div>
+  </div>
+  <div class="accordion--container">
+    {{#each item}}
+      <div class="accordion__item">
+        <div class="accordion__item-title">
+          <h6>{{this.title}}</h6>
+        </div>
+        <div class="accordion__title-answer">
+          {{{this.text}}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>

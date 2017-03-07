@@ -1,0 +1,71 @@
+{
+  "about-us": {
+    "header": {
+      "title": "Why Choose Elita DNA Therapy?",
+      "text": "<p>Our team of professional therapists are here to help.Come learn and build confidence knowing your child is in the right hands.</p>"
+    },
+    "solution": [{
+      "icon": "grad-cap",
+      "title": "Founded & Managed by Therapists",
+      "text": "<p>We were founded by professionals and want to provide the best results for our patients.</p>"
+    }, {
+      "icon": "shield-person",
+      "title": "We Maximize Each & Every Patient",
+      "text": "<p>Meeting our patients therapeutically where they are, and getting them where they need to be.</p>"
+    }, {
+      "icon": "med-kit",
+      "title": "Only Therapists Treat Patients",
+      "text": "<p>Our patients can be confident they are in the trusted hands of a professional.</p>"
+    }, {
+      "icon": "brain-storm",
+      "title": "Our Comprehensive Team Approach",
+      "text": "<p>No matter what specialty our patient is being seen, they always have access to the entire Elite DNA team.</p>"
+    }]
+  },
+  "our-team": {
+    "header": {
+      "title": "Why Choose Elita DNA Therapy?",
+      "text": "<p>Our team of professional therapists are here to help.Come learn and build confidence knowing your child is in the right hands.</p>"
+    },
+    "solution": [{
+      "icon": "grad-cap",
+      "title": "Founded & Managed by Therapists",
+      "text": "<p>We were founded by professionals and want to provide the best results for our patients.</p>"
+    }, {
+      "icon": "shield-person",
+      "title": "We Maximize Each & Every Patient",
+      "text": "<p>Meeting our patients therapeutically where they are, and getting them where they need to be.</p>"
+    }, {
+      "icon": "med-kit",
+      "title": "Only Therapists Treat Patients",
+      "text": "<p>Our patients can be confident they are in the trusted hands of a professional.</p>"
+    }, {
+      "icon": "brain-storm",
+      "title": "Our Comprehensive Team Approach",
+      "text": "<p>No matter what specialty our patient is being seen, they always have access to the entire Elite DNA team.</p>"
+    }]
+  },
+  "aba": {
+    "header": {
+      "title": "Our Teach Approach",
+      "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi.</p>"
+    },
+    "solution": [{
+      "icon": "heart-hands",
+      "title": "1:1 Sessions",
+      "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi.</p>"
+    }, {
+      "icon": "family",
+      "title": "Parent Training Sessions",
+      "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi.</p>"
+    }, {
+      "icon": "peer",
+      "title": "Peer/Group Sessions",
+      "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi.</p>"
+    }, {
+      "icon": "school",
+      "title": "School/Community Sessions",
+      "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi.</p>"
+    }]
+  }
+}

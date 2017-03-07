@@ -1,0 +1,16 @@
+.cta {
+  &--inline {
+    @extend %OpenSansbold;
+    font-size: 20px;
+    @include letter-spacing(-10, 20);
+    color: #ff6651;
+  }
+  &--button {
+    @extend %OpenSansExtrabold;
+    text-align: center;
+    font-size: 20px;
+    background-color: #ff6651;
+    @include letter-spacing(-10, 20);
+    color: $white;
+  }
+}

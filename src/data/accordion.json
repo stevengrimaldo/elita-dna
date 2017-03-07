@@ -1,0 +1,65 @@
+{
+  "faqs": {
+    "header": {
+      "title": "Frequently Asked Questions"
+    },
+    "item": [{
+      "title": "How long does a therapy question last?",
+      "text": "<p>Typical children’s occupation therapy at our Fort Myers clinic last 45 minutes. These sessions can be shortened or lengthened depending on your needs and the goals we are working to accomplish.</p><p>Each child is different, so we will work to create at holistic plan to best support his or her therapy needs.</p>"
+    }, {
+      "title": "Can a Registered Dietitian help my child and family if we are healthy?",
+      "text": "<p>something</p>"
+    }, {
+      "title": "What is a Registered Dietitian?",
+      "text": "<p>something</p>"
+    }]
+  },
+  "conditions": {
+    "header": {
+      "title": "Conditions We Specialize in:"
+    },
+    "item": [{
+      "title": "Communication Disorders & Delays",
+      "text": "<p>A Communication disorder or delay is impairment in one’s ability to process, send, receive, or comprehend written or spoken language. Communication disorders can range from mild to severe and can be developmental or acquired. With children, studies show that the earlier your child gets help, the greater their progress will be.</p>"
+    }, {
+      "title": "Language Disorders",
+      "text": "<p>something</p>"
+    }, {
+      "title": "Central Auditory Processing Disorders (CAPD)",
+      "text": "<p>something</p>"
+    }, {
+      "title": "Speech Sound Disorders",
+      "text": "<p>something</p>"
+    }, {
+      "title": "Childhood Apraxia of Speech",
+      "text": "<p>something</p>"
+    }, {
+      "title": "Stuttering & Fluency Disorders",
+      "text": "<p>something</p>"
+    }, {
+      "title": "Traumatic Brain Injury",
+      "text": "<p>something</p>"
+    }, {
+      "title": "Voice Disorders",
+      "text": "<p>something</p>"
+    }, {
+      "title": "Feeding & Swallowing",
+      "text": "<p>something</p>"
+    }, {
+      "title": "Autism",
+      "text": "<p>something</p>"
+    }, {
+      "title": "Assistive Technology",
+      "text": "<p>something</p>"
+    }, {
+      "title": "Acquired Apraxia of Speech",
+      "text": "<p>something</p>"
+    }, {
+      "title": "Dysarthia",
+      "text": "<p>something</p>"
+    }, {
+      "title": "Aphasia",
+      "text": "<p>something</p>"
+    }]
+  }
+}

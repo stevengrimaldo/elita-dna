@@ -1,0 +1,24 @@
+<section class="section featured-content{{#each classes}} section--{{this}}{{/each}}">
+  <div class="featured-content--container">
+    {{#if icon}}
+      <div class="icon--container"><i class="icon icon--{{icon}}"></i></div>
+    {{/if}}
+    {{#if copy}}
+      {{#if copy.title}}
+        <div class="featured-content-title">
+          <h2>{{{copy.title}}}</h2>
+        </div>
+      {{/if}}
+      {{#if copy.text}}
+        <div class="featured-content-text">
+          {{{copy.text}}}
+        </div>
+      {{/if}}
+    {{/if}}
+    {{#if cta}}
+      {{#each cta}}
+        <div class="cta--container"><a href="{{this.url}}" class="cta cta--{{this.type}}">{{this.text}}</a></div>
+      {{/each}}
+    {{/if}}
+  </div>
+</section>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html{{#if locale}} lang="{{locale}}"{{/if}}>
+  <head>
+    <title>{{title}} | d5ive</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{#if description}}
+      {{!-- Meta description --}}
+      <meta name="description" content="{{description}}">
+    {{/if}}
+
+    {{#if keywords}}
+      {{!-- Meta keywords --}}
+      <meta name="keywords" content="{{#each keywords}}{{.}}{{#unless @last}},{{/unless}}{{/each}}">
+    {{/if}}
+
+    {{!-- Handheld support --}}
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+
+    {{!-- CSS includes --}}
+    <link rel="stylesheet" href="/css/global/app.min.css?v={{timestamp}}">
+  </head>
+  <body class="{{#if classes}}{{#each classes}}{{.}}{{#unless @last}} {{/unless}}{{/each}}{{/if}}">
+    <div id="svgs">
+      <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+        <defs>
+        </defs>
+      </svg>
+    </div>
+    <div class="container">
+      {{> header }}
+      <main class="content">
+        {% body %}
+      </main>
+      {{> footer }}
+    </div>
+    <div id="scripts">
+      {{!-- Script includes --}}
+      <script src="/js/common.js?v={{timestamp}}"></script>
+      <script src="/js/app.js?v={{timestamp}}"></script>
+    </div>
+  </body>
+</html>

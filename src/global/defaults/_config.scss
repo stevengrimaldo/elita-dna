@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700,700i');
+
+// Base Colors
+$white: #fff;
+$black: #000;
+
+// Colors
+$woodsmoke: #141519;
+$cerulean: #03a9f4;
+$fun-blue: #2160ae;
+$mine-shaft: #363333;
+$tundora: #413f3f;
+$dusty-gray: #999;
+$mine-shaft: #3c3c3c;
+
+// Social Colors
+$twitter-blue: #1da1f2;
+$facebook-blue: #3b5998;
+$youtube-red: #e62117;
+$linkedin-blue: #4075b4;
+
+$text-color: $black;
+$link-color: $cerulean;
+$link-color-hover: $fun-blue;
+
+$base-font-size: 16px;
+$base-font-weight: 400;
+$base-line-height: 24px;
+$image-path-prod: '/media/img';
+$image-path: $image-path-prod;
+// $image-path: '../img';
+$svg-path: $image-path + '/svg';
+
+$open-sans: 'Open Sans';
+$museo-slab: 'MuseoSlab';
+
+$primary-font-family: $open-sans;
+$secondary-font-family: $museo-slab;
+$fallback: Helvetica, Arial, sans-serif;
+
+$desktop: 1440px;
+$laptop: 1024;
+$tablet: 768;
+$phablet: 667;
+$mobile: 480;
+
+$min: 'min-width';
+$max: 'max-width';
+
+$module-padding: 80px;
+$half-module-padding: $module-padding / 2;

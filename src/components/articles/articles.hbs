@@ -1,0 +1,22 @@
+<section class="section articles">
+  <div class="articles__header">
+    <h2>Noteworthy Articles</h2>
+  </div>
+  <div class="articles--container">
+    {{#each article}}
+      <div class="articles__article">
+        <figure class="articles__article-image">
+          <img src="{{this.image}}" alt="" />
+        </figure>
+        <div class="articles__article-content">
+          <span class="source">Source: {{this.source.title}}</span>
+          <h6>{{{this.title}}}</h6>
+        </div>
+        <div class="cta--container"><a href="{{this.source.url}}" class="cta cta--inline">{{this.source.title}}</a></div>
+      </div>
+    {{/each}}
+  </div>
+  <div class="articles__more">
+    <div class="cta--container"><a href="#" class="cta--button">Load More</a></div>
+  </div>
+</section>

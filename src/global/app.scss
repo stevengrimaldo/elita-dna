@@ -1,0 +1,10 @@
+//
+//  Import default css to set a base/foundation for the site
+//
+@import 'defaults/config',
+'defaults/mixins',
+'defaults/placeholders',
+'defaults/typography',
+'defaults/reset',
+'defaults/layout',
+'defaults/ctas';

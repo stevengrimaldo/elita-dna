@@ -1,0 +1,108 @@
+{
+  "mental-health-services": {
+    "icon": "shield-heart",
+    "copy": {
+      "title": "Mental Health Services",
+      "text": "<p>We specialize in combining psychotherapy with practical, hands on approaches, along with goal setting strategies in order to make progress with various psychological issues.</p>"
+    },
+    "cta": [{
+      "type": "inline",
+      "text": "Discover More",
+      "url": "#"
+    }]
+  },
+  "get-in-touch": {
+    "icon": "",
+    "copy": {
+      "title": "Get in Touch!",
+      "text": "<p>6360 Techster Blvd, Suites 1 & 2 , Fort Myers, FL 33966</p><p>(239) 223-2751</p><p><a href='#'>info@elitednatherapy.com</a></p>"
+    },
+    "cta": []
+  },
+  "next-step": {
+    "icon": "",
+    "copy": {
+      "title": "Ready to Take the Next Step?",
+      "text": ""
+    },
+    "cta": [{
+      "type": "button",
+      "text": "Make an Appointment",
+      "url": "#"
+    }, {
+      "type": "inline",
+      "text": "View Our Intake Forms",
+      "url": "#"
+    }]
+  },
+  "aba": {
+    "icon": "",
+    "copy": {
+      "title": "Applied Behavior Analysis",
+      "text": "<p>Our trained therapists use teach play, communication, self-help and academic skills to help your child improve socially significant behaviors.</p>"
+    },
+    "cta": []
+  },
+  "aba-list": {
+    "copy": {
+      "text": "<h4>How We Help Your Child:</h4><ul><li>Least restrictive approach<li>Team Setting</li><li>Antecedent based interventions</li><li>Procedures based on positive reinforcement</li><li>Functional approach to behavior-teaching replacement behaviors</li><li>Avoidance of restrictive/punitive procedures</li><li>Social skills training model</li><li>Eye Contact</li><li>Play skills & peer relations</li><li>Listening & following directions</li><li>Functional communication skills</li><li>Self-regulation & self-control</li><li>Redirection</li><li>Crisis management & safety protocols</li><li>Outbursts/tantrums</li><li>Difficulties with daily routine</li><li>Bedtime/sleeping difficulties</li><li>Toileting issues</li><li>Aggression, property misuse, self-injury, elopement</li><li>Sensory related behaviors</li><li>School difficulties</li><li>Inattention</li><li>Transition difficulties</li></ul>"
+    }
+  },
+  "questions": {
+    "copy": {
+      "title": "Questions?",
+      "text": "<p>We’d love to help you find the right journey on your path to success, we look forward to hearing from you!</p>"
+    },
+    "cta": [{
+      "type": "button",
+      "text": "Contact Us",
+      "url": "#"
+    }]
+  },
+  "counseling-psychiatry": {
+    "icon": "clipboard",
+    "copy": {
+      "title": "Counseling & Psychiatry",
+      "text": "<p>When life presents its challenges or specific problems interfere with your daily activities, our interdisciplinary team is ready to partner with you. Our licensed and trained therapists can help you to understand and modify concerning behaviors, treat psychological symptoms, identify and express emotions in healthy ways, and develop adaptive coping strategies.</p>"
+    },
+    "cta": []
+  },
+  "picky-eater": {
+    "icon": "apple",
+    "copy": {
+      "title": "Is your child a picky eater?",
+      "text": "<p>We can help everyone stay healthy by providing: healthy recipes, balanced meal plans and menus (from infants to adults), shopping tips, grocery lists and even breastfeeding support. Our Pediatric Nutritional and Dietary Counseling Services are provided by Registered Dietician Maria F. Butler, MS, RD, LD/N.</p>"
+    }
+  },
+  "enjoy-life": {
+    "icon": "toy",
+    "copy": {
+      "title": "Help your Child Enjoy Life!",
+      "text": "<p>Each child differs in his/her ability to process sensory information, which impacts his/her development of fine motor, gross motor, visual motor, and resulting modulation/regulation skills for effective and appropriate interaction within his/her expected environments.Therapy can help your child overcome any challenges and enhance their ability to learn, interact with others and enjoy life.</p>"
+    }
+  },
+  "careers": {
+    "copy": {
+      "title": "Careers",
+      "text": "<p>Elite DNA Therapy Services is committed to providing a friendly, collegial work environment.</p>"
+    }
+  },
+  "intake-forms": {
+    "copy": {
+      "title": "Intake Forms",
+      "text": "<p>All new clients please print and fill out the intake forms for the discipline you or your child will be seeing. Thank you, and please feel free to call with any questions.</p>"
+    }
+  },
+  "resources": {
+    "copy": {
+      "title": "News & Resources",
+      "text": "<p>We do our best to curate the most relevant and helpful articles and tools for you to reference on your journey to a happier life.</p>"
+    }
+  },
+  "contact": {
+    "copy": {
+      "title": "Contact Us",
+      "text": "<p>Send us a message below and one of our licensed professionals will be in touch.</p>"
+    }
+  }
+}

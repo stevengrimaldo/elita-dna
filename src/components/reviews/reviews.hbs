@@ -1,0 +1,21 @@
+<section class="section reviews">
+  <div class="reviews__header">
+    <div class="icon--container"><i class="icon icon--review"></i></div>
+    <div class="reviews__header-title">
+      <h2>Featured Reviews</h2>
+    </div>
+  </div>
+  <div class="reviews--container">
+    {{#each review}}
+      <div class="reviews__review">
+        <div class="reviews__review-text">
+          {{{this.text}}}
+        </div>
+        <div class="reviews__review-author">
+          <h6>{{this.author}}</h6>
+          <time>{{this.date}}</time>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>

@@ -1,0 +1,63 @@
+{
+  "home": {
+    "classes": ["tan", "slant", "slant--top-left", "slant--top-left--polkadots", "slant--bottom-left", "slant--bottom-left--polkadots"],
+    "resource": [{
+      "icon": "blocks",
+      "title": "Occupational Therapy",
+      "text": "<p>We can help your child overcome sensory challenges and enhance their ability to learn, interact with others and enjoy life.</p>",
+      "cta": {
+        "type": "inline",
+        "text": "Discover More",
+        "url": "#"
+      }
+    }, {
+      "icon": "apple",
+      "title": "Nutrition Counseling",
+      "text": "<p>Let us help you and your child stay healthy, how to choose foods wisely and maintain a healthy lifestyle.</p>",
+      "cta": {
+        "type": "inline",
+        "text": "Discover More",
+        "url": "#"
+      }
+    }, {
+      "icon": "abc",
+      "title": "Speech & Language",
+      "text": "<p>We can help you grow communication skills which is fundamental in order interact and connect with others.</p>",
+      "cta": {
+        "type": "inline",
+        "text": "Discover More",
+        "url": "#"
+      }
+    }, {
+      "icon": "puzzle",
+      "title": "ABA Therapy",
+      "text": "<p>Applied Behavior Analysis (ABA) uses the scientific principles of learning and motivation in order to effectively teach.</p>",
+      "cta": {
+        "type": "inline",
+        "text": "Discover More",
+        "url": "#"
+      }
+    }]
+  },
+  "resources": {
+    "resource": [{
+      "icon": "pdf",
+      "title": "Integrating Therapy Into The Classroom",
+      "text": "<p>By R.A. McWilliam & Stacy Scott Here is a great research paper discussing the importance of integrating therapy into the classroom from the National Individualizing Preschool Inclusion Project.</p>",
+      "cta": {
+        "type": "download",
+        "text": "Download Article",
+        "url": "#"
+      }
+    }, {
+      "icon": "pdf",
+      "title": "Universal Design for Learning (UDL)",
+      "text": "<p>The UDL fact sheet is an excellent educational resource from the <a href='#'>American Occupational Therapy Association</a>.</p>",
+      "cta": {
+        "type": "download",
+        "text": "Download Fact Sheet",
+        "url": "#"
+      }
+    }]
+  }
+}

@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="description" content="{{description}}" />
+    <meta name="keywords" content="{{#each keywords}}{{.}}{{#unless @last}},{{/unless}}{{/each}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+    <link rel="stylesheet" href="/includes/cssbin/main.css" />
+  </head>
+  <body class="{{#if classes}}{{#each classes}}{{.}}{{#unless @last}} {{/unless}}{{/each}}{{/if}}">
+    <div id="svgs"></div>
+    <div id="container"></div>
+    <div id="scripts"></div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+
+@include font-face('MuseoSlab', '/media/font/MuseoSlab_300', 300);
+@include font-face('MuseoSlab', '/media/font/MuseoSlab_700', 700);
+
+%MuseoSlab {
+  @include font(300, $museo-slab);
+}
+%MuseoSlabBold {
+  @include font(700, $museo-slab);
+}
+%OpenSans {
+  @include font(400);
+}
+%OpenSansbold {
+  @include font(600);
+}
+%OpenSansSemibold {
+  @include font(700);
+}
+%OpenSansExtrabold {
+  @include font(800);
+}

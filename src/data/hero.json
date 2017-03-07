@@ -1,0 +1,98 @@
+{
+  "home": {
+    "classes": ["slant", "slant--bottom-left", "slant--bottom-left--polkadots"],
+    "copy": {
+      "sub-title": "Tackle Today's Concerns with Our",
+      "title": "Comprehensive<br />Approach",
+      "text": "",
+      "cta": {
+        "type": "button",
+        "text": "New patient Sign Up",
+        "url": "#"
+      }
+    },
+    "img": "home-hero.jpg"
+  },
+  "about-us": {
+    "classes": ["slant", "slant--bottom-right", "slant--polkadots"],
+    "copy": {
+      "sub-title": "",
+      "title": "About Us",
+      "text": "<h4>Life is Art. Paint Your Dreams.</h4><p>Our unique interdisciplinary model allows our clinicians to evaluate a situation in it’s entirety. No better model for success exists.</p><p>Bumps along the way shouldn’t be seen as a weakness, disaster or failure. It is our goal to use these moments to support, encourage and help our families. We can then develop stronger mechanisms and strategies to successfully grow and interact in social environments.</p>",
+      "cta": {
+        "type": "button",
+        "text": "Make an Appointment",
+        "url": "#"
+      }
+    },
+    "img": "about-us-hero.jpg"
+  },
+  "our-team": {
+    "classes": ["slant", "slant--bottom-right"],
+    "copy": {
+      "sub-title": "",
+      "title": "Our Team",
+      "text": "<h4>Committed to you and your Family</h4><p>Our company exists thanks to the wonderful staff and administrators who run the day-to-day operations helping families with their children.</p>",
+      "cta": {}
+    },
+    "img": "our-team-hero.jpg"
+  },
+  "mental-health": {
+    "classes": ["slant", "slant--bottom-right", "slant--orange"],
+    "copy": {
+      "sub-title": "",
+      "title": "Mental Health",
+      "text": "<p>We appreciate that there is no one-size-fits all when it comes to treatment, so we work collaboratively with you and your other providers to help address your problems and concerns. Our clinical staff is experienced and committed to meeting your needs in a safe, supportive environment.</p>",
+      "cta": {
+        "type": "button",
+        "text": "Make an Appointment",
+        "url": "#"
+      }
+    },
+    "img": "mental-health-hero.jpg"
+  },
+  "nutrition-counseling": {
+    "classes": ["slant", "slant--bottom-right", "slant--orange"],
+    "copy": {
+      "sub-title": "",
+      "title": "Nutrition Counseling",
+      "text": "<p>Our registered dietitian can help you stay healthy by teaching you and your family how to choose foods wisely and develop a healthy lifestyle. Balance, variety and moderation is key for the entire family. We don’t just treat the child, the entire family should be on board.</p>",
+      "cta": {
+        "type": "button",
+        "text": "Make an Appointment",
+        "url": "#"
+      }
+    },
+    "img": "nutrition-counseling-hero.jpg"
+  },
+  "occupational-therapy": {
+    "classes": ["slant", "slant--bottom-right"],
+    "copy": {
+      "title": "Occupational Therapy",
+      "text": "<p>Occupational Therapy services allow for skilled evaluation and treatment of children with a variety of needs to facilitate achievement of age-appropriate developmental milestones and maximize participation in age-appropriate occupations.</p>",
+      "cta": [{
+        "type": "button",
+        "text": "Make an Appointment",
+        "url": "#"
+      }]
+    }
+  },
+  "speech-language": {
+    "classes": ["slant", "slant--bottom-right", "slant--orange"],
+    "copy": {
+      "sub-title": "",
+      "title": "Speech & Language",
+      "text": "<p>Whether you have a child that is a late bloomer or you are person with an acquired speech condition, we will work with you to create an appropriate intervention plan for any of the conditions below.</p>",
+      "cta": [{
+        "type": "button",
+        "text": "Make an Appointment",
+        "url": "#"
+      }, {
+        "type": "download",
+        "text": "Download Intake Form",
+        "url": "#"
+      }]
+    },
+    "img": "speech-language-hero.jpg"
+  }
+}

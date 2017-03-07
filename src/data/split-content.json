@@ -1,0 +1,17 @@
+{
+  "aba": {
+    "classes": ["image--right"],
+    "text": "<h4>What exactly is ABA?</h4><ul><li>Uses the scientific principles of learning and motivation in order to effectively teach.</li><li>Concentrates on the idea that consequences of how we behave will affect how we learn and what we will do in the future.</li><li>Seeks to improve socially significant behaviors while demonstrating reliable relations between the procedures used and the change in the individual’s behavior.</li><li>Uses positive reinforcement to increase positive behaviors and social interactions while decreasing challenging or inappropriate behaviors.</li><li>ABA therapy provides each individual with a tailored program that suites their unique needs.</li><li>Uses techniques and principles to bring about meaningful and positive change in behavior.</li></ul>",
+    "image": "polygons.jpg"
+  },
+  "careers": {
+    "classes": ["image--right"],
+    "text": "<h4>Benefits Include:</h4><ul><li>Competitive compensation; salary plus productivity bonus.</li><li>Medical, vision, dental, STD, LTD.</li><li>PTO, CME allowance, Allocated CME days.</li><li>Minimal clerical duties; we are fully electronic.</li><li>Traditional outpatient office: no mandatory nights or weekends.</li><li>Staff events and appreciation days.</li></ul>",
+    "image": "desk.jpg"
+  },
+  "nutrition": {
+    "classes": ["image--right"],
+    "text": "<h4>How we can help:</h4><ul><li>Weight management</li><li>Meal planning</li><li>Food allergies and intolerances</li><li>Picky eaters</li><li>Pediatric metabolic disorders</li><li>Failure to thrive / infant feeding</li><li>Diabetes</li><li>Heart disease</li><li>Kidney disease</li><li>Sports nutrition</li></ul>",
+    "image": "fruit.jpg"
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../global/defaults/config',
+'../../global/defaults/mixins';
+
+.hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 770px;
+  height: 100%;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  padding-top: 150px;
+  position: relative;
+  &__content {
+    text-align: center;
+    &-sub-title {
+      font-size: 40px;
+      @include letter-spacing(-30, 40);
+      color: #6f686b;
+    }
+    &-title {
+      font-size: 100px;
+      line-height: 95px;
+      @include letter-spacing(-50, 100);
+      color: #4e4449;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "mental-health": {
+    "text": "<h4>Common treatment issues:</h4><ul><li>Adolescent issues</li><li>Anger</li><li>Anxiety</li><li>ADHD</li><li>Autism spectrum disorders</li><li>Behavior problems</li><li>Depression</li><li>Divorce</li><li>Fears and phobias</li><li>Grief</li><li>Coping with health issues</li><li>Obsessive-compulsive disorder</li><li>Oppositional defiant disorder</li><li>Parenting issues</li><li>Post-traumatic stress</li><li>Relationship problems</li><li>School problems</li><li>Self-esteem issues</li><li>Separation anxiety</li><li>Social anxiety</li><li>Sibling rivalry</li><li>Sleep issues</li><li>Social skills</li><li>Stress management</li><li>Transgender issues</li><li>Women’s issues</li></ul><h4>Client intake forms:</h4>",
+    "document": [{
+      "image": "adult-mental-health.png",
+      "title": "Adult Mental Health",
+      "url": "#"
+    }, {
+      "image": "child-mental-health.png",
+      "title": "Child Mental Health",
+      "url": "#"
+    }]
+  },
+  "occupational-therapy": {
+    "text": "<h4>Services Include:</h4><ul><li><h5>Initial Screening</h5>Assess age-appropriate achievement of developmental milestones including: fine motor, gross motor, visual motor, sensory motor, sensory processing & self help skills</li><li><h5>Comprehensive Evaluation</h5>Standardized assessments to establish baseline level for gross, fine, visual, sensory, and self-help skills</li><li><h5>Plan of Care</h5>Establishment of collaborative and child-centered plan of care addressing meangingful long and short-term goals</li><li><h5>Comprehensive Re-evaluation</h5>Addressing progress towards set goals</li></ul><h4>Specialty Areas:</h4><ul><li><h5>Sensory Processing</h5>Sensory modulation, sensory integration, emotional regulation</li><li><h5>Fine Motor Skills</h5>Handwriting without tears, in-hand manipulation</li><li><h5>Gross Motor Skills</h5>Coordination and endurance training</li><li><h5>Ergonomic Analysis</h5></li><li><h5>Support for successful transitions</h5></li></ul>",
+    "document": [{
+      "image": "occupational-therapy.png",
+      "title": "Occupational Therapy",
+      "url": "#"
+    }]
+  },
+  "forms": {
+    "document": [{
+      "image": "occupational-therapy.png",
+      "title": "Occupational Therapy",
+      "url": "#"
+    }, {
+      "image": "speech-therapy.png",
+      "title": "Speech Therapy",
+      "url": "#"
+    }, {
+      "image": "child-mental-health.png",
+      "title": "Child Mental Health",
+      "url": "#"
+    }, {
+      "image": "adult-mental-health.png",
+      "title": "Adult Mental Health",
+      "url": "#"
+    }]
+  }
+}

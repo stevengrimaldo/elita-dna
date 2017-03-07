@@ -1,0 +1,16 @@
+<section class="section resources{{#each classes}} section--{{this}}{{/each}}">
+  {{#each resource}}
+    <div class="resources__resource">
+      <div class="icon--container"><i class="icon icon--{{this.icon}}"></i></div>
+      <div class="resources__resource-content">
+        <div class="resources__resource-content__title">
+          <h4>{{this.title}}</h4>
+        </div>
+        <div class="resources__resource-content__text">
+          {{{this.text}}}
+        </div>
+        <div class="cta--container"><a href="#" class="cta cta--inline">Discover More</a></div>
+      </div>
+    </div>
+  {{/each}}
+</section>

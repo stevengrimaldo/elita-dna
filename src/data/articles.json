@@ -1,0 +1,45 @@
+{
+  "article": [{
+    "img": "image.jpg",
+    "title": "5 Simple Things Moms Can Do to Care for Themselves",
+    "source": {
+      "title": "Parent.co",
+      "url": "#"
+    }
+  }, {
+    "img": "image.jpg",
+    "title": "An Eastern & Western Perspective on Personalized Medicine",
+    "source": {
+      "title": "Genomind.com",
+      "url": "#"
+    }
+  }, {
+    "img": "image.jpg",
+    "title": "Helping Your Anxious Teen Cope with a Panic Attack",
+    "source": {
+      "title": "ADAA.org",
+      "url": "#"
+    }
+  }, {
+    "img": "image.jpg",
+    "title": "Electric Three Sided Toothbrush for Autism & Special Needs",
+    "source": {
+      "title": "differentnotless.us",
+      "url": "#"
+    }
+  }, {
+    "img": "image.jpg",
+    "title": "The “No More Nagging” Chart",
+    "source": {
+      "title": "theflipplan.com",
+      "url": "#"
+    }
+  }, {
+    "img": "image.jpg",
+    "title": "Can't Stop the (ADHD) Feeling!",
+    "source": {
+      "title": "additudemag.com",
+      "url": "#"
+    }
+  }]
+}

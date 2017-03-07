@@ -1,0 +1,116 @@
+.section {
+  position: relative;
+  &--tan {
+    background-color: #f9f6f0;
+  }
+  &--slant {
+    &::before,
+    &::after {
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+    &--top-left,
+    &--top-right,
+    &--bottom-left,
+    &--bottom-right {
+      &--polkadots {
+        &::before,
+        &::after {
+          background-image: url('/media/img/polkadots.png');
+          width: 100vw;
+          height: 120px;
+          background-repeat: no-repeat;
+          background-size: 100vw 100%;
+        }
+      }
+    }
+    &--top-left,
+    &--top-right {
+      padding-top: 120px;
+      &::before {
+        content: '';
+        border-top: 120px solid $white;
+        top: 0;
+      }
+      &--tan {
+        &::before {
+          border-top-color: #f9f6f0;
+        }
+      }
+      &--polkadots {
+        &::before {
+          border-top: 0 none;
+        }
+      }
+    }
+    &--bottom-left,
+    &--bottom-right {
+      padding-bottom: 120px;
+      &::after {
+        content: '';
+        border-bottom: 120px solid $white;
+        bottom: 0;
+      }
+      &--tan {
+        &::after {
+          border-bottom-color: #f9f6f0;
+        }
+      }
+      &--polkadots {
+        &::after {
+          border-bottom: 0 none;
+        }
+      }
+    }
+    &--top-left {
+      &::before {
+        border-right: 100vw solid transparent;
+      }
+      &--polkadots {
+        &::before {
+          transform: scale(1, -1);
+          background-position: top left;
+          border-right: 0 none;
+        }
+      }
+    }
+    &--top-right {
+      &::before {
+        border-left: 100vw solid transparent;
+      }
+      &--polkadots {
+        &::before {
+          transform: scale(-1, -1);
+          background-position: top right;
+          border-left: 0 none;
+        }
+      }
+    }
+    &--bottom-left {
+      &::after {
+        border-right: 100vw solid transparent;
+      }
+      &--polkadots {
+        &::after {
+          background-position: bottom left;
+          border-right: 0 none;
+        }
+      }
+    }
+    &--bottom-right {
+      &::after {
+        border-left: 100vw solid transparent;
+      }
+      &--polkadots {
+        &::after {
+          transform: scale(-1, 1);
+          background-position: top right;
+          border-left: 0 none;
+        }
+      }
+    }
+  }
+}
