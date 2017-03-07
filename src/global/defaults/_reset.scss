@@ -69,6 +69,8 @@ h1, h2, h3, h4, h5, h6 {
   @extend %MuseoSlab;
 }
 a {
+  color: #ff6651;
+  @extend %OpenSansbold;
   text-decoration: none;
   &:hover {
     text-decoration: none;
@@ -80,7 +82,7 @@ u {
 strike, s {
   text-decoration: line-through;
 }
-p, li {
+a, p, li {
   font-size: 24px;
   line-height: 37px;
   @include letter-spacing(-30, 24);

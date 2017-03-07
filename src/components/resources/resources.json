@@ -1,6 +1,6 @@
 {
   "home": {
-    "classes": ["tan", "slant", "slant--top-left", "slant--top-left--polkadots", "slant--bottom-left", "slant--bottom-left--polkadots"],
+    "classes": ["tan", "slant", "slant--top-right", "slant--bottom-right"],
     "resource": [{
       "icon": "blocks",
       "title": "Occupational Therapy",

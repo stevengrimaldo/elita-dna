@@ -1,8 +1,11 @@
 const components = [
+  'header',
   'hero',
   'featured-content',
-  'resources'
+  'resources',
+  'footer'
 ];
+
 const componentLength = components.length;
 
 function loadCss(name) {

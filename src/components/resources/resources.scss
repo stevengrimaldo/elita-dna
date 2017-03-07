@@ -4,31 +4,36 @@
 
 .resources {
   padding: 100px 0;
-  &__resource-content {
-    &__title {
-      font-size: 26px;
-      @include letter-spacing(-20, 26);
-      color: #4e4449;
-      @extend %OpenSansSemibold;
-    }
-    &__text {
-      font-size: 20px;
-      line-height: 30px;
-      @include letter-spacing(-30, 20);
-      p {
-        font-size: inherit;
-        line-height: inherit;
+  &__resource {
+    margin-bottom: 50px;
+    &-content {
+      &__title {
+        font-size: 26px;
+        @include letter-spacing(-20, 26);
+        color: #4e4449;
+        @extend %OpenSansSemibold;
+        margin-bottom: 10px;
+        h1, h2, h3, h4, h5, h6 {
+          font-family: inherit;
+          font-weight: inherit;
+          // @extend %OpenSansSemibold;
+        }
+      }
+      &__text {
+        font-size: 20px;
+        line-height: 30px;
+        @include letter-spacing(-30, 20);
+        p {
+          font-size: inherit;
+          line-height: inherit;
+        }
+      }
+      .cta--container {
+        margin-top: 15px;
       }
     }
   }
-  &.section--slant {
-    &--top-left,
-    &--top-right {
-      padding-top: 220px;
-    }
-    &--bottom-left,
-    &--bottom-right {
-      padding-bottom: 220px;
-    }
+  &--container {
+    margin-left: span(1);
   }
 }

@@ -36,10 +36,10 @@ const paths = {
   srcCss: './src/scss/**/**/*.scss',
   srcImg: './src/media/img/**/*',
   srcLint: ['./src/js/polymap.js'],
-  dist: './dist',
-  distJs: './dist/js',
-  distImg: './dist/media/img',
-  distDeploy: './dist/**/*'
+  build: './build',
+  buildJs: './build/js',
+  buildImg: './build/media/img',
+  buildDeploy: './build/**/*'
 };
 
 const entries = [
@@ -60,20 +60,20 @@ const entries = [
 ];
 
 const output = [
-  './dist/js/app.js',
-  './dist/js/components/accordion.js',
-  './dist/js/components/articles.js',
-  './dist/js/components/documents.js',
-  './dist/js/components/featured-content.js',
-  './dist/js/components/hero.js',
-  './dist/js/components/locations.js',
-  './dist/js/components/profile.js',
-  './dist/js/components/resources.js',
-  './dist/js/components/reviews.js',
-  './dist/js/components/solutions.js',
-  './dist/js/components/split-content.js',
-  './dist/js/components/team.js',
-  './dist/js/components/tools.js'
+  './build/js/app.js',
+  './build/js/components/accordion.js',
+  './build/js/components/articles.js',
+  './build/js/components/documents.js',
+  './build/js/components/featured-content.js',
+  './build/js/components/hero.js',
+  './build/js/components/locations.js',
+  './build/js/components/profile.js',
+  './build/js/components/resources.js',
+  './build/js/components/reviews.js',
+  './build/js/components/solutions.js',
+  './build/js/components/split-content.js',
+  './build/js/components/team.js',
+  './build/js/components/tools.js'
 ];
 
 const customOpts = {
@@ -86,18 +86,18 @@ const customOpts = {
 const options = {
   locale: 'en-GB',
   timestamp: Date.now(),
-  assets: './dist/media/img/'
+  assets: './build/media/img/'
 }
 
 const opts = Object.assign({}, watchify.args, customOpts);
 
 gulp.task('clean', cb => {
-  rimraf('./dist/js/components/*', cb);
+  rimraf('./build/js/components/*', cb);
 });
 
 gulp.task('browserSync', () => {
   browserSync({
-    server: {baseDir: './dist/'}
+    server: {baseDir: './build/'}
   });
 });
 
@@ -109,7 +109,7 @@ gulp.task('watchify', () => {
       .bundle()
       .on('error', notify.onError())
       .pipe(source('common.js'))
-      .pipe(gulp.dest(paths.distJs))
+      .pipe(gulp.dest(paths.buildJs))
       .pipe(reload({stream: true}));
   }
 
@@ -125,13 +125,16 @@ gulp.task('browserify', () => {
   .pipe(source('common.js'))
   .pipe(buffer())
   .pipe(uglify())
-  .pipe(gulp.dest(paths.distJs));
+  .pipe(gulp.dest(paths.buildJs));
 });
 
 gulp.task('styles', () => {
   gulp.src('./src/**/**/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({
+      outputStyle: 'compressed',
+      includePaths: ['node_modules/susy/sass']
+    }).on('error', sass.logError))
     .pipe(postcss([autoprefixer({
       browsers: ['> 2%'],
       cascade: false,
@@ -140,7 +143,7 @@ gulp.task('styles', () => {
     }), csswring({removeAllComments: true})]))
     .pipe(sourcemaps.write('.'))
     .pipe(rename({extname: '.min.css'}))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('./build/css'))
     .pipe(reload({stream: true}));
 });
 
@@ -151,7 +154,7 @@ gulp.task('images', () => {
       svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()]
     }))
-    .pipe(gulp.dest(paths.distImg));
+    .pipe(gulp.dest(paths.buildImg));
 });
 
 gulp.task('html', () => {
@@ -160,8 +163,8 @@ gulp.task('html', () => {
   app.partials('./src/components/**/*.hbs');
 
   // Add data
-  app.data('./src/data/*.{json,yml}');
-  app.data({imagePath: './dist/media/img/'});
+  app.data('./src/components/**/*.{json,yml}');
+  app.data({imagePath: './build/media/img/'});
 
   // Add classic helpers
   app.helpers(handlebarsHelpers(), app.helpers);
@@ -171,7 +174,7 @@ gulp.task('html', () => {
     .pipe(app.renderFile(options))
     .pipe(rename({extname: '.html'}))
     .pipe(prettify({indent_size: 2}))
-    .pipe(app.dest('./dist/'))
+    .pipe(app.dest('./build/'))
     .pipe(reload({stream: true}));
 });
 
@@ -183,9 +186,10 @@ gulp.task('lint', () => {
 
 gulp.task('watchTask', () => {
   gulp.watch(paths.srcImg, ['images']);
-  gulp.watch(paths.srcCss, ['styles']);
+  gulp.watch('./src/**/**/*.scss', ['styles']);
   gulp.watch(paths.srcLint, ['lint']);
-  gulp.watch('./src/pages/*.hbs', ['html']);
+  gulp.watch('./src/**/**/*.hbs', ['html']);
+  gulp.watch('./src/components/**/*.json', ['html']);
 });
 
 gulp.task('watch', cb => {

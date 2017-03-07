@@ -1,5 +1,6 @@
 {
   "mental-health-services": {
+    "classes": [],
     "icon": "shield-heart",
     "copy": {
       "title": "Mental Health Services",
@@ -12,6 +13,7 @@
     }]
   },
   "get-in-touch": {
+    "classes": ["left-align"],
     "icon": "",
     "copy": {
       "title": "Get in Touch!",
@@ -20,6 +22,7 @@
     "cta": []
   },
   "next-step": {
+    "classes": [],
     "icon": "",
     "copy": {
       "title": "Ready to Take the Next Step?",
@@ -36,6 +39,7 @@
     }]
   },
   "aba": {
+    "classes": [],
     "icon": "",
     "copy": {
       "title": "Applied Behavior Analysis",
@@ -44,11 +48,13 @@
     "cta": []
   },
   "aba-list": {
+    "classes": [],
     "copy": {
       "text": "<h4>How We Help Your Child:</h4><ul><li>Least restrictive approach<li>Team Setting</li><li>Antecedent based interventions</li><li>Procedures based on positive reinforcement</li><li>Functional approach to behavior-teaching replacement behaviors</li><li>Avoidance of restrictive/punitive procedures</li><li>Social skills training model</li><li>Eye Contact</li><li>Play skills & peer relations</li><li>Listening & following directions</li><li>Functional communication skills</li><li>Self-regulation & self-control</li><li>Redirection</li><li>Crisis management & safety protocols</li><li>Outbursts/tantrums</li><li>Difficulties with daily routine</li><li>Bedtime/sleeping difficulties</li><li>Toileting issues</li><li>Aggression, property misuse, self-injury, elopement</li><li>Sensory related behaviors</li><li>School difficulties</li><li>Inattention</li><li>Transition difficulties</li></ul>"
     }
   },
   "questions": {
+    "classes": [],
     "copy": {
       "title": "Questions?",
       "text": "<p>We’d love to help you find the right journey on your path to success, we look forward to hearing from you!</p>"
@@ -60,6 +66,7 @@
     }]
   },
   "counseling-psychiatry": {
+    "classes": [],
     "icon": "clipboard",
     "copy": {
       "title": "Counseling & Psychiatry",
@@ -68,6 +75,7 @@
     "cta": []
   },
   "picky-eater": {
+    "classes": [],
     "icon": "apple",
     "copy": {
       "title": "Is your child a picky eater?",
@@ -75,6 +83,7 @@
     }
   },
   "enjoy-life": {
+    "classes": [],
     "icon": "toy",
     "copy": {
       "title": "Help your Child Enjoy Life!",
@@ -82,24 +91,28 @@
     }
   },
   "careers": {
+    "classes": [],
     "copy": {
       "title": "Careers",
       "text": "<p>Elite DNA Therapy Services is committed to providing a friendly, collegial work environment.</p>"
     }
   },
   "intake-forms": {
+    "classes": [],
     "copy": {
       "title": "Intake Forms",
       "text": "<p>All new clients please print and fill out the intake forms for the discipline you or your child will be seeing. Thank you, and please feel free to call with any questions.</p>"
     }
   },
   "resources": {
+    "classes": [],
     "copy": {
       "title": "News & Resources",
       "text": "<p>We do our best to curate the most relevant and helpful articles and tools for you to reference on your journey to a happier life.</p>"
     }
   },
   "contact": {
+    "classes": [],
     "copy": {
       "title": "Contact Us",
       "text": "<p>Send us a message below and one of our licensed professionals will be in touch.</p>"

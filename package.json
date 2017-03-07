@@ -1,7 +1,7 @@
 {
-  "name": "d5ive",
+  "name": "elitedna",
   "version": "1.0.0",
-  "description": "Creative Portfolio",
+  "description": "website",
   "author": "stevengrimaldo",
   "license": "MIT",
   "private": true,
@@ -53,6 +53,7 @@
     "rimraf": "^2.4.3",
     "run-sequence": "^1.1.2",
     "sass-lint": "^1.9.1",
+    "susy": "^2.2.12",
     "uglify-js": "^2.7.5",
     "vinyl-buffer": "^1.0.0",
     "vinyl-fs": "^2.4.3",

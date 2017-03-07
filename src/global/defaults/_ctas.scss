@@ -1,4 +1,5 @@
 .cta {
+  display: inline-block;
   &--inline {
     @extend %OpenSansbold;
     font-size: 20px;
@@ -12,5 +13,7 @@
     background-color: #ff6651;
     @include letter-spacing(-10, 20);
     color: $white;
+    padding: 20px 30px;
+    border-radius: 40px;
   }
 }

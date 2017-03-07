@@ -1,4 +1,5 @@
-@import '../../global/defaults/mixins';
+@import '../../global/defaults/config',
+'../../global/defaults/mixins';
 
 .featured-content {
   text-align: center;
@@ -8,15 +9,24 @@
     line-height: 65px;
     @include letter-spacing(-50, 55);
     color: #4e4449;
+    margin-bottom: 20px;
   }
-  &.section--slant {
-    &--top-left,
-    &--top-right {
-      padding-top: 160px;
+  &-text {
+    p {
+      margin-bottom: 10px;
     }
-    &--bottom-left,
-    &--bottom-right {
-      padding-bottom: 160px;
+  }
+  .cta--container {
+    margin-top: 40px;
+  }
+  &--container {
+    width: span(6);
+    margin: 0 auto;
+  }
+  &.section--left-align {
+    text-align: left;
+    .featured-content--container {
+      margin-left: span(2);
     }
   }
 }
