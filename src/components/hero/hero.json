@@ -1,6 +1,6 @@
 {
   "home": {
-    "classes": ["slant", "slant--bottom-left", "slant--bottom-left--polkadots"],
+    "classes": ["slant", "slant--bottom-right"],
     "copy": {
       "sub-title": "Tackle Today's Concerns with Our",
       "title": "Comprehensive<br />Approach",
@@ -14,7 +14,7 @@
     "img": "home-hero.jpg"
   },
   "about-us": {
-    "classes": ["slant", "slant--bottom-right", "slant--polkadots"],
+    "classes": ["slant", "slant--bottom-left"],
     "copy": {
       "sub-title": "",
       "title": "About Us",

@@ -2,13 +2,14 @@ body {
   background-image: url('/media/img/polkadots-bg.jpg');
   background-position: center center;
 }
+.section-wrapper,
+.header-wrapper {
+  @include container($susy);
+  max-width: 1400.5px;
+  width: 100%;
+}
 .section {
   position: relative;
-  &-wrapper {
-    @include container($susy);
-    max-width: 1400.5px;
-    width: 100%;
-  }
   &--tan {
     background-color: #f9f6f0;
     border-color: #f9f6f0;

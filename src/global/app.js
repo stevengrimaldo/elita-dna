@@ -3,6 +3,7 @@ const components = [
   'hero',
   'featured-content',
   'resources',
+  'profile',
   'footer'
 ];
 

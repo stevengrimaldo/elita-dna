@@ -1,0 +1,13 @@
+@import '../../global/defaults/mixins';
+
+.footer {
+  background-color: #94607e;
+  padding: 30px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  p {
+    font-size: inherit;
+    @include letter-spacing(-30, 18);
+  }
+}

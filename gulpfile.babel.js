@@ -154,7 +154,8 @@ gulp.task('images', () => {
       svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()]
     }))
-    .pipe(gulp.dest(paths.buildImg));
+    .pipe(gulp.dest(paths.buildImg))
+    .pipe(reload({stream: true}));
 });
 
 gulp.task('html', () => {
