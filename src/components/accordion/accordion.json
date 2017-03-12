@@ -1,5 +1,6 @@
 {
   "faqs": {
+    "classes": ["faqs", "tan", "slant", "slant--top-left"],
     "header": {
       "title": "Frequently Asked Questions"
     },
@@ -15,6 +16,7 @@
     }]
   },
   "conditions": {
+    "classes": ["conditions"],
     "header": {
       "title": "Conditions We Specialize in:"
     },

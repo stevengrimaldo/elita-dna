@@ -1,4 +1,4 @@
-<section class="section accordion">
+<section class="section accordion{{#each classes}} section--{{this}}{{/each}}">
   <div class="accordion__header">
     <div class="accordion__header-title">
       <h3>{{header.title}}</h3>
@@ -10,7 +10,7 @@
         <div class="accordion__item-title">
           <h6>{{this.title}}</h6>
         </div>
-        <div class="accordion__title-answer">
+        <div class="accordion__item-answer">
           {{{this.text}}}
         </div>
       </div>

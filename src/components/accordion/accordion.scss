@@ -1,0 +1,40 @@
+@import '../../global/defaults/config',
+'../../global/defaults/mixins',
+'../../global/defaults/typography';
+
+.accordion {
+  &__header {
+    padding: 90px 0;
+    text-align: center;
+    &-title {
+      font-size: 53px;
+      @include letter-spacing(-30, 53);
+    }
+  }
+  &--container {
+    background-color: $white;
+  }
+  &__item {
+    padding: 80px 0;
+    &-title {
+      font-size: 32px;
+      line-height: 66px;
+      @include letter-spacing(-30, 32);
+      @extend %OpenSansSemibold;
+      h1, h2, h3, h4, h5, h6 {
+        font-family: inherit;
+        font-weight: inherit;
+      }
+    }
+    &-answer {
+      font-size: 20px;
+      line-height: 30px;
+      @include letter-spacing(-30, 20);
+      margin-top: 20px;
+      p {
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+}

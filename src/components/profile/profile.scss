@@ -1,3 +1,34 @@
+@import '../../global/defaults/config',
+'../../global/defaults/mixins',
+'../../global/defaults/typography';
+
 .profile {
   padding: 80px 0;
+  font-size: 0;
+  &__img,
+  &__content {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 260px;
+    height: 260px;
+    margin-right: 50px;
+  }
+  &__content {
+    width: span(8) + gutter() + gutter();
+    h6 {
+      font-size: 26px;
+      @include letter-spacing(-30, 26);
+      @extend %OpenSansSemibold;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 34px;
+      @include letter-spacing(-30, 20);
+    }
+  }
 }

@@ -1,0 +1,13 @@
+@import '../../global/defaults/config',
+'../../global/defaults/mixins';
+
+.reviews {
+  padding: 65px 0;
+  text-align: center;
+  &__header {
+    &-title {
+      font-size: 53px;
+      @include letter-spacing(-30, 53);
+    }
+  }
+}

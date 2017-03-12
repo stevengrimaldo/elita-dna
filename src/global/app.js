@@ -4,6 +4,9 @@ const components = [
   'featured-content',
   'resources',
   'profile',
+  'solutions',
+  'reviews',
+  'accordion',
   'footer'
 ];
 

@@ -1,0 +1,50 @@
+@import '../../global/defaults/config',
+'../../global/defaults/mixins',
+'../../global/defaults/typography';
+
+.solutions {
+  padding: 100px 0;
+  &__header {
+    width: span(8);
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 100px;
+    &-title {
+      font-size: 53px;
+      line-height: 88px;
+      @include letter-spacing(-30, 53);
+      margin-bottom: 30px;
+    }
+  }
+  &__list {
+    @include clearfix;
+    &-item {
+      @include span(3);
+      text-align: center;
+      padding: 0 10px;
+      &__title {
+        font-size: 26px;
+        line-height: 32px;
+        @include letter-spacing(-30, 26);
+        @extend %OpenSansSemibold;
+        margin-bottom: 20px;
+        h1, h2, h3, h4, h5, h6 {
+          font-family: inherit;
+          font-weight: inherit;
+        }
+      }
+      &__text {
+        font-size: 20px;
+        line-height: 30px;
+        @include letter-spacing(-30, 20);
+        p {
+          font-size: inherit;
+          line-height: inherit;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
