@@ -1,13 +1,46 @@
 @import '../../global/defaults/config',
-'../../global/defaults/mixins';
+'../../global/defaults/mixins',
+'../../global/defaults/typography';
 
 .reviews {
   padding: 65px 0;
   text-align: center;
   &__header {
+    margin-bottom: 70px;
     &-title {
       font-size: 53px;
       @include letter-spacing(-30, 53);
+    }
+  }
+  &__review {
+    &-text {
+      width: span(8);
+      margin: 0 auto;
+      font-size: 32px;
+      line-height: 55px;
+      @include letter-spacing(-30, 32);
+      @extend %MuseoSlab;
+      quotes: '“' '”' '‘' '’';
+      &::before {
+        content: open-quote;
+      }
+      &::after {
+        content: close-quote;
+      }
+    }
+    &-author {
+      h6 {
+        font-size: 32px;
+        @extend %OpenSansSemibold;
+        @include letter-spacing(-30, 32);
+        margin-top: 40px;
+      }
+      time {
+        font-size: 20px;
+        @include letter-spacing(-30, 20);
+        @extend %OpenSans;
+        margin-top: 10px;
+      }
     }
   }
 }
