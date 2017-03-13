@@ -1,6 +1,7 @@
 @import '../../global/defaults/config',
 '../../global/defaults/mixins',
-'../../global/defaults/typography';
+'../../global/defaults/typography',
+'../../../node_modules/slick-carousel/slick/slick.scss';
 
 .reviews {
   padding: 65px 0;
@@ -10,6 +11,73 @@
     &-title {
       font-size: 53px;
       @include letter-spacing(-30, 53);
+    }
+  }
+  &--container {
+    .slick {
+      &-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-100%);
+        // overflow: hidden;
+        font-size: 0;
+        height: 60px;
+        width: 28px;
+        cursor: pointer;
+        z-index: 10;
+        &::before,
+        &::after {
+          content: '';
+          width: 2px;
+          height: 30px;
+          background-color: #ff6651;
+          position: absolute;
+          border-radius: 100px;
+        }
+        &::before {
+          bottom: 25px;
+          right: 13px;
+          transform: rotate(45deg);
+          left: auto;
+          top: auto;
+        }
+        &::after {
+          transform: rotate(-45deg);
+          bottom: auto;
+          right: 13px;
+          left: auto;
+          top: 25px;
+        }
+      }
+      &-prev {
+        left: 5.5555555556%;
+      }
+      &-next {
+        right: 5.5555555556%;
+        transform: translateY(-100%) rotate(180deg);
+      }
+      &-dots {
+        display: inline-block;
+        font-size: 0;
+        margin-top: 60px;
+        li {
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 15px;
+          font-size: 0;
+          button {
+            height: 15px;
+            width: 15px;
+            border-radius: 30px;
+            border: 1px solid #ff6651;
+          }
+          &.slick-active {
+            button {
+              background-color: #ff6651;
+            }
+          }
+        }
+      }
     }
   }
   &__review {
@@ -39,7 +107,7 @@
         font-size: 20px;
         @include letter-spacing(-30, 20);
         @extend %OpenSans;
-        margin-top: 10px;
+        margin-top: 15px;
       }
     }
   }

@@ -7,6 +7,7 @@ const components = [
   'solutions',
   'reviews',
   'accordion',
+  'split-content',
   'footer'
 ];
 
@@ -19,8 +20,15 @@ function loadCss(name) {
   document.getElementsByTagName('head')[0].appendChild(link);
 }
 
+function loadJs(name) {
+  const script = document.createElement('script');
+  script.src = '/js/components/' + name + '.js';
+  document.getElementById('scripts').appendChild(script);
+}
+
 for (let i = 0; i < componentLength; i++) {
   if (typeof(document.querySelector('.' + components[i])) !== 'undefined' && document.querySelector('.' + components[i]) !== null) {
     loadCss(components[i]);
+    loadJs(components[i]);
   }
 }

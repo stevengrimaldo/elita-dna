@@ -3,12 +3,12 @@
 
 .featured-content {
   text-align: center;
-  padding: 40px 0;
+  padding: 60px 0;
+  color: #4e4449;
   &-title {
     font-size: 55px;
     line-height: 65px;
     @include letter-spacing(-50, 55);
-    color: #4e4449;
     margin-bottom: 20px;
   }
   &-text {
@@ -20,13 +20,22 @@
     margin-top: 40px;
   }
   &--container {
-    width: span(6);
+    width: span(7);
     margin: 0 auto;
   }
   &.section--left-align {
     text-align: left;
     .featured-content--container {
       margin-left: span(2);
+    }
+  }
+  &.section--orange {
+    color: $white;
+  }
+  &.section--left-align {
+    .featured-content--container {
+      width: 100%;
+      margin: 0;
     }
   }
 }

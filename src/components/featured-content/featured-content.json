@@ -39,7 +39,7 @@
     }]
   },
   "aba": {
-    "classes": [],
+    "classes": ["orange", "slant", "slant--bottom-right"],
     "icon": "",
     "copy": {
       "title": "Applied Behavior Analysis",
@@ -48,13 +48,13 @@
     "cta": []
   },
   "aba-list": {
-    "classes": [],
+    "classes": ["tan", "slant", "slant--top-right", "slant--bottom-right", "left-align"],
     "copy": {
       "text": "<h4>How We Help Your Child:</h4><ul><li>Least restrictive approach<li>Team Setting</li><li>Antecedent based interventions</li><li>Procedures based on positive reinforcement</li><li>Functional approach to behavior-teaching replacement behaviors</li><li>Avoidance of restrictive/punitive procedures</li><li>Social skills training model</li><li>Eye Contact</li><li>Play skills & peer relations</li><li>Listening & following directions</li><li>Functional communication skills</li><li>Self-regulation & self-control</li><li>Redirection</li><li>Crisis management & safety protocols</li><li>Outbursts/tantrums</li><li>Difficulties with daily routine</li><li>Bedtime/sleeping difficulties</li><li>Toileting issues</li><li>Aggression, property misuse, self-injury, elopement</li><li>Sensory related behaviors</li><li>School difficulties</li><li>Inattention</li><li>Transition difficulties</li></ul>"
     }
   },
   "questions": {
-    "classes": [],
+    "classes": ["tan", "slant", "slant--top-right"],
     "copy": {
       "title": "Questions?",
       "text": "<p>We’d love to help you find the right journey on your path to success, we look forward to hearing from you!</p>"

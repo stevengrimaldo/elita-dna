@@ -15,18 +15,57 @@
     background-color: $white;
   }
   &__item {
-    padding: 80px 0;
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(#4e4449, .4);
+    &--wrapper {
+      @include container($susy);
+    }
     &-title {
       font-size: 32px;
       line-height: 66px;
       @include letter-spacing(-30, 32);
+      position: relative;
       @extend %OpenSansSemibold;
       h1, h2, h3, h4, h5, h6 {
         font-family: inherit;
         font-weight: inherit;
       }
+      &::before,
+      &::after {
+        content: '';
+        border-radius: 100px;
+        position: absolute;
+        right: 0;
+        background-color: #ff6651;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::before {
+        width: 30px;
+        height: 2px;
+        top: 50%;
+      }
+      &::after {
+        height: 30px;
+        width: 2px;
+        right: 15px;
+      }
+    }
+    &:first-child,
+    &--open {
+      .accordion__item {
+        &-title {
+          &::after {
+            content: none;
+          }
+        }
+        &-answer {
+          display: block;
+        }
+      }
     }
     &-answer {
+      display: none;
       font-size: 20px;
       line-height: 30px;
       @include letter-spacing(-30, 20);
@@ -36,6 +75,9 @@
         line-height: inherit;
         margin-bottom: 30px;
       }
+    }
+    &:last-child {
+      border-bottom: 0 none;
     }
   }
 }
