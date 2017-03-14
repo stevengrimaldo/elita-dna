@@ -1,18 +1,23 @@
 <section class="section documents">
-  <div class="documents__content">
-    {{{text}}}
-  </div>
-  <div class="documents__items">
-    {{#each document}}
-      <div class="documents__items__item">
-        <figure class="documents__items__item-image">
-          <img src="{{this.mage}}" alt="" />
-        </figure>
-        <div class="documents__items__item-title">
-          <h6>{{this.title}}</h6>
+  <div class="section-wrapper">
+    <div class="documents__content">
+      {{{text}}}
+    </div>
+    <div class="documents__items">
+      {{#if title}}
+        {{{title}}}
+      {{/if}}
+      {{#each document}}
+        <div class="documents__items__item">
+          <figure class="documents__items__item-image">
+            <img src="/media/img/{{this.image}}" alt="" />
+          </figure>
+          <div class="documents__items__item-title">
+            <h6>{{this.title}}</h6>
+          </div>
+          <div class="cta--container"><a href="#" class="cta cta--dowload">Download</a></div>
         </div>
-        <div class="cta--container"><a href="#" class="cta cta--dowload">Download</a></div>
-      </div>
-    {{/each}}
+      {{/each}}
+    </div>
   </div>
 </section>

@@ -25,6 +25,7 @@
       line-height: 66px;
       @include letter-spacing(-30, 32);
       position: relative;
+      cursor: pointer;
       @extend %OpenSansSemibold;
       h1, h2, h3, h4, h5, h6 {
         font-family: inherit;
@@ -49,19 +50,7 @@
         height: 30px;
         width: 2px;
         right: 15px;
-      }
-    }
-    &:first-child,
-    &--open {
-      .accordion__item {
-        &-title {
-          &::after {
-            content: none;
-          }
-        }
-        &-answer {
-          display: block;
-        }
+        transition: height 400ms;
       }
     }
     &-answer {
@@ -74,6 +63,18 @@
         font-size: inherit;
         line-height: inherit;
         margin-bottom: 30px;
+      }
+    }
+    &--open {
+      .accordion__item {
+        &-title {
+          &::after {
+            height: 0;
+          }
+        }
+        &-answer {
+          display: block;
+        }
       }
     }
     &:last-child {

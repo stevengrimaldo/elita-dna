@@ -1,3 +1,43 @@
+@import '../../global/defaults/config',
+'../../global/defaults/mixins';
+
 .split-content {
   padding: 50px 0;
+  &__content {
+    width: span(5);
+    float: left;
+    h4 {
+      font-size: 40px;
+      @include letter-spacing(-30, 40);
+      margin-bottom: 30px;
+    }
+    p, li {
+      font-size: 20px;
+      line-height: 32px;
+      @include letter-spacing(-30, 20);
+    }
+    li {
+      margin-bottom: 30px;
+      margin-left: 22px;
+      list-style-type: disc;
+      list-style-position: outside;
+      color: #ff6651;
+      span {
+        color: #4e4449;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    right: 0;
+    height: calc(100% + 240px);
+    background-repeat: no-repeat;
+    width: 100%;
+    top: 50%;
+    z-index: -1;
+    bottom: 0;
+    transform: translateY(-50%);
+    background-size: auto 100%;
+    background-position: right center;
+  }
 }

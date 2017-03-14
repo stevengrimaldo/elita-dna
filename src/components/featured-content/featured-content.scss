@@ -3,7 +3,7 @@
 
 .featured-content {
   text-align: center;
-  padding: 60px 0;
+  padding: 80px 0;
   color: #4e4449;
   &-title {
     font-size: 55px;
@@ -12,8 +12,35 @@
     margin-bottom: 20px;
   }
   &-text {
+    h4 {
+      font-size: 40px;
+      @include letter-spacing(-30, 40);
+      margin-bottom: 30px;
+    }
     p {
       margin-bottom: 10px;
+    }
+    ul {
+      @include clearfix;
+    }
+    li {
+      font-size: 20px;
+      line-height: 32px;
+      @include letter-spacing(-30, 20);
+      margin-bottom: 30px;
+      margin-left: 22px;
+      list-style-type: disc;
+      list-style-position: outside;
+      color: #ff6651;
+      width: 30%;
+      margin-right: 1%;
+      float: left;
+      span {
+        color: #4e4449;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
   .cta--container {

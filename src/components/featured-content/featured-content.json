@@ -50,7 +50,7 @@
   "aba-list": {
     "classes": ["tan", "slant", "slant--top-right", "slant--bottom-right", "left-align"],
     "copy": {
-      "text": "<h4>How We Help Your Child:</h4><ul><li>Least restrictive approach<li>Team Setting</li><li>Antecedent based interventions</li><li>Procedures based on positive reinforcement</li><li>Functional approach to behavior-teaching replacement behaviors</li><li>Avoidance of restrictive/punitive procedures</li><li>Social skills training model</li><li>Eye Contact</li><li>Play skills & peer relations</li><li>Listening & following directions</li><li>Functional communication skills</li><li>Self-regulation & self-control</li><li>Redirection</li><li>Crisis management & safety protocols</li><li>Outbursts/tantrums</li><li>Difficulties with daily routine</li><li>Bedtime/sleeping difficulties</li><li>Toileting issues</li><li>Aggression, property misuse, self-injury, elopement</li><li>Sensory related behaviors</li><li>School difficulties</li><li>Inattention</li><li>Transition difficulties</li></ul>"
+      "text": "<h4>How We Help Your Child:</h4><ul><li><span>Least restrictive approach<li><span>Team Setting</span></li><li><span>Antecedent based interventions</span></li><li><span>Procedures based on positive reinforcement</span></li><li><span>Functional approach to behavior-teaching replacement behaviors</span></li><li><span>Avoidance of restrictive/punitive procedures</span></li><li><span>Social skills training model</span></li><li><span>Eye Contact</span></li><li><span>Play skills & peer relations</span></li><li><span>Listening & following directions</span></li><li><span>Functional communication skills</span></li><li><span>Self-regulation & self-control</span></li><li><span>Redirection</span></li><li><span>Crisis management & safety protocols</span></li><li><span>Outbursts/tantrums</span></li><li><span>Difficulties with daily routine</span></li><li><span>Bedtime/sleeping difficulties</span></li><li><span>Toileting issues</span></li><li><span>Aggression, property misuse, self-injury, elopement</span></li><li><span>Sensory related behaviors</span></li><li><span>School difficulties</span></li><li><span>Inattention</span></li><li><span>Transition difficulties</span></li></ul>"
     }
   },
   "questions": {
@@ -66,7 +66,7 @@
     }]
   },
   "counseling-psychiatry": {
-    "classes": [],
+    "classes": ["orange", "slant", "slant--top-right", "slant--bottom-right"],
     "icon": "clipboard",
     "copy": {
       "title": "Counseling & Psychiatry",
@@ -75,7 +75,7 @@
     "cta": []
   },
   "picky-eater": {
-    "classes": [],
+    "classes": ["orange", "slant", "slant--top-right", "slant--bottom-right"],
     "icon": "apple",
     "copy": {
       "title": "Is your child a picky eater?",

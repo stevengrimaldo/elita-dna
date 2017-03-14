@@ -38,7 +38,7 @@
     "img": "our-team-hero.jpg"
   },
   "mental-health": {
-    "classes": ["slant", "slant--bottom-right", "slant--orange"],
+    "classes": ["slant", "slant--bottom-left"],
     "copy": {
       "sub-title": "",
       "title": "Mental Health",
@@ -52,7 +52,7 @@
     "img": "mental-health-hero.jpg"
   },
   "nutrition-counseling": {
-    "classes": ["slant", "slant--bottom-right", "slant--orange"],
+    "classes": ["slant", "slant--bottom-left"],
     "copy": {
       "sub-title": "",
       "title": "Nutrition Counseling",
@@ -78,7 +78,7 @@
     }
   },
   "speech-language": {
-    "classes": ["slant", "slant--bottom-right", "slant--orange"],
+    "classes": ["slant", "slant--bottom-right"],
     "copy": {
       "sub-title": "",
       "title": "Speech & Language",

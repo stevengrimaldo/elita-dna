@@ -54,10 +54,10 @@
     &--bottom-right {
       padding-bottom: 120px;
       margin-bottom: 0;
-      transform: skewY(4deg);
+      transform: skewY(4.75deg);
       transform-origin: right top;
       > * {
-        transform: skewY(-4deg);
+        transform: skewY(-4.75deg);
         transform-origin: inherit;
       }
       &::after {
@@ -67,14 +67,20 @@
     &--bottom-left {
       padding-bottom: 120px;
       margin-bottom: 0;
-      transform: skewY(-4deg);
+      transform: skewY(-4.75deg);
       transform-origin: left top;
       > * {
-        transform: skewY(4deg);
+        transform: skewY(4.75deg);
         transform-origin: inherit;
       }
       &::after {
         content: none;
+      }
+    }
+    + .section--orange,
+    + .section--tan {
+      &.section--slant {
+        margin-top: 0;
       }
     }
   }

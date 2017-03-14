@@ -8,6 +8,7 @@ const components = [
   'reviews',
   'accordion',
   'split-content',
+  'documents',
   'footer'
 ];
 
