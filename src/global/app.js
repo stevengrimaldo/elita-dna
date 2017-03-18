@@ -10,6 +10,7 @@ const components = [
   'split-content',
   'documents',
   'articles',
+  'locations',
   'footer'
 ];
 
