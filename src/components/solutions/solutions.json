@@ -24,6 +24,7 @@
     }]
   },
   "our-team": {
+    "classes": ["orange", "slant", "slant--top-left", "slant--bottom-left"],
     "header": {
       "title": "Why Choose Elita DNA Therapy?",
       "text": "<p>Our team of professional therapists are here to help.Come learn and build confidence knowing your child is in the right hands.</p>"

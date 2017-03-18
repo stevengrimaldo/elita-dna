@@ -83,7 +83,7 @@
     }
   },
   "enjoy-life": {
-    "classes": [],
+    "classes": ["orange", "slant", "slant--top-right", "slant--bottom-right"],
     "icon": "toy",
     "copy": {
       "title": "Help your Child Enjoy Life!",
@@ -91,28 +91,28 @@
     }
   },
   "careers": {
-    "classes": [],
+    "classes": ["orange", "slant", "slant--bottom-right"],
     "copy": {
       "title": "Careers",
       "text": "<p>Elite DNA Therapy Services is committed to providing a friendly, collegial work environment.</p>"
     }
   },
   "intake-forms": {
-    "classes": [],
+    "classes": ["orange", "slant", "slant--bottom-right"],
     "copy": {
       "title": "Intake Forms",
       "text": "<p>All new clients please print and fill out the intake forms for the discipline you or your child will be seeing. Thank you, and please feel free to call with any questions.</p>"
     }
   },
   "resources": {
-    "classes": [],
+    "classes": ["orange", "slant", "slant--bottom-right"],
     "copy": {
       "title": "News & Resources",
       "text": "<p>We do our best to curate the most relevant and helpful articles and tools for you to reference on your journey to a happier life.</p>"
     }
   },
   "contact": {
-    "classes": [],
+    "classes": ["orange", "slant", "slant--bottom-right"],
     "copy": {
       "title": "Contact Us",
       "text": "<p>Send us a message below and one of our licensed professionals will be in touch.</p>"

@@ -28,7 +28,7 @@
     "img": "about-us-hero.jpg"
   },
   "our-team": {
-    "classes": ["slant", "slant--bottom-right"],
+    "classes": ["slant", "slant--bottom-left"],
     "copy": {
       "sub-title": "",
       "title": "Our Team",
@@ -70,12 +70,13 @@
     "copy": {
       "title": "Occupational Therapy",
       "text": "<p>Occupational Therapy services allow for skilled evaluation and treatment of children with a variety of needs to facilitate achievement of age-appropriate developmental milestones and maximize participation in age-appropriate occupations.</p>",
-      "cta": [{
+      "cta": {
         "type": "button",
         "text": "Make an Appointment",
         "url": "#"
-      }]
-    }
+      }
+    },
+    "img": "occupational-therapy.jpg"
   },
   "speech-language": {
     "classes": ["slant", "slant--bottom-right"],

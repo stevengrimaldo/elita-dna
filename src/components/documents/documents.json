@@ -13,7 +13,7 @@
     }]
   },
   "occupational-therapy": {
-    "title": "",
+    "title": "<h4>Client intake forms:</h4>",
     "text": "<h4>Services Include:</h4><ul><li><span><h5>Initial Screening</h5>Assess age-appropriate achievement of developmental milestones including: fine motor, gross motor, visual motor, sensory motor, sensory processing & self help skills</span></li><li><span><h5>Comprehensive Evaluation</h5>Standardized assessments to establish baseline level for gross, fine, visual, sensory, and self-help skills</span></li><li><span><h5>Plan of Care</h5>Establishment of collaborative and child-centered plan of care addressing meangingful long and short-term goals</span></li><li><span><h5>Comprehensive Re-evaluation</h5>Addressing progress towards set goals</span></li></ul><h4>Specialty Areas:</h4><ul><li><span><h5>Sensory Processing</h5>Sensory modulation, sensory integration, emotional regulation</span></li><li><span><h5>Fine Motor Skills</h5>Handwriting without tears, in-hand manipulation</span></li><li><span><h5>Gross Motor Skills</h5>Coordination and endurance training</span></li><li><span><h5>Ergonomic Analysis</h5></span></li><li><span><h5>Support for successful transitions</h5></span></li></ul>",
     "document": [{
       "image": "occupational-therapy.png",
