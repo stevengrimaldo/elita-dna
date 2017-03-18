@@ -19,6 +19,9 @@ GoogleMapsLoader.load(google => {
             // The latitude and longitude to center the map (always required)
             center: results[0].geometry.location,
 
+            // Remove the default controls
+            disableDefaultUI: true,
+
             // How you would like to style the map.
             // This is where you would paste any style found on Snazzy Maps.
             styles: [{
@@ -135,3 +138,15 @@ GoogleMapsLoader.load(google => {
     geocodeAddress(office, mapElement);
   });
 });
+
+$('.locations__list-item').on('click', function () {
+  if (!$(this).hasClass('active')) {
+    $('.locations__maps-code').removeClass('locations__maps-code--active');
+    $('.locations__list-item').removeClass('locations__list-item--active');
+    $(this).addClass('locations__list-item--active');
+    $('.locations__maps-code').eq($(this).index()).addClass('locations__maps-code--active');
+  }
+});
+
+$('.locations__maps-code').first().addClass('locations__maps-code--active');
+$('.locations__list-item').first().addClass('locations__list-item--active');
