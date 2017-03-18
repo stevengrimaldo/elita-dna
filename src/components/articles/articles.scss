@@ -1,0 +1,63 @@
+@import '../../global/defaults/config',
+'../../global/defaults/mixins';
+
+.articles {
+  padding: 120px 0;
+  &--container {
+    font-size: 0;
+  }
+  &__header {
+    margin-bottom: 80px;
+    text-align: center;
+    h2 {
+      font-size: 55px;
+      line-height: 65px;
+      @include letter-spacing(-50, 55);
+    }
+  }
+  &__article {
+    width: span(3);
+    display: inline-block;
+    vertical-align: top;
+    margin: 60px;
+    text-align: center;
+    &-image {
+      position: relative;
+      @include aspect-ratio(1, 1);
+      overflow: hidden;
+      border-radius: 50%;
+      margin-bottom: 40px;
+      img {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        position: absolute;
+        object-fit: cover;
+      }
+    }
+    &-content {
+      .source {
+        font-size: 18px;
+        @include letter-spacing(-30, 18);
+        margin-bottom: 25px;
+        display: block;
+      }
+      h6 {
+        font-size: 26px;
+        line-height: 35px;
+        @include letter-spacing(-30, 26);
+      }
+    }
+    .cta--container {
+      margin-top: 25px;
+    }
+  }
+  &__more {
+    text-align: center;
+    margin-top: 60px;
+  }
+}

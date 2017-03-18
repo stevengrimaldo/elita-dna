@@ -9,6 +9,7 @@ const components = [
   'accordion',
   'split-content',
   'documents',
+  'articles',
   'footer'
 ];
 
