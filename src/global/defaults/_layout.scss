@@ -10,6 +10,10 @@ body {
 }
 .section {
   position: relative;
+  &--white {
+    background-color: $white;
+    border-color: $white;
+  }
   &--tan {
     background-color: #f9f6f0;
     border-color: #f9f6f0;

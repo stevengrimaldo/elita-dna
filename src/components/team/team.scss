@@ -1,0 +1,126 @@
+@import '../../global/defaults/config',
+'../../global/defaults/mixins',
+'../../global/defaults/typography';
+
+.team {
+  padding: 150px 0;
+  &__filters {
+    @include span(2);
+    &-label {
+      font-size: 20px;
+      @include letter-spacing(-30, 20);
+      @extend %OpenSans;
+      margin-bottom: 15px;
+      display: block;
+    }
+    &__filter {
+      border-top: 1px solid #4e4449;
+      &-location {
+        @extend %OpenSansbold;
+        font-size: 20px;
+        text-transform: uppercase;
+        @include letter-spacing(-30, 20);
+        padding: 25px 0;
+        position: relative;
+        cursor: pointer;
+        h4 {
+          font-family: inherit;
+          font-weight: inherit;
+        }
+        &::before,
+        &::after {
+          content: '';
+          border-radius: 100px;
+          position: absolute;
+          right: 0;
+          background-color: #ff6651;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &::before {
+          width: 30px;
+          height: 2px;
+          top: 50%;
+        }
+        &::after {
+          height: 30px;
+          width: 2px;
+          right: 15px;
+          transition: height 400ms;
+        }
+      }
+      &__departments {
+        display: none;
+        padding-bottom: 25px;
+        &-department {
+          margin-bottom: 15px;
+          font-size: 16px;
+          @include letter-spacing(-30, 20);
+          @extend %OpenSans;
+          span {
+            text-decoration: underline;
+          }
+          &--active {
+            @extend %OpenSansbold;
+            color: #ff6651;
+            span {
+              text-decoration: none;
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &:last-child {
+        border-bottom: 1px solid #4e4449;
+      }
+      &--open {
+        .team__filters__filter-location {
+          &::after {
+            height: 0;
+          }
+        }
+      }
+    }
+  }
+  &__members {
+    font-size: 0;
+    text-align: center;
+    @include span(9 last);
+    &__member {
+      width: span(2);
+      display: inline-block;
+      vertical-align: top;
+      margin: 45px;
+      text-align: center;
+      &-image {
+        @include aspect-ratio(1, 1);
+        overflow: hidden;
+        border-radius: 50%;
+        img {
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          position: absolute;
+          object-fit: cover;
+        }
+      }
+      &-name {
+        font-size: 20px;
+        line-height: 27px;
+        margin-top: 20px;
+        @include letter-spacing(-30, 20);
+        @extend %OpenSansSemibold;
+        h5 {
+          font-family: inherit;
+          font-weight: inherit;
+        }
+      }
+    }
+  }
+}

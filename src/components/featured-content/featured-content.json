@@ -22,7 +22,7 @@
     "cta": []
   },
   "next-step": {
-    "classes": [],
+    "classes": ["tan", "slant", "slant--top-right"],
     "icon": "",
     "copy": {
       "title": "Ready to Take the Next Step?",

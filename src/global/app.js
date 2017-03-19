@@ -11,6 +11,7 @@ const components = [
   'documents',
   'articles',
   'locations',
+  'team',
   'footer'
 ];
 

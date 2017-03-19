@@ -1,8 +1,9 @@
 {
+  "classes": ["white", "slant", "slant--top-right", "slant--bottom-right"],
   "member": [{
     "location": "ft-myers",
     "department": "mental-health",
-    "image": "placeholder.jpg",
+    "image": "male-profile.jpg",
     "name": "Dr. Robert A. Katz, MD"
   }, {
     "location": "ft-myers",
@@ -17,12 +18,12 @@
   }, {
     "location": "ft-myers",
     "department": "mental-health",
-    "image": "placeholder.jpg",
+    "image": "female-profile.jpg",
     "name": "Nicole Kendrick-Konkowski, MSW"
   }, {
     "location": "ft-myers",
     "department": "mental-health",
-    "image": "placeholder.jpg",
+    "image": "male-profile.jpg",
     "name": "Dr. Robert James, PhD"
   }, {
     "location": "ft-myers",
@@ -42,7 +43,7 @@
   }, {
     "location": "ft-myers",
     "department": "mental-health",
-    "image": "placeholder.jpg",
+    "image": "female-profile.jpg",
     "name": "Lisa Rachel Bendetowicz, LCSW"
   }, {
     "location": "ft-myers",
@@ -52,7 +53,7 @@
   }, {
     "location": "ft-myers",
     "department": "mental-health",
-    "image": "placeholder.jpg",
+    "image": "female-profile.jpg",
     "name": "Karen Zampa Katz, LCSW"
   }, {
     "location": "ft-myers",
@@ -72,7 +73,7 @@
   }, {
     "location": "ft-myers",
     "department": "mental-health",
-    "image": "placeholder.jpg",
+    "image": "female-profile.jpg",
     "name": "Jan-Paul Romero Mojica, LCSW"
   }, {
     "location": "ft-myers",
