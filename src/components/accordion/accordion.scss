@@ -50,6 +50,7 @@
     &-answer {
       display: none;
       margin-top: 20px;
+      padding-right: 40px;
       p {
         @include font-size(16);
         margin-bottom: 15px;

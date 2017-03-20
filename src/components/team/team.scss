@@ -19,7 +19,7 @@
         @extend %OpenSansbold;
         @include font-size(16, initial);
         text-transform: uppercase;
-        padding: 15px 0;
+        padding: 15px 25px 15px 0;
         position: relative;
         cursor: pointer;
         h4 {
@@ -33,13 +33,12 @@
           position: absolute;
           right: 0;
           background-color: $persimmon;
-          top: 50%;
+          top: 26px;
           transform: translateY(-50%);
         }
         &::before {
           width: 16px;
           height: 2px;
-          top: 50%;
         }
         &::after {
           height: 16px;
@@ -51,6 +50,7 @@
       &__departments {
         display: none;
         padding-bottom: 25px;
+        padding-right: 25px;
         &-department {
           margin-bottom: 10px;
           @include font-size(14, initial);
@@ -86,13 +86,13 @@
     font-size: 0;
     text-align: center;
     float: right;
-    @include col(9);
+    @include col(10);
     margin-top: -45px;
     &__member {
-      @include col(2);
+      @include col(2, 10);
       display: inline-block;
       vertical-align: top;
-      margin: 45px;
+      margin: 45px pc(45, $base);
       text-align: center;
       &-image {
         @include aspect-ratio(1, 1);

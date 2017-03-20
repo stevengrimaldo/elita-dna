@@ -1,5 +1,6 @@
 {
   "mental-health": {
+    "classes": ["white", "slant", "slant--top-left", "slant--bottom-left"],
     "title": "<h4>Client intake forms:</h4>",
     "text": "<h4>Common treatment issues:</h4><ul><li><span>Adolescent issues</span></li><li><span>Anger</span></li><li><span>Anxiety</span></li><li><span>ADHD</span></li><li><span>Autism spectrum disorders</span></li><li><span>Behavior problems</span></li><li><span>Depression</span></li><li><span>Divorce</span></li><li><span>Fears and phobias</span></li><li><span>Grief</span></li><li><span>Coping with health issues</span></li><li><span>Obsessive-compulsive disorder</span></li><li><span>Oppositional defiant disorder</span></li><li><span>Parenting issues</span></li><li><span>Post-traumatic stress</span></li><li><span>Relationship problems</span></li><li><span>School problems</span></li><li><span>Self-esteem issues</span></li><li><span>Separation anxiety</span></li><li><span>Social anxiety</span></li><li><span>Sibling rivalry</span></li><li><span>Sleep issues</span></li><li><span>Social skills</span></li><li><span>Stress management</span></li><li><span>Transgender issues</span></li><li><span>Women’s issues</span></li></ul>",
     "document": [{

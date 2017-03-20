@@ -26,6 +26,10 @@
       display: inline-block;
       position: relative;
       vertical-align: top;
+      h5, bold {
+        @include font-size(20, null, -20);
+        @extend %OpenSansSemibold;
+      }
       span {
         color: $emperor;
       }
@@ -35,7 +39,7 @@
         height: 8px;
         background-color: $persimmon;
         border-radius: 50%;
-        top: 14px;
+        top: 11px;
         left: -15px;
         position: absolute;
       }
