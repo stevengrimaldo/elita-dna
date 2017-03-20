@@ -11,15 +11,15 @@ body {
   @include clearfix;
   @include mq($min, $laptop + 1) {
     max-width: 1800px;
-    padding: 0 100px;
+    padding: 0 pc(100, $base);
   }
   @include mq('', $tablet, $laptop) {
     max-width: 1700px;
-    padding: 0 50px;
+    padding: 0 pc(50, $base);
   }
   @include mq($max, $tablet - 1) {
     max-width: 1650px;
-    padding: 0 25px;
+    padding: 0 pc(25, $base);
   }
 }
 .section {

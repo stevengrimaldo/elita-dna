@@ -15,14 +15,17 @@
     }
   }
   &__list {
-    @include clearfix;
+    font-size: 0;
+    text-align: center;
     &-item {
-      float: left;
-      @include col(3);
+      display: inline-block;
+      vertical-align: top;
+      @include col(3, $base, 10);
       text-align: center;
-      padding: 0 10px;
+      padding: 0 pc(10, $base);
+      margin-right: pc(20, $base);
       &__title {
-        @include font-size(24);
+        @include font-size(22);
         @extend %OpenSansSemibold;
         margin-bottom: 20px;
         h6 {
@@ -32,7 +35,7 @@
       }
       &__text {
         p {
-          @include font-size(20);
+          @include font-size(16);
         }
       }
       &:last-child {

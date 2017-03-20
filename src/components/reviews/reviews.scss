@@ -65,11 +65,13 @@
           margin: 0 15px;
           font-size: 0;
           button {
+            background-color: transparent;
             height: 15px;
             width: 15px;
             border-radius: 30px;
             border: 1px solid $persimmon;
             cursor: pointer;
+            transition: background-color 250ms;
           }
           &:hover,
           &.slick-active {

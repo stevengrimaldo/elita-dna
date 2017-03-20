@@ -6,7 +6,7 @@
 .team {
   &__filters {
     float: left;
-    @include col(2);
+    @include col(3);
     &-label {
       @include font-size(14, initial);
       @extend %OpenSans;
@@ -52,7 +52,7 @@
         display: none;
         padding-bottom: 25px;
         &-department {
-          margin-bottom: 15px;
+          margin-bottom: 10px;
           @include font-size(14, initial);
           @extend %OpenSans;
           span {
@@ -85,7 +85,7 @@
   &__members {
     font-size: 0;
     text-align: center;
-    float: left;
+    float: right;
     @include col(9);
     margin-top: -45px;
     &__member {

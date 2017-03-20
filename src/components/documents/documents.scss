@@ -10,6 +10,7 @@
     margin-bottom: 50px;
   }
   &__content {
+    margin-bottom: 100px;
     ul {
       margin-bottom: 30px;
     }
@@ -45,7 +46,6 @@
   }
   &__items {
     text-align: left;
-    margin-top: 100px;
     @include clearfix;
     &__item {
       float: left;

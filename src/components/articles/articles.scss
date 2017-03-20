@@ -6,9 +6,10 @@
 .articles {
   &--container {
     font-size: 0;
+    text-align: center;
   }
   &__header {
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     text-align: center;
     h2 {
       @include font-size(45, null, -50);
@@ -18,7 +19,7 @@
     @include col(3);
     display: inline-block;
     vertical-align: top;
-    margin: 60px;
+    margin: 50px pc(80, $base);
     text-align: center;
     &-image {
       position: relative;
