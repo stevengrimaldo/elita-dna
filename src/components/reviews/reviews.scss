@@ -4,7 +4,6 @@
 '../../../node_modules/slick-carousel/slick/slick.scss';
 
 .reviews {
-  padding: 65px 0;
   text-align: center;
   &__header {
     margin-bottom: 70px;
@@ -70,7 +69,9 @@
             width: 15px;
             border-radius: 30px;
             border: 1px solid #ff6651;
+            cursor: pointer;
           }
+          &:hover,
           &.slick-active {
             button {
               background-color: #ff6651;
@@ -99,7 +100,7 @@
     &-author {
       h6 {
         font-size: 32px;
-        @extend %OpenSansSemibold;
+        @extend %OpenSansbold;
         @include letter-spacing(-30, 32);
         margin-top: 40px;
       }

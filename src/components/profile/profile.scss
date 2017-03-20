@@ -3,7 +3,6 @@
 '../../global/defaults/typography';
 
 .profile {
-  padding: 80px 0;
   font-size: 0;
   &__img,
   &__content {
@@ -22,7 +21,7 @@
     h6 {
       font-size: 26px;
       @include letter-spacing(-30, 26);
-      @extend %OpenSansSemibold;
+      @extend %OpenSansbold;
       margin-bottom: 20px;
     }
     p {

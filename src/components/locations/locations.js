@@ -14,7 +14,7 @@ GoogleMapsLoader.load(google => {
           // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
           const mapOptions = {
             // How zoomed in you want the map to start at (always required)
-            zoom: 11,
+            zoom: 16,
 
             // The latitude and longitude to center the map (always required)
             center: results[0].geometry.location,

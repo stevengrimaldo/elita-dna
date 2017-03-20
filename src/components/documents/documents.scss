@@ -3,31 +3,40 @@
 '../../global/defaults/typography';
 
 .documents {
-  padding: 80px 0;
   h4 {
     display: block;
-    font-size: 40px;
-    @include letter-spacing(-30, 40);
-    margin-bottom: 30px;
+    font-size: 35px;
+    @include letter-spacing(-30, 35);
+    margin-bottom: 50px;
   }
   &__content {
     ul {
-      @include clearfix;
+      margin-bottom: 30px;
     }
     li {
-      font-size: 20px;
-      line-height: 32px;
-      @include letter-spacing(-30, 20);
-      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 36px;
+      @include letter-spacing(-30, 16);
+      margin-bottom: 10px;
       margin-left: 22px;
-      list-style-type: disc;
-      list-style-position: outside;
       color: #ff6651;
       width: 30%;
       margin-right: 1%;
-      float: left;
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
       span {
         color: #4e4449;
+      }
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #ff6651;
+        border-radius: 50%;
+        top: 14px;
+        left: -15px;
+        position: absolute;
       }
       &:last-child {
         margin-right: 0;
@@ -42,20 +51,20 @@
       @include span(3);
       text-align: center;
       &-title {
-        font-size: 26px;
+        font-size: 20px;
         @extend %OpenSansSemibold;
-        @include letter-spacing(-30, 26);
-        line-height: 27px;
+        @include letter-spacing(-30, 20);
+        line-height: 20px;
         h6 {
           font-family: inherit;
         }
       }
       img {
-        margin-bottom: 30px;
-        width: 80%;
+        margin-bottom: 50px;
+        width: 75%;
       }
       .cta--container {
-        margin-top: 30px;
+        margin-top: 10px;
       }
       &:last-child {
         margin-right: 0;

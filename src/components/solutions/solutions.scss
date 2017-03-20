@@ -3,7 +3,6 @@
 '../../global/defaults/typography';
 
 .solutions {
-  padding: 100px 0;
   &__header {
     width: span(8);
     margin: 0 auto;
@@ -26,7 +25,7 @@
         font-size: 26px;
         line-height: 32px;
         @include letter-spacing(-30, 26);
-        @extend %OpenSansSemibold;
+        @extend %OpenSansbold;
         margin-bottom: 20px;
         h1, h2, h3, h4, h5, h6 {
           font-family: inherit;

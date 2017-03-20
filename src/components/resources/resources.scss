@@ -3,15 +3,14 @@
 '../../global/defaults/typography';
 
 .resources {
-  padding: 100px 0;
   &__resource {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     &-content {
       &__title {
-        font-size: 26px;
-        @include letter-spacing(-20, 26);
+        font-size: 24px;
+        @include letter-spacing(-20, 24);
         color: #4e4449;
-        @extend %OpenSansSemibold;
+        @extend %OpenSansbold;
         margin-bottom: 10px;
         h1, h2, h3, h4, h5, h6 {
           font-family: inherit;
@@ -19,9 +18,9 @@
         }
       }
       &__text {
-        font-size: 20px;
-        line-height: 30px;
-        @include letter-spacing(-30, 20);
+        font-size: 16px;
+        line-height: 36px;
+        @include letter-spacing(-30, 16);
         p {
           font-size: inherit;
           line-height: inherit;

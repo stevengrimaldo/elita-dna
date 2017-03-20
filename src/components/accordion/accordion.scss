@@ -4,26 +4,26 @@
 
 .accordion {
   &__header {
-    padding: 90px 0;
+    padding: 40px 0;
     text-align: center;
     &-title {
-      font-size: 53px;
-      @include letter-spacing(-30, 53);
+      font-size: 45px;
+      @include letter-spacing(-30, 45);
     }
   }
   &--container {
     background-color: $white;
   }
   &__item {
-    padding: 60px 0;
+    padding: 40px 0;
     border-bottom: 1px solid rgba(#4e4449, .4);
     &--wrapper {
       @include container($susy);
     }
     &-title {
-      font-size: 32px;
-      line-height: 66px;
-      @include letter-spacing(-30, 32);
+      font-size: 26px;
+      line-height: 46px;
+      @include letter-spacing(-30, 26);
       position: relative;
       cursor: pointer;
       @extend %OpenSansSemibold;
@@ -55,14 +55,14 @@
     }
     &-answer {
       display: none;
-      font-size: 20px;
-      line-height: 30px;
-      @include letter-spacing(-30, 20);
+      font-size: 16px;
+      line-height: 36px;
+      @include letter-spacing(-30, 16);
       margin-top: 20px;
       p {
         font-size: inherit;
         line-height: inherit;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
       }
     }
     &--open {

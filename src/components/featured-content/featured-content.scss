@@ -3,40 +3,48 @@
 
 .featured-content {
   text-align: center;
-  padding: 80px 0;
-  color: #4e4449;
   &-title {
-    font-size: 55px;
-    line-height: 65px;
-    @include letter-spacing(-50, 55);
+    font-size: 45px;
+    line-height: 55px;
+    @include letter-spacing(-50, 45);
     margin-bottom: 20px;
   }
   &-text {
     h4 {
-      font-size: 40px;
-      @include letter-spacing(-30, 40);
+      font-size: 30px;
+      @include letter-spacing(-30, 30);
       margin-bottom: 30px;
     }
     p {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
     ul {
-      @include clearfix;
+      margin-bottom: 30px;
     }
     li {
-      font-size: 20px;
-      line-height: 32px;
-      @include letter-spacing(-30, 20);
-      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 36px;
+      @include letter-spacing(-30, 16);
+      margin-bottom: 5px;
       margin-left: 22px;
-      list-style-type: disc;
-      list-style-position: outside;
       color: #ff6651;
       width: 30%;
       margin-right: 1%;
-      float: left;
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
       span {
         color: #4e4449;
+      }
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #ff6651;
+        border-radius: 50%;
+        top: 13px;
+        left: -15px;
+        position: absolute;
       }
       &:last-child {
         margin-right: 0;
@@ -44,7 +52,7 @@
     }
   }
   .cta--container {
-    margin-top: 40px;
+    margin-top: 30px;
   }
   &--container {
     width: span(7);

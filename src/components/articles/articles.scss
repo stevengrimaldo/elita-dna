@@ -1,8 +1,8 @@
 @import '../../global/defaults/config',
-'../../global/defaults/mixins';
+'../../global/defaults/mixins',
+'../../global/defaults/typography';
 
 .articles {
-  padding: 120px 0;
   &--container {
     font-size: 0;
   }
@@ -41,19 +41,20 @@
     }
     &-content {
       .source {
-        font-size: 18px;
-        @include letter-spacing(-30, 18);
-        margin-bottom: 25px;
+        font-size: 16px;
+        @include letter-spacing(-30, 16);
+        margin-bottom: 10px;
         display: block;
       }
       h6 {
-        font-size: 26px;
+        @extend %OpenSansSemibold;
+        font-size: 24px;
         line-height: 35px;
-        @include letter-spacing(-30, 26);
+        @include letter-spacing(-30, 24);
       }
     }
     .cta--container {
-      margin-top: 25px;
+      margin-top: 5px;
     }
   }
   &__more {

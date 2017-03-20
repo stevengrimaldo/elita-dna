@@ -55,7 +55,7 @@ body {
   letter-spacing: normal;
   line-height: 1;
   @extend %OpenSans;
-  color: #4e4449;
+  color: $text-color;
 }
 h1, h2, h3, h4, h5, h6 {
   -moz-osx-font-smoothing: grayscale;
@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   @extend %MuseoSlab;
 }
 a {
-  color: #ff6651;
+  color: $link-color;
   @extend %OpenSansbold;
   text-decoration: none;
   &:hover {
@@ -84,9 +84,9 @@ strike, s {
   text-decoration: line-through;
 }
 .cta, p, li {
-  font-size: 23px;
-  line-height: 36px;
-  @include letter-spacing(-30, 23);
+  font-size: 18px;
+  line-height: 38px;
+  @include letter-spacing(-30, 18);
 }
 ul, ol, li {
   list-style: none;

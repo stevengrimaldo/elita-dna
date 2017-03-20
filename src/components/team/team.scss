@@ -3,24 +3,23 @@
 '../../global/defaults/typography';
 
 .team {
-  padding: 150px 0;
   &__filters {
     @include span(2);
     &-label {
-      font-size: 20px;
-      @include letter-spacing(-30, 20);
+      font-size: 14px;
+      @include letter-spacing(-30, 14);
       @extend %OpenSans;
       margin-bottom: 15px;
       display: block;
     }
     &__filter {
-      border-top: 1px solid #4e4449;
+      border-top: 1px solid rgba(#4e4449, .3);
       &-location {
         @extend %OpenSansbold;
-        font-size: 20px;
+        font-size: 16px;
         text-transform: uppercase;
-        @include letter-spacing(-30, 20);
-        padding: 25px 0;
+        @include letter-spacing(-30, 16);
+        padding: 15px 0;
         position: relative;
         cursor: pointer;
         h4 {
@@ -38,14 +37,14 @@
           transform: translateY(-50%);
         }
         &::before {
-          width: 30px;
+          width: 16px;
           height: 2px;
           top: 50%;
         }
         &::after {
-          height: 30px;
+          height: 16px;
           width: 2px;
-          right: 15px;
+          right: 7px;
           transition: height 400ms;
         }
       }
@@ -54,14 +53,14 @@
         padding-bottom: 25px;
         &-department {
           margin-bottom: 15px;
-          font-size: 16px;
-          @include letter-spacing(-30, 20);
+          font-size: 14px;
+          @include letter-spacing(-30, 14);
           @extend %OpenSans;
           span {
             text-decoration: underline;
           }
           &--active {
-            @extend %OpenSansbold;
+            @extend %OpenSansSemibold;
             color: #ff6651;
             span {
               text-decoration: none;
@@ -73,7 +72,7 @@
         }
       }
       &:last-child {
-        border-bottom: 1px solid #4e4449;
+        border-bottom: 1px solid rgba(#4e4449, .3);
       }
       &--open {
         .team__filters__filter-location {
@@ -88,6 +87,7 @@
     font-size: 0;
     text-align: center;
     @include span(9 last);
+    margin-top: -45px;
     &__member {
       width: span(2);
       display: inline-block;
@@ -111,11 +111,11 @@
         }
       }
       &-name {
-        font-size: 20px;
-        line-height: 27px;
+        font-size: 16px;
+        line-height: 36px;
         margin-top: 20px;
-        @include letter-spacing(-30, 20);
-        @extend %OpenSansSemibold;
+        @include letter-spacing(-30, 16);
+        @extend %OpenSansbold;
         h5 {
           font-family: inherit;
           font-weight: inherit;

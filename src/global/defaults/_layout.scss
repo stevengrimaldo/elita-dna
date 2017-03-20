@@ -10,6 +10,13 @@ body {
 }
 .section {
   position: relative;
+  padding: $module-padding 0;
+  &.accordion,
+  &.footer,
+  &.hero,
+  &.tools {
+    padding: 0;
+  }
   &--white {
     background-color: $white;
     border-color: $white;
@@ -34,6 +41,7 @@ body {
     }
     &--top-left {
       margin-top: 120px;
+      padding-top: $half-module-padding;
       &::before {
         content: '';
         border-bottom-width: 120px;
@@ -45,6 +53,7 @@ body {
     }
     &--top-right {
       margin-top: 120px;
+      padding-top: $half-module-padding;
       &::before {
         content: '';
         border-bottom-width: 120px;
@@ -56,6 +65,7 @@ body {
     }
     &--bottom-left {
       margin-bottom: 120px;
+      padding-bottom: $half-module-padding;
       &::after {
         content: '';
         border-top-width: 120px;
@@ -67,6 +77,7 @@ body {
     }
     &--bottom-right {
       margin-bottom: 120px;
+      padding-bottom: $half-module-padding;
       &::after {
         content: '';
         border-top-width: 120px;

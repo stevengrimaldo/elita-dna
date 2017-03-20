@@ -11,23 +11,13 @@ $white: #fff;
 $black: #000;
 
 // Colors
-$woodsmoke: #141519;
-$cerulean: #03a9f4;
-$fun-blue: #2160ae;
-$mine-shaft: #363333;
-$tundora: #413f3f;
-$dusty-gray: #999;
-$mine-shaft: #3c3c3c;
+$emperor: #4e4449;
+$persimmon: #ff6651;
+$cinnabar: #e8523d;
 
-// Social Colors
-$twitter-blue: #1da1f2;
-$facebook-blue: #3b5998;
-$youtube-red: #e62117;
-$linkedin-blue: #4075b4;
-
-$text-color: $black;
-$link-color: $cerulean;
-$link-color-hover: $fun-blue;
+$text-color: $emperor;
+$link-color: $persimmon;
+$link-color-hover: $cinnabar;
 
 $base-font-size: 16px;
 $base-font-weight: 400;
@@ -44,6 +34,7 @@ $primary-font-family: $open-sans;
 $secondary-font-family: $museo-slab;
 $fallback: Helvetica, Arial, sans-serif;
 
+$context: 1800px;
 $desktop: 1440px;
 $laptop: 1024;
 $tablet: 768;

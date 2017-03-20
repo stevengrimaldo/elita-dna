@@ -2,22 +2,21 @@
 '../../global/defaults/mixins';
 
 .split-content {
-  padding: 50px 0;
   &__content {
     width: span(5);
     float: left;
     h4 {
-      font-size: 40px;
-      @include letter-spacing(-30, 40);
-      margin-bottom: 30px;
+      font-size: 35px;
+      @include letter-spacing(-30, 35);
+      margin-bottom: 50px;
     }
     p, li {
-      font-size: 20px;
-      line-height: 32px;
-      @include letter-spacing(-30, 20);
+      font-size: 16px;
+      line-height: 36px;
+      @include letter-spacing(-30, 16);
     }
     li {
-      margin-bottom: 30px;
+      margin-bottom: 5px;
       margin-left: 22px;
       list-style-type: disc;
       list-style-position: outside;
