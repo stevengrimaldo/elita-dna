@@ -6,19 +6,17 @@
   &__filters {
     @include span(2);
     &-label {
-      font-size: 14px;
-      @include letter-spacing(-30, 14);
+      @include font-size(14, initial);
       @extend %OpenSans;
       margin-bottom: 15px;
       display: block;
     }
     &__filter {
-      border-top: 1px solid rgba(#4e4449, .3);
+      border-top: 1px solid rgba($emperor, .3);
       &-location {
         @extend %OpenSansbold;
-        font-size: 16px;
+        @include font-size(16, initial);
         text-transform: uppercase;
-        @include letter-spacing(-30, 16);
         padding: 15px 0;
         position: relative;
         cursor: pointer;
@@ -32,7 +30,7 @@
           border-radius: 100px;
           position: absolute;
           right: 0;
-          background-color: #ff6651;
+          background-color: $persimmon;
           top: 50%;
           transform: translateY(-50%);
         }
@@ -53,15 +51,14 @@
         padding-bottom: 25px;
         &-department {
           margin-bottom: 15px;
-          font-size: 14px;
-          @include letter-spacing(-30, 14);
+          @include font-size(14, initial);
           @extend %OpenSans;
           span {
             text-decoration: underline;
           }
           &--active {
             @extend %OpenSansSemibold;
-            color: #ff6651;
+            color: $persimmon;
             span {
               text-decoration: none;
             }
@@ -72,7 +69,7 @@
         }
       }
       &:last-child {
-        border-bottom: 1px solid rgba(#4e4449, .3);
+        border-bottom: 1px solid rgba($emperor, .3);
       }
       &--open {
         .team__filters__filter-location {
@@ -111,10 +108,8 @@
         }
       }
       &-name {
-        font-size: 16px;
-        line-height: 36px;
+        @include font-size(16);
         margin-top: 20px;
-        @include letter-spacing(-30, 16);
         @extend %OpenSansbold;
         h5 {
           font-family: inherit;

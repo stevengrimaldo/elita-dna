@@ -13,20 +13,17 @@
     width: span(9) + gutter() + gutter();
     margin: 0 auto;
     &-sub-title {
-      font-size: 24px;
-      @include letter-spacing(-30, 24);
-      color: #6f686b;
+      @include font-size(24);
+      color: $emperor;
     }
     &-title {
-      font-size: 65px;
-      line-height: 60px;
-      @include letter-spacing(-50, 65);
-      color: #4e4449;
+      @include font-size(65, initial, -50);
+      color: $emperor;
       margin-bottom: 20px;
     }
     &-text {
       h4 {
-        font-size: 40px;
+        @include font-size(40, initial);
         margin-bottom: 20px;
       }
       p {

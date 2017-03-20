@@ -8,8 +8,7 @@
   &__header {
     margin-bottom: 70px;
     &-title {
-      font-size: 53px;
-      @include letter-spacing(-30, 53);
+      @include font-size(53, initial);
     }
   }
   &--container {
@@ -29,7 +28,7 @@
           content: '';
           width: 2px;
           height: 30px;
-          background-color: #ff6651;
+          background-color: $persimmon;
           position: absolute;
           border-radius: 100px;
         }
@@ -68,13 +67,13 @@
             height: 15px;
             width: 15px;
             border-radius: 30px;
-            border: 1px solid #ff6651;
+            border: 1px solid $persimmon;
             cursor: pointer;
           }
           &:hover,
           &.slick-active {
             button {
-              background-color: #ff6651;
+              background-color: $persimmon;
             }
           }
         }
@@ -85,9 +84,7 @@
     &-text {
       width: span(8);
       margin: 0 auto;
-      font-size: 32px;
-      line-height: 55px;
-      @include letter-spacing(-30, 32);
+      @include font-size(32);
       @extend %MuseoSlab;
       quotes: '“' '”' '‘' '’';
       &::before {
@@ -99,14 +96,12 @@
     }
     &-author {
       h6 {
-        font-size: 32px;
+        @include font-size(32, initial);
         @extend %OpenSansbold;
-        @include letter-spacing(-30, 32);
         margin-top: 40px;
       }
       time {
-        font-size: 20px;
-        @include letter-spacing(-30, 20);
+        @include font-size(20, initial);
         @extend %OpenSans;
         margin-top: 15px;
       }

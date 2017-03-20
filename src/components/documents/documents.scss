@@ -5,34 +5,33 @@
 .documents {
   h4 {
     display: block;
-    font-size: 35px;
-    @include letter-spacing(-30, 35);
+    @include font-size(35);
     margin-bottom: 50px;
   }
   &__content {
     ul {
       margin-bottom: 30px;
     }
+    p, li {
+      @include font-size(16);
+    }
     li {
-      font-size: 16px;
-      line-height: 36px;
-      @include letter-spacing(-30, 16);
       margin-bottom: 10px;
       margin-left: 22px;
-      color: #ff6651;
+      color: $persimmon;
       width: 30%;
       margin-right: 1%;
       display: inline-block;
       position: relative;
       vertical-align: top;
       span {
-        color: #4e4449;
+        color: $emperor;
       }
       &::before {
         content: '';
         width: 8px;
         height: 8px;
-        background-color: #ff6651;
+        background-color: $persimmon;
         border-radius: 50%;
         top: 14px;
         left: -15px;
@@ -51,12 +50,11 @@
       @include span(3);
       text-align: center;
       &-title {
-        font-size: 20px;
+        @include font-size(20, initial);
         @extend %OpenSansSemibold;
-        @include letter-spacing(-30, 20);
-        line-height: 20px;
         h6 {
           font-family: inherit;
+          font-weight: inherit;
         }
       }
       img {

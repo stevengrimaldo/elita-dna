@@ -6,23 +6,32 @@
     width: span(5);
     float: left;
     h4 {
-      font-size: 35px;
-      @include letter-spacing(-30, 35);
+      @include font-size(35, initial);
       margin-bottom: 50px;
     }
     p, li {
-      font-size: 16px;
-      line-height: 36px;
-      @include letter-spacing(-30, 16);
+      @include font-size(16);
     }
     li {
       margin-bottom: 5px;
       margin-left: 22px;
-      list-style-type: disc;
-      list-style-position: outside;
-      color: #ff6651;
+      color: $persimmon;
+      position: relative;
       span {
-        color: #4e4449;
+        color: $emperor;
+      }
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: $persimmon;
+        border-radius: 50%;
+        top: 9px;
+        left: -15px;
+        position: absolute;
+      }
+      &:last-child {
+        margin-right: 0;
       }
     }
   }

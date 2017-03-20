@@ -1,12 +1,12 @@
-@import '../../global/defaults/mixins';
+@import '../../global/defaults/config',
+'../../global/defaults/mixins';
 
 .footer {
-  background-color: #94607e;
+  background-color: $strikemaster;
   padding: 20px 0 18px;
   text-align: center;
-  color: #fff;
+  color: $white;
   p {
-    font-size: 14px;
-    @include letter-spacing(-30, 14);
+    @include font-size(14, initial);
   }
 }

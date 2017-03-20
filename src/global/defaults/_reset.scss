@@ -29,7 +29,6 @@ blockquote, q {
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
   content: none;
 }
 table {
@@ -84,9 +83,7 @@ strike, s {
   text-decoration: line-through;
 }
 .cta, p, li {
-  font-size: 18px;
-  line-height: 38px;
-  @include letter-spacing(-30, 18);
+  @include font-size(18);
 }
 ul, ol, li {
   list-style: none;

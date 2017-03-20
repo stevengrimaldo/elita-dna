@@ -7,8 +7,7 @@
     padding: 40px 0;
     text-align: center;
     &-title {
-      font-size: 45px;
-      @include letter-spacing(-30, 45);
+      @include font-size(45, initial);
     }
   }
   &--container {
@@ -16,18 +15,16 @@
   }
   &__item {
     padding: 40px 0;
-    border-bottom: 1px solid rgba(#4e4449, .4);
+    border-bottom: 1px solid rgba($emperor, .4);
     &--wrapper {
       @include container($susy);
     }
     &-title {
-      font-size: 26px;
-      line-height: 46px;
-      @include letter-spacing(-30, 26);
+      @include font-size(26, initial);
       position: relative;
       cursor: pointer;
       @extend %OpenSansSemibold;
-      h1, h2, h3, h4, h5, h6 {
+      h6 {
         font-family: inherit;
         font-weight: inherit;
       }
@@ -37,7 +34,7 @@
         border-radius: 100px;
         position: absolute;
         right: 0;
-        background-color: #ff6651;
+        background-color: $persimmon;
         top: 50%;
         transform: translateY(-50%);
       }
@@ -55,13 +52,9 @@
     }
     &-answer {
       display: none;
-      font-size: 16px;
-      line-height: 36px;
-      @include letter-spacing(-30, 16);
       margin-top: 20px;
       p {
-        font-size: inherit;
-        line-height: inherit;
+        @include font-size(16);
         margin-bottom: 15px;
       }
     }

@@ -9,9 +9,7 @@
     text-align: center;
     margin-bottom: 100px;
     &-title {
-      font-size: 53px;
-      line-height: 88px;
-      @include letter-spacing(-30, 53);
+      @include font-size(45);
       margin-bottom: 30px;
     }
   }
@@ -22,23 +20,17 @@
       text-align: center;
       padding: 0 10px;
       &__title {
-        font-size: 26px;
-        line-height: 32px;
-        @include letter-spacing(-30, 26);
-        @extend %OpenSansbold;
+        @include font-size(24);
+        @extend %OpenSansSemibold;
         margin-bottom: 20px;
-        h1, h2, h3, h4, h5, h6 {
+        h6 {
           font-family: inherit;
           font-weight: inherit;
         }
       }
       &__text {
-        font-size: 20px;
-        line-height: 30px;
-        @include letter-spacing(-30, 20);
         p {
-          font-size: inherit;
-          line-height: inherit;
+          @include font-size(20);
         }
       }
       &:last-child {

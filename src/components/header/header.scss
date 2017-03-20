@@ -3,7 +3,7 @@
 '../../global/defaults/typography';
 
 .header {
-  background-color: #fff;
+  background-color: $white;
   position: relative;
   z-index: 10;
   padding: 25px 0;
@@ -28,11 +28,9 @@
       li {
         display: inline-block;
         vertical-align: top;
-        font-size: 13px;
-        line-height: 13px;
-        @include letter-spacing(-10, 13);
+        @include font-size(13, initial, -10);
         @extend %OpenSansSemibold;
-        color: #4e4449;
+        color: $emperor;
         &::after {
           content: '•';
           color: inherit;
@@ -51,13 +49,11 @@
       li {
         display: inline-block;
         vertical-align: top;
-        font-size: 15px;
-        line-height: 15px;
-        @include letter-spacing(-10, 15);
+        @include font-size(15, initial, -10);
         margin-left: 60px;
         @extend %OpenSansSemibold;
         a {
-          color: #4e4449;
+          color: $emperor;
         }
       }
     }

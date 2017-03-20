@@ -4,15 +4,12 @@
 .featured-content {
   text-align: center;
   &-title {
-    font-size: 45px;
-    line-height: 55px;
-    @include letter-spacing(-50, 45);
+    @include font-size(45, null, -50);
     margin-bottom: 20px;
   }
   &-text {
     h4 {
-      font-size: 30px;
-      @include letter-spacing(-30, 30);
+      @include font-size(30, initial);
       margin-bottom: 30px;
     }
     p {
@@ -21,26 +18,26 @@
     ul {
       margin-bottom: 30px;
     }
+    p, li {
+      @include font-size(16);
+    }
     li {
-      font-size: 16px;
-      line-height: 36px;
-      @include letter-spacing(-30, 16);
       margin-bottom: 5px;
       margin-left: 22px;
-      color: #ff6651;
+      color: $persimmon;
       width: 30%;
       margin-right: 1%;
       display: inline-block;
       position: relative;
       vertical-align: top;
       span {
-        color: #4e4449;
+        color: $emperor;
       }
       &::before {
         content: '';
         width: 8px;
         height: 8px;
-        background-color: #ff6651;
+        background-color: $persimmon;
         border-radius: 50%;
         top: 13px;
         left: -15px;
@@ -60,14 +57,6 @@
   }
   &.section--left-align {
     text-align: left;
-    .featured-content--container {
-      margin-left: span(2);
-    }
-  }
-  &.section--orange {
-    color: $white;
-  }
-  &.section--left-align {
     .featured-content--container {
       width: 100%;
       margin: 0;

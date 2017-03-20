@@ -10,15 +10,12 @@
       cursor: pointer;
       width: span(4);
       h4 {
-        font-size: 20px;
-        @include letter-spacing(-30, 20);
+        @include font-size(20, initial);
         text-transform: uppercase;
         @extend %OpenSansSemibold;
       }
       p {
-        font-size: 16px;
-        line-height: 34px;
-        @include letter-spacing(-30, 16);
+        @include font-size(16);
       }
       &:last-child {
         margin-bottom: 0;

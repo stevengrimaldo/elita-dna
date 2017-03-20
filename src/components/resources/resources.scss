@@ -7,9 +7,8 @@
     margin-bottom: 40px;
     &-content {
       &__title {
-        font-size: 24px;
-        @include letter-spacing(-20, 24);
-        color: #4e4449;
+        @include font-size(24, initial);
+        color: $emperor;
         @extend %OpenSansbold;
         margin-bottom: 10px;
         h1, h2, h3, h4, h5, h6 {
@@ -18,12 +17,8 @@
         }
       }
       &__text {
-        font-size: 16px;
-        line-height: 36px;
-        @include letter-spacing(-30, 16);
         p {
-          font-size: inherit;
-          line-height: inherit;
+          @include font-size(16);
         }
       }
       .cta--container {
