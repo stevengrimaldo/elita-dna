@@ -1,5 +1,6 @@
 @import '../../global/defaults/config',
 '../../global/defaults/mixins',
+'../../global/defaults/grid',
 '../../global/defaults/typography',
 '../../../node_modules/slick-carousel/slick/slick.scss';
 
@@ -82,7 +83,7 @@
   }
   &__review {
     &-text {
-      width: span(8);
+      @include col(8);
       margin: 0 auto;
       @include font-size(32);
       @extend %MuseoSlab;

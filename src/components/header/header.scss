@@ -1,5 +1,7 @@
 @import '../../global/defaults/config',
+'../../global/defaults/functions',
 '../../global/defaults/mixins',
+'../../global/defaults/grid',
 '../../global/defaults/typography';
 
 .header {
@@ -11,7 +13,8 @@
     @include clearfix;
   }
   &__logo {
-    @include span(3);
+    float: left;
+    @include col(3);
     img {
       width: auto;
       max-height: 75px;
@@ -20,7 +23,7 @@
   }
   &__nav {
     float: right;
-    width: auto;
+    @include col(9);
     text-align: right;
     &-utility {
       font-size: 0;
@@ -50,7 +53,7 @@
         display: inline-block;
         vertical-align: top;
         @include font-size(15, initial, -10);
-        margin-left: 60px;
+        margin-left: 55px;
         @extend %OpenSansSemibold;
         a {
           color: $emperor;

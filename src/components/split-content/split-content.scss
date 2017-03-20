@@ -1,9 +1,10 @@
 @import '../../global/defaults/config',
-'../../global/defaults/mixins';
+'../../global/defaults/mixins',
+'../../global/defaults/grid';
 
 .split-content {
   &__content {
-    width: span(5);
+    @include col(5);
     float: left;
     h4 {
       @include font-size(35, initial);
@@ -13,7 +14,7 @@
       @include font-size(16);
     }
     li {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       margin-left: 22px;
       color: $persimmon;
       position: relative;

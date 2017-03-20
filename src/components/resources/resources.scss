@@ -1,5 +1,6 @@
 @import '../../global/defaults/config',
 '../../global/defaults/mixins',
+'../../global/defaults/grid',
 '../../global/defaults/typography';
 
 .resources {
@@ -25,8 +26,5 @@
         margin-top: 15px;
       }
     }
-  }
-  &--container {
-    margin-left: span(1);
   }
 }

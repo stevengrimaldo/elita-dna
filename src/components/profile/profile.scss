@@ -1,5 +1,6 @@
 @import '../../global/defaults/config',
 '../../global/defaults/mixins',
+'../../global/defaults/grid',
 '../../global/defaults/typography';
 
 .profile {
@@ -17,7 +18,7 @@
     margin-right: 50px;
   }
   &__content {
-    width: span(8) + gutter() + gutter();
+    @include col(8);
     h6 {
       @include font-size(26);
       @extend %OpenSansbold;

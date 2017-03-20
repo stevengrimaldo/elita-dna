@@ -1,5 +1,6 @@
 @import '../../global/defaults/config',
 '../../global/defaults/mixins',
+'../../global/defaults/grid',
 '../../global/defaults/typography';
 
 .articles {
@@ -14,7 +15,7 @@
     }
   }
   &__article {
-    width: span(3);
+    @include col(3);
     display: inline-block;
     vertical-align: top;
     margin: 60px;

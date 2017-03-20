@@ -1,10 +1,12 @@
 @import '../../global/defaults/config',
 '../../global/defaults/mixins',
+'../../global/defaults/grid',
 '../../global/defaults/typography';
 
 .team {
   &__filters {
-    @include span(2);
+    float: left;
+    @include col(2);
     &-label {
       @include font-size(14, initial);
       @extend %OpenSans;
@@ -83,10 +85,11 @@
   &__members {
     font-size: 0;
     text-align: center;
-    @include span(9 last);
+    float: left;
+    @include col(9);
     margin-top: -45px;
     &__member {
-      width: span(2);
+      @include col(2);
       display: inline-block;
       vertical-align: top;
       margin: 45px;

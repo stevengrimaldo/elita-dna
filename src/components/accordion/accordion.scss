@@ -16,9 +16,6 @@
   &__item {
     padding: 40px 0;
     border-bottom: 1px solid rgba($emperor, .4);
-    &--wrapper {
-      @include container($susy);
-    }
     &-title {
       @include font-size(26, initial);
       position: relative;

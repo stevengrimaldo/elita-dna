@@ -1,5 +1,6 @@
 @import '../../global/defaults/config',
-'../../global/defaults/mixins';
+'../../global/defaults/mixins',
+'../../global/defaults/grid';
 
 .hero {
   min-height: 600px;
@@ -10,7 +11,7 @@
   overflow: hidden;
   &__content {
     text-align: center;
-    width: span(9) + gutter() + gutter();
+    @include col(8);
     margin: 0 auto;
     &-sub-title {
       @include font-size(24);

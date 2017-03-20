@@ -1,5 +1,6 @@
 @import '../../global/defaults/config',
 '../../global/defaults/mixins',
+'../../global/defaults/grid',
 '../../global/defaults/typography';
 
 .documents {
@@ -47,7 +48,8 @@
     margin-top: 100px;
     @include clearfix;
     &__item {
-      @include span(3);
+      float: left;
+      @include col(3);
       text-align: center;
       &-title {
         @include font-size(20, initial);

@@ -3,16 +3,32 @@ body {
   background-position: center center;
 }
 .section-wrapper,
-.header-wrapper {
-  @include container($susy);
-  max-width: 1400.5px;
+.header-wrapper,
+.footer-wrapper,
+.accordion__item--wrapper {
   width: 100%;
+  margin: 0 auto;
+  @include clearfix;
+  @include mq($min, $laptop + 1) {
+    max-width: 1800px;
+    padding: 0 100px;
+  }
+  @include mq('', $tablet, $laptop) {
+    max-width: 1700px;
+    padding: 0 50px;
+  }
+  @include mq($max, $tablet - 1) {
+    max-width: 1650px;
+    padding: 0 25px;
+  }
 }
 .section {
+  width: 100%;
   position: relative;
   padding: $module-padding 0;
   &.accordion,
   &.footer,
+  &.header,
   &.hero,
   &.tools {
     padding: 0;

@@ -1,10 +1,11 @@
 @import '../../global/defaults/config',
 '../../global/defaults/mixins',
+'../../global/defaults/grid',
 '../../global/defaults/typography';
 
 .solutions {
   &__header {
-    width: span(8);
+    @include col(8);
     margin: 0 auto;
     text-align: center;
     margin-bottom: 100px;
@@ -16,7 +17,8 @@
   &__list {
     @include clearfix;
     &-item {
-      @include span(3);
+      float: left;
+      @include col(3);
       text-align: center;
       padding: 0 10px;
       &__title {
