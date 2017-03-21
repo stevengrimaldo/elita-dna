@@ -6,13 +6,21 @@
 .resources {
   &__resource {
     margin-bottom: 40px;
+    font-size: 0;
+    .icon--container {
+      margin-right: 5%;
+      width: 5%;
+    }
     &-content {
+      width: 90%;
+      display: inline-block;
+      vertical-align: top;
       &__title {
-        @include font-size(24, initial);
+        @include font-size(22, initial);
         color: $emperor;
-        @extend %OpenSansbold;
-        margin-bottom: 10px;
-        h1, h2, h3, h4, h5, h6 {
+        @extend %OpenSansSemibold;
+        margin-bottom: 5px;
+        h4 {
           font-family: inherit;
           font-weight: inherit;
         }

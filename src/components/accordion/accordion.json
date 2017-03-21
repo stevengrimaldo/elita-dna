@@ -16,7 +16,7 @@
     }]
   },
   "conditions": {
-    "classes": ["conditions"],
+    "classes": ["conditions", "orange", "slant", "slant--top-right"],
     "header": {
       "title": "Conditions We Specialize in:"
     },

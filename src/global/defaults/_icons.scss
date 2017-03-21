@@ -1,0 +1,120 @@
+// uses png fallback if svg not supported*
+// *support is checked by detecting if multiple background images are supported
+@mixin background-icon($name, $svg: true) {
+  $fallback-extension: 'png' !default;
+  background-image: url("#{$image-path}/#{$name}.#{$fallback-extension}");
+  @if $svg == true {
+    background-image: url("#{$svg-path}/#{$name}.svg"), none;
+  }
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @content;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  &--container {
+    display: inline-block;
+    vertical-align: top;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+
+// @key = class name
+// @value = svg file name
+$icons: (
+  'puzzle': 'aba-puzzle',
+  'apple': 'apple',
+  'brain': 'brain',
+  'clipboard': 'counseling-psychiatry',
+  'download': 'download-arrow',
+  'chat-bubble': 'featured-reviews-chat',
+  'cap': 'graduation-cap',
+  'shield-heart': 'shield-heart',
+  'bag': 'medical-bag',
+  'blocks': 'occupational-therapy-blocks',
+  'toy': 'occupational-therapy-toy',
+  'hands': 'one-on-one-sessions',
+  'parents': 'parent-training-sessions',
+  'pdf': 'pdf',
+  'peers': 'peer-group-sessions',
+  'school': 'school-community-sessions',
+  'shield-person': 'shield-person',
+  'abc-bubble': 'speech-language'
+);
+
+// use placeholders where icons are needed in scss
+// sizes are defined as per comp, images are @2x for retina ready support
+%puzzle-icon {
+  @include background-icon('aba-puzzle');
+}
+%apple-icon {
+  @include background-icon('apple');
+}
+%brain-icon {
+  @include background-icon('brain');
+}
+%clipboard-icon {
+  @include background-icon('counseling-psychiatry');
+}
+%download-icon {
+  @include background-icon('download-arrow');
+}
+%chat-bubble-icon {
+  @include background-icon('featured-reviews-chat');
+}
+%cap-icon {
+  @include background-icon('graduation-cap');
+}
+%shield-heart-icon {
+  @include background-icon('shield-heart');
+}
+%bag-icon {
+  @include background-icon('medical-bag');
+}
+%blocks-icon {
+  @include background-icon('occupational-therapy-blocks');
+}
+%toy-icon {
+  @include background-icon('occupational-therapy-toy');
+}
+%hands-icon {
+  @include background-icon('one-on-one-sessions');
+}
+%parents-icon {
+  @include background-icon('parent-training-sessions');
+}
+%pdf-icon {
+  @include background-icon('pdf');
+}
+%peers-icon {
+  @include background-icon('peer-group-sessions');
+}
+%school-icon {
+  @include background-icon('school-community-sessions');
+}
+%shield-person-icon {
+  @include background-icon('shield-person');
+}
+%abc-bubble-icon {
+  @include background-icon('speech-language');
+}
+// @icon = @key
+// @name = @value
+// uses the placeholders above so it can also add the correct bg size for the @2x fallback image
+@each $icon, $name in $icons {
+  $name: map-get($icons, $icon);
+  .icon--#{$icon} {
+    @extend %#{$icon}-icon;
+  }
+}
+
+// extend patch for media queries.
+@mixin icon($name) {
+  @extend %#{$name};
+}

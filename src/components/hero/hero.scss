@@ -48,7 +48,7 @@
   }
   &.section--slant {
     &--bottom-right {
-      padding-bottom: 120px;
+      padding-bottom: 80px;
       margin-bottom: 0;
       transform: skewY(4.75deg);
       transform-origin: right top;
@@ -61,7 +61,7 @@
       }
     }
     &--bottom-left {
-      padding-bottom: 120px;
+      padding-bottom: 80px;
       margin-bottom: 0;
       transform: skewY(-4.75deg);
       transform-origin: left top;

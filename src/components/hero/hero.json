@@ -78,8 +78,8 @@
     },
     "img": "occupational-therapy.jpg"
   },
-  "speech-language": {
-    "classes": ["slant", "slant--bottom-right"],
+  "speech-therapy": {
+    "classes": ["slant", "slant--bottom-left"],
     "copy": {
       "sub-title": "",
       "title": "Speech & Language",
@@ -94,6 +94,6 @@
         "url": "#"
       }]
     },
-    "img": "speech-language-hero.jpg"
+    "img": "speech-therapy-hero.jpg"
   }
 }

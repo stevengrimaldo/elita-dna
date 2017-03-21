@@ -12,12 +12,13 @@
   }
   &--container {
     background-color: $white;
+    color: $emperor;
   }
   &__item {
     padding: 40px 0;
     border-bottom: 1px solid rgba($emperor, .4);
     &-title {
-      @include font-size(26, initial);
+      @include font-size(22, initial);
       position: relative;
       cursor: pointer;
       @extend %OpenSansSemibold;

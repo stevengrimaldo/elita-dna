@@ -30,7 +30,7 @@
       "text": "<p>Our team of professional therapists are here to help.Come learn and build confidence knowing your child is in the right hands.</p>"
     },
     "solution": [{
-      "icon": "grad-cap",
+      "icon": "cap",
       "title": "Founded & Managed by Therapists",
       "text": "<p>We were founded by professionals and want to provide the best results for our patients.</p>"
     }, {
@@ -38,11 +38,11 @@
       "title": "We Maximize Each & Every Patient",
       "text": "<p>Meeting our patients therapeutically where they are, and getting them where they need to be.</p>"
     }, {
-      "icon": "med-kit",
+      "icon": "bag",
       "title": "Only Therapists Treat Patients",
       "text": "<p>Our patients can be confident they are in the trusted hands of a professional.</p>"
     }, {
-      "icon": "brain-storm",
+      "icon": "brain",
       "title": "Our Comprehensive Team Approach",
       "text": "<p>No matter what specialty our patient is being seen, they always have access to the entire Elite DNA team.</p>"
     }]
@@ -54,15 +54,15 @@
       "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi.</p>"
     },
     "solution": [{
-      "icon": "heart-hands",
+      "icon": "hands",
       "title": "1:1 Sessions",
       "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi.</p>"
     }, {
-      "icon": "family",
+      "icon": "parents",
       "title": "Parent Training Sessions",
       "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi.</p>"
     }, {
-      "icon": "peer",
+      "icon": "peers",
       "title": "Peer/Group Sessions",
       "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi.</p>"
     }, {

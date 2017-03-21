@@ -41,17 +41,17 @@
     }
     &-content {
       .source {
-        @include font-size(16);
+        @include font-size(16, initial);
         margin-bottom: 10px;
         display: block;
       }
       h6 {
         @extend %OpenSansSemibold;
-        @include font-size(24);
+        @include font-size(20);
       }
     }
     .cta--container {
-      margin-top: 5px;
+      margin-top: 10px;
     }
   }
   &__more {

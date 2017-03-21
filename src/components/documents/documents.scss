@@ -18,11 +18,10 @@
       @include font-size(16);
     }
     li {
-      margin-bottom: 10px;
-      margin-left: 22px;
+      margin-bottom: 25px;
+      margin: 0 1.6666666667%;
       color: $persimmon;
       width: 30%;
-      margin-right: 1%;
       display: inline-block;
       position: relative;
       vertical-align: top;
@@ -69,6 +68,9 @@
       }
       .cta--container {
         margin-top: 10px;
+      }
+      &:first-child {
+        margin-left: 0;
       }
       &:last-child {
         margin-right: 0;
