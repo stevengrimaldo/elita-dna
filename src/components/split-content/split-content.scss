@@ -49,4 +49,25 @@
     background-size: auto 100%;
     background-position: right center;
   }
+  @include mq($max, $laptop) {
+    &__content {
+      @include col(9);
+    }
+  }
+  @include mq($max, $tablet) {
+    &__content {
+      max-width: none;
+      width: 100%;
+      h4 {
+        @include font-size(30, initial);
+        margin-bottom: 25px;
+      }
+      p, li {
+        @include font-size(14);
+      }
+    }
+    &__img {
+      height: calc(100% + 120px);
+    }
+  }
 }

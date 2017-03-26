@@ -160,7 +160,7 @@ gulp.task('images', () => {
 
 gulp.task('html', () => {
   // Find layouts and partials
-  app.layouts('./src/global/default.hbs');
+  app.layouts('./src/global/**/*.hbs');
   app.partials('./src/components/**/*.hbs');
 
   // Add data
@@ -169,6 +169,9 @@ gulp.task('html', () => {
 
   // Add classic helpers
   app.helpers(handlebarsHelpers(), app.helpers);
+
+  // Add options
+  app.option('layout', 'layout.hbs');
 
   // Build templates
   return app.src('./src/pages/*.hbs')
@@ -190,7 +193,7 @@ gulp.task('watchTask', () => {
   gulp.watch('./src/**/**/*.scss', ['styles']);
   gulp.watch(paths.srcLint, ['lint']);
   gulp.watch('./src/**/**/*.hbs', ['html']);
-  gulp.watch('./src/components/**/*.json', ['html']);
+  gulp.watch('./src/components/**/*.{json,yml}', ['html']);
 });
 
 gulp.task('watch', cb => {

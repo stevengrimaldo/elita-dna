@@ -18,7 +18,7 @@
       color: $emperor;
     }
     &-title {
-      @include font-size(65, initial, -50);
+      @include font-size(65, null, -50);
       color: $emperor;
       margin-bottom: 20px;
     }
@@ -78,6 +78,52 @@
     + .section--tan {
       &.section--slant {
         margin-top: 0;
+      }
+    }
+  }
+  @include mq($max, $laptop) {
+    min-height: 500px;
+    &__content {
+      width: 100%;
+      max-width: none;
+    }
+  }
+  @include mq($max, $tablet) {
+    min-height: 400px;
+    &__content {
+      &-sub-title {
+        @include font-size(18);
+      }
+      &-title {
+        @include font-size(55, null, -50);
+        margin-bottom: 10px;
+      }
+      &-text {
+        h4 {
+          @include font-size(30, initial);
+          margin-bottom: 10px;
+        }
+      }
+      .cta--container {
+        margin-top: 20px;
+      }
+    }
+  }
+  @include mq($max, $mobile) {
+    &__content {
+      &-sub-title {
+        @include font-size(16);
+      }
+      &-title {
+        @include font-size(45, null, -50);
+      }
+      &-text {
+        p {
+          @include font-size(14, initial);
+        }
+      }
+      .cta--container {
+        margin-top: 15px;
       }
     }
   }

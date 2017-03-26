@@ -9,4 +9,9 @@
   p {
     @include font-size(14, initial);
   }
+  @include mq($max, $mobile) {
+    p {
+      @include font-size(12, initial);
+    }
+  }
 }

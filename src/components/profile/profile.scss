@@ -13,12 +13,12 @@
   &__img {
     border-radius: 50%;
     overflow: hidden;
-    width: 260px;
-    height: 260px;
-    margin-right: 50px;
+    @include aspect-ratio(1, 1);
+    margin-right: pc(50, $base);
+    @include col(3);
   }
   &__content {
-    @include col(8);
+    @include col(9);
     h6 {
       @include font-size(26);
       @extend %OpenSansbold;
@@ -26,6 +26,32 @@
     }
     p {
       @include font-size(20);
+    }
+  }
+  @include mq($max, $tablet) {
+    text-align: center;
+    &__img {
+      width: 50%;
+      max-width: none;
+      margin: 0 auto 40px;
+    }
+    &__content {
+      width: 100%;
+    }
+  }
+  @include mq($max, $mobile) {
+    &__img {
+      margin-bottom: 20px;
+      width: 70%;
+    }
+    &__content {
+      h6 {
+        @include font-size(22);
+        margin-bottom: 10px;
+      }
+      p {
+        @include font-size(14);
+      }
     }
   }
 }

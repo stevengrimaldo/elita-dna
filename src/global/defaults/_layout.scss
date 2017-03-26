@@ -1,6 +1,7 @@
 body {
   background-image: url('/media/img/polkadots-bg.jpg');
   background-position: center center;
+  background-attachment: fixed;
 }
 .section-wrapper,
 .header-wrapper,
@@ -9,18 +10,20 @@ body {
   width: 100%;
   margin: 0 auto;
   @include clearfix;
-  @include mq($min, $laptop + 1) {
-    max-width: 1800px;
-    padding: 0 pc(100, $base);
-  }
-  @include mq('', $tablet, $laptop) {
-    max-width: 1700px;
-    padding: 0 pc(50, $base);
-  }
-  @include mq($max, $tablet - 1) {
-    max-width: 1650px;
-    padding: 0 pc(25, $base);
-  }
+  max-width: 1800px;
+  padding: 0 pc(100, $base);
+  // @include mq($min, $laptop + 1) {
+  //   max-width: 1800px;
+  //   padding: 0 pc(100, $base);
+  // }
+  // @include mq('', $tablet, $laptop) {
+  //   max-width: 1700px;
+  //   padding: 0 pc(75, $base);
+  // }
+  // @include mq($max, $tablet - 1) {
+  //   max-width: 1650px;
+  //   padding: 0 pc(50, $base);
+  // }
 }
 .section {
   width: 100%;
@@ -101,6 +104,36 @@ body {
         border-top-color: inherit;
         border-left: 100vw solid transparent;
         bottom: -120px;
+      }
+    }
+    @include mq($max, $tablet) {
+      &--top-left {
+        margin-top: 60px;
+        &::before {
+          border-bottom-width: 60px;
+          top: -60px;
+        }
+      }
+      &--top-right {
+        margin-top: 60px;
+        &::before {
+          border-bottom-width: 60px;
+          top: -60px;
+        }
+      }
+      &--bottom-left {
+        margin-bottom: 60px;
+        &::after {
+          border-top-width: 60px;
+          bottom: -60px;
+        }
+      }
+      &--bottom-right {
+        margin-bottom: 60px;
+        &::after {
+          border-top-width: 60px;
+          bottom: -60px;
+        }
       }
     }
   }

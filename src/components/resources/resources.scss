@@ -16,13 +16,11 @@
       display: inline-block;
       vertical-align: top;
       &__title {
-        @include font-size(22, initial);
         color: $emperor;
-        @extend %OpenSansSemibold;
         margin-bottom: 5px;
         h4 {
-          font-family: inherit;
-          font-weight: inherit;
+          @include font-size(22, initial);
+          @extend %OpenSansSemibold;
         }
       }
       &__text {
@@ -36,6 +34,35 @@
     }
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+  @include mq($max, $tablet) {
+    &__resource {
+      &-content {
+        &__title {
+          h4 {
+            @include font-size(18, initial);
+          }
+        }
+        &__text {
+          p {
+            @include font-size(14);
+          }
+        }
+      }
+    }
+  }
+  @include mq($max, $mobile) {
+    &__resource {
+      text-align: center;
+      .icon--container {
+        margin-right: 0;
+        width: 50px;
+        margin-bottom: 10px;
+      }
+      &-content {
+        width: 100%;
+      }
     }
   }
 }

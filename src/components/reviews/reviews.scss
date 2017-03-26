@@ -12,7 +12,7 @@
       margin-bottom: 30px;
     }
     &-title {
-      @include font-size(53, initial);
+      @include font-size(55, initial);
     }
   }
   &--container {
@@ -110,6 +110,59 @@
         @include font-size(20, initial);
         @extend %OpenSans;
         margin-top: 10px;
+      }
+    }
+  }
+  @include mq($max, $tablet) {
+    &__header {
+      margin-bottom: 40px;
+      &-title {
+        @include font-size(45, initial);
+      }
+    }
+    &__review {
+      &-text {
+        @include col(9);
+        @include font-size(24);
+      }
+    }
+  }
+  @include mq($max, $phablet) {
+    &--container {
+      .slick {
+        &-dots {
+          li {
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+    &__review {
+      &-text {
+        @include font-size(20);
+      }
+      &-author {
+        h6 {
+          @include font-size(20, initial);
+          margin-top: 15px;
+        }
+        time {
+          @include font-size(16, initial);
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  @include mq($max, $mobile) {
+    &__header {
+      margin-bottom: 20px;
+      &-title {
+        @include font-size(30, initial);
+      }
+    }
+    &__review {
+      &-text {
+        @include font-size(16);
       }
     }
   }

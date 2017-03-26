@@ -18,13 +18,11 @@
     padding: 40px 0;
     border-bottom: 1px solid rgba($emperor, .4);
     &-title {
-      @include font-size(22, initial);
       position: relative;
       cursor: pointer;
-      @extend %OpenSansSemibold;
       h6 {
-        font-family: inherit;
-        font-weight: inherit;
+        @include font-size(22, initial);
+        @extend %OpenSansSemibold;
       }
       &::before,
       &::after {
@@ -71,6 +69,36 @@
     }
     &:last-child {
       border-bottom: 0 none;
+    }
+  }
+  @include mq($max, $tablet) {
+    &__header {
+      &-title {
+        @include font-size(30, initial);
+      }
+    }
+    &__item {
+      padding: 25px 0;
+      &-title {
+        padding-right: 26px;
+        h6 {
+          @include font-size(16, initial);
+        }
+        &::before {
+          width: 16px;
+          height: 2px;
+        }
+        &::after {
+          height: 16px;
+          right: 7px;
+        }
+      }
+      &-answer {
+        p {
+          @include font-size(14);
+          margin-bottom: 5px;
+        }
+      }
     }
   }
 }

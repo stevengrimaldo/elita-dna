@@ -13,6 +13,11 @@
       @include font-size(45);
       margin-bottom: 30px;
     }
+    &-text {
+      p {
+        @include font-size(20);
+      }
+    }
   }
   &__list {
     font-size: 0;
@@ -43,6 +48,55 @@
       }
       &:last-child {
         margin-right: 0;
+      }
+    }
+  }
+  @include mq($max, $laptop) {
+    &__header {
+      @include col(10);
+      margin-bottom: 60px;
+    }
+    &__list {
+      &-item {
+        width: 50%;
+        margin-right: 0;
+        padding: 0 pc(10, $laptop);
+        .icon--container {
+          margin-bottom: 20px;
+        }
+        &__title {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  @include mq($max, $tablet) {
+    &__header {
+      max-width: none;
+      width: 100%;
+      &-title {
+        @include font-size(30);
+      }
+      &-text {
+        p {
+          @include font-size(16);
+        }
+      }
+    }
+    &__list {
+      &-item {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        margin-bottom: 30px;
+        &__text {
+          p {
+            @include font-size(14);
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
