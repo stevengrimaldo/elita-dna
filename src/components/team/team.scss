@@ -56,8 +56,6 @@
           @include font-size(14, initial);
           @extend %OpenSans;
           cursor: pointer;
-          display: inline-block;
-          vertical-align: middle;
           span {
             text-decoration: underline;
           }
