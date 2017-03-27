@@ -23,7 +23,7 @@
   }
   &__nav {
     float: right;
-    @include col(9);
+    @include col(10);
     text-align: right;
     &-utility {
       font-size: 0;
@@ -53,7 +53,7 @@
         display: inline-block;
         vertical-align: top;
         @include font-size(15, initial, -10);
-        margin-left: 55px;
+        margin-left: pc(55, 1330);
         @extend %OpenSansSemibold;
         a {
           color: $emperor;

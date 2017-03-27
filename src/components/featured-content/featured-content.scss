@@ -1,6 +1,7 @@
 @import '../../global/defaults/config',
 '../../global/defaults/mixins',
-'../../global/defaults/grid';
+'../../global/defaults/grid',
+'../../global/defaults/typography';
 
 .featured-content {
   text-align: center;
@@ -30,14 +31,16 @@
       @include font-size(16);
     }
     li {
-      margin-bottom: 10px;
-      margin-left: 1%;
+      margin: 0 1.6666666667% 25px;
       color: $persimmon;
       width: 30%;
-      margin-right: 1%;
       display: inline-block;
       position: relative;
       vertical-align: top;
+      h5, bold {
+        @include font-size(20, null, -20);
+        @extend %OpenSansSemibold;
+      }
       span {
         color: $emperor;
       }
@@ -47,7 +50,7 @@
         height: 8px;
         background-color: $persimmon;
         border-radius: 50%;
-        top: 13px;
+        top: 11px;
         left: -15px;
         position: absolute;
       }
@@ -74,7 +77,8 @@
     &-text {
       li {
         width: 40%;
-        margin: 0 3%;
+        margin-left: 3%;
+        margin-right: 3%;
       }
     }
   }
@@ -88,6 +92,7 @@
         text-align: left;
         width: 100%;
         margin-right: 0;
+        margin-left: 0;
       }
     }
   }

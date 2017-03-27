@@ -12,6 +12,7 @@ const components = [
   'articles',
   'locations',
   'team',
+  'tools',
   'footer'
 ];
 

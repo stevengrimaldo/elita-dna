@@ -18,10 +18,9 @@
       @include font-size(16);
     }
     li {
-      margin-bottom: 25px;
-      margin: 0 1.6666666667%;
+      margin: 0 1.6666666667% 25px;
       color: $persimmon;
-      width: 30%;
+      width: 28%;
       display: inline-block;
       position: relative;
       vertical-align: top;
@@ -48,12 +47,20 @@
     }
   }
   &__items {
-    text-align: left;
-    @include clearfix;
+    display: flex;
+    // text-align: left;
+    // @include clearfix;
     &__item {
-      float: left;
+      // float: left;
       @include col(3);
+      flex: 1;
       text-align: center;
+      &-img {
+        margin-bottom: 50px;
+        img {
+          width: 75%;
+        }
+      }
       &-title {
         @include font-size(20, initial);
         @extend %OpenSansSemibold;
@@ -61,10 +68,6 @@
           font-family: inherit;
           font-weight: inherit;
         }
-      }
-      img {
-        margin-bottom: 50px;
-        width: 75%;
       }
       .cta--container {
         margin-top: 10px;
@@ -74,6 +77,51 @@
       }
       &:last-child {
         margin-right: 0;
+      }
+    }
+  }
+  @include mq($max, $laptop) {
+    &__content {
+      li {
+        width: 40%;
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+    }
+    &__items {
+      display: block;
+      &__item {
+        float: left;
+        flex: initial;
+        width: 50%;
+        margin-bottom: 50px;
+        &-img {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  @include mq($max, $tablet) {
+    &__content {
+      li {
+        text-align: left;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+  @include mq($max, $phablet) {
+    &__content {
+      p, li {
+        @include font-size(14);
+      }
+    }
+    &__items {
+      &__item {
+        float: none;
+        width: 100%;
+        margin-bottom: 30px;
       }
     }
   }

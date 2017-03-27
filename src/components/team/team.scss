@@ -55,8 +55,17 @@
           margin-bottom: 10px;
           @include font-size(14, initial);
           @extend %OpenSans;
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: middle;
           span {
             text-decoration: underline;
+          }
+          &:hover {
+            color: $persimmon;
+            span {
+              text-decoration: none;
+            }
           }
           &--active {
             @extend %OpenSansSemibold;

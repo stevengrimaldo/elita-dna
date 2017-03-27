@@ -58,4 +58,28 @@
     text-align: center;
     margin-top: 60px;
   }
+  @include mq($max, 1100) {
+    &__article {
+      width: 43%;
+      margin: 20px pc(30, 1100);
+    }
+  }
+  @include mq($max, $tablet) {
+    &__header {
+      margin-bottom: 15px;
+    }
+  }
+  @include mq($max, $phablet) {
+    &__article {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      &-image {
+        margin: 0 5% 5%;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

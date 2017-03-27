@@ -93,6 +93,9 @@ body {
         border-right: 100vw solid transparent;
         bottom: -120px;
       }
+      + .tools {
+        margin-top: -120px;
+      }
     }
     &--bottom-right {
       margin-bottom: 120px;
@@ -104,6 +107,9 @@ body {
         border-top-color: inherit;
         border-left: 100vw solid transparent;
         bottom: -120px;
+      }
+      + .tools {
+        margin-top: -120px;
       }
     }
     @include mq($max, $tablet) {
@@ -136,5 +142,8 @@ body {
         }
       }
     }
+  }
+  &--double-bottom-padding {
+    padding-bottom: $module-padding !important;
   }
 }
