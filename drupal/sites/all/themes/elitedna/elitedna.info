@@ -1,0 +1,7 @@
+name = Elite DNA
+description = A new and exciting responsive theme.
+package = Core
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = css/app.min.css
