@@ -31,9 +31,13 @@ function loadJs(name) {
   document.getElementById('scripts').appendChild(script);
 }
 
+function loadComponent(name) {
+  loadCss(name);
+  loadJs(name);
+}
+
 for (let i = 0; i < componentLength; i++) {
   if (typeof(document.querySelector('.' + components[i])) !== 'undefined' && document.querySelector('.' + components[i]) !== null) {
-    loadCss(components[i]);
-    loadJs(components[i]);
+    loadComponent(components[i]);
   }
 }
