@@ -86,9 +86,6 @@ u {
 strike, s {
   text-decoration: line-through;
 }
-.cta, p, li {
-  @include font-size(18);
-}
 ul, ol, li {
   list-style: none;
   margin: 0;
@@ -96,14 +93,6 @@ ul, ol, li {
 }
 label {
   cursor: default;
-}
-img, object, embed, video, iframe, svg, use>svg {
-  border: 0 none;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-  width: 100%;
-  display: inline-block;
 }
 svg, use>svg {
   fill: $white;

@@ -188,6 +188,21 @@ gulp.task('lint', () => {
   .pipe(eslint.format());
 });
 
+gulp.task('moveCss', () => {
+  gulp.src("./build/css/**")
+    .pipe(gulp.dest('./drupal/sites/all/themes/elitedna/css'));
+});
+
+gulp.task('moveJs', () => {
+  gulp.src("./build/js/**")
+    .pipe(gulp.dest('./drupal/sites/all/themes/elitedna/js'));
+});
+
+gulp.task('moveMedia', () => {
+  gulp.src("./build/media/**")
+    .pipe(gulp.dest('./drupal/sites/all/themes/elitedna/media'));
+});
+
 gulp.task('watchTask', () => {
   gulp.watch(paths.srcImg, ['images']);
   gulp.watch('./src/**/**/*.scss', ['styles']);
@@ -202,5 +217,5 @@ gulp.task('watch', cb => {
 
 gulp.task('build', cb => {
   process.env.NODE_ENV = 'production';
-  runSequence('clean', ['browserify', 'styles', 'html', 'images'], cb);
+  runSequence('clean', ['browserify', 'styles', 'lint', 'html', 'images', 'moveCss', 'moveJs', 'moveMedia'], cb);
 });

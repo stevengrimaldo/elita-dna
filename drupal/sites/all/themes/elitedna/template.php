@@ -108,13 +108,6 @@ function elitedna_preprocess_node(&$vars) {
   if (arg(0) == 'taxonomy') {
     array_push($vars['theme_hook_suggestions'], 'node__taxonomy');
   }
-
-  if($vars['type']=='landing_page') {
-    $field = field_get_items('node', $vars['node'], 'field_hero_image');
-    if ($field) {
-      $vars['classes_array'][] = 'static-header';
-    }
-  }
 }
 
 /**
@@ -144,7 +137,7 @@ function elitedna_css_alter(&$css) {
  */
 function elitedna_js_alter(&$js) {
   // Unset core js for better performance and less conflicts.
-  unset($js['misc/jquery.js']);
+  // unset($js['misc/jquery.js']);
   $js['misc/jquery.once.js']['weight'] = 1;
   $js['misc/drupal.js']['weight'] = 2;
 }

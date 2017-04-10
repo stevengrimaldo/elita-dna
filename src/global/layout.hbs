@@ -3,24 +3,24 @@
   <head>
     <title>{{title}} | {{name}}</title>
 
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     {{#if description}}
       {{!-- Meta description --}}
-      <meta name="description" content="{{description}}">
+      <meta name="description" content="{{description}}" />
     {{/if}}
 
     {{#if keywords}}
       {{!-- Meta keywords --}}
-      <meta name="keywords" content="{{#each keywords}}{{.}}{{#unless @last}},{{/unless}}{{/each}}">
+      <meta name="keywords" content="{{#each keywords}}{{.}}{{#unless @last}},{{/unless}}{{/each}}" />
     {{/if}}
 
     {{!-- Handheld support --}}
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
 
     {{!-- CSS includes --}}
-    <link rel="stylesheet" href="/css/global/app.min.css?v={{timestamp}}">
+    <link rel="stylesheet" href="/css/global/app.min.css?v={{timestamp}}" />
   </head>
   <body class="{{#if classes}}{{#each classes}}{{.}}{{#unless @last}} {{/unless}}{{/each}}{{/if}}">
     <div class="container">
