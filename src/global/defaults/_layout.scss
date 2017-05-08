@@ -1,5 +1,5 @@
 body {
-  background-image: url('/media/img/polkadots-bg.jpg');
+  background-image: url(#{$image-path}/polkadots-bg.jpg);
   background-position: center center;
   background-attachment: fixed;
 }
@@ -29,6 +29,7 @@ body {
   width: 100%;
   position: relative;
   padding: $module-padding 0;
+  text-align: center;
   .cta, p, li {
     @include font-size(18);
   }
@@ -59,6 +60,15 @@ body {
     background-color: $persimmon;
     border-color: $persimmon;
     color: $white;
+  }
+  &--left-align {
+    text-align: left;
+  }
+  &--right-align {
+    text-align: right;
+  }
+  &--double-bottom-padding {
+    padding-bottom: $module-padding !important;
   }
   &--slant {
     &::before,
@@ -154,8 +164,11 @@ body {
       }
     }
   }
-  &--double-bottom-padding {
-    padding-bottom: $module-padding !important;
+  @include mq($max, $mobile) {
+    &--left-align,
+    &--right-align {
+      text-align: center;
+    }
   }
 }
 .messages {

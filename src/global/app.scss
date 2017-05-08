@@ -1,3 +1,10 @@
+@import 'defaults/config',
+'defaults/mixins';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+@include font-face('MuseoSlab', $font-path + '/MuseoSlab_300', 300);
+@include font-face('MuseoSlab', $font-path + '/MuseoSlab_700', 700);
+
 //
 //  Import default css to set a base/foundation for the site
 //
@@ -5,3 +12,18 @@
 'defaults/layout',
 'defaults/ctas',
 'defaults/icons';
+
+// @icon = @key
+// @name = @value
+// uses the placeholders above so it can also add the correct bg size for the @2x fallback image
+@each $icon, $name in $icons {
+  $name: map-get($icons, $icon);
+  .icon--#{$icon} {
+    @include background-icon($name);
+  }
+  .section--orange {
+    .icon--#{$icon} {
+      @include background-icon($name, true);
+    }
+  }
+}

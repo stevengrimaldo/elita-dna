@@ -30,7 +30,23 @@
  $path = drupal_lookup_path('alias', $path);
  global $user;
 ?>
-<section class="section section--featured-content">
+<section class="section featured-content section--featured-content<?php
+  if (isset($content['field_top_slant']) || isset($content['field_bottom_slant'])) {
+    print ' section--slant';
+  }
+  if (isset($content['field_top_slant'])) {
+    print ' section--slant--' . $content['field_top_slant']['#items'][0]['value'];
+  }
+  if (isset($content['field_bottom_slant'])) {
+    print ' section--slant--' . $content['field_bottom_slant']['#items'][0]['value'];
+  }
+  if (isset($content['field_background_color'])) {
+    print ' section--' . $content['field_background_color']['#items'][0]['value'];
+  }
+  if (isset($content['field_text_alignment'])) {
+    print ' section--' . $content['field_text_alignment']['#items'][0]['value'];
+  }
+?>">
   <div class="section-wrapper">
     <?php if ($user->uid): ?>
       <div class="edit-button">
@@ -38,26 +54,22 @@
       </div>
     <?php endif; ?>
     <div class="featured-content--container">
-      {{#if icon}}
-        <div class="icon--container"><i class="icon icon--{{icon}}"></i></div>
-      {{/if}}
-      {{#if copy}}
-        {{#if copy.title}}
-          <div class="featured-content-title">
-            <h2>{{{copy.title}}}</h2>
-          </div>
-        {{/if}}
-        {{#if copy.text}}
-          <div class="featured-content-text">
-            {{{copy.text}}}
-          </div>
-        {{/if}}
-      {{/if}}
-      {{#if cta}}
-        {{#each cta}}
-          <div class="cta--container"><a href="{{this.url}}" class="cta cta--{{this.type}}"><span>{{this.text}}</span></a></div>
-        {{/each}}
-      {{/if}}
+      <?php if (isset($content['field_icon'])): ?>
+        <div class="icon--container"><?php print render($content['field_icon']); ?></div>
+      <?php endif; ?>
+      <?php if (isset($content['field_title'])): ?>
+        <div class="featured-content-title">
+          <h4><?php print render($content['field_title']); ?></h4>
+        </div>
+      <?php endif; ?>
+      <?php if (isset($content['field_text'])): ?>
+        <div class="featured-content-text">
+          <?php print render($content['field_text']); ?>
+        </div>
+      <?php endif; ?>
+      <?php if (isset($content['field_link'])): ?>
+        <div class="cta--container"><?php print render($content['field_link']); ?></div>
+      <?php endif; ?>
     </div>
   </div>
 </section>

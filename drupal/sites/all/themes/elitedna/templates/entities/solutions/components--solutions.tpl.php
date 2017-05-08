@@ -30,40 +30,43 @@
  $path = drupal_lookup_path('alias', $path);
  global $user;
 ?>
-<section class="section section--solutions">
+<section class="section solutions section--solutions<?php
+  if (isset($content['field_top_slant']) || isset($content['field_bottom_slant'])) {
+    print ' section--slant';
+  }
+  if (isset($content['field_top_slant'])) {
+    print ' section--slant--' . $content['field_top_slant']['#items'][0]['value'];
+  }
+  if (isset($content['field_bottom_slant'])) {
+    print ' section--slant--' . $content['field_bottom_slant']['#items'][0]['value'];
+  }
+  if (isset($content['field_background_color'])) {
+    print ' section--' . $content['field_background_color']['#items'][0]['value'];
+  }
+?>">
   <div class="section-wrapper">
     <?php if ($user->uid): ?>
       <div class="edit-button">
         <a href="/admin/structure/entity-type<?php print $url . '/edit?destination=' . $path; ?>">Edit</a>
       </div>
     <?php endif; ?>
-    {{#if header}}
-      <div class="solutions__header">
-        {{#if header.title}}
-          <div class="solutions__header-title">
-            <h2>{{header.title}}</h2>
-          </div>
-        {{/if}}
-        {{#if header.text}}
-          <div class="solutions__header-text">
-            {{{header.text}}}
-          </div>
-        {{/if}}
-      </div>
-    {{/if}}
-    <div class="solutions__list">
-      {{#each solution}}
-        <div class="solutions__list-item">
-          <div class="icon--container"><i class="icon icon--{{this.icon}}"></i></div>
-          <div class="solutions__list-item__title">
-            <h6>{{this.title}}</h6>
-          </div>
-          <div class="solutions__list-item__text">
-            {{{this.text}}}
-          </div>
+    <div class="solutions__header">
+      <?php if (isset($content['field_title'])): ?>
+        <div class="solutions__header-title">
+          <h2><?php print render($content['field_title']); ?></h2>
         </div>
-      {{/each}}
+      <?php endif; ?>
+      <?php if (isset($content['field_text'])): ?>
+        <div class="solutions__header-text">
+          <?php print render($content['field_text']); ?>
+        </div>
+      <?php endif; ?>
     </div>
+    <?php if (isset($content['field_solution'])): ?>
+      <div class="solutions__list">
+        <?php print render($content['field_solution']); ?>
+      </div>
+    <?php endif; ?>
   </div>
 </section>
 

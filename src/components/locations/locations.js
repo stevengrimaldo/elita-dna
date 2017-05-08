@@ -131,7 +131,7 @@ GoogleMapsLoader.load(google => {
       });
   };
 
-  $('.locations__maps-code').each(function () {
+  $('.locations__list-location__map-code').each(function () {
     const office = $(this).attr('data-address');
     const mapElement = this;
 
@@ -139,14 +139,11 @@ GoogleMapsLoader.load(google => {
   });
 });
 
-$('.locations__list-item').on('click', function () {
-  if (!$(this).hasClass('active')) {
-    $('.locations__maps-code').removeClass('locations__maps-code--active');
-    $('.locations__list-item').removeClass('locations__list-item--active');
-    $(this).addClass('locations__list-item--active');
-    $('.locations__maps-code').eq($(this).index()).addClass('locations__maps-code--active');
+$('.locations__list-location__info').on('click', function () {
+  if (!$(this).parent().hasClass('active')) {
+    $('.locations__list-location').removeClass('locations__list-location--active');
+    $(this).parent().addClass('locations__list-location--active');
   }
 });
 
-$('.locations__maps-code').first().addClass('locations__maps-code--active');
-$('.locations__list-item').first().addClass('locations__list-item--active');
+$('.locations__list-location').first().addClass('locations__list-location--active');

@@ -56,7 +56,8 @@ const entries = [
   './src/components/solutions/solutions.js',
   './src/components/split-content/split-content.js',
   './src/components/team/team.js',
-  './src/components/tools/tools.js'
+  './src/components/tools/tools.js',
+  './src/components/form/form.js'
 ];
 
 const output = [
@@ -73,7 +74,8 @@ const output = [
   './build/js/components/solutions.js',
   './build/js/components/split-content.js',
   './build/js/components/team.js',
-  './build/js/components/tools.js'
+  './build/js/components/tools.js',
+  './build/js/components/form.js'
 ];
 
 const customOpts = {
@@ -189,17 +191,17 @@ gulp.task('lint', () => {
 });
 
 gulp.task('moveCss', () => {
-  gulp.src("./build/css/**")
+  gulp.src("./build/css/**/**")
     .pipe(gulp.dest('./drupal/sites/all/themes/elitedna/css'));
 });
 
 gulp.task('moveJs', () => {
-  gulp.src("./build/js/**")
+  gulp.src("./build/js/**/**")
     .pipe(gulp.dest('./drupal/sites/all/themes/elitedna/js'));
 });
 
 gulp.task('moveMedia', () => {
-  gulp.src("./build/media/**")
+  gulp.src("./build/media/**/**")
     .pipe(gulp.dest('./drupal/sites/all/themes/elitedna/media'));
 });
 
@@ -216,6 +218,9 @@ gulp.task('watch', cb => {
 });
 
 gulp.task('build', cb => {
-  process.env.NODE_ENV = 'production';
-  runSequence('clean', ['browserify', 'styles', 'lint', 'html', 'images', 'moveCss', 'moveJs', 'moveMedia'], cb);
+  runSequence('clean', ['browserify', 'styles', 'lint', 'html', 'images'], cb);
+});
+
+gulp.task('move', cb => {
+  runSequence('build', ['moveCss', 'moveJs', 'moveMedia'], cb);
 });

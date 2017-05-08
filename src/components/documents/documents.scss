@@ -4,27 +4,36 @@
 '../../global/defaults/typography';
 
 .documents {
-  h4 {
-    display: block;
+  &__title {
     @include font-size(35);
     margin-bottom: 50px;
+    text-align: left;
+    h4 {
+      font-family: inherit;
+      font-weight: inherit;
+    }
   }
   &__content {
     margin-bottom: 100px;
+    text-align: left;
     ul {
       margin-bottom: 30px;
+    }
+    h4 {
+      @include font-size(35, initial);
+      margin-bottom: 50px;
     }
     p, li {
       @include font-size(16);
     }
     li {
       margin: 0 1.6666666667% 25px;
-      color: $persimmon;
+      color: $emperor;
       width: 28%;
       display: inline-block;
       position: relative;
       vertical-align: top;
-      h5, bold {
+      h5, b, strong {
         @include font-size(20, null, -20);
         @extend %OpenSansSemibold;
       }

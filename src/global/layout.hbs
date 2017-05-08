@@ -20,20 +20,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
 
     {{!-- CSS includes --}}
-    <link rel="stylesheet" href="/css/global/app.min.css?v={{timestamp}}" />
+    <link rel="stylesheet" href="./css/global/app.min.css?v={{timestamp}}" />
   </head>
   <body class="{{#if classes}}{{#each classes}}{{.}}{{#unless @last}} {{/unless}}{{/each}}{{/if}}">
-    <div class="container">
-      {{> header }}
-      <main class="content">
-        {% body %}
-      </main>
-      {{> footer }}
+    {{> mobile-menu }}
+    <div class="content-wrap">
+      <div class="content">
+        {{> header }}
+        <main class="components">
+          {% body %}
+        </main>
+        {{> footer }}
+      </div>
     </div>
     <div id="scripts">
       {{!-- Script includes --}}
-      <script src="/js/common.js?v={{timestamp}}"></script>
-      <script src="/js/app.js?v={{timestamp}}"></script>
+      <script src="./js/common.js?v={{timestamp}}"></script>
+      <script src="./js/app.js?v={{timestamp}}"></script>
     </div>
   </body>
 </html>

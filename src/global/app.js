@@ -1,5 +1,6 @@
 const components = [
   'header',
+  'mobile-menu',
   'hero',
   'featured-content',
   'resources',
@@ -13,6 +14,7 @@ const components = [
   'locations',
   'team',
   'tools',
+  'form',
   'footer'
 ];
 

@@ -1,11 +1,13 @@
 @import '../../global/defaults/config',
 '../../global/defaults/mixins',
-'../../global/defaults/grid';
+'../../global/defaults/grid',
+'../../global/defaults/typography';
 
 .split-content {
   &__content {
     @include col(5);
     float: left;
+    text-align: left;
     h4 {
       @include font-size(35, initial);
       margin-bottom: 50px;
@@ -16,8 +18,12 @@
     li {
       margin-bottom: 10px;
       margin-left: 22px;
-      color: $persimmon;
+      color: $emperor;
       position: relative;
+      h5, b, strong {
+        @include font-size(20, null, -20);
+        @extend %OpenSansSemibold;
+      }
       span {
         color: $emperor;
       }

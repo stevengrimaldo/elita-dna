@@ -1,7 +1,7 @@
 {
   "mental-health": {
     "classes": ["white", "slant", "slant--top-left", "slant--bottom-left"],
-    "title": "<h4>Client intake forms:</h4>",
+    "title": "Client intake forms:",
     "text": "<h4>Common treatment issues:</h4><ul><li><span>Adolescent issues</span></li><li><span>Anger</span></li><li><span>Anxiety</span></li><li><span>ADHD</span></li><li><span>Autism spectrum disorders</span></li><li><span>Behavior problems</span></li><li><span>Depression</span></li><li><span>Divorce</span></li><li><span>Fears and phobias</span></li><li><span>Grief</span></li><li><span>Coping with health issues</span></li><li><span>Obsessive-compulsive disorder</span></li><li><span>Oppositional defiant disorder</span></li><li><span>Parenting issues</span></li><li><span>Post-traumatic stress</span></li><li><span>Relationship problems</span></li><li><span>School problems</span></li><li><span>Self-esteem issues</span></li><li><span>Separation anxiety</span></li><li><span>Social anxiety</span></li><li><span>Sibling rivalry</span></li><li><span>Sleep issues</span></li><li><span>Social skills</span></li><li><span>Stress management</span></li><li><span>Transgender issues</span></li><li><span>Women’s issues</span></li></ul>",
     "document": [{
       "image": "adult-mental-health.png",
@@ -14,7 +14,7 @@
     }]
   },
   "occupational-therapy": {
-    "title": "<h4>Client intake forms:</h4>",
+    "title": "Client intake forms:",
     "text": "<h4>Services Include:</h4><ul><li><span><h5>Initial Screening</h5>Assess age-appropriate achievement of developmental milestones including: fine motor, gross motor, visual motor, sensory motor, sensory processing & self help skills</span></li><li><span><h5>Comprehensive Evaluation</h5>Standardized assessments to establish baseline level for gross, fine, visual, sensory, and self-help skills</span></li><li><span><h5>Plan of Care</h5>Establishment of collaborative and child-centered plan of care addressing meangingful long and short-term goals</span></li><li><span><h5>Comprehensive Re-evaluation</h5>Addressing progress towards set goals</span></li></ul><h4>Specialty Areas:</h4><ul><li><span><h5>Sensory Processing</h5>Sensory modulation, sensory integration, emotional regulation</span></li><li><span><h5>Fine Motor Skills</h5>Handwriting without tears, in-hand manipulation</span></li><li><span><h5>Gross Motor Skills</h5>Coordination and endurance training</span></li><li><span><h5>Ergonomic Analysis</h5></span></li><li><span><h5>Support for successful transitions</h5></span></li></ul>",
     "document": [{
       "image": "occupational-therapy.png",

@@ -29,34 +29,30 @@
  $path = current_path();
  $path = drupal_lookup_path('alias', $path);
  global $user;
-
- print render($content['field_NAME']);
 ?>
-<section class="section section--accordion">
-  <div class="section-wrapper">
-    <?php if ($user->uid): ?>
-      <div class="edit-button">
-        <a href="/admin/structure/entity-type<?php print $url . '/edit?destination=' . $path; ?>">Edit</a>
+<section class="section accordion section--accordion<?php
+  if (isset($content['field_top_slant'])) {
+    print ' section--slant section--slant--' . $content['field_top_slant']['#items'][0]['value'];
+  }
+  if (isset($content['field_background_color'])) {
+    print ' section--' . $content['field_background_color']['#items'][0]['value'];
+  }
+?>">
+  <?php if ($user->uid): ?>
+    <div class="edit-button">
+      <a href="/admin/structure/entity-type<?php print $url . '/edit?destination=' . $path; ?>">Edit</a>
+    </div>
+  <?php endif; ?>
+  <div class="accordion__header">
+    <?php if (isset($content['field_title'])): ?>
+      <div class="accordion__header-title">
+        <h3><?php print render($content['field_title']); ?></h3>
       </div>
     <?php endif; ?>
-    <div class="accordion__header">
-      <div class="accordion__header-title">
-        <h3>{{header.title}}</h3>
-      </div>
-    </div>
-    <div class="accordion--container">
-      {{#each item}}
-        <div class="accordion__item">
-          <div class="accordion__item--wrapper">
-            <div class="accordion__item-title">
-              <h6>{{this.title}}</h6>
-            </div>
-            <div class="accordion__item-answer">
-              {{{this.text}}}
-            </div>
-          </div>
-        </div>
-      {{/each}}
-    </div>
   </div>
+  <?php if (isset($content['field_question'])): ?>
+    <div class="accordion--container">
+      <?php print render($content['field_question']); ?>
+    </div>
+  <?php endif; ?>
 </section>

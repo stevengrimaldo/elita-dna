@@ -1,15 +1,15 @@
-<section class="section locations{{#each classes}} section--{{this}}{{/each}}">
+<section class="section locations section--locations{{#each classes}} section--{{this}}{{/each}}">
   <div class="locations__list">
     {{#each location}}
-      <div class="locations__list-item">
-        <h4>{{this.name}}</h4>
-        <p>{{{this.address}}}</p>
+      <div class="locations__list-location">
+        <div class="locations__list-location__info">
+          <h4>{{this.name}}</h4>
+          <p>{{{this.address}}}</p>
+        </div>
+        <div class="locations__list-location__map">
+          <div class="locations__list-location__map-code" data-address="{{{this.address}}}"></div>
+        </div>
       </div>
-    {{/each}}
-  </div>
-  <div class="locations__maps">
-    {{#each location}}
-      <div class="locations__maps-code" data-address="{{{this.address}}}"></div>
     {{/each}}
   </div>
 </section>

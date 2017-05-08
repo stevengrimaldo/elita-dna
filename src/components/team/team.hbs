@@ -1,4 +1,4 @@
-<section class="section team{{#each team.classes}} section--{{this}}{{/each}}">
+<section class="section team section--team{{#each team.classes}} section--{{this}}{{/each}}">
   <div class="section-wrapper">
     <div class="team__filters">
       <label class="team__filters-label">Filters:</label>
@@ -23,7 +23,7 @@
       {{#each team.member}}
         <div class="team__members__member" data-department="{{this.department}}" data-location="{{this.location}}">
           <figure class="team__members__member-image">
-            <img src="/media/img/{{this.image}}" alt="" />
+            <img src="./media/img/{{this.image}}" alt="" />
           </figure>
           <div class="team__members__member-name">
             <h5>{{this.name}}</h5>

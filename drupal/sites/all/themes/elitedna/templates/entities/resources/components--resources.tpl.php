@@ -30,7 +30,20 @@
  $path = drupal_lookup_path('alias', $path);
  global $user;
 ?>
-<section class="section section--resources">
+<section class="section resources section--resources<?php
+  if (isset($content['field_top_slant']) || isset($content['field_bottom_slant'])) {
+    print ' section--slant';
+  }
+  if (isset($content['field_top_slant'])) {
+    print ' section--slant--' . $content['field_top_slant']['#items'][0]['value'];
+  }
+  if (isset($content['field_bottom_slant'])) {
+    print ' section--slant--' . $content['field_bottom_slant']['#items'][0]['value'];
+  }
+  if (isset($content['field_background_color'])) {
+    print ' section--' . $content['field_background_color']['#items'][0]['value'];
+  }
+?>">
   <div class="section-wrapper">
     <?php if ($user->uid): ?>
       <div class="edit-button">
@@ -38,20 +51,7 @@
       </div>
     <?php endif; ?>
     <div class="resources--container">
-      {{#each resource}}
-        <div class="resources__resource">
-          <div class="icon--container"><i class="icon icon--{{this.icon}}"></i></div>
-          <div class="resources__resource-content">
-            <div class="resources__resource-content__title">
-              <h4>{{this.title}}</h4>
-            </div>
-            <div class="resources__resource-content__text">
-              {{{this.text}}}
-            </div>
-            <div class="cta--container"><a href="#" class="cta cta--inline"><span>Discover More</span></a></div>
-          </div>
-        </div>
-      {{/each}}
+      <?php print render($content['field_resource']); ?>
     </div>
   </div>
 </section>

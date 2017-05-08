@@ -52,17 +52,3 @@ $icons: (
   'abc-bubble': 'speech-language'
 );
 
-// @icon = @key
-// @name = @value
-// uses the placeholders above so it can also add the correct bg size for the @2x fallback image
-@each $icon, $name in $icons {
-  $name: map-get($icons, $icon);
-  .icon--#{$icon} {
-    @include background-icon($name);
-  }
-  .section--orange {
-    .icon--#{$icon} {
-      @include background-icon($name, true);
-    }
-  }
-}

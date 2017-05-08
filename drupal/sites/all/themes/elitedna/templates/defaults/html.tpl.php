@@ -29,7 +29,7 @@
         <header class="header">
           <div class="header-wrapper">
             <figure class="header__logo">
-              <a href="/"><img src="/media/img/logo.png" alt="" /></a>
+              <a href="/"><img src="/<?php print IMG_PATH; ?>/logo.png" alt="" /></a>
             </figure>
             <nav class="header__nav">
               <ul class="header__nav-utility">

@@ -1,4 +1,4 @@
-<section class="section documents{{#each classes}} section--{{this}}{{/each}}">
+<section class="section documents section--documents{{#each classes}} section--{{this}}{{/each}}">
   <div class="section-wrapper">
     {{#if text}}
       <div class="documents__content">
@@ -7,18 +7,20 @@
     {{/if}}
     <div class="documents__items--container">
       {{#if title}}
-        {{{title}}}
+        <div class="documents__title">
+          {{{title}}}
+        </div>
       {{/if}}
       <div class="documents__items">
         {{#each document}}
           <div class="documents__items__item">
             <figure class="documents__items__item-img">
-              <img src="/media/img/{{this.image}}" alt="" />
+              <img src="./media/img/{{this.image}}" alt="" />
             </figure>
             <div class="documents__items__item-title">
               <h6>{{this.title}}</h6>
             </div>
-            <div class="cta--container"><a href="#" class="cta cta--dowload">Download</a></div>
+            <div class="cta--container"><a href="#" class="cta cta--dowload" download>Download</a></div>
           </div>
         {{/each}}
       </div>

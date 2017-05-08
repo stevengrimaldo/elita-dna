@@ -1,5 +1,9 @@
 import $ from 'jquery';
 
+$('.accordion').each(function () {
+  $(this).find('.accordion__item').first().addClass('accordion__item--open');
+});
+
 $('.accordion__item-title').on('click', function () {
   $('.accordion__item--open .accordion__item-answer').slideUp(400);
 

@@ -108,6 +108,71 @@ function elitedna_preprocess_node(&$vars) {
   if (arg(0) == 'taxonomy') {
     array_push($vars['theme_hook_suggestions'], 'node__taxonomy');
   }
+
+  if (!empty($vars['field_components'])) {
+    foreach ($vars['field_components'] as $bundle) {
+      // drupal_add_js(path_to_theme() . '/js/components/' . $bundle['entity']->type . '.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+      // drupal_add_css(path_to_theme() . '/css/components/' . $bundle['entity']->type . '/' . $bundle['entity']->type . '.min.css', array('group' => CSS_THEME));
+      switch ($bundle['entity']->type) {
+        case 'accordion':
+          drupal_add_js(path_to_theme() . '/js/components/accordion.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/accordion/accordion.min.css', array('group' => CSS_THEME));
+          break;
+        case 'documents':
+          drupal_add_js(path_to_theme() . '/js/components/documents.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/documents/documents.min.css', array('group' => CSS_THEME));
+          break;
+        case 'featured_content':
+          drupal_add_js(path_to_theme() . '/js/components/featured-content.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/featured-content/featured-content.min.css', array('group' => CSS_THEME));
+          break;
+        case 'hero':
+          drupal_add_js(path_to_theme() . '/js/components/hero.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/hero/hero.min.css', array('group' => CSS_THEME));
+          break;
+        case 'resources':
+          drupal_add_js(path_to_theme() . '/js/components/resources.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/resources/resources.min.css', array('group' => CSS_THEME));
+          break;
+        case 'solutions':
+          drupal_add_js(path_to_theme() . '/js/components/solutions.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/solutions/solutions.min.css', array('group' => CSS_THEME));
+          break;
+        case 'split_content':
+          drupal_add_js(path_to_theme() . '/js/components/split-content.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/split-content/split-content.min.css', array('group' => CSS_THEME));
+          break;
+        case 'tools':
+          drupal_add_js(path_to_theme() . '/js/components/tools.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/tools/tools.min.css', array('group' => CSS_THEME));
+          break;
+        case 'profile':
+          drupal_add_js(path_to_theme() . '/js/components/profile.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/profile/profile.min.css', array('group' => CSS_THEME));
+          break;
+        case 'reviews':
+          drupal_add_js(path_to_theme() . '/js/components/reviews.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/reviews/reviews.min.css', array('group' => CSS_THEME));
+          break;
+        case 'locations':
+          drupal_add_js(path_to_theme() . '/js/components/locations.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/locations/locations.min.css', array('group' => CSS_THEME));
+          break;
+        case 'articles':
+          drupal_add_js(path_to_theme() . '/js/components/articles.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/articles/articles.min.css', array('group' => CSS_THEME));
+          break;
+        case 'team':
+          drupal_add_js(path_to_theme() . '/js/components/team.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/team/team.min.css', array('group' => CSS_THEME));
+          break;
+        case 'form':
+          drupal_add_js(path_to_theme() . '/js/components/form.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/form/form.min.css', array('group' => CSS_THEME));
+          break;
+      }
+    }
+  }
 }
 
 /**

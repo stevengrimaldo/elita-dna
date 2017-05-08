@@ -30,7 +30,11 @@
  $path = drupal_lookup_path('alias', $path);
  global $user;
 ?>
-<section class="section section--hero">
+<section class="section hero section--hero<?php
+  if (isset($content['field_bottom_slant'])) {
+    print ' section--slant section--slant--' . $content['field_bottom_slant']['#items'][0]['value'];
+  }
+?>">
   <div class="section-wrapper">
     <?php if ($user->uid): ?>
       <div class="edit-button">
@@ -38,28 +42,28 @@
       </div>
     <?php endif; ?>
     <div class="hero__content">
-      {{#if copy.sub-title}}
+      <?php if (isset($content['field_sub_title'])): ?>
         <div class="hero__content-sub-title">
-          <h3>{{{copy.sub-title}}}</h3>
+          <h3><?php print render($content['field_sub_title']); ?></h3>
         </div>
-      {{/if}}
-      {{#if copy}}
-        {{#if copy.title}}
-          <div class="hero__content-title">
-            <h1>{{{copy.title}}}</h1>
-          </div>
-        {{/if}}
-        {{#if copy.text}}
-          <div class="hero__content-text">
-            {{{copy.text}}}
-          </div>
-        {{/if}}
-        {{#if copy.cta}}
-          <div class="cta--container"><a href="{{copy.cta.url}}" class="cta cta--{{copy.cta.type}}">{{copy.cta.text}}</a></div>
-        {{/if}}
-      {{/if}}
+      <?php endif; ?>
+      <?php if (isset($content['field_title'])): ?>
+        <div class="hero__content-title">
+          <h1><?php print render($content['field_title']); ?></h1>
+        </div>
+      <?php endif; ?>
+      <?php if (isset($content['field_text'])): ?>
+        <div class="hero__content-text">
+          <?php print render($content['field_text']); ?>
+        </div>
+      <?php endif; ?>
+      <?php if (isset($content['field_link'])): ?>
+        <div class="cta--container"><?php print render($content['field_link']); ?></div>
+      <?php endif; ?>
     </div>
-    {{#if img}}<div class="hero__img" style="background-image: url('/media/img/{{img}}');"></div>{{/if}}
   </div>
+  <?php if (isset($content['field_background_image'])): ?>
+    <div class="hero__img" style="background-image: url('<?php print render($content['field_background_image']); ?>');"></div>
+  <?php endif; ?>
 </section>
 

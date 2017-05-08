@@ -19,6 +19,7 @@
   }
   &__content {
     @include col(9);
+    text-align: left;
     h6 {
       @include font-size(26);
       @extend %OpenSansbold;

@@ -1,3 +1,12 @@
 {
-
+  "employment-application": {
+    "classes": ["tan", "slant", "slant--top-right"],
+    "title": "Online Employment Application",
+    "text": "All fields marked with an asterisk (*) are required."
+  },
+  "contact-us": {
+    "classes": ["white", "slant", "slant--top-left", "slant--bottom-left"],
+    "title": "",
+    "text": "All fields marked with an asterisk (*) are required."
+  }
 }

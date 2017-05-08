@@ -30,17 +30,24 @@
  $path = drupal_lookup_path('alias', $path);
  global $user;
 ?>
-<section class="section section--split-content">
+<section class="section split-content section--split-content<?php
+  if (isset($content['field_image_alignment'])) {
+    print ' section--image-' . $content['field_image_alignment']['#items'][0]['value'];
+  }
+?>">
   <div class="section-wrapper">
     <?php if ($user->uid): ?>
       <div class="edit-button">
         <a href="/admin/structure/entity-type<?php print $url . '/edit?destination=' . $path; ?>">Edit</a>
       </div>
     <?php endif; ?>
+    <?php if (isset($content['field_text'])): ?>
     <div class="split-content__content">
-      {{{text}}}
+      <?php print render($content['field_text']); ?>
     </div>
-    <div class="split-content__img" style="background-image: url('/media/img/{{img}}');"></div>
+    <?php endif; ?>
+    <?php if (isset($content['field_background_image'])): ?>
+      <div class="split-content__img" style="background-image: url('<?php print render($content['field_background_image']); ?>');"></div>
+    <?php endif; ?>
   </div>
 </section>
-

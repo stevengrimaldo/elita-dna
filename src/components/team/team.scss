@@ -7,6 +7,7 @@
   &__filters {
     float: left;
     @include col(3);
+    text-align: left;
     &-label {
       @include font-size(14, initial);
       @extend %OpenSans;
@@ -56,20 +57,17 @@
           @include font-size(14, initial);
           @extend %OpenSans;
           cursor: pointer;
-          span {
-            text-decoration: underline;
-          }
           &:hover {
             color: $persimmon;
             span {
-              text-decoration: none;
+              text-decoration: underline;
             }
           }
           &--active {
             @extend %OpenSansSemibold;
             color: $persimmon;
             span {
-              text-decoration: none;
+              text-decoration: underline;
             }
           }
           &:last-child {

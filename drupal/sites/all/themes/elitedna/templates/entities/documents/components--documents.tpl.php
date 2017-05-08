@@ -30,35 +30,42 @@
  $path = drupal_lookup_path('alias', $path);
  global $user;
 ?>
-<section class="section section--documents">
+<section class="section documents section--documents<?php
+  if (isset($content['field_top_slant']) || isset($content['field_bottom_slant'])) {
+    print ' section--slant';
+  }
+  if (isset($content['field_top_slant'])) {
+    print ' section--slant--' . $content['field_top_slant']['#items'][0]['value'];
+  }
+  if (isset($content['field_bottom_slant'])) {
+    print ' section--slant--' . $content['field_bottom_slant']['#items'][0]['value'];
+  }
+  if (isset($content['field_background_color'])) {
+    print ' section--' . $content['field_background_color']['#items'][0]['value'];
+  }
+?>">
   <div class="section-wrapper">
     <?php if ($user->uid): ?>
       <div class="edit-button">
         <a href="/admin/structure/entity-type<?php print $url . '/edit?destination=' . $path; ?>">Edit</a>
       </div>
     <?php endif; ?>
-    {{#if text}}
+    <?php if (isset($content['field_text'])): ?>
       <div class="documents__content">
-        {{{text}}}
+        <?php print render($content['field_text']); ?>
       </div>
-    {{/if}}
+    <?php endif; ?>
     <div class="documents__items--container">
-      {{#if title}}
-        {{{title}}}
-      {{/if}}
-      <div class="documents__items">
-        {{#each document}}
-          <div class="documents__items__item">
-            <figure class="documents__items__item-img">
-              <img src="/media/img/{{this.image}}" alt="" />
-            </figure>
-            <div class="documents__items__item-title">
-              <h6>{{this.title}}</h6>
-            </div>
-            <div class="cta--container"><a href="#" class="cta cta--dowload">Download</a></div>
-          </div>
-        {{/each}}
-      </div>
+      <?php if (isset($content['field_title'])): ?>
+        <div class="documents__title">
+          <h4><?php print render($content['field_title']); ?></h4>
+        </div>
+      <?php endif; ?>
+      <?php if (isset($content['field_documents'])): ?>
+        <div class="documents__items">
+          <?php print render($content['field_documents']); ?>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </section>

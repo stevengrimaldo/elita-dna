@@ -4,7 +4,6 @@
 '../../global/defaults/typography';
 
 .featured-content {
-  text-align: center;
   &--container {
     @include col(7);
     margin: 0 auto;
@@ -32,12 +31,12 @@
     }
     li {
       margin: 0 1.6666666667% 25px;
-      color: $persimmon;
-      width: 30%;
+      color: $emperor;
+      width: 29%;
       display: inline-block;
       position: relative;
       vertical-align: top;
-      h5, bold {
+      h5, b, strong {
         @include font-size(20, null, -20);
         @extend %OpenSansSemibold;
       }
@@ -63,7 +62,6 @@
     margin-top: 30px;
   }
   &.section--left-align {
-    text-align: left;
     .featured-content--container {
       max-width: none;
       width: 100%;
@@ -118,11 +116,6 @@
     }
     .cta--container {
       margin-top: 15px;
-    }
-  }
-  @include mq($max, $mobile) {
-    &.section--left-align {
-      text-align: center;
     }
   }
 }
