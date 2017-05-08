@@ -15,6 +15,26 @@
     border-radius: 35px;
     display: inline-block;
   }
+  &--download {
+    @extend %OpenSansbold;
+    @include font-size(16, initial, -10);
+    color: $persimmon;
+    @include background-icon('download-arrow') {
+      background-size: 16px auto;
+      background-position: right center;
+      padding-right: 26px;
+    }
+  }
+  &--arrow {
+    @extend %OpenSansbold;
+    @include font-size(16, initial, -10);
+    color: $persimmon;
+    @include background-icon('right-arrow') {
+      background-size: 16px auto;
+      background-position: right center;
+      padding-right: 26px;
+    }
+  }
 }
 .webform-submit {
   @extend %OpenSansExtrabold;

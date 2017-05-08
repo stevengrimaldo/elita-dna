@@ -13,6 +13,7 @@
         cursor: pointer;
         @include col(4);
         transition: background-color 250ms;
+        text-align: left;
         h4 {
           @include font-size(20, initial);
           text-transform: uppercase;

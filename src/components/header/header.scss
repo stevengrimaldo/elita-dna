@@ -8,7 +8,7 @@
   background-color: $white;
   position: relative;
   z-index: 10;
-  padding: 25px 0;
+  padding: 25px 0 0;
   &-wrapper {
     @include clearfix;
   }
@@ -57,6 +57,45 @@
         @extend %OpenSansSemibold;
         a {
           color: $emperor;
+          font-weight: inherit;
+          padding-bottom: 25px;
+          display: block;
+          &.active,
+          &:hover {
+            color: $strikemaster;
+          }
+        }
+        .menu,
+        .sub-menu {
+          display: none;
+          position: absolute;
+          background-color: $white;
+          width: 225px;
+          li {
+            text-align: left;
+            font-weight: 400;
+            display: block;
+            margin: 0;
+            a {
+              padding: 10px 20px;
+              border-bottom: 1px solid rgba($emperor, .15);
+            }
+            &:last-child {
+              a {
+                border-bottom: 0 none;
+              }
+            }
+          }
+        }
+        &.expanded,
+        &.has-menu {
+          position: relative;
+          &:hover {
+            .menu,
+            .sub-menu {
+              display: block;
+            }
+          }
         }
       }
     }
