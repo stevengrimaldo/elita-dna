@@ -16,7 +16,7 @@
         height: 30px;
       }
       &--download {
-        @include background-icon('download-arrow', true) {
+        @include background-icon('download-arrow', 'white') {
           background-size: 30px auto;
         }
       }

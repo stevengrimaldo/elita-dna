@@ -100,4 +100,16 @@
       }
     }
   }
+  @media screen and (max-width: 64em) {
+    padding-top: 0;
+    &__logo {
+      padding: 13px 0 12px;
+      img {
+        max-width: 150px;
+      }
+    }
+    &__nav {
+      display: none;
+    }
+  }
 }

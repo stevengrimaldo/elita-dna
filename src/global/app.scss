@@ -23,7 +23,7 @@
   }
   .section--orange {
     .icon--#{$icon} {
-      @include background-icon($name, true);
+      @include background-icon($name, 'white');
     }
   }
 }

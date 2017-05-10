@@ -19,7 +19,7 @@
     @extend %OpenSansbold;
     @include font-size(16, initial, -10);
     color: $persimmon;
-    @include background-icon('download-arrow') {
+    @include background-icon('download-arrow', 'orange') {
       background-size: 16px auto;
       background-position: right center;
       padding-right: 26px;
@@ -29,7 +29,7 @@
     @extend %OpenSansbold;
     @include font-size(16, initial, -10);
     color: $persimmon;
-    @include background-icon('right-arrow') {
+    @include background-icon('right-arrow', 'orange') {
       background-size: 16px auto;
       background-position: right center;
       padding-right: 26px;

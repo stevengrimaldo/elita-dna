@@ -1,11 +1,11 @@
 // uses png fallback if svg not supported*
 // *support is checked by detecting if multiple background images are supported
-@mixin background-icon($name, $white: false, $svg: true) {
+@mixin background-icon($name, $color: null, $svg: true) {
   $fallback-extension: 'png' !default;
   background-image: url("#{$image-path}/#{$name}.#{$fallback-extension}");
   @if $svg == true {
-    @if $white == true {
-      background-image: url("#{$svg-path-white}/#{$name}.svg"), none;
+    @if $color {
+      background-image: url("#{$svg-path}/#{$color}/#{$name}.svg"), none;
     } @else {
       background-image: url("#{$svg-path}/#{$name}.svg"), none;
     }

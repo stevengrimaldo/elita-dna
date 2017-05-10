@@ -57,7 +57,8 @@ const entries = [
   './src/components/split-content/split-content.js',
   './src/components/team/team.js',
   './src/components/tools/tools.js',
-  './src/components/form/form.js'
+  './src/components/form/form.js',
+  './src/components/mobile-menu/mobile-menu.js'
 ];
 
 const output = [
@@ -75,7 +76,8 @@ const output = [
   './build/js/components/split-content.js',
   './build/js/components/team.js',
   './build/js/components/tools.js',
-  './build/js/components/form.js'
+  './build/js/components/form.js',
+  './build/js/components/mobile-menu.js'
 ];
 
 const customOpts = {
