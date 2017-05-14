@@ -68,4 +68,18 @@
       }
     }
   }
+  @include mq($max, 1250) {
+    &__list {
+      padding-right: 5.5555555556%;
+      &-location {
+        &__info {
+          max-width: none;
+          width: 100%;
+        }
+        &__map {
+          display: none;
+        }
+      }
+    }
+  }
 }
