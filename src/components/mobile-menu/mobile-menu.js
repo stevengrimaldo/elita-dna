@@ -3,6 +3,7 @@ import $ from 'jquery';
 let isOpen = false;
 let settings = {
   vpWidth: 0,
+  isTouchMoveAllowed: true,
   scrollPosition: 0
 };
 let $el = {
@@ -175,6 +176,9 @@ let toggleMenu = (ev) => {
   if (isOpen) {
     $el.bodyEl.removeClass('show-menu');
     allowScrolling();
+    $('.expanded').removeClass('open active');
+    $('.parent').removeClass('hide active');
+    $('.mobile-menu-nav-menus ul').removeClass('active');
   } else {
     ev.preventDefault();
     ev.stopPropagation();
@@ -183,7 +187,42 @@ let toggleMenu = (ev) => {
   }
   isOpen = !isOpen;
 };
+let bindMobileMenuEvents = (ev) => {
+    $('.header__nav__menu > ul.menu > ul.menu').unwrap();
+    $('.mobile-menu-nav-menus > ul').addClass('parent');
+    $('.mobile-menu .expanded > ul').prepend('<li class="back">Go Back</li>');
+    $('.mobile-menu .expanded').on('click', function (ev) {
+        var target = ev.target,
+            currentTarget = ev.currentTarget;
+
+        if (target.tagName !== 'A') {
+            // opens submenu
+            ev.stopPropagation();
+            $('.expanded').removeClass('open');
+            $(currentTarget).addClass('open');
+            $(currentTarget).parents('ul').addClass('active');
+            if ($(currentTarget).parent().closest('.expanded').length > 0) {
+                $(currentTarget).parent().closest('.expanded').addClass('active');
+            }
+            $(currentTarget).closest('.parent').siblings().addClass('hide');
+        } else {
+            // opens link
+        }
+    });
+    $('.back').on('click', function (ev) {
+        ev.stopPropagation();
+        if ($(ev.currentTarget).closest('.expanded').parent().closest('.expanded').length > 0) {
+            $(ev.currentTarget).closest('.expanded').parent().closest('.expanded').addClass('open');
+        } else {
+            $('.parent').removeClass('hide active');
+        }
+        $(ev.currentTarget).closest('.active').removeClass('active');
+        $(ev.currentTarget).closest('.expanded').removeClass('open active');
+        $(ev.currentTarget).parent().closest('.expanded').removeClass('active');
+    });
+};
 let initMobileMenu = () => {
+  bindMobileMenuEvents();
   $el.openbtn.on('click', toggleMenu);
 
   if ($el.closebtn) {
@@ -216,6 +255,10 @@ let windowResize = () => {
 settings.vpWidth = util.viewport().width;
 
 initMobileMenu();
+
+$('.no-link').on('click', function (ev) {
+  ev.preventDefault();
+});
 
 $('.modal .close').on('click', function(ev) {
   ev.stopImmediatePropagation();

@@ -1,4 +1,5 @@
-@import '../../global/defaults/config';
+@import '../../global/defaults/config',
+'../../global/defaults/mixins';
 
 .mobile-menu {
   display: none;
@@ -15,12 +16,22 @@
   transition: transform 400ms;
   transition-timing-function: cubic-bezier(0.7,0,0.3,1);
   a {
-    color: #ea5504;
+    color: $text-color;
     cursor: pointer;
     text-decoration: none;
     &:hover {
-      color: #ea5504;
+      color: $strikemaster;
       text-decoration: none;
+    }
+  }
+  &-header {
+    background-color: $white;
+    position: relative;
+    padding: 14px 25px;
+    border-bottom: 1px solid $strikemaster;
+    @include clearfix;
+    a {
+      display: block;
     }
   }
   &-nav {
@@ -48,43 +59,46 @@
             display: none;
             cursor: pointer;
             padding-left: 37px;
-            &::before {
-              content: '';
-              width: 7px;
-              height: 14px;
-              position: absolute;
-              left: 20px;
-              top: 50%;
-              -webkit-transform: translateY(-50%) rotate(180deg);
-              -ms-transform: translateY(-50%) rotate(180deg);
-              transform: translateY(-50%) rotate(180deg);
-              display: block;
-              background-image: url(/sites/all/themes/wy_theme/src/media/menu-right-arrow.png);
-              background-image: url(/sites/all/themes/wy_theme/src/media/svg/menu-right-arrow.svg),none;
-              display: inline-block;
-              background-position: center center;
-              background-repeat: no-repeat;
-              background-size: 7px auto;
-            }
-          }
-          &.expanded {
+            &::before,
             &::after {
               content: '';
-              width: 7px;
-              height: 14px;
+              width: 1px;
+              height: 8px;
+              position: absolute;
+              left: 20px;
+              display: block;
+              border-radius: 50px;
+              background-color: $strikemaster;
+            }
+            &::before {
+              transform: rotate(-45deg);
+              top: 48%;
+            }
+            &::after {
+              transform: rotate(45deg);
+              bottom: 48%;
+            }
+          }
+          &.has-menu,
+          &.expanded {
+            &::before,
+            &::after {
+              content: '';
+              width: 1px;
+              height: 8px;
               position: absolute;
               right: 20px;
-              top: 50%;
-              -webkit-transform: translateY(-50%);
-              -ms-transform: translateY(-50%);
-              transform: translateY(-50%);
               display: block;
-              background-image: url(/sites/all/themes/wy_theme/src/media/menu-right-arrow.png);
-              background-image: url(/sites/all/themes/wy_theme/src/media/svg/menu-right-arrow.svg),none;
-              display: inline-block;
-              background-position: center center;
-              background-repeat: no-repeat;
-              background-size: 7px auto;
+              border-radius: 50px;
+              background-color: $strikemaster;
+            }
+            &::before {
+              transform: rotate(45deg);
+              top: 48%;
+            }
+            &::after {
+              transform: rotate(-45deg);
+              bottom: 48%;
             }
             a {
               display: inline-block;
@@ -94,6 +108,7 @@
               > a {
                 display: none;
               }
+              &::before,
               &::after {
                 content: none;
               }
@@ -154,17 +169,12 @@
   }
   &-logo {
     text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    width: 138px;
-    margin: 0 auto;
-    transform: translateY(-42%);
-    img,
-    svg {
-      max-width: 138px;
-      max-height: 23px;
+    width: 200px;
+    max-width: 385px;
+    float: left;
+    img {
+      max-width: 150px;
+      max-height: 50px;
       display: block;
     }
   }
@@ -203,19 +213,33 @@
     }
   }
   &-close {
-    max-width: 50px;
-    max-height: 50px;
+    float: right;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
-    position: absolute;
-    padding: 20px;
-    top: 50%;
-    right: 0;
-    z-index: 9;
-    transform: translateY(-50%);
-    svg {
+    margin-top: 8px;
+    i {
       display: block;
-      max-width: 20px;
-      max-height: 20px;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        height: 30px;
+        width: 2px;
+        background-color: $strikemaster;
+        position: absolute;
+        top: 0;
+        left: 50%;
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
     }
   }
   @media screen and (max-width: 64em) {
