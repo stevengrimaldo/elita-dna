@@ -99,6 +99,10 @@ function elitedna_preprocess_page(&$vars) {
     unset($vars['page']['content']['system_main']['term_heading']['#prefix']);
     unset($vars['page']['content']['system_main']['term_heading']['#suffix']);
   }
+  if (current_path() == 'user' || current_path() == 'user/login' || current_path() == 'user/registration') {
+    drupal_add_js(path_to_theme() . '/js/components/form.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+    drupal_add_css(path_to_theme() . '/css/components/form/form.min.css', array('group' => CSS_THEME));
+  }
 }
 
 /**

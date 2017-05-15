@@ -36,7 +36,8 @@
     }
   }
 }
-.webform-submit {
+.webform-submit,
+.form-submit {
   @extend %OpenSansExtrabold;
   text-align: center;
   @include font-size(16, initial, -10);
@@ -46,4 +47,5 @@
   border-radius: 35px;
   display: inline-block;
   margin-top: 20px;
+  cursor: pointer;
 }

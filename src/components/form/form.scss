@@ -15,26 +15,33 @@
       margin-bottom: 40px;
     }
   }
-  .webform-client-form,
-  .webform-client-form > div {
-    @include clearfix;
-  }
   .webform {
     &-client-form {
       text-align: center;
-    }
-    &-component {
-      @include col(4);
-      float: left;
-      text-align: left;
-      margin: 20px 10px;
-      label {
-        display: block;
-        margin-bottom: 10px;
+      @include clearfix;
+      > div {
+        @include clearfix;
       }
+    }
+  }
+  &-item {
+    @include col(4);
+    float: left;
+    text-align: left;
+    margin: 20px 10px;
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .description {
+      @include font-size(12, null, 10);
+      margin-top: 5px;
+    }
+    &.form-type {
       &-textfield,
       &-number,
-      &-email {
+      &-email,
+      &-password {
         input {
           width: 100%;
           height: 40px;
@@ -61,16 +68,34 @@
           padding: 10px;
         }
       }
-      &.webform-component--what-position-are-you-interested-in,
-      &.webform-component--cover-letter,
-      &.webform-component--subject,
-      &.webform-component--message {
-        @include col(8);
-      }
+    }
+    &.webform-component--what-position-are-you-interested-in,
+    &.webform-component--cover-letter,
+    &.webform-component--subject,
+    &.webform-component--message {
+      @include col(8);
     }
   }
   &-actions {
     clear: both;
     text-align: left;
+  }
+  &--user {
+    .form {
+      &__header-text {
+        text-align: center;
+      }
+      &-item {
+        &.form-item-name,
+        &.form-item-pass {
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      &-actions {
+        text-align: center;
+      }
+    }
   }
 }

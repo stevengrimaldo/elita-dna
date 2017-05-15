@@ -70,12 +70,34 @@
  *
  * @ingroup themeable
  */
- $path = current_path();
- $path = drupal_lookup_path('alias', $path);
+ $base_path = current_path();
+ $path = drupal_lookup_path('alias', $base_path);
  global $user;
 ?>
 <?php print $messages; ?>
+<?php if ($base_path == 'user' || $base_path == 'user/login' || $base_path == 'user/registration'): ?>
+  <section class="section form form--user section--form section--white">
+    <div class="section-wrapper">
+      <div class="form__header">
+				<div class="form__header-title">
+					<h3><?php if ($base_path == 'user' || $base_path == 'user/login') {
+            print 'Login';
+          } else if ($base_path == 'user/registration') {
+            print 'Sign Up';
+          } ?></h3>
+				</div>
+				<div class="form__header-text">
+          <p>All fields marked with an asterisk (*) are required.</p>
+				</div>
+  		</div>
+      <div class="form--container">
+<?php endif; ?>
 <?php print render($page['content']); ?>
+<?php if ($base_path == 'user' || $base_path == 'user/login' || $base_path == 'user/registration'): ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
 <?php if (!empty($node)): ?>
   <div class="page-edit-button">
     <a href="<?php print '/node/' . $node->nid . '/edit?destination=' . $path; ?>">Edit Page</a>
