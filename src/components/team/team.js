@@ -12,3 +12,16 @@ $('.team__filters__filter-location').on('click', function () {
     $(this).parent().removeClass('team__filters__filter--open');
   }
 });
+
+$('.team__filters__filter').each(function () {
+  $(this).find('.team__filters__filter__departments-department').each(function () {
+    $(this).attr('data-department', $(this).children('span').text().toLowerCase().replace(/\s+/g, '-'));
+  });
+});
+
+$('.team__filters__filter__departments-department').on('click', function () {
+  $('.team__members__member').hide();
+  if ($('.team__members__member').attr('data-location') === $(this).parent().prev().attr('data-location')) {
+    $('.team__members__member[data-department="' + $(this).attr("data-department") + '"]').show();
+  }
+});

@@ -20,4 +20,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   }
 });
 
+(0, _jquery2.default)('.team__filters__filter').each(function () {
+  (0, _jquery2.default)(this).find('.team__filters__filter__departments-department').each(function () {
+    (0, _jquery2.default)(this).attr('data-department', (0, _jquery2.default)(this).children('span').text().toLowerCase().replace(/\s+/g, '-'));
+  });
+});
+
+(0, _jquery2.default)('.team__filters__filter__departments-department').on('click', function () {
+  (0, _jquery2.default)('.team__members__member').hide();
+  if ((0, _jquery2.default)('.team__members__member').attr('data-location') === (0, _jquery2.default)(this).parent().prev().attr('data-location')) {
+    (0, _jquery2.default)('.team__members__member[data-department="' + (0, _jquery2.default)(this).attr("data-department") + '"]').show();
+  }
+});
+
 },{"jquery":3}]},{},[18]);
