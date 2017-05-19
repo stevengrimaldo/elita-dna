@@ -1,14 +1,14 @@
 <?php
   $spec = '/[-.]/';
   $space = '/\s+/';
-  $location = render($content['field_address']['#items']['0']['locality']);
+  $location = $title;
   $location = preg_replace($spec, '', $location);
   $location = strtolower(preg_replace($space, '-', $location));
 ?>
 <?php if ($teaser): ?>
   <div class="team__filters__filter">
     <div class="team__filters__filter-location" data-location="<?php print $location; ?>">
-      <h4><?php print render($content['field_address']['#items']['0']['locality']); ?></h4>
+      <h4><?php print $title; ?></h4>
     </div>
     <?php if (isset($content['field_department'])): ?>
       <div class="team__filters__filter__departments">

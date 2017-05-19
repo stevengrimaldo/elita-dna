@@ -21,7 +21,11 @@ $('.team__filters__filter').each(function () {
 
 $('.team__filters__filter__departments-department').on('click', function () {
   $('.team__members__member').hide();
-  if ($('.team__members__member').attr('data-location') === $(this).parent().prev().attr('data-location')) {
-    $('.team__members__member[data-department="' + $(this).attr("data-department") + '"]').show();
-  }
+  let currentLocation = $(this).parent().prev().attr('data-location');
+  let currentDepartment = $(this).attr('data-department');
+  $('.team__members__member').each(function () {
+    if ($(this).attr('data-location') === currentLocation && $(this).attr('data-department') === currentDepartment) {
+      $(this).show();
+    }
+  });
 });
