@@ -37,4 +37,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
 });
 
+(0, _jquery2.default)('.team__members__member').hide();
+(0, _jquery2.default)('.team__members__member[data-location="our-team"]').show();
+(0, _jquery2.default)('.team__filters__filter-location[data-location="our-team"]').parent().detach().insertAfter('.team__filters-label');
+
 },{"jquery":3}]},{},[18]);

@@ -29,3 +29,7 @@ $('.team__filters__filter__departments-department').on('click', function () {
     }
   });
 });
+
+$('.team__members__member').hide();
+$('.team__members__member[data-location="our-team"]').show();
+$('.team__filters__filter-location[data-location="our-team"]').parent().detach().insertAfter('.team__filters-label');
