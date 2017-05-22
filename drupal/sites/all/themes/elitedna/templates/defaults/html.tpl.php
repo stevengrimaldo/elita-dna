@@ -33,7 +33,7 @@
             </figure>
             <nav class="header__nav">
               <ul class="header__nav-utility">
-                <li><a href="#">info@elitednatherapy.com</a></li>
+                <li><a href="mailto:info@elitednatherapy.com" rel="nofollow">info@elitednatherapy.com</a></li>
                 <li>(239) 223-2751</li>
               </ul>
               <?php if ($main_menu): ?>

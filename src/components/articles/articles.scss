@@ -53,8 +53,12 @@
     .cta--container {
       margin-top: 10px;
     }
+    &:nth-child(n+7) {
+      display: none;
+    }
   }
   &__more {
+    display: none;
     text-align: center;
     margin-top: 60px;
   }
