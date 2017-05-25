@@ -30,6 +30,9 @@ $('.team__filters__filter__departments-department').on('click', function () {
       $(this).show();
     }
   });
+  $('html, body').animate({
+    scrollTop: $('.team__members').offset().top
+  }, 500);
 });
 
 $('.team__members__member').hide();

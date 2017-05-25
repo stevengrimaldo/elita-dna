@@ -102,12 +102,12 @@
     }
     &-author {
       h6 {
-        @include font-size(21, initial);
+        @include font-size(22, initial);
         @extend %OpenSansbold;
         margin-top: 30px;
       }
       time {
-        @include font-size(`8`, initial);
+        @include font-size(18, initial);
         @extend %OpenSans;
         margin-top: 10px;
       }
