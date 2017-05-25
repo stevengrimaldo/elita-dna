@@ -60,6 +60,11 @@
       @include col(9);
     }
   }
+  @include mq($max, 1300) {
+    &__img {
+      display: none;
+    }
+  }
   @include mq($max, $tablet) {
     &__content {
       max-width: none;
