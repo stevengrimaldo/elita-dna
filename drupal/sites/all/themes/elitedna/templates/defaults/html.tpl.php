@@ -15,6 +15,9 @@
     <div class="mobile-menu">
       <nav class="mobile-menu-nav">
         <div class="mobile-menu-header">
+          <div class="mobile-menu-logo">
+            <a href="/"><img src="/<?php print IMG_PATH; ?>/logo.png" alt="" /></a>
+          </div>
           <div class="mobile-menu-close"><i></i></div>
         </div>
         <?php if ($main_menu): ?>
@@ -43,6 +46,7 @@
                 <div class="mobile-menu-open"><i></i></div>
               <?php endif; ?>
             </nav>
+            <div class="mobile-menu-open"><i></i></div>
           </div>
         </header>
         <main class="components">

@@ -9,6 +9,7 @@ define('IMG_PATH', THEME_PATH . '/media/img/');
 function elitedna_preprocess_html(&$vars) {
   drupal_add_js(THEME_PATH . '/js/common.js', array('scope' => 'header', 'group' => JS_LIBRARY, 'every_page' => TRUE, 'weight' => 0));
   drupal_add_js(THEME_PATH . '/js/app.js', array('scope' => 'header', 'group' => JS_THEME, 'every_page' => TRUE, 'weight' => 1));
+  drupal_add_js(THEME_PATH . '/js/components/mobile-menu.js', array('scope' => 'header', 'group' => JS_THEME, 'every_page' => TRUE, 'weight' => 2));
 
   $current_entity = menu_get_object('node');
 

@@ -27,9 +27,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 (0, _jquery2.default)('.team__filters__filter__departments-department').on('click', function () {
+  (0, _jquery2.default)('.team__filters__filter__departments-department').removeClass('team__filters__filter__departments-department--active');
   (0, _jquery2.default)('.team__members__member').hide();
   var currentLocation = (0, _jquery2.default)(this).parent().prev().attr('data-location');
   var currentDepartment = (0, _jquery2.default)(this).attr('data-department');
+  (0, _jquery2.default)(this).addClass('team__filters__filter__departments-department--active');
   (0, _jquery2.default)('.team__members__member').each(function () {
     if ((0, _jquery2.default)(this).attr('data-location') === currentLocation && (0, _jquery2.default)(this).attr('data-department') === currentDepartment) {
       (0, _jquery2.default)(this).show();
@@ -40,5 +42,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _jquery2.default)('.team__members__member').hide();
 (0, _jquery2.default)('.team__members__member[data-location="our-team"]').show();
 (0, _jquery2.default)('.team__filters__filter-location[data-location="our-team"]').parent().detach().insertAfter('.team__filters-label');
+(0, _jquery2.default)('.team__filters__filter-location[data-location="our-team"]').parent().addClass('team__filters__filter--open');
+(0, _jquery2.default)('.team__filters__filter-location[data-location="our-team"]').next().show();
 
 },{"jquery":3}]},{},[18]);

@@ -64,6 +64,10 @@
           &:hover {
             color: $strikemaster;
           }
+          &.no-link {
+            color: $emperor;
+            cursor: default;
+          }
         }
         .menu,
         .sub-menu {

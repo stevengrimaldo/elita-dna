@@ -4,6 +4,9 @@
     @extend %OpenSansbold;
     @include font-size(16, initial, -10);
     color: $persimmon;
+    &:hover {
+      color: $link-color-hover;
+    }
   }
   &--button {
     @extend %OpenSansExtrabold;
@@ -14,6 +17,9 @@
     padding: 15px 35px;
     border-radius: 35px;
     display: inline-block;
+    &:hover {
+      background-color: $link-color-hover;
+    }
   }
   &--download {
     @extend %OpenSansbold;
@@ -24,6 +30,9 @@
       background-position: right center;
       padding-right: 26px;
     }
+    &:hover {
+      color: $link-color-hover;
+    }
   }
   &--arrow {
     @extend %OpenSansbold;
@@ -33,6 +42,9 @@
       background-size: 16px auto;
       background-position: right center;
       padding-right: 26px;
+    }
+    &:hover {
+      color: $link-color-hover;
     }
   }
 }
@@ -48,4 +60,7 @@
   display: inline-block;
   margin-top: 20px;
   cursor: pointer;
+  &:hover {
+    background-color: $link-color-hover;
+  }
 }

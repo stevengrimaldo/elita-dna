@@ -66,8 +66,10 @@
           &--active {
             @extend %OpenSansSemibold;
             color: $persimmon;
-            span {
-              text-decoration: underline;
+            &:hover {
+              span {
+                text-decoration: none;
+              }
             }
           }
           &:last-child {
@@ -97,7 +99,7 @@
       @include col(2, 10);
       display: inline-block;
       vertical-align: top;
-      margin: 45px pc(45, $base);
+      margin: 30px pc(35, $base);
       text-align: center;
       &-image {
         @include aspect-ratio(1, 1);
@@ -116,7 +118,7 @@
         }
       }
       &-name {
-        @include font-size(16);
+        @include font-size(14);
         margin-top: 20px;
         @extend %OpenSansbold;
         h5 {
@@ -136,7 +138,7 @@
       float: none;
       max-width: none;
       width: 100%;
-      margin-top: 60px;
+      margin-top: 50px;
       &__member {
         @include col(2, 10);
       }
