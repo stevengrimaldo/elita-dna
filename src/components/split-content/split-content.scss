@@ -61,14 +61,16 @@
     }
   }
   @include mq($max, 1300) {
+    &__content {
+      max-width: none;
+      width: 100%;
+    }
     &__img {
       display: none;
     }
   }
   @include mq($max, $tablet) {
     &__content {
-      max-width: none;
-      width: 100%;
       h4 {
         @include font-size(30, initial);
         margin-bottom: 25px;
