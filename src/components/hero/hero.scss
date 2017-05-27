@@ -73,6 +73,15 @@
         content: none;
       }
     }
+    &.section--above-slant {
+      &.section--slant--bottom-left,
+      &.section--slant--bottom-right {
+        transform: none;
+        > * {
+          transform: none;
+        }
+      }
+    }
     + .section--white,
     + .section--orange,
     + .section--tan {

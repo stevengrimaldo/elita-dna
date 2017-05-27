@@ -146,3 +146,5 @@ $('.locations__list-location__info').on('click', function () {
 });
 
 $('.locations__list-location').first().addClass('locations__list-location--active');
+
+$('.section--locations').prev().addClass('section--above-map');

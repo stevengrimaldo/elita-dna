@@ -35,8 +35,6 @@
         height: calc(100% + 120px);
         width: 60%;
         z-index: 0;
-        transform: skewY(-4.75deg);
-        transform-origin: right top;
         overflow: hidden;
         &-code {
           width: 100%;
@@ -46,8 +44,6 @@
           bottom: 0;
           right: 0;
           left: 0;
-          transform: skewY(4.75deg);
-          transform-origin: inherit;
           z-index: -1;
         }
       }

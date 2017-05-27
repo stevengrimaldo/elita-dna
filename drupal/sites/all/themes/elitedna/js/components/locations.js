@@ -156,6 +156,8 @@ _googleMaps2.default.load(function (google) {
 
 (0, _jQuery2.default)('.locations__list-location').first().addClass('locations__list-location--active');
 
+(0, _jQuery2.default)('.section--locations').prev().addClass('section--above-map');
+
 },{"google-maps":1,"jQuery":2}],1:[function(require,module,exports){
 (function(root, factory) {
 

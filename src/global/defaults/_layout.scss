@@ -114,6 +114,11 @@ body {
         border-right: 100vw solid transparent;
         bottom: -120px;
       }
+      &.section--above-map {
+        &::after {
+          z-index: 10;
+        }
+      }
       + .tools {
         margin-top: -120px;
       }
@@ -128,6 +133,11 @@ body {
         border-top-color: inherit;
         border-left: 100vw solid transparent;
         bottom: -120px;
+      }
+      &.section--above-map {
+        &::after {
+          z-index: 10;
+        }
       }
       + .tools {
         margin-top: -120px;

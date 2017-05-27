@@ -98,7 +98,7 @@
     </div>
   </section>
 <?php endif; ?>
-<?php if (!empty($node)): ?>
+<?php if ($user->uid): ?>
   <div class="page-edit-button">
     <a href="<?php print '/node/' . $node->nid . '/edit?destination=' . $path; ?>">Edit Page</a>
   </div>
