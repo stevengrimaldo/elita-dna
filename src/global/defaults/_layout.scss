@@ -48,6 +48,13 @@ body {
   &.tools {
     padding: 0;
   }
+  &.locations {
+    + .section--slant {
+      &::before {
+        z-index: 10;
+      }
+    }
+  }
   &--white {
     background-color: $white;
     border-color: $white;

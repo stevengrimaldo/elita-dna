@@ -22,8 +22,8 @@ $('.team__filters__filter').each(function () {
 $('.team__filters__filter__departments-department').on('click', function () {
   $('.team__filters__filter__departments-department').removeClass('team__filters__filter__departments-department--active');
   $('.team__members__member').hide();
-  let currentLocation = $(this).parent().prev().attr('data-location');
-  let currentDepartment = $(this).attr('data-department');
+  const currentLocation = $(this).parent().prev().attr('data-location');
+  const currentDepartment = $(this).attr('data-department');
   $(this).addClass('team__filters__filter__departments-department--active');
   $('.team__members__member').each(function () {
     if ($(this).attr('data-location') === currentLocation && $(this).attr('data-department') === currentDepartment) {

@@ -38,6 +38,23 @@
       "url": "#"
     }]
   },
+  "next-steps": {
+    "classes": ["tan", "slant", "slant--top-left"],
+    "icon": "",
+    "copy": {
+      "title": "Ready to Take the Next Step?",
+      "text": ""
+    },
+    "cta": [{
+      "type": "button",
+      "text": "Make an Appointment",
+      "url": "#"
+    }, {
+      "type": "inline",
+      "text": "View Our Intake Forms",
+      "url": "#"
+    }]
+  },
   "aba": {
     "classes": ["orange", "slant", "slant--bottom-right"],
     "icon": "",

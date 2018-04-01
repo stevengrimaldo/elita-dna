@@ -47,6 +47,30 @@
       "text": "<p>No matter what specialty our patient is being seen, they always have access to the entire Elite DNA team.</p>"
     }]
   },
+  "detail": {
+    "classes": ["orange", "slant", "slant--top-left", "slant--bottom-left"],
+    "header": {
+      "title": "Why Choose Elita DNA Therapy?",
+      "text": "<p>Our team of professional therapists are here to help.Come learn and build confidence knowing your child is in the right hands.</p>"
+    },
+    "solution": [{
+      "icon": "cap",
+      "title": "Founded & Managed by Therapists",
+      "text": "<p>We were founded by professionals and want to provide the best results for our patients.</p>"
+    }, {
+      "icon": "shield-person",
+      "title": "We Maximize Each & Every Patient",
+      "text": "<p>Meeting our patients therapeutically where they are, and getting them where they need to be.</p>"
+    }, {
+      "icon": "bag",
+      "title": "Only Therapists Treat Patients",
+      "text": "<p>Our patients can be confident they are in the trusted hands of a professional.</p>"
+    }, {
+      "icon": "brain",
+      "title": "Our Comprehensive Team Approach",
+      "text": "<p>No matter what specialty our patient is being seen, they always have access to the entire Elite DNA team.</p>"
+    }]
+  },
   "aba": {
     "classes": ["orange", "slant", "slant--top-left", "slant--bottom-left"],
     "header": {

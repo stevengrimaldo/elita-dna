@@ -64,6 +64,18 @@
       }
     }
   }
+  &.section--slant--top-left,
+  &.section--slant--top-right {
+    .locations__list-location__map {
+      height: calc(100% + 120px);
+    }
+    &.section--slant--bottom-left,
+    &.section--slant--bottom-right {
+      .locations__list-location__map {
+        height: calc(100% + 240px);
+      }
+    }
+  }
   @include mq($max, 1250) {
     &__list {
       padding-right: 5.5555555556%;
