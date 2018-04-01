@@ -13,16 +13,11 @@ import browserSync, { reload } from 'browser-sync';
 import sourcemaps from 'gulp-sourcemaps';
 import postcss from 'gulp-postcss';
 import rename from 'gulp-rename';
-import nested from 'postcss-nested';
-import inline from 'postcss-strip-inline-comments';
-import cssnano from 'gulp-cssnano';
 import imagemin from 'gulp-imagemin';
 import pngquant from 'imagemin-pngquant';
 import runSequence from 'run-sequence';
-import eStream from 'event-stream';
 import factor from 'factor-bundle';
 import assemble from 'assemble';
-import scss from 'postcss-scss';
 import handlebarsHelpers from 'handlebars-helpers';
 import prettify from 'gulp-prettify';
 import sass from 'gulp-sass';
@@ -42,7 +37,7 @@ const paths = {
   buildDeploy: './build/**/*'
 };
 
-const entries = [
+const entryPoints = [
   './src/global/app.js',
   './src/components/accordion/accordion.js',
   './src/components/articles/articles.js',
@@ -58,6 +53,8 @@ const entries = [
   './src/components/team/team.js',
   './src/components/tools/tools.js',
   './src/components/form/form.js',
+  './src/components/main-content/main-content.js',
+  './src/components/video/video.js',
   './src/components/mobile-menu/mobile-menu.js'
 ];
 
@@ -77,11 +74,13 @@ const output = [
   './build/js/components/team.js',
   './build/js/components/tools.js',
   './build/js/components/form.js',
+  './build/js/components/main-content.js',
+  './build/js/components/video.js',
   './build/js/components/mobile-menu.js'
 ];
 
 const customOpts = {
-  entries: entries,
+  entries: entryPoints,
   debug: true,
   cache: {},
   packageCache: {}
@@ -91,7 +90,7 @@ const options = {
   locale: 'en-GB',
   timestamp: Date.now(),
   assets: './build/media/img/'
-}
+};
 
 const opts = Object.assign({}, watchify.args, customOpts);
 
@@ -101,7 +100,7 @@ gulp.task('clean', cb => {
 
 gulp.task('browserSync', () => {
   browserSync({
-    server: {baseDir: './build/'}
+    server: { baseDir: './build/' }
   });
 });
 
@@ -109,12 +108,12 @@ gulp.task('watchify', () => {
   const bundler = watchify(browserify(opts));
 
   function rebundle() {
-    return bundler.plugin(factor, {o: output})
+    return bundler.plugin(factor, { o: output })
       .bundle()
       .on('error', notify.onError())
       .pipe(source('common.js'))
       .pipe(gulp.dest(paths.buildJs))
-      .pipe(reload({stream: true}));
+      .pipe(reload({ stream: true }));
   }
 
   bundler.transform(babelify)
@@ -122,15 +121,14 @@ gulp.task('watchify', () => {
   return rebundle();
 });
 
-gulp.task('browserify', () => {
-  return browserify({entries: entries})
-  .plugin(factor, {o: output})
+gulp.task('browserify', () =>
+  browserify({ entries: entryPoints })
+  .plugin(factor, { o: output })
   .bundle()
   .pipe(source('common.js'))
   .pipe(buffer())
   .pipe(uglify())
-  .pipe(gulp.dest(paths.buildJs));
-});
+  .pipe(gulp.dest(paths.buildJs)));
 
 gulp.task('styles', () => {
   gulp.src('./src/**/**/*.scss')
@@ -144,22 +142,22 @@ gulp.task('styles', () => {
       cascade: false,
       map: true,
       remove: true
-    }), csswring({removeAllComments: true})]))
+    }), csswring({ removeAllComments: true })]))
     .pipe(sourcemaps.write('.'))
-    .pipe(rename({extname: '.min.css'}))
+    .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('./build/css'))
-    .pipe(reload({stream: true}));
+    .pipe(reload({ stream: true }));
 });
 
 gulp.task('images', () => {
   gulp.src(paths.srcImg)
     .pipe(imagemin({
       progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
+      svgoPlugins: [{ removeViewBox: false }],
       use: [pngquant()]
     }))
     .pipe(gulp.dest(paths.buildImg))
-    .pipe(reload({stream: true}));
+    .pipe(reload({ stream: true }));
 });
 
 gulp.task('html', () => {
@@ -169,7 +167,7 @@ gulp.task('html', () => {
 
   // Add data
   app.data('./src/components/**/*.{json,yml}');
-  app.data({imagePath: './build/media/img/'});
+  app.data({ imagePath: './build/media/img/' });
 
   // Add classic helpers
   app.helpers(handlebarsHelpers(), app.helpers);
@@ -180,10 +178,10 @@ gulp.task('html', () => {
   // Build templates
   return app.src('./src/pages/*.hbs')
     .pipe(app.renderFile(options))
-    .pipe(rename({extname: '.html'}))
-    .pipe(prettify({indent_size: 2}))
+    .pipe(rename({ extname: '.html' }))
+    .pipe(prettify({ indent_size: 2 }))
     .pipe(app.dest('./build/'))
-    .pipe(reload({stream: true}));
+    .pipe(reload({ stream: true }));
 });
 
 gulp.task('lint', () => {
@@ -193,18 +191,28 @@ gulp.task('lint', () => {
 });
 
 gulp.task('moveCss', () => {
-  gulp.src("./build/css/**/**")
+  gulp.src('./build/css/**/**')
     .pipe(gulp.dest('./drupal/sites/all/themes/elitedna/css'));
 });
 
 gulp.task('moveJs', () => {
-  gulp.src("./build/js/**/**")
+  gulp.src('./build/js/**/**')
     .pipe(gulp.dest('./drupal/sites/all/themes/elitedna/js'));
 });
 
 gulp.task('moveMedia', () => {
-  gulp.src("./build/media/**/**")
+  gulp.src('./build/media/**/**')
     .pipe(gulp.dest('./drupal/sites/all/themes/elitedna/media'));
+});
+
+gulp.task('copyFonts', () => {
+  gulp.src('./src/media/font/**/**')
+    .pipe(gulp.dest('./build/media/font'));
+});
+
+gulp.task('copySvgs', () => {
+  gulp.src('./src/media/svg/**/**')
+    .pipe(gulp.dest('./build/media/svg'));
 });
 
 gulp.task('watchTask', () => {
@@ -216,11 +224,11 @@ gulp.task('watchTask', () => {
 });
 
 gulp.task('watch', cb => {
-  runSequence('clean', ['browserSync', 'watchTask', 'watchify', 'styles', 'lint', 'html', 'images'], cb);
+  runSequence('clean', ['browserSync', 'watchTask', 'watchify', 'styles', 'lint', 'html', 'images', 'copyFonts', 'copySvgs'], cb);
 });
 
 gulp.task('build', cb => {
-  runSequence('clean', ['browserify', 'styles', 'lint', 'html', 'images'], cb);
+  runSequence('clean', ['browserify', 'styles', 'lint', 'html', 'images', 'copyFonts', 'copySvgs'], cb);
 });
 
 gulp.task('move', cb => {

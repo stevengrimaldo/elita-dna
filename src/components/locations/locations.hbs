@@ -1,6 +1,6 @@
-<section class="section locations section--locations{{#each classes}} section--{{this}}{{/each}}">
+<section class="section locations section--locations{{#each this.classes}} section--{{this}}{{/each}}">
   <div class="locations__list">
-    {{#each location}}
+    {{#each this.location}}
       <div class="locations__list-location">
         <div class="locations__list-location__info">
           <h4>{{this.name}}</h4>
