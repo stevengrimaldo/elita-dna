@@ -175,6 +175,14 @@ function elitedna_preprocess_node(&$vars) {
           drupal_add_js(path_to_theme() . '/js/components/form.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
           drupal_add_css(path_to_theme() . '/css/components/form/form.min.css', array('group' => CSS_THEME));
           break;
+        case 'main_content':
+          drupal_add_js(path_to_theme() . '/js/components/main-content.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/main-content/main-content.min.css', array('group' => CSS_THEME));
+          break;
+        case 'video':
+          drupal_add_js(path_to_theme() . '/js/components/video.js', array('scope' => 'header', 'group' => JS_THEME, 'weight' => 2));
+          drupal_add_css(path_to_theme() . '/css/components/video/video.min.css', array('group' => CSS_THEME));
+          break;
       }
     }
   }

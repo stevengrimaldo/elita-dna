@@ -1,0 +1,25 @@
+<section class="section video video{{#each classes}} section--{{this}}{{/each}}">
+  <div class="section-wrapper">
+    {{#if header}}
+      <div class="video__header">
+        {{#if header.title}}
+          <div class="video__header-title">
+            <h2>{{header.title}}</h2>
+          </div>
+        {{/if}}
+        {{#if header.text}}
+          <div class="video__header-text">
+            {{{header.text}}}
+          </div>
+        {{/if}}
+      </div>
+    {{/if}}
+    <div class="video--wrapper">
+      <div class="video">
+        <div class="video__iframe">
+          <iframe allowfullscreen src="//www.youtube.com/embed/{{video.id}}?rel=0&amp;showinfo=0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

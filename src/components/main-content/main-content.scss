@@ -1,0 +1,49 @@
+@import '../../global/defaults/config',
+'../../global/defaults/mixins',
+'../../global/defaults/grid',
+'../../global/defaults/typography';
+
+.main-content {
+  &__content {
+    width: 100%;
+    text-align: left;
+    h2 {
+      @include font-size(55, initial, -30);
+      margin-bottom: 50px;
+    }
+    p {
+      margin-bottom: 40px;
+      @include font-size(24);
+    }
+    h4 {
+      margin-bottom: 30px;
+      @include font-size(40, initial, -30);
+    }
+    li {
+      list-style-type: decimal;
+      list-style-position: inside;
+      margin-bottom: 15px;
+      @include font-size(20, initial, -30);
+    }
+    img {
+      width: auto;
+      float: right;
+      margin-left: 50px;
+    }
+  }
+  @include mq($max, $tablet) {
+    &__content {
+      h2 {
+        @include font-size(30, initial);
+        margin-bottom: 25px;
+      }
+      p {
+        @include font-size(14);
+      }
+      img {
+        float: none;
+        margin-left: 0;
+      }
+    }
+  }
+}
