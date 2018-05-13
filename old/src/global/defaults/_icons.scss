@@ -1,0 +1,55 @@
+// uses png fallback if svg not supported*
+// *support is checked by detecting if multiple background images are supported
+@mixin background-icon($name, $color: null, $svg: true) {
+  $fallback-extension: 'png' !default;
+  background-image: url("#{$image-path}/#{$name}.#{$fallback-extension}");
+  @if $svg == true {
+    @if $color {
+      background-image: url("#{$svg-path}/#{$color}/#{$name}.svg"), none;
+    } @else {
+      background-image: url("#{$svg-path}/#{$name}.svg"), none;
+    }
+  }
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @content;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  &--container {
+    display: inline-block;
+    vertical-align: top;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+
+// @key = class name
+// @value = svg file name
+$icons: (
+  'puzzle': 'aba-puzzle',
+  'apple': 'apple',
+  'brain': 'brain',
+  'clipboard': 'counseling-psychiatry',
+  'download': 'download-arrow',
+  'chat-bubble': 'featured-reviews-chat',
+  'cap': 'graduation-cap',
+  'shield-heart': 'shield-heart',
+  'bag': 'medical-bag',
+  'blocks': 'occupational-therapy-blocks',
+  'toy': 'occupational-therapy-toy',
+  'hands': 'one-on-one-sessions',
+  'parents': 'parent-training-sessions',
+  'pdf': 'pdf',
+  'peers': 'peer-group-sessions',
+  'school': 'school-community-sessions',
+  'shield-person': 'shield-person',
+  'abc-bubble': 'speech-language',
+  'left-arrow': 'left-arrow',
+  'right-arrow': 'right-arrow'
+);

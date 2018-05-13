@@ -1,41 +1,29 @@
 {
-  "extends": "airbnb",
-
+  "extends": ["standard", "standard-preact"],
   "globals": {
     "PWD": true,
     "ENV": true,
     "envMode": true,
-    "envUrls": true
+    "envUrls": true,
+    "document": true,
+    "window": true
   },
-
+  "ecmaFeatures": {
+    "modules": true
+  },
   "env": {
-    "es6": true,
-    "browser": true
+    "browser": true,
+    "commonjs": true,
+    "es6": true
   },
-
-  ecmaFeatures: {
-    modules: true
-  },
-
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module"
   },
-
   "rules": {
-    "strict": [ 2, "global" ],
-    "no-console": "off",
-    "func-names": "off",
-    "array-bracket-spacing": "off",
-    "indent": [ 2 ],
-    "comma-dangle": "off",
-    "prefer-template": "off",
-    "curly": "off",
-    "consistent-return": "off",
-    "no-return-assign": "off",
-    "no-sequences": "off",
-    "no-nested-ternary": "off",
-    "no-param-reassign": "off",
-    "max-len": [1, {"code": 200, "tabWidth": 2, "ignoreUrls": true}]
+    "sort-keys": 2,
+    "space-before-function-paren": 0,
+    "jsx-quotes": 0,
+    "comma-dangle": [2, "always-multiline"]
   }
 }

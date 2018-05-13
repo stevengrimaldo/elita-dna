@@ -1,0 +1,82 @@
+import MentalHealthHero from './img/MentalHealthHero.jpg'
+import AdultMentalHealth from './img/adult-mental-health.png'
+import ChildMentalHealth from './img/child-mental-health.png'
+
+import MentalHealthIntakeFormAdult from '../../../global/pdfs/Mental-Health-Intake-Form-Adult.pdf'
+import MentalHealthIntakeFormChild from '../../../global/pdfs/Mental-Health-Intake-Form-Child.pdf'
+
+import { CheckListHeart } from '../../../global/icons'
+
+export const data = {
+  clientIntakeForms: {
+    documents: [
+      {
+        image: AdultMentalHealth,
+        link: MentalHealthIntakeFormAdult,
+        title: 'Adult Intake Form',
+      },
+      {
+        image: ChildMentalHealth,
+        link: MentalHealthIntakeFormChild,
+        title: 'Child Mental Health Form',
+      },
+    ],
+    title: 'Client intake forms:',
+  },
+  commonTreatmentIssues: {
+    text: `
+      <h3>Common treatment issues:</h3>
+      <ul>
+        <li>Adolescent issues</li>
+        <li>Anger</li>
+        <li>Anxiety</li>
+        <li>ADHD</li>
+        <li>Autism spectrum disorders</li>
+        <li>Behavior problems</li>
+        <li>Depression</li>
+        <li>Divorce</li>
+        <li>Fears and phobias</li>
+        <li>Grief</li>
+        <li>Coping with health issues</li>
+        <li>Obsessive-compulsive disorder</li>
+        <li>Oppositional defiant disorder</li>
+        <li>Parenting issues</li>
+        <li>Post-traumatic stress</li>
+        <li>Relationship problems</li>
+        <li>School problems</li>
+        <li>Self-esteem issues</li>
+        <li>Separation anxiety</li>
+        <li>Social anxiety</li>
+        <li>Sibling rivalry</li>
+        <li>Sleep issues</li>
+        <li>Social skills</li>
+        <li>Stress management</li>
+        <li>Transgender issues</li>
+        <li>Women’s issues</li>
+      </ul>
+    `,
+  },
+  counselingPsychiatry: {
+    icon: CheckListHeart,
+    text: `
+      <p>When life presents its challenges or specific problems interfere with your daily activities, our interdisciplinary team is ready to partner with you. Our licensed and trained therapists can help you to understand and modify concerning behaviors, treat psychological symptoms, identify and express emotions in healthy ways, and develop adaptive coping strategies.</p>
+    `,
+    title: 'Counseling & Psychiatry',
+  },
+  hero: {
+    copy: {
+      links: [
+        {
+          path: '/contact-us',
+          text: 'Make An Appointment',
+        },
+      ],
+      subTitle: '',
+      text: `
+        <p>We appreciate that there is no one-size-fits all when it comes to treatment, so we work collaboratively with you and your other providers to help address your problems and concerns. Our clinical staff is experienced and committed to meeting your needs in a safe, supportive environment.</p>
+      `,
+      title: 'Mental Health',
+    },
+    image: MentalHealthHero,
+  },
+}

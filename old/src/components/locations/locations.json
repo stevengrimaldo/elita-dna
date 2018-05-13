@@ -1,0 +1,100 @@
+{
+  "contact-us": {
+    "classes": ["tan", "slant", "slant--top-right"],
+    "location": [{
+      "name": "Fort Myers",
+      "address": "6360 Techster Blvd. Ste. 1 & 2, Fort Myers, FL 33966",
+      "departments": [{
+        "name": "Mental Health"
+      }, {
+        "name": "Applied Behavior Analysis"
+      }, {
+        "name": "Occupational Therapy"
+      }, {
+        "name": "Speech Therapy"
+      }]
+    }, {
+      "name": "Cape Coral",
+      "address": "2721 Del Prado Blvd., Cape Coral, FL 33904"
+    }, {
+      "name": "Naples",
+      "address": "2230 Venetian Court, Naples, FL 34109"
+    }, {
+      "name": "Port Charlotte - Harbour",
+      "address": "3191 Harbor Blvd. #A, Port Charlotte, FL 33952"
+    }, {
+      "name": "Port Charlotte - Cochran Blvd.",
+      "address": "19531 Cochran Blvd., Port Charlotte, FL 33948"
+    }, {
+      "name": "Venice",
+      "address": "1287 US-41 Bypass South, Venice, FL 34292"
+    }]
+  },
+  "detail": {
+    "classes": ["white", "slant", "slant--top-right", "slant--bottom-right"],
+    "location": [{
+      "name": "Fort Myers",
+      "address": "6360 Techster Blvd. Ste. 1 & 2, Fort Myers, FL 33966",
+      "departments": [{
+        "name": "Mental Health"
+      }, {
+        "name": "Applied Behavior Analysis"
+      }, {
+        "name": "Occupational Therapy"
+      }, {
+        "name": "Speech Therapy"
+      }]
+    }, {
+      "name": "Cape Coral",
+      "address": "2721 Del Prado Blvd., Cape Coral, FL 33904"
+    }, {
+      "name": "Naples",
+      "address": "2230 Venetian Court, Naples, FL 34109"
+    }, {
+      "name": "Port Charlotte - Harbour",
+      "address": "3191 Harbor Blvd. #A, Port Charlotte, FL 33952"
+    }, {
+      "name": "Port Charlotte - Cochran Blvd.",
+      "address": "19531 Cochran Blvd., Port Charlotte, FL 33948"
+    }, {
+      "name": "Venice",
+      "address": "1287 US-41 Bypass South, Venice, FL 34292"
+    }]
+  },
+  "locations": {
+    "classes": ["tan", "slant", "slant--top-right"],
+    "location": [{
+      "name": "Our Team",
+      "departments": [{
+        "name": "Admin"
+      }]
+    }, {
+      "name": "Fort Myers",
+      "address": "6360 Techster Blvd. Ste. 1 & 2, Fort Myers, FL 33966",
+      "departments": [{
+        "name": "Mental Health"
+      }, {
+        "name": "Applied Behavior Analysis"
+      }, {
+        "name": "Occupational Therapy"
+      }, {
+        "name": "Speech Therapy"
+      }]
+    }, {
+      "name": "Cape Coral",
+      "address": "2721 Del Prado Blvd., Cape Coral, FL 33904"
+    }, {
+      "name": "Naples",
+      "address": "2230 Venetian Court, Naples, FL 34109"
+    }, {
+      "name": "Port Charlotte - Harbour",
+      "address": "3191 Harbor Blvd. #A, Port Charlotte, FL 33952"
+    }, {
+      "name": "Port Charlotte - Cochran Blvd.",
+      "address": "19531 Cochran Blvd., Port Charlotte, FL 33948"
+    }, {
+      "name": "Venice",
+      "address": "1287 US-41 Bypass South, Venice, FL 34292"
+    }]
+  }
+}
