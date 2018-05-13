@@ -11,6 +11,11 @@
   .icon--container {
     margin-bottom: 30px;
   }
+  &-image {
+    max-width: 60%;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
   &-title {
     @include font-size(45, null, -50);
     margin-bottom: 20px;
