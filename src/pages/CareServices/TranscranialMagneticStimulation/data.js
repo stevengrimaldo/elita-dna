@@ -52,7 +52,7 @@ export const data = {
       author: 'R.P.',
       date: 'Oct 10th, 2017',
       text:
-        " To all the special people at Elite DNA Therapy Services, I just wanted to say how pleased I am with all the people I had contact with during my treatment. The doctor was kind and caring, Rose was a sweetheart and very efficient but my technician Jay was outstanding! She'd made it a pleasure to come in and let the woodpecker do its job by his sweet disposition and good work ethic. I feel I was greatly encouraged with my treatment and would recommend it to others.",
+        "To all the special people at Elite DNA Therapy Services, I just wanted to say how pleased I am with all the people I had contact with during my treatment. The doctor was kind and caring, Rose was a sweetheart and very efficient but my technician Jay was outstanding! She'd made it a pleasure to come in and let the woodpecker do its job by his sweet disposition and good work ethic. I feel I was greatly encouraged with my treatment and would recommend it to others.",
     },
     {
       author: 'N.J.',
@@ -64,7 +64,7 @@ export const data = {
       author: 'N.J.',
       date: 'Nov 4th, 2017',
       text:
-        ' I have experienced years and years of depression. Five times I was admitted to mental facilities. Occasionally medicine would help temporarily, but the dark veil of depression was always present. Thoughts of suicide went through my mind often, and at times, seemed like the only way to get relief from the heavy weight of depression. Dr. Toledo suggested TMS Therapy for me. At the end of the treatments I could feel the darkness and depression lifting away.',
+        'I have experienced years and years of depression. Five times I was admitted to mental facilities. Occasionally medicine would help temporarily, but the dark veil of depression was always present. Thoughts of suicide went through my mind often, and at times, seemed like the only way to get relief from the heavy weight of depression. Dr. Toledo suggested TMS Therapy for me. At the end of the treatments I could feel the darkness and depression lifting away.',
     },
   ],
   tmsServices: {
