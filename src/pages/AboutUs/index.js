@@ -9,12 +9,14 @@ import {
   Solutions,
 } from '../../components'
 
+import PageWrapper from '../../global/template'
+
 // data
 import { data } from './data'
 import { faqs, solutions } from '../../global/data'
 
 const AboutUs = () => (
-  <div class="components--about-us">
+  <PageWrapper className="careers" meta={data.meta}>
     <Hero data={data.hero} slantBottom="left" />
     <Section>
       <Profile data={data.founder} />
@@ -32,7 +34,7 @@ const AboutUs = () => (
     <Section bgColor="tan" padding="none" slantTop="left" unContain>
       <Questions data={faqs} />
     </Section>
-  </div>
+  </PageWrapper>
 )
 
 export default AboutUs

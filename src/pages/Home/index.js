@@ -8,13 +8,14 @@ import {
   Section,
   Tools,
 } from '../../components'
+import PageWrapper from '../../global/template'
 
 // data
 import { data } from './data'
 
 // component
 const Home = () => (
-  <div class="components--home">
+  <PageWrapper className="home" meta={data.meta}>
     <Hero data={data.hero} slantBottom="right" />
     <Section>
       <FeaturedContent data={data.mentalHealthServices} />
@@ -28,7 +29,7 @@ const Home = () => (
     <Section align="left" padding="halfTop">
       <FeaturedContent data={data.getInTouch} />
     </Section>
-  </div>
+  </PageWrapper>
 )
 
 export default Home

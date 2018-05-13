@@ -1,4 +1,4 @@
-import OccupationalHero from './img/OccupationalHero.jpg'
+import heroImage from './img/OccupationalHero.jpg'
 import OccupationalTherapy from './img/occupational-therapy.png'
 
 import OccupationTherapyIntakeForm from '../../../global/pdfs/Occupational-Therapy-Intake-Form.pdf'
@@ -42,7 +42,27 @@ export const data = {
       `,
       title: 'Occupational Therapy',
     },
-    image: OccupationalHero,
+    image: heroImage,
+  },
+  meta: {
+    keywords: [
+      'Intake',
+      'Screening',
+      'Evalutation',
+      'Sensory Processing',
+      'Ergonomic Analysis',
+      'Fine Motor Skills',
+      'Gross Motor Skills',
+      'Occupational Therapy',
+      'Therapy',
+      'Modulation',
+      'Visual Motor',
+      'Sensory',
+      'Regulation',
+      'Interaction',
+    ],
+    tags: [{ content: heroImage, property: 'og:image' }],
+    title: 'Occupational Therapy',
   },
   servicesAndSpecialties: {
     text: `

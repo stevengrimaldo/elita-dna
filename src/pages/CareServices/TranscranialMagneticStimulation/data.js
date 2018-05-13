@@ -23,6 +23,30 @@ export const data = {
       </ul>
     `,
   },
+  meta: {
+    keywords: [
+      'TMS',
+      'Transcranial Magnetic Stimulation',
+      'Severe Depression',
+      'Depression',
+      'FDA',
+      'Cleared',
+      'Depressed',
+      'Depression',
+      'Insurance',
+      'Awake',
+      'Treatment',
+      'Consult',
+      'Neurostar',
+      'Professional',
+      'Therapy',
+      'Psychiatrist',
+      'Depressive Mood Disorder',
+      'Advanced',
+      'Therapy',
+    ],
+    title: 'Transcranial Magnetic Stimulation',
+  },
   reviews: [
     {
       author: 'R.P.',

@@ -1,12 +1,13 @@
 import { h } from 'preact'
 
 import { Hero, News, Resources, Section } from '../../components'
+import PageWrapper from '../../global/template'
 
 // data
 import { data } from './data'
 
 const NewsResources = () => (
-  <div class="components--news-resources">
+  <PageWrapper className="news-resources" meta={data.meta}>
     <Hero bgColor="orange" data={data.hero} slantBottom="right" />
     <Section>
       <Resources data={data.helpfulTools} />
@@ -14,7 +15,7 @@ const NewsResources = () => (
     <Section bgColor="tan" slantTop="right">
       <News data={data.articles} />
     </Section>
-  </div>
+  </PageWrapper>
 )
 
 export default NewsResources

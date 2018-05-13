@@ -166,4 +166,20 @@ export const data = {
     },
     image: '',
   },
+  meta: {
+    keywords: [
+      'Articles',
+      'Newsletter',
+      'Email',
+      'Tools',
+      'News',
+      'Resources',
+      'Tips',
+      'ADHD',
+      'Anxiety',
+      'Updates',
+      'Contact',
+    ],
+    title: 'News & Resources',
+  },
 }

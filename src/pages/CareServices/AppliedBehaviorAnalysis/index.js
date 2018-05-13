@@ -1,13 +1,14 @@
 import { h } from 'preact'
 
 import { FeaturedContent, Hero, Section, Solutions } from '../../../components'
+import PageWrapper from '../../../global/template'
 
 // data
 import { data } from './data'
 import { haveQuestions } from '../../../global/data'
 
 const AppliedBehaviorAnalysis = () => (
-  <div class="components--applied-behavior-analysis">
+  <PageWrapper className="applied-behavior-analysis" meta={data.meta}>
     <Hero bgColor="orange" data={data.hero} slantBottom="right" />
     <Section
       align="left"
@@ -29,7 +30,7 @@ const AppliedBehaviorAnalysis = () => (
     <Section bgColor="tan" slantTop="right">
       <FeaturedContent data={haveQuestions} />
     </Section>
-  </div>
+  </PageWrapper>
 )
 
 export default AppliedBehaviorAnalysis

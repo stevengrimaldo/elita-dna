@@ -1,4 +1,4 @@
-import SpeechTherapyHero from './img/SpeechTherapyHero.jpg'
+import heroImage from './img/SpeechTherapyHero.jpg'
 
 export const data = {
   conditionSpecializations: {
@@ -109,6 +109,34 @@ export const data = {
       `,
       title: 'Speech & Language',
     },
-    image: SpeechTherapyHero,
+    image: heroImage,
+  },
+  meta: {
+    keywords: [
+      'Communication',
+      'Speech',
+      'Therapy',
+      'Speech Therapy',
+      'Language Disorder',
+      'CAPD',
+      'Central Auditory Processing Disorders',
+      'Speech Sound Disorders',
+      'Sound',
+      'Childhood Apraxia of Speech',
+      'Stuttering',
+      'Fluency Disorders',
+      'Trauma',
+      'Traumatic Brain Injury',
+      'Voice Disorder',
+      'Feeding',
+      'Swallowing',
+      'Autism',
+      'Assistive Technology',
+      'Acquired Apraxia of Speech',
+      'Dysarthia',
+      'Aphasia',
+    ],
+    tags: [{ content: heroImage, property: 'og:image' }],
+    title: 'Speech Therapy',
   },
 }

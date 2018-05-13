@@ -7,6 +7,7 @@ import {
   Solutions,
   Team,
 } from '../../components'
+import PageWrapper from '../../global/template'
 
 import { team } from '../../global/team'
 import { locations } from '../../global/locations'
@@ -25,7 +26,7 @@ const admin = [
 const allLocations = admin.concat(locations)
 
 const OurTeam = () => (
-  <div class="components--our-team">
+  <PageWrapper className="our-team" meta={data.meta}>
     <Hero data={data.hero} slantBottom="left" />
     <Section align="left" bgColor="white" slantTop="right" slantBottom="right">
       <Team team={team} locations={allLocations} />
@@ -40,7 +41,7 @@ const OurTeam = () => (
     <Section bgColor="white" image={data.nextSteps.image} slantTop="right">
       <FeaturedContent data={data.nextSteps.copy} />
     </Section>
-  </div>
+  </PageWrapper>
 )
 
 export default OurTeam

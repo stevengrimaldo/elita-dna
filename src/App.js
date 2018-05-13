@@ -1,5 +1,6 @@
 import { h, Component } from 'preact'
 import Router from 'preact-router'
+import { Helmet } from 'react-helmet'
 // import scrollIntoView from 'scroll-into-view'
 
 import {
@@ -28,11 +29,6 @@ import './global'
 
 const year = new Date().getFullYear()
 
-const meta = {
-  tags: [{ content: '', property: 'og:image' }],
-  title: 'Home',
-}
-
 class App extends Component {
   handleRoute = e => {
     if (
@@ -53,7 +49,7 @@ class App extends Component {
   render(props) {
     return (
       <div>
-        <Meta data={meta}>
+        <Helmet>
           <meta charset="utf-8" />
           <meta httpequiv="X-UA-Compatible" content="IE=edge" />
           <meta
@@ -70,7 +66,7 @@ class App extends Component {
               content={`http://elitedna.us${props.url}}`}
             />
           )}
-        </Meta>
+        </Helmet>
         <Header data={navigation} />
         <div class="components">
           <Router url={props.url} onChange={this.handleRoute}>

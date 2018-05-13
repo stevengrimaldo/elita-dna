@@ -1,14 +1,14 @@
 import { h } from 'preact'
 
 import { FeaturedContent, Hero, Section } from '../../components'
-
 import ApplicationForm from './applicationForm'
+import PageWrapper from '../../global/template'
 
 // data
 import { data } from './data'
 
 const Careers = () => (
-  <div class="components--careers">
+  <PageWrapper className="careers" meta={data.meta}>
     <Hero bgColor="orange" data={data.hero} slantBottom="right" />
     <Section
       align="left"
@@ -21,7 +21,7 @@ const Careers = () => (
     <Section bgColor="tan" slantTop="right">
       <ApplicationForm />
     </Section>
-  </div>
+  </PageWrapper>
 )
 
 export default Careers

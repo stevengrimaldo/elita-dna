@@ -39,4 +39,7 @@ export const data = {
     ],
     title: '',
   },
+  meta: {
+    title: 'Forms',
+  },
 }

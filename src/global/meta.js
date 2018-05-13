@@ -1,6 +1,6 @@
 import { h } from 'preact'
-import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
+import PropTypes from 'prop-types'
 
 const Meta = ({ children, data }) => (
   <Helmet
@@ -25,7 +25,12 @@ Meta.propTypes = {
   data: PropTypes.shape({
     description: PropTypes.string,
     keywords: PropTypes.arrayOf(PropTypes.string),
-    tags: PropTypes.object,
+    tags: PropTypes.arrayOf(
+      PropTypes.shape({
+        content: PropTypes.string,
+        property: PropTypes.string,
+      })
+    ),
     title: PropTypes.string,
   }),
 }

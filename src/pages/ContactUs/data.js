@@ -85,4 +85,18 @@ export const data = {
     },
     image: '',
   },
+  meta: {
+    description:
+      'Send us a message below and one of our licensed professionals will be in touch.',
+    keywords: [
+      'Elite DNA Contact',
+      'Contact Us',
+      'Licensed professional contacts',
+      'Health Services locations',
+      'Newsletter',
+      'Updates',
+      'Information Sharing',
+    ],
+    title: 'Contact Us',
+  },
 }

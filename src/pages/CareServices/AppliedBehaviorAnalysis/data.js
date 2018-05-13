@@ -44,6 +44,31 @@ export const data = {
       </ul>
     `,
   },
+  meta: {
+    keywords: [
+      'Applied Behavior Analysis',
+      'Behavior Analysis',
+      'ABA',
+      'Therapist',
+      'Communication',
+      'Self-help',
+      'Academic Skills',
+      'Socialization',
+      'Social Behaviors',
+      'Social Skills',
+      'Functional Communication',
+      'Sensory',
+      'Sensory Related Behavior',
+      'Transition Difficulty',
+      'Intervention',
+      'Self-regulation',
+      'Play skills',
+      'Outbursts',
+      'Tantrums',
+      'School Difficulty',
+    ],
+    title: 'Applied Behavior Analysis',
+  },
   teachingApproach: {
     content: [
       {

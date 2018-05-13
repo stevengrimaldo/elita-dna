@@ -1,4 +1,4 @@
-import NutritionCounselingHero from './img/NutirtionHero.jpg'
+import heroImage from './img/NutirtionHero.jpg'
 import fruit from './img/fruit.png'
 
 import { Apple } from '../../../global/icons'
@@ -18,7 +18,7 @@ export const data = {
       `,
       title: 'Nutrition Counseling',
     },
-    image: NutritionCounselingHero,
+    image: heroImage,
   },
   howWeCanHelp: {
     copy: {
@@ -39,6 +39,10 @@ export const data = {
       `,
     },
     image: fruit,
+  },
+  meta: {
+    tags: [{ content: heroImage, property: 'og:image' }],
+    title: 'Nutrition Counseling',
   },
   pickyEater: {
     icon: Apple,

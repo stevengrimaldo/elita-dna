@@ -1,13 +1,14 @@
 import { h } from 'preact'
 
 import { Documents, FeaturedContent, Hero, Section } from '../../../components'
+import PageWrapper from '../../../global/template'
 
 // data
 import { data } from './data'
 import { haveQuestions } from '../../../global/data'
 
 const OccupationalTherapy = () => (
-  <div class="components--occupational-therapy">
+  <PageWrapper className="occupational-therapy" meta={data.meta}>
     <Hero data={data.hero} slantBottom="left" />
     <Section bgColor="orange" slantBottom="right" slantTop="right">
       <FeaturedContent data={data.enjoyLife} inverted />
@@ -21,7 +22,7 @@ const OccupationalTherapy = () => (
     <Section bgColor="tan" slantTop="right">
       <FeaturedContent data={haveQuestions} />
     </Section>
-  </div>
+  </PageWrapper>
 )
 
 export default OccupationalTherapy

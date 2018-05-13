@@ -7,13 +7,14 @@ import {
   Section,
   Video,
 } from '../../../components'
+import PageWrapper from '../../../global/template'
 
 // data
 import { data } from './data'
 import { haveQuestions } from '../../../global/data'
 
 const TranscranialMagneticStimulation = () => (
-  <div class="components--transcranial-magnetic-stimulation">
+  <PageWrapper className="transcranial-magnetic-stimulation" meta={data.meta}>
     <Hero bgColor="orange" data={data.hero} slantBottom="right" />
     <Section>
       <FeaturedContent data={data.tmsServices} />
@@ -30,7 +31,7 @@ const TranscranialMagneticStimulation = () => (
     <Section bgColor="tan" slantTop="right">
       <FeaturedContent data={haveQuestions} />
     </Section>
-  </div>
+  </PageWrapper>
 )
 
 export default TranscranialMagneticStimulation
