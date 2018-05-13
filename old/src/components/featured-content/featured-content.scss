@@ -1,0 +1,125 @@
+@import '../../global/defaults/config',
+'../../global/defaults/mixins',
+'../../global/defaults/grid',
+'../../global/defaults/typography';
+
+.featured-content {
+  &--container {
+    @include col(7);
+    margin: 0 auto;
+  }
+  .icon--container {
+    margin-bottom: 30px;
+  }
+  &-image {
+    max-width: 60%;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  &-title {
+    @include font-size(45, null, -50);
+    margin-bottom: 20px;
+  }
+  &-text {
+    h4 {
+      @include font-size(30, initial);
+      margin-bottom: 30px;
+    }
+    p {
+      margin-bottom: 5px;
+    }
+    ul {
+      margin-bottom: 30px;
+    }
+    p, li {
+      @include font-size(16);
+    }
+    li {
+      margin: 0 1.6666666667% 25px;
+      color: $emperor;
+      width: 29%;
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      h5, b, strong {
+        @include font-size(20, null, -20);
+        @extend %OpenSansSemibold;
+      }
+      span {
+        color: $emperor;
+      }
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: $persimmon;
+        border-radius: 50%;
+        top: 11px;
+        left: -15px;
+        position: absolute;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .cta--container {
+    margin-top: 30px;
+  }
+  &.section--left-align {
+    .featured-content--container {
+      max-width: none;
+      width: 100%;
+      margin: 0;
+    }
+  }
+  @include mq($max, $laptop) {
+    &--container {
+      @include col(7, $laptop);
+    }
+    &-text {
+      li {
+        width: 40%;
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+    }
+  }
+  @include mq($max, $tablet) {
+    &--container {
+      max-width: none;
+      width: 100%;
+    }
+    &-text {
+      li {
+        text-align: left;
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  }
+  @include mq($max, $phablet) {
+    .icon--container {
+      margin-bottom: 15px;
+    }
+    &-title {
+      @include font-size(30, null, -50);
+      margin-bottom: 10px;
+    }
+    &-text {
+      h4 {
+        @include font-size(20, initial);
+        margin-bottom: 10px;
+      }
+      ul {
+        margin-bottom: 10px;
+      }
+      p, li {
+        @include font-size(14);
+      }
+    }
+    .cta--container {
+      margin-top: 15px;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "classes": ["white", "slant", "slant--top-right", "slant--bottom-right"],
+  "member": [{
+    "location": "our-team",
+    "department": "admin",
+    "image": "male-profile.jpg",
+    "name": "Dr. Robert A. Katz, MD",
+    "hometown": "Fort Myers, FL",
+    "degree": "Clinical Mental Health Counseling and Licensed Mental Health Counselor",
+    "colleges": "Florida State University (BS) & Florida Gulf Coast University (MA, CACREP accredited program)",
+    "special-certifications": "N/A",
+    "client-populations-seen": "anxiety, depression, trauma, ADHD, Autism spectrum, mood disorders",
+    "patient-ages-seen": "Ages six and older in office; additionally, adolescent & adult telemedicine.",
+    "therapy-modality-used": "ACT - Acceptance Commitment Therapy, CPT and Solution Focused/Behavior Plans",
+    "hobbies": "Video Games/Board Games. Finds that this helps him to relate with clients",
+    "favorite-quote": "“We must be willing to encounter darkness and despair when they come up and face them, over and over again if need be, without running away or numbing ourselves in the thousands of ways we conjure up to avoid the unavoidable.” - Jon Kabat-Zinn"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "female-profile.jpg",
+    "name": "Dr. Andrew Samuel Ferber, MD"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "male-profile.jpg",
+    "name": "Dr Sharon Bloom, PsyD"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "female-profile.jpg",
+    "name": "Nicole Kendrick-Konkowski, MSW"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "male-profile.jpg",
+    "name": "Dr. Robert James, PhD"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "female-profile.jpg",
+    "name": "Reese Theresa Gorski, ARNP"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "male-profile.jpg",
+    "name": "Rosa Elvira Smith, ARNP"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "female-profile.jpg",
+    "name": "Diana Lynn Davidson, ARNP"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "male-profile.jpg",
+    "name": "Lisa Rachel Bendetowicz, LCSW"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "female-profile.jpg",
+    "name": "Erica N. Kress, LCSW"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "male-profile.jpg",
+    "name": "Karen Zampa Katz, LCSW"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "female-profile.jpg",
+    "name": "Dorothy Jean Smith, LCSW"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "male-profile.jpg",
+    "name": "Adam Redman, LCSW"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "female-profile.jpg",
+    "name": "Scarlett Olivares, LCSW"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "male-profile.jpg",
+    "name": "Jan-Paul Romero Mojica, LCSW"
+  }, {
+    "location": "our-team",
+    "department": "admin",
+    "image": "female-profile.jpg",
+    "name": "Carla Rosier, MHC"
+  }]
+}
