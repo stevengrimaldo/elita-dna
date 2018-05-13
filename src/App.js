@@ -16,12 +16,11 @@ import {
   OccupationalTherapy,
   OurTeam,
   SpeechTherapy,
+  Teletherapy,
   TranscranialMagneticStimulation,
 } from './pages'
 
 import { Footer, Header } from './components'
-
-import Meta from './global/meta'
 
 import { navigation } from './global/data'
 
@@ -78,6 +77,7 @@ class App extends Component {
             <NutritionCounseling path="/care-services/nutrition-counseling" />
             <OccupationalTherapy path="/care-services/occupational-therapy" />
             <SpeechTherapy path="/care-services/speech-therapy" />
+            <Teletherapy path="/care-services/teletherapy" />
             <TranscranialMagneticStimulation path="/care-services/transcranial-magnetic-stimulation" />
             <NewsResources path="/news-resources" />
             <Forms path="/news-resources/forms" />

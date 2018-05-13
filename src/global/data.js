@@ -61,6 +61,10 @@ export const navigation = [
         text: 'Speech Therapy',
       },
       {
+        path: '/care-services/teletherapy',
+        text: 'Teletherapy',
+      },
+      {
         path: '/care-services/transcranial-magnetic-stimulation',
         text: 'Transcranial Magnetic Stimulation',
       },

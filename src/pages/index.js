@@ -16,6 +16,7 @@ export {
 } from './CareServices/OccupationalTherapy'
 export { default as OurTeam } from './OurTeam'
 export { default as SpeechTherapy } from './CareServices/SpeechTherapy'
+export { default as Teletherapy } from './CareServices/Teletherapy'
 export {
   default as TranscranialMagneticStimulation,
 } from './CareServices/TranscranialMagneticStimulation'
