@@ -9,7 +9,7 @@ import { color, fontFamily, fontWeight } from '../../global/theme'
 
 import { setWidth, letterSpacing, shadeOf, toEms } from '../../global/utils'
 
-import logo from '../../global/img/logo.png'
+const logo = '/img/logo.png'
 
 const Wrapper = styled.header`
   background-color: ${color.white};

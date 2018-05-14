@@ -1,11 +1,13 @@
-import heroImage from './img/MentalHealthHero.jpg'
-import AdultMentalHealth from './img/adult-mental-health.png'
-import ChildMentalHealth from './img/child-mental-health.png'
-
-import MentalHealthIntakeFormAdult from '../../../global/pdfs/Mental-Health-Intake-Form-Adult.pdf'
-import MentalHealthIntakeFormChild from '../../../global/pdfs/Mental-Health-Intake-Form-Child.pdf'
-
 import { CheckListHeart } from '../../../global/icons'
+
+const heroImage = '/img/care-services/mental-health/MentalHealthHero.jpg'
+const AdultMentalHealth =
+  '/img/care-services/mental-health/adult-mental-health.png'
+const ChildMentalHealth =
+  '/img/care-services/mental-health/child-mental-health.png'
+
+const MentalHealthIntakeFormAdult = '/pdfs/Mental-Health-Intake-Form-Adult.pdf'
+const MentalHealthIntakeFormChild = '/pdfs/Mental-Health-Intake-Form-Child.pdf'
 
 export const data = {
   clientIntakeForms: {

@@ -1,10 +1,3 @@
-import heroImage from './img/HomepageHero.jpg'
-
-import OccupationTherapyIntakeForm from '../../global/pdfs/Occupational-Therapy-Intake-Form.pdf'
-// import SpeechTherapyIntakeForm from '../../global/pdfs/Speech-Therapy-Intake-Form.pdf'
-import MentalHealthIntakeFormAdult from '../../global/pdfs/Mental-Health-Intake-Form-Adult.pdf'
-import MentalHealthIntakeFormChild from '../../global/pdfs/Mental-Health-Intake-Form-Child.pdf'
-
 import {
   Apple,
   ShieldHeart,
@@ -12,6 +5,13 @@ import {
   SpeechBubble,
   PuzzlePieces,
 } from '../../global/icons'
+
+const OccupationTherapyIntakeForm = '/pdfs/Occupational-Therapy-Intake-Form.pdf'
+// const SpeechTherapyIntakeForm = '/pdfs/Speech-Therapy-Intake-Form.pdf'
+const MentalHealthIntakeFormAdult = '/pdfs/Mental-Health-Intake-Form-Adult.pdf'
+const MentalHealthIntakeFormChild = '/pdfs/Mental-Health-Intake-Form-Child.pdf'
+
+const heroImage = '/img/home/HomepageHero.jpg'
 
 export const data = {
   getInTouch: {

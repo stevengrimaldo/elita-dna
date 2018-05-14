@@ -6,6 +6,8 @@ import { Icon } from '../'
 
 import { FeaturedText, Wysiwyg } from '../../global/type'
 
+import { color } from '../../global/theme'
+
 import { parseContent } from '../../global/utils'
 
 const Container = styled.div`
@@ -32,7 +34,7 @@ const IconContainer = styled(Icon)`
   display: inline-block;
 
   svg {
-    fill: ${props => props.theme.color.white};
+    fill: ${color.white};
     width: 100%;
     height: 100%;
   }

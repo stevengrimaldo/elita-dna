@@ -6,9 +6,10 @@
   "scripts": {
     "start": "parcel index.html --open",
     "start:client": "npm run start",
-    "start:server": "babel-watch server.js",
+    "start:server": "babel-watch server/index.js",
     "watch": "parcel watch index.html",
     "serve": "parcel serve index.html --open",
+    "ssr": "npm run build && npm run start:server",
     "build": "parcel build src/index.js --no-cache"
   },
   "proxy": {

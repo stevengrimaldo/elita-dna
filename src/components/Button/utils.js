@@ -1,6 +1,7 @@
 import { color } from '../../global/theme'
-import downloadIcon from '../../global/svg/download-arrow.svg'
-import rightArrowIcon from '../../global/svg/right-arrow.svg'
+
+const downloadIcon = '/svg/download-arrow.svg'
+const rightArrowIcon = '/svg/right-arrow.svg'
 
 export const genButton = ({ type }) => {
   let css = ''

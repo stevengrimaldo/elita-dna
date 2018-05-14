@@ -1,6 +1,6 @@
 import { Select, Text, TextArea } from '../../components/Form/elements'
 
-import Desk from './img/desk.png'
+const Desk = '/img/careers/desk.png'
 
 export const data = {
   benefits: {

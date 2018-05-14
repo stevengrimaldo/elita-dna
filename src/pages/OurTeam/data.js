@@ -1,5 +1,5 @@
-import heroImage from './img/OurTeamHero.jpg'
-import nextStepsImage from '../../global/img/NextSteps.png'
+const heroImage = '/img/our-team/OurTeamHero.jpg'
+const nextStepsImage = '/img/our-team/NextSteps.png'
 
 export const data = {
   hero: {

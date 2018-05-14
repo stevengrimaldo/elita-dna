@@ -1,7 +1,7 @@
 import { h, Component } from 'preact'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import GoogleMapsLoader from 'google-maps'
+// import GoogleMapsLoader from 'google-maps'
 
 import { BodyText, FeaturedText } from '../../global/type'
 
@@ -79,7 +79,7 @@ const List = styled.div`
   position: relative;
 `
 
-GoogleMapsLoader.KEY = 'AIzaSyCok5PyWTvryvbsRzaVAkJbpuZjfklnmJM'
+// GoogleMapsLoader.KEY = 'AIzaSyCok5PyWTvryvbsRzaVAkJbpuZjfklnmJM'
 
 class Locations extends Component {
   mapRefs = []
@@ -97,13 +97,13 @@ class Locations extends Component {
   }
 
   loadMaps() {
-    GoogleMapsLoader.load(google => {
-      this.mapRefs.map(map => this.geocodeAddress(google, map.address, map.el))
-    })
+    // GoogleMapsLoader.load(google => {
+    //   this.mapRefs.map(map => this.geocodeAddress(google, map.address, map.el))
+    // })
   }
 
   releaseMaps = () => {
-    GoogleMapsLoader.release()
+    // GoogleMapsLoader.release()
   }
 
   geocodeAddress = (google, location, el) => {

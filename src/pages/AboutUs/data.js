@@ -1,5 +1,5 @@
-import heroImage from './img/AboutUsHero.jpg'
-import FounderProfile from './img/ElizabethDosoretz.jpg'
+const heroImage = '/img/about-us/AboutUsHero.jpg'
+const FounderProfile = '/img/about-us/ElizabethDosoretz.jpg'
 
 export const data = {
   founder: {
