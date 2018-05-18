@@ -1,5 +1,4 @@
 import { css } from 'styled-components'
-import sanitizeHtml from 'sanitize-html'
 import { rgba } from 'polished'
 
 const sizes = {
@@ -89,7 +88,7 @@ export const truncate = width => `
 export const toEms = value => {
   const result = toUnitless(value)
 
-  return result / 16 + 'em'
+  return `${result / 16}em`
 }
 
 export const isPx = value => {
@@ -125,21 +124,7 @@ export const setWidth = (width, parentContext = 1800) => {
 
 export const parseContent = content => {
   return {
-    __html: sanitizeHtml(content, {
-      allowedTags: sanitizeHtml.defaults.allowedTags.concat([
-        'h1',
-        'h2',
-        'h3',
-        'h4',
-        'h5',
-        'h6',
-        'p',
-        'img',
-        'sup',
-        'sub',
-        'small',
-      ]),
-    }),
+    __html: content,
   }
 }
 

@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import { h, Component } from 'preact'
 
 import {
   FeaturedContent,
@@ -9,12 +9,10 @@ import {
 } from '../../components'
 import PageWrapper from '../../global/template'
 
-import { team } from '../../global/team'
-import { locations } from '../../global/locations'
-
 // data
 import { data } from './data'
 import { solutions } from '../../global/data'
+import { locations } from '../../global/locations'
 
 const admin = [
   {
@@ -25,23 +23,46 @@ const admin = [
 
 const allLocations = admin.concat(locations)
 
-const OurTeam = () => (
-  <PageWrapper className="our-team" meta={data.meta}>
-    <Hero data={data.hero} slantBottom="left" />
-    <Section align="left" bgColor="white" slantTop="right" slantBottom="right">
-      <Team team={team} locations={allLocations} />
-    </Section>
-    <Section
-      intro={solutions.intro}
-      bgColor="orange"
-      slantTop="left"
-      slantBottom="left">
-      <Solutions data={solutions.content} inverted />
-    </Section>
-    <Section bgColor="white" image={data.nextSteps.image} slantTop="right">
-      <FeaturedContent data={data.nextSteps.copy} />
-    </Section>
-  </PageWrapper>
-)
+class OurTeam extends Component {
+  state = {
+    team: null,
+  }
+
+  componentWillMount() {
+    // this is uuuuugggee - so we want to dynamically import this instead
+    import('../../global/team').then(({ team }) => {
+      this.setState({ team })
+    })
+  }
+
+  render(props, state) {
+    return (
+      <PageWrapper className="our-team" meta={data.meta}>
+        <Hero data={data.hero} />
+        <Section
+          align="left"
+          bgColor="white"
+          slantTop="right"
+          slantBottom="right">
+          {state.team ? (
+            <Team team={state.team} locations={allLocations} />
+          ) : (
+            <p>loading...</p>
+          )}
+        </Section>
+        <Section
+          intro={solutions.intro}
+          bgColor="orange"
+          slantTop="left"
+          slantBottom="left">
+          <Solutions data={solutions.content} inverted />
+        </Section>
+        <Section bgColor="white" image={data.nextSteps.image} slantTop="right">
+          <FeaturedContent data={data.nextSteps.copy} />
+        </Section>
+      </PageWrapper>
+    )
+  }
+}
 
 export default OurTeam

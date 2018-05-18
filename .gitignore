@@ -1,5 +1,10 @@
 /.cache
-/dist
 /node_modules
-/server
-/static
+/static/dist
+/functions/node_modules
+firebase-debug.log
+/dist
+/api
+/functions/src
+/functions/static
+/functions/dist

@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "elite-dna-therapy",
+    "ssr": "elite-dna-therapy"
+  }
+}

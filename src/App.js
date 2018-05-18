@@ -1,26 +1,24 @@
 import { h, Component } from 'preact'
 import Router from 'preact-router'
+import AsyncRoute from 'preact-async-route'
 import { Helmet } from 'react-helmet'
-// import scrollIntoView from 'scroll-into-view'
 
-import {
-  AboutUs,
-  AppliedBehaviorAnalysis,
-  Careers,
-  ContactUs,
-  Forms,
-  Home,
-  MentalHealth,
-  NewsResources,
-  NutritionCounseling,
-  OccupationalTherapy,
-  OurTeam,
-  SpeechTherapy,
-  Teletherapy,
-  TranscranialMagneticStimulation,
-} from './pages'
-
-import { Footer, Header } from './components'
+import Home from './pages/Home'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import AboutUs from './pages/AboutUs'
+import AppliedBehaviorAnalysis from './pages/CareServices/AppliedBehaviorAnalysis'
+import Careers from './pages/Careers'
+import ContactUs from './pages/ContactUs'
+import Forms from './pages/NewsResources/Forms'
+import MentalHealth from './pages/CareServices/MentalHealth'
+import NewsResources from './pages/NewsResources'
+import NutritionCounseling from './pages/CareServices/NutritionCounseling'
+import OccupationalTherapy from './pages/CareServices/OccupationalTherapy'
+import OurTeam from './pages/OurTeam'
+import SpeechTherapy from './pages/CareServices/SpeechTherapy'
+import Teletherapy from './pages/CareServices/Teletherapy'
+import TranscranialMagneticStimulation from './pages/CareServices/TranscranialMagneticStimulation'
 
 import { navigation } from './global/data'
 
@@ -36,12 +34,6 @@ class App extends Component {
       window.pageYOffset > 1
     ) {
       window.scrollTo(0, 0)
-      // scrollIntoView(document.body, {
-      //   align: {
-      //     top: 0,
-      //   },
-      //   time: 300,
-      // })
     }
   }
 
@@ -68,21 +60,42 @@ class App extends Component {
         </Helmet>
         <Header data={navigation} />
         <div class="components">
-          <Router url={props.url} onChange={this.handleRoute}>
+          <Router {...props} url={props.url} onChange={this.handleRoute}>
             <Home path="/" />
-            <AboutUs path="/about-us" />
-            <OurTeam path="/our-team" />
-            <AppliedBehaviorAnalysis path="/care-services/applied-behavior-analysis" />
-            <MentalHealth path="/care-services/mental-health" />
-            <NutritionCounseling path="/care-services/nutrition-counseling" />
-            <OccupationalTherapy path="/care-services/occupational-therapy" />
-            <SpeechTherapy path="/care-services/speech-therapy" />
-            <Teletherapy path="/care-services/teletherapy" />
-            <TranscranialMagneticStimulation path="/care-services/transcranial-magnetic-stimulation" />
-            <NewsResources path="/news-resources" />
-            <Forms path="/news-resources/forms" />
-            <Careers path="/careers" />
-            <ContactUs path="/contact-us" />
+            <AsyncRoute component={AboutUs} path="/about-us" />
+            <AsyncRoute
+              component={AppliedBehaviorAnalysis}
+              path="/care-services/applied-behavior-analysis"
+            />
+            <AsyncRoute component={Careers} path="/careers" />
+            <AsyncRoute component={ContactUs} path="/contact-us" />
+            <AsyncRoute component={Forms} path="/news-resources/forms" />
+            <AsyncRoute
+              component={MentalHealth}
+              path="/care-services/mental-health"
+            />
+            <AsyncRoute component={NewsResources} path="/news-resources" />
+            <AsyncRoute
+              component={NutritionCounseling}
+              path="/care-services/nutrition-counseling"
+            />
+            <AsyncRoute
+              component={OccupationalTherapy}
+              path="/care-services/occupational-therapy"
+            />
+            <AsyncRoute component={OurTeam} path="/our-team" />
+            <AsyncRoute
+              component={SpeechTherapy}
+              path="/care-services/speech-therapy"
+            />
+            <AsyncRoute
+              component={Teletherapy}
+              path="/care-services/teletherapy"
+            />
+            <AsyncRoute
+              component={TranscranialMagneticStimulation}
+              path="/care-services/transcranial-magnetic-stimulation"
+            />
           </Router>
         </div>
         <Footer year={year} />
