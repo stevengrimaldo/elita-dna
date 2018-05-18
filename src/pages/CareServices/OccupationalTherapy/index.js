@@ -9,7 +9,7 @@ import { haveQuestions } from '../../../global/data'
 
 const OccupationalTherapy = () => (
   <PageWrapper className="occupational-therapy" meta={data.meta}>
-    <Hero data={data.hero} slantBottom="left" />
+    <Hero data={data.hero} />
     <Section bgColor="orange" slantBottom="right" slantTop="right">
       <FeaturedContent data={data.enjoyLife} inverted />
     </Section>

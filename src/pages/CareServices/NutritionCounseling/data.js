@@ -1,7 +1,7 @@
-import heroImage from './img/NutirtionHero.jpg'
-import fruit from './img/fruit.png'
-
 import { Apple } from '../../../global/icons'
+
+const heroImage = '/img/care-services/nutrition-counseling/NutirtionHero.jpg'
+const fruit = '/img/care-services/nutrition-counseling/fruit.png'
 
 export const data = {
   hero: {

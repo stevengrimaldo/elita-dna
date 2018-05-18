@@ -1,4 +1,4 @@
-import NeuroStarLogo from '../../../global/img/NeuroStarLogo.png'
+const NeuroStarLogo = '/img/NeuroStarLogo.png'
 
 export const data = {
   hero: {

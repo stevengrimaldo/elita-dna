@@ -1,5 +1,5 @@
-import path from 'path'
-import moduleAlias from 'module-alias'
+const path = require('path')
+const moduleAlias = require('module-alias')
 
 moduleAlias.addAliases({
   'create-react-class': path.resolve(__dirname, './create-preact-class'),

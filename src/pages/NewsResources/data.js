@@ -1,17 +1,17 @@
-import ArticleImageOne from './img/article-1.jpg'
-import ArticleImageTwo from './img/article-2.jpg'
-import ArticleImageThree from './img/article-3.jpg'
-import ArticleImageFour from './img/article-4.jpg'
-import ArticleImageFive from './img/article-5.jpg'
-import ArticleImageSix from './img/article-6.jpg'
-
-import IntegratedServices from '../../global/pdfs/IntegratedServices-Ap2005.pdf'
-import UDLFactSheet from '../../global/pdfs/UDL-fact-sheet.pdf'
-import SeptemberNewsletter from '../../global/pdfs/Elite-DNA-September-2017-Newsletter.pdf'
-import OctoberNewsletter from '../../global/pdfs/October-2017-Newsletter.pdf'
-import NovemberNewsletter from '../../global/pdfs/November-2017-Newsletter.pdf'
-
 import { Pdf } from '../../global/icons'
+
+const ArticleImageOne = '/img/news-resources/article-1.jpg'
+const ArticleImageTwo = '/img/news-resources/article-2.jpg'
+const ArticleImageThree = '/img/news-resources/article-3.jpg'
+const ArticleImageFour = '/img/news-resources/article-4.jpg'
+const ArticleImageFive = '/img/news-resources/article-5.jpg'
+const ArticleImageSix = '/img/news-resources/article-6.jpg'
+
+const IntegratedServices = '/pdfs/IntegratedServices-Ap2005.pdf'
+const UDLFactSheet = '/pdfs/UDL-fact-sheet.pdf'
+const SeptemberNewsletter = '/pdfs/Elite-DNA-September-2017-Newsletter.pdf'
+const OctoberNewsletter = '/pdfs/October-2017-Newsletter.pdf'
+const NovemberNewsletter = '/pdfs/November-2017-Newsletter.pdf'
 
 export const data = {
   articles: [

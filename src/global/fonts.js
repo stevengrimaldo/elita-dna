@@ -1,6 +1,6 @@
 // Museo Slab
-import MuseoSlabLight from './fonts/MuseoSlab_300.woff' // light
-import MuseoSlabBold from './fonts/MuseoSlab_700.woff' // bold
+const MuseoSlabLight = '/fonts/MuseoSlab_300.woff' // light
+const MuseoSlabBold = '/fonts/MuseoSlab_700.woff' // bold
 
 export default {
   MuseoSlab: [

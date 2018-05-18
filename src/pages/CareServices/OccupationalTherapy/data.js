@@ -1,9 +1,10 @@
-import heroImage from './img/OccupationalHero.jpg'
-import OccupationalTherapy from './img/occupational-therapy.png'
-
-import OccupationTherapyIntakeForm from '../../../global/pdfs/Occupational-Therapy-Intake-Form.pdf'
-
 import { Toy } from '../../../global/icons'
+
+const heroImage = '/img/care-services/occupational-therapy/OccupationalHero.jpg'
+const OccupationalTherapy =
+  '/img/care-services/occupational-therapy/occupational-therapy.png'
+
+const OccupationTherapyIntakeForm = '/pdfs/Occupational-Therapy-Intake-Form.pdf'
 
 export const data = {
   clientIntakeForms: {

@@ -1,9 +1,9 @@
 import { injectGlobal } from 'styled-components'
 import { fontFaces, googleFonts } from './type'
 import { resetCSS } from './reset'
-
 import sig from './sig'
-import backgroundImage from './img/polkadots-bg.jpg'
+
+const backgroundImage = '/img/polkadots-bg.jpg'
 
 console.log(sig)
 

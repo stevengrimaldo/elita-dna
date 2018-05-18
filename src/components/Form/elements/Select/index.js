@@ -12,7 +12,7 @@ import {
 
 import { Error, Label, Wrapper } from '../'
 
-import selectIcon from '../../../../global/img/select-icon.png'
+const selectIcon = '/img/select-icon.png'
 
 // prettier-ignore
 const SelectMenu = styled.select`

@@ -1,4 +1,4 @@
-import heroImage from './img/SpeechTherapyHero.jpg'
+const heroImage = '/img/care-services/speech-therapy/SpeechTherapyHero.jpg'
 
 export const data = {
   conditionSpecializations: {

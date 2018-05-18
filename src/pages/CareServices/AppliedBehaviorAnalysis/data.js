@@ -1,6 +1,6 @@
-import polygons from './img/polygons.png'
-
 import { HandsHeart, Parents, PeerGroup, School } from '../../../global/icons'
+
+const polygons = '/img/care-services/applied-behavior-analysis/polygons.png'
 
 export const data = {
   hero: {

@@ -1,11 +1,11 @@
-import AdultMentalHealth from './img/adult-mental-health.png'
-import ChildMentalHealth from './img/child-mental-health.png'
-import OccupationalTherapy from './img/occupational-therapy.png'
+const AdultMentalHealth = '/img/news-resources/forms/adult-mental-health.png'
+const ChildMentalHealth = '/img/news-resources/forms/child-mental-health.png'
+const OccupationalTherapy = '/img/news-resources/forms/occupational-therapy.png'
 
-import OccupationTherapyIntakeForm from '../../../global/pdfs/Occupational-Therapy-Intake-Form.pdf'
-// import SpeechTherapyIntakeForm from '../../../global/pdfs/Speech-Therapy-Intake-Form.pdf'
-import MentalHealthIntakeFormAdult from '../../../global/pdfs/Mental-Health-Intake-Form-Adult.pdf'
-import MentalHealthIntakeFormChild from '../../../global/pdfs/Mental-Health-Intake-Form-Child.pdf'
+const OccupationTherapyIntakeForm = '/pdfs/Occupational-Therapy-Intake-Form.pdf'
+// const SpeechTherapyIntakeForm = '/pdfs/Speech-Therapy-Intake-Form.pdf'
+const MentalHealthIntakeFormAdult = '/pdfs/Mental-Health-Intake-Form-Adult.pdf'
+const MentalHealthIntakeFormChild = '/pdfs/Mental-Health-Intake-Form-Child.pdf'
 
 export const data = {
   hero: {

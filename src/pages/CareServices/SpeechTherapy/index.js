@@ -8,7 +8,7 @@ import { data } from './data'
 
 const SpeechTherapy = () => (
   <PageWrapper className="occupational-therapy" meta={data.meta}>
-    <Hero data={data.hero} slantBottom="left" />
+    <Hero data={data.hero} />
     <Section bgColor="orange" padding="none" slantTop="right" unContain>
       <Questions data={data.conditionSpecializations} inverted />
     </Section>

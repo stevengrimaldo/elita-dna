@@ -76,6 +76,8 @@ export const addSlant = ({ above, bgColor, image, slantBottom }) => {
         default:
           css += ''
       }
+    } else {
+      css += 'position: relative;'
     }
   } else {
     css += 'width: 100%;'
