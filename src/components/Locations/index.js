@@ -1,7 +1,8 @@
 import { h, Component } from 'preact'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-// import GoogleMapsLoader from 'google-maps'
+
+import { Map } from '../'
 
 import { BodyText, FeaturedText } from '../../global/type'
 
@@ -79,68 +80,41 @@ const List = styled.div`
   position: relative;
 `
 
-// GoogleMapsLoader.KEY = 'AIzaSyCok5PyWTvryvbsRzaVAkJbpuZjfklnmJM'
-
 class Locations extends Component {
+  locations = []
   mapRefs = []
 
   state = {
     activeLocationIndex: 0,
+    locations: null,
   }
 
   componentDidMount() {
-    this.loadMaps()
-  }
-
-  componentWillUnmount() {
-    this.releaseMaps()
-  }
-
-  loadMaps() {
-    // GoogleMapsLoader.load(google => {
-    //   this.mapRefs.map(map => this.geocodeAddress(google, map.address, map.el))
-    // })
-  }
-
-  releaseMaps = () => {
-    // GoogleMapsLoader.release()
-  }
-
-  geocodeAddress = (google, location, el) => {
-    const geocoder = new google.maps.Geocoder()
-
-    geocoder.geocode({ address: location }, (results, status) => {
-      if (status === 'OK') {
-        // Basic options for a simple Google Map
-        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-        const mapOptions = {
-          // The latitude and longitude to center the map (always required)
-          center: results[0].geometry.location,
-
-          // Remove the default controls
-          disableDefaultUI: true,
-
-          // How you would like to style the map.
-          // This is where you would paste any style found on Snazzy Maps.
-          styles: [],
-
-          // How zoomed in you want the map to start at (always required)
-          zoom: 16,
-        }
-
-        // Create the Google Map using our element and options defined above
-        const map = new google.maps.Map(el, mapOptions)
-
-        // Let's also add a marker while we're at it
-        // eslint-disable-next-line no-unused-vars
-        const marker = new google.maps.Marker({
-          map,
-          position: results[0].geometry.location,
-        })
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status)
-      }
+    const googleMapsClient = require('@google/maps').createClient({
+      Promise: Promise,
+      key: 'AIzaSyCok5PyWTvryvbsRzaVAkJbpuZjfklnmJM',
     })
+
+    if (this.mapRefs) {
+      this.mapRefs.map((map, i) => {
+        googleMapsClient
+          .geocode({ address: map.address })
+          .asPromise()
+          .then(response => {
+            this.locations.push({
+              latLng: response.json.results[0].geometry.location,
+            })
+            this.setState({
+              locations: this.locations,
+            })
+          })
+          .catch(err => {
+            console.log(
+              `Geocode was not successful for the following reason: ${err}`
+            )
+          })
+      })
+    }
   }
 
   showMap = i => {
@@ -162,13 +136,21 @@ class Locations extends Component {
               <MapWrapper>
                 <MapCode
                   className={active && 'active'}
-                  dataAddress={location.address}
                   innerRef={el => {
                     if (this.mapRefs.every(i => i.el !== el) && el != null) {
                       this.mapRefs.push({ address: location.address, el })
                     }
-                  }}
-                />
+                  }}>
+                  {state.locations && (
+                    <Map
+                      mapPosition={state.locations[i].latLng}
+                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCok5PyWTvryvbsRzaVAkJbpuZjfklnmJM"
+                      loadingElement={<div style={{ height: '100%' }} />}
+                      containerElement={<div style={{ height: '100%' }} />}
+                      mapElement={<div style={{ height: '100%' }} />}
+                    />
+                  )}
+                </MapCode>
               </MapWrapper>
             </Location>
           )

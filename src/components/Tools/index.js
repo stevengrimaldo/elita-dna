@@ -95,7 +95,7 @@ const Tools = ({ data }) => (
   <Container>
     {data.map((tool, i) => (
       <Tool key={i}>
-        <Link href={tool.link} target="_blank" download native>
+        <Link href={tool.link} target="_blank" download="" native>
           <Title inverted>{tool.title}</Title>
           <ToolIcon Name={DownloadArrow} />
         </Link>

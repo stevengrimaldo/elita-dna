@@ -1,7 +1,12 @@
 import { h, Component } from 'preact'
 import styled from 'styled-components'
 
-import { BodyText, Headline, SubHeadline } from '../../global/type'
+import {
+  BodyText,
+  FeaturedText,
+  Headline,
+  SubHeadline,
+} from '../../global/type'
 
 import { fontWeight, fontFamily } from '../../global/theme'
 
@@ -46,12 +51,19 @@ const ButtonWrapper = styled.div`
   clear: both;
 `
 
+const Loader = styled.div`
+  display: inline-block;
+  margin-left: 20px;
+`
+
 class Form extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
       data: null,
+      loading: false,
+      loadingText: 'Sending...',
       touched: null,
       valid: null,
     }
@@ -75,18 +87,30 @@ class Form extends Component {
   }
 
   handleSubmit = e => {
+    e.preventDefault()
+
     const isValid = Object.values(this.state.valid).every(v => v)
     const callback = this.props.submit.callback || null
 
     if (isValid) {
       if (callback) {
-        e.preventDefault()
-
-        callback(this.state.data)
+        this.setState(
+          { loading: true },
+          callback(this.state.data, () => {
+            this.setState(
+              {
+                loadingText: 'Sent!',
+              },
+              () => {
+                setTimeout(() => {
+                  this.setState({ loading: false })
+                }, 2000)
+              }
+            )
+          })
+        )
       }
     } else {
-      e.preventDefault()
-
       this.setState(state => ({
         touched: Object.keys(state.touched).reduce(
           (total, k) => ({ ...total, [k]: true }),
@@ -175,7 +199,13 @@ class Form extends Component {
             </BodyText>
           </ContactInfo>
           <ButtonWrapper>
-            <Button data={{ text: props.submit.text, type: 'submit' }} />
+            {state.loading ? (
+              <Loader>
+                <FeaturedText>{state.loadingText}</FeaturedText>
+              </Loader>
+            ) : (
+              <Button data={{ text: props.submit.text, type: 'submit' }} />
+            )}
           </ButtonWrapper>
         </FormWrapper>
       </div>

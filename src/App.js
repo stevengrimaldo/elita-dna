@@ -13,7 +13,6 @@ import ContactUs from './pages/ContactUs'
 import Forms from './pages/NewsResources/Forms'
 import MentalHealth from './pages/CareServices/MentalHealth'
 import NewsResources from './pages/NewsResources'
-import NutritionCounseling from './pages/CareServices/NutritionCounseling'
 import OccupationalTherapy from './pages/CareServices/OccupationalTherapy'
 import OurTeam from './pages/OurTeam'
 import SpeechTherapy from './pages/CareServices/SpeechTherapy'
@@ -75,10 +74,6 @@ class App extends Component {
               path="/care-services/mental-health"
             />
             <AsyncRoute component={NewsResources} path="/news-resources" />
-            <AsyncRoute
-              component={NutritionCounseling}
-              path="/care-services/nutrition-counseling"
-            />
             <AsyncRoute
               component={OccupationalTherapy}
               path="/care-services/occupational-therapy"

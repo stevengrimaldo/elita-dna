@@ -49,10 +49,6 @@ export const navigation = [
         text: 'Mental Health',
       },
       {
-        path: '/care-services/nutrition-counseling',
-        text: 'Nutrition Counseling',
-      },
-      {
         path: '/care-services/occupational-therapy',
         text: 'Occupational Therapy',
       },
@@ -99,7 +95,7 @@ export const haveQuestions = {
     },
   ],
   text: `
-    <p>We’d love to help you find the right journey on your path to success, we look forward to hearing from you!</p>
+    <p>We’d love to help you find the right journey on your path to success, we look forward to hearing from you! If you or someone you know is CURRENTLY in an acute crisis, then do not use this service; call 911 or Text START to 741-741.</p>
   `,
   title: 'Questions?',
 }

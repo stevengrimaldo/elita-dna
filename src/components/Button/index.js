@@ -24,24 +24,36 @@ const Link = Text.withComponent('a')
 const Button = ({ className, data, onClick }) => {
   const isDownload = data.type === 'download'
   const target = isDownload || data.external ? '_blank' : data.target
+  let link = null
 
-  return (
-    <Container className={className}>
-      {data.path ? (
+  if (data.path) {
+    if (isDownload) {
+      link = (
         <Link
           href={data.path}
-          download={isDownload}
+          download=""
           target={target}
-          type={data.type}>
+          type={data.type}
+          native>
           {data.text}
         </Link>
-      ) : (
-        <Text type={data.type} onClick={onClick}>
+      )
+    } else {
+      link = (
+        <Link href={data.path} target={target} type={data.type}>
           {data.text}
-        </Text>
-      )}
-    </Container>
-  )
+        </Link>
+      )
+    }
+  } else {
+    link = (
+      <Text type={data.type} onClick={onClick}>
+        {data.text}
+      </Text>
+    )
+  }
+
+  return <Container className={className}>{link}</Container>
 }
 
 export const buttonData = {

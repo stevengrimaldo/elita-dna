@@ -79,7 +79,7 @@ export const data = {
       links: [],
       subTitle: '',
       text: `
-        <p>Send us a message below and one of our licensed professionals will be in touch.</p>
+        <p>Send us a message below and one of our licensed professionals will be in touch, or call us at (239) 223-2751. If you or someone you know is CURRENTLY in an acute crisis, then do not use this service; call 911 or Text START to 741-741.</p>
       `,
       title: 'Contact Us',
     },

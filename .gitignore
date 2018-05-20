@@ -4,7 +4,7 @@
 /functions/node_modules
 firebase-debug.log
 /dist
-/api
+# /api
 /functions/src
 /functions/static
 /functions/dist

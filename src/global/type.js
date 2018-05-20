@@ -85,11 +85,11 @@ export const BodyText = styled.p`
   }
 
   a {
-    color: ${color.persimmon};
+    color: ${props => (props.inverted ? color.white : color.persimmon)};
     text-decoration: none;
 
     &:hover {
-      color: ${color.cinnabar};
+      color: ${props => (props.inverted ? color.white : color.cinnabar)};
       text-decoration: underline;
     }
   }
@@ -218,11 +218,11 @@ export const Wysiwyg = styled.div`
   }
 
   a {
-    color: ${color.persimmon};
+    color: ${props => (props.inverted ? color.white : color.persimmon)};
     text-decoration: none;
 
     &:hover {
-      color: ${color.cinnabar};
+      color: ${props => (props.inverted ? color.white : color.cinnabar)};
       text-decoration: underline;
     }
   }

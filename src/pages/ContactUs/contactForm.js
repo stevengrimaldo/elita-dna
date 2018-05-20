@@ -6,25 +6,31 @@ import Form from '../../components/Form'
 import { data } from './data'
 
 class ContactForm extends Component {
-  handleSubmit = data => {
+  handleSubmit = (data, callback) => {
     axios
-      .post('http://localhost:4000/api/mail/contact', data)
-      .then(response => {
-        console.log(response)
+      .post(
+        'https://us-central1-elite-dna-therapy.cloudfunctions.net/contactForm',
+        data
+      )
+      .then(() => {
+        if (callback) {
+          callback()
+        }
       })
       .catch(error => {
         console.log(error)
+        if (callback) {
+          callback()
+        }
       })
   }
 
-  render() {
+  render(props, state) {
     return (
       <Form
-        action="http://localhost:4000/api/mail/contact"
         elements={data.form.elements}
-        method="POST"
         intro={data.form.intro}
-        submit={{ text: 'Send Message' }}
+        submit={{ callback: this.handleSubmit, text: 'Send Message' }}
       />
     )
   }

@@ -6,27 +6,30 @@
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build src/index.js --out-dir static/dist",
-    "package-src":
-      "babel src -d functions/src --plugins=transform-class-properties,dynamic-import-node,transform-runtime --copy-files --ignore node_modules",
+    "package-src": "babel src -d functions/src --plugins=transform-class-properties,dynamic-import-node,transform-runtime --copy-files --ignore node_modules",
+    "preserve": "npm run build && npm run package-src",
     "serve": "firebase serve --only functions,hosting",
     "predeploy": "npm run build && npm run package-src",
-    "deploy": "firebase deploy --only functions,hosting"
+    "deploy": "firebase deploy --only functions,hosting",
+    "ssr": "babel-watch api/index.js"
   },
   "dependencies": {
+    "@google/maps": "^0.4.6",
     "axios": "^0.18.0",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "firebase": "^5.0.2",
     "firebase-admin": "~5.12.0",
     "firebase-functions": "^1.0.2",
-    "google-maps": "^3.3.0",
-    "nodemailer": "^4.6.4",
     "module-alias": "^2.0.6",
+    "nodemailer": "^4.6.4",
     "polished": "^1.9.2",
     "preact": "^8.2.7",
     "preact-async-route": "^2.1.1",
     "preact-compat": "^3.18.0",
     "preact-router": "^2.6.0",
     "prop-types": "^15.6.1",
+    "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.0",
     "react-slick": "^0.23.1",
     "styled-components": "^3.2.5"
