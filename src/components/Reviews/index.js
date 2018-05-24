@@ -205,101 +205,14 @@ const IntroIcon = styled(Icon)`
 `
 
 class Reviews extends Component {
-  sliding = 0
-  startClientX = 0
-  startPixelOffset = 0
-  pixelOffset = 0
-  currentSlide = 0
-  slideNr = 0
-  slideCount = 0
-
-  state = {
-    pixelOffset: 0,
-    release: false,
-  }
-
   componentDidMount() {
-    this.windowWidth = window.innerWidth
-    this.slideCount = this.props.data.length
-    this.containerWidth = this.windowWidth * this.slideCount
-  }
-
-  mouseDown = e => {
-    if (this.sliding === 0) {
-      this.sliding = 1
-      this.startClientX = e.clientX
-    }
-
-    this.setState({ release: false })
-  }
-
-  mouseLeave = () => {
-    this.mouseUp()
-  }
-
-  mouseMove = e => {
-    e.preventDefault()
-
-    const deltaSlide = e.clientX - this.startClientX
-
-    if (this.sliding === 1 && this.deltaSlide !== 0) {
-      this.sliding = 2
-      this.startPixelOffset = this.state.pixelOffset
-    }
-
-    if (this.sliding === 2) {
-      let touchPixelRatio = 1
-
-      if (
-        (this.currentSlide === 0 && e.clientX > this.startClientX) ||
-        (this.currentSlide === this.slideCount - 1 &&
-          e.clientX < this.startClientX)
-      ) {
-        touchPixelRatio = 3
-      }
-
-      this.setState({
-        pixelOffset: this.startPixelOffset + deltaSlide / touchPixelRatio,
-      })
-    }
-  }
-
-  mouseUp = () => {
-    if (this.sliding === 2) {
-      const oldPixelOffset = this.state.pixelOffset
-
-      this.sliding = 0
-      this.currentSlide =
-        this.state.pixelOffset < this.startPixelOffset
-          ? this.currentSlide + 1
-          : this.currentSlide - 1
-      this.currentSlide = Math.min(
-        Math.max(this.currentSlide, 0),
-        this.slideCount - 1
-      )
-
-      this.setState(
-        {
-          pixelOffset: this.currentSlide * -this.windowWidth,
-          release: true,
-        },
-        () => {
-          if (this.state.pixelOffset < oldPixelOffset) {
-            this.slideNr += 1
-          } else if (this.state.pixelOffset > oldPixelOffset) {
-            this.slideNr -= 1
-          }
-        }
-      )
+    this.slickSettings = {
+      adaptiveHeight: true,
+      dots: true,
     }
   }
 
   render(props, state) {
-    const settings = {
-      adaptiveHeight: true,
-      dots: true,
-    }
-
     return (
       <div>
         <Intro>
@@ -307,7 +220,7 @@ class Reviews extends Component {
           <MainHeadline>Featured Reviews</MainHeadline>
         </Intro>
         <Container>
-          <Slider {...settings}>
+          <Slider {...this.slickSettings}>
             {props.data.map((review, i) => (
               <Review key={i}>
                 <Quote>{review.text}</Quote>
