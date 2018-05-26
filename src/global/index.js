@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components'
+import { injectGlobal } from 'preact-emotion'
 import { fontFaces, googleFonts } from './type'
 import { resetCSS } from './reset'
 import sig from './sig'

@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import { CalloutText, Wysiwyg } from '../../global/type'
 
@@ -48,7 +48,7 @@ const Content = styled.div`
   text-align: left;
 `
 
-const Title = CalloutText.extend`
+const Title = styled(CalloutText)`
   margin-bottom: 20px;
   font-family: ${fontFamily.openSans};
   font-weight: ${fontWeight.bold};

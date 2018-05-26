@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import { Button, Icon } from '../'
 
@@ -36,7 +36,7 @@ const Copy = styled.div`
   vertical-align: top;
 `
 
-const Title = FeaturedText.extend`
+const Title = styled(FeaturedText)`
   margin-bottom: 5px;
 `
 
@@ -44,7 +44,7 @@ const ResourceButton = styled(Button)`
   margin-top: 15px;
 `
 
-const Header = Headline.extend`
+const Header = styled(Headline)`
   margin-bottom: 50px;
 `
 

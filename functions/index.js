@@ -1,8 +1,9 @@
 require('./utils/patchPreact')
 const { h } = require('preact')
-const { ServerStyleSheet } = require('styled-components')
 const functions = require('firebase-functions')
 const render = require('preact-render-to-string')
+const Helmet = require('preact-helmet')
+const { renderStylesToString } = require('emotion-server')
 const nodemailer = require('nodemailer')
 const cors = require('cors')({ origin: true })
 const App = require('./src/App')
@@ -79,15 +80,43 @@ exports.careersForm = functions.https.onRequest((req, res) => {
   })
 })
 
+exports.geocode = functions.https.onRequest((req, res) => {
+  cors(req, res, () => {
+    const googleMapsClient = require('@google/maps').createClient({
+      Promise: Promise,
+      key: 'AIzaSyCok5PyWTvryvbsRzaVAkJbpuZjfklnmJM',
+    })
+
+    googleMapsClient
+      .geocode({ address: req.body.address })
+      .asPromise()
+      .then(response => {
+        res.send({
+          latLng: response.json.results[0].geometry.location,
+        })
+      })
+      .catch(err => {
+        res.send(`Geocode was not successful for the following reason: ${err}`)
+      })
+  })
+})
+
 exports.ssrapp = functions.https.onRequest((req, res) => {
-  // creating out stylesheet
-  const sheet = new ServerStyleSheet()
-  // collecting styles
-  const body = render(sheet.collectStyles(h(App.default, { url: req.url })))
-  // getting all the tags from the sheet
-  const styles = sheet.getStyleTags()
+  const body = renderStylesToString(render(h(App.default, { url: req.url })))
+  const head = Helmet.rewind()
 
   res.send(
-    `<!DOCTYPE html><html><head>${styles}</head><body><div id="root">${body}</div><script src="/dist/index.js"></script></body></html>`
+    `<!DOCTYPE html>
+    <html ${head.htmlAttributes.toString()}>
+      <head>
+        ${head.title.toString()}
+        ${head.meta.toString()}
+        ${head.link.toString()}
+      </head>
+      <body>
+        <div id="root">${body}</div>
+        <script src="/dist/index.js"></script>
+      </body>
+    </html>`
   )
 })

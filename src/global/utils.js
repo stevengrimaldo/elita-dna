@@ -1,4 +1,4 @@
-import { css } from 'styled-components'
+import { css } from 'preact-emotion'
 import { rgba } from 'polished'
 
 const sizes = {

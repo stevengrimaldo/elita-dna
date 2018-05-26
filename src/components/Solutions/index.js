@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import { Icon } from '../'
 
@@ -40,7 +40,7 @@ const IconContainer = styled(Icon)`
   }
 `
 
-const Title = FeaturedText.extend`
+const Title = styled(FeaturedText)`
   margin-bottom: 15px;
 `
 

@@ -7,7 +7,7 @@ import {
 } from '../../global/icons'
 
 const OccupationTherapyIntakeForm = '/pdfs/Occupational-Therapy-Intake-Form.pdf'
-// const SpeechTherapyIntakeForm = '/pdfs/Speech-Therapy-Intake-Form.pdf'
+const SpeechTherapyIntakeForm = '/pdfs/Speech-Therapy-Intake-Form.pdf'
 const MentalHealthIntakeFormAdult = '/pdfs/Mental-Health-Intake-Form-Adult.pdf'
 const MentalHealthIntakeFormChild = '/pdfs/Mental-Health-Intake-Form-Child.pdf'
 
@@ -104,7 +104,7 @@ export const data = {
       title: 'Occupational Therapy Intake Form',
     },
     {
-      link: '#',
+      link: SpeechTherapyIntakeForm,
       title: 'Speech Therapy Intake Form',
     },
     {

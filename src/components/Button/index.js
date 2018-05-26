@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import { type } from '../../global/theme'
 
@@ -19,7 +19,9 @@ const Text = styled.button`
 `
 
 // prettier-ignore
-const Link = Text.withComponent('a')
+const Link = styled(Text.withComponent('a'))`
+  cursor: pointer;
+`
 
 const Button = ({ className, data, onClick }) => {
   const isDownload = data.type === 'download'

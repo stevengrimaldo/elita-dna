@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import { Helmet } from 'react-helmet'
+import Helmet from 'preact-helmet'
 import PropTypes from 'prop-types'
 
 const Meta = ({ children, data }) => (

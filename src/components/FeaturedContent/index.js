@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import { Button, Icon } from '../'
 
@@ -47,7 +47,7 @@ const FeaturedContentImage = styled.img`
 `
 
 // prettier-ignore
-const Text = Wysiwyg.extend`
+const Text = styled(Wysiwyg)`
   ${props => props.full && `
     ul {
       display: flex;
@@ -83,7 +83,7 @@ const Text = Wysiwyg.extend`
   }
 `
 
-const Title = MainHeadline.extend`
+const Title = styled(MainHeadline)`
   margin-bottom: 20px;
 `
 

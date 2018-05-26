@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import { buttonData } from '../Button'
 
@@ -40,7 +40,7 @@ const Image = styled.div`
   z-index: -1;
 `
 
-const SubTitle = CalloutText.extend`
+const SubTitle = styled(CalloutText)`
   margin-bottom: 15px;
 `
 
@@ -48,7 +48,7 @@ const HeroButton = styled.div`
   margin-top: 30px;
 `
 
-const Text = Wysiwyg.extend`
+const Text = styled(Wysiwyg)`
   margin-top: 15px;
 `
 

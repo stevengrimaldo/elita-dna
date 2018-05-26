@@ -1,12 +1,13 @@
 {
   "name": "elitedna",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build src/index.js --out-dir static/dist",
-    "package-src": "babel src -d functions/src --plugins=transform-class-properties,dynamic-import-node,transform-runtime --copy-files --ignore node_modules",
+    "package-src":
+      "babel src -d functions/src --plugins=dynamic-import-node,transform-class-properties,transform-object-assign,transform-runtime,emotion --copy-files --ignore node_modules",
     "preserve": "npm run build && npm run package-src",
     "serve": "firebase serve --only functions,hosting",
     "predeploy": "npm run build && npm run package-src",
@@ -14,25 +15,21 @@
     "ssr": "babel-watch api/index.js"
   },
   "dependencies": {
-    "@google/maps": "^0.4.6",
     "axios": "^0.18.0",
-    "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "firebase": "^5.0.2",
-    "firebase-admin": "~5.12.0",
-    "firebase-functions": "^1.0.2",
-    "module-alias": "^2.0.6",
-    "nodemailer": "^4.6.4",
+    "emotion": "^9.1.3",
+    "emotion-server": "^9.1.3",
+    "emotion-theming": "^9.1.2",
     "polished": "^1.9.2",
     "preact": "^8.2.7",
     "preact-async-route": "^2.1.1",
     "preact-compat": "^3.18.0",
+    "preact-emotion": "^9.1.3",
+    "preact-helmet": "^4.0.0-alpha-3",
     "preact-router": "^2.6.0",
     "prop-types": "^15.6.1",
+    "qs": "^6.5.2",
     "react-google-maps": "^9.4.5",
-    "react-helmet": "^5.2.0",
-    "react-slick": "^0.23.1",
-    "styled-components": "^3.2.5"
+    "react-slick": "^0.23.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -40,6 +37,7 @@
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-emotion": "^9.1.2",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-styled-components": "^1.5.1",
     "babel-plugin-transform-object-assign": "^6.22.0",
@@ -59,8 +57,7 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
-    "parcel-bundler": "^1.8.1",
-    "rimraf": "^2.6.2"
+    "parcel-bundler": "^1.8.1"
   },
   "alias": {
     "react": "preact-compat",

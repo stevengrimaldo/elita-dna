@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 import PropTypes from 'prop-types'
 
 import { BodyText } from '../../global/type'

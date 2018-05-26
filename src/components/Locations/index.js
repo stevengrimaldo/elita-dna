@@ -1,6 +1,7 @@
 import { h, Component } from 'preact'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
+import axios from 'axios'
 
 import { Map } from '../'
 
@@ -9,6 +10,8 @@ import { BodyText, FeaturedText } from '../../global/type'
 import { setWidth, shadeOf } from '../../global/utils'
 
 import { color, spacing } from '../../global/theme'
+
+import { googleMapsURL } from '../../global/data'
 
 const MapWrapper = styled.div`
   position: absolute;
@@ -50,7 +53,7 @@ const MapDetails = styled.div`
   }
 `
 
-const LocationName = FeaturedText.extend`
+const LocationName = styled(FeaturedText)`
   text-transform: uppercase;
   transition: all 250ms;
 `
@@ -81,40 +84,28 @@ const List = styled.div`
 `
 
 class Locations extends Component {
-  locations = []
-  mapRefs = []
-
   state = {
     activeLocationIndex: 0,
-    locations: null,
+    locations: [],
   }
 
   componentDidMount() {
-    const googleMapsClient = require('@google/maps').createClient({
-      Promise: Promise,
-      key: 'AIzaSyCok5PyWTvryvbsRzaVAkJbpuZjfklnmJM',
-    })
-
-    if (this.mapRefs) {
-      this.mapRefs.map((map, i) => {
-        googleMapsClient
-          .geocode({ address: map.address })
-          .asPromise()
-          .then(response => {
-            this.locations.push({
-              latLng: response.json.results[0].geometry.location,
-            })
-            this.setState({
-              locations: this.locations,
-            })
-          })
-          .catch(err => {
-            console.log(
-              `Geocode was not successful for the following reason: ${err}`
-            )
-          })
+    this.props.data.map((location, i) => {
+      axios({
+        data: { address: location.address },
+        headers: { 'content-type': 'application/json' },
+        method: 'POST',
+        url: 'https://us-central1-elite-dna-therapy.cloudfunctions.net/geocode',
       })
-    }
+        .then(res => {
+          this.setState(state => ({
+            locations: [...state.locations, res.data],
+          }))
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    })
   }
 
   showMap = i => {
@@ -126,6 +117,14 @@ class Locations extends Component {
       <List>
         {props.data.map((location, i) => {
           const active = state.activeLocationIndex === i
+          let latLng = null
+          if (state.locations.length > 0) {
+            if (state.locations[i] != null) {
+              if (state.locations[i].latLng != null) {
+                latLng = state.locations[i].latLng
+              }
+            }
+          }
 
           return (
             <Location className={active && 'active'} key={i}>
@@ -134,21 +133,17 @@ class Locations extends Component {
                 <BodyText>{location.address}</BodyText>
               </MapDetails>
               <MapWrapper>
-                <MapCode
-                  className={active && 'active'}
-                  innerRef={el => {
-                    if (this.mapRefs.every(i => i.el !== el) && el != null) {
-                      this.mapRefs.push({ address: location.address, el })
-                    }
-                  }}>
-                  {state.locations && (
+                <MapCode className={active && 'active'}>
+                  {state.locations.length > 0 ? (
                     <Map
-                      mapPosition={state.locations[i].latLng}
-                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCok5PyWTvryvbsRzaVAkJbpuZjfklnmJM"
+                      mapPosition={latLng}
+                      googleMapURL={googleMapsURL}
                       loadingElement={<div style={{ height: '100%' }} />}
                       containerElement={<div style={{ height: '100%' }} />}
                       mapElement={<div style={{ height: '100%' }} />}
                     />
+                  ) : (
+                    <p>loading...</p>
                   )}
                 </MapCode>
               </MapWrapper>

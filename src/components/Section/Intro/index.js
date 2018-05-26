@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import { Button, buttonData } from '../../'
 
@@ -13,12 +13,12 @@ import { parseContent } from '../../../global/utils'
 const marginBottom = `margin-bottom: 30px;`
 
 // prettier-ignore
-const IntroTitle = MainHeadline.extend`
+const IntroTitle = styled(MainHeadline)`
   ${marginBottom}
 `
 
 // prettier-ignore
-const IntroText = Wysiwyg.extend`
+const IntroText = styled(Wysiwyg)`
   ${marginBottom}
 `
 

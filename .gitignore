@@ -2,9 +2,10 @@
 /node_modules
 /static/dist
 /functions/node_modules
-firebase-debug.log
-/dist
-# /api
+/functions/package-lock.json
 /functions/src
 /functions/static
 /functions/dist
+firebase-debug.log
+/dist
+package-lock.json

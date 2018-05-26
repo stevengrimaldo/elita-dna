@@ -1,7 +1,7 @@
 import { h } from 'preact'
 import { Link } from 'preact-router/match'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import { Container } from '../'
 
@@ -59,7 +59,7 @@ const NavText = styled.span`
   }
 `
 
-const NavLink = NavText.withComponent(Link).extend`
+const NavLink = styled(NavText.withComponent(Link))`
   cursor: pointer;
 `
 
@@ -109,7 +109,7 @@ const LinkItem = styled.li`
   }
 `
 
-const SubNavLink = NavText.withComponent(Link).extend`
+const SubNavLink = styled(NavText.withComponent(Link))`
   padding: 10px 20px;
   border-bottom: 1px solid ${shadeOf(color.emperor, 0.15)};
   font-weight: ${fontWeight.regular};

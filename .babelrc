@@ -1,22 +1,27 @@
 {
   "presets": [
+    "preact",
+    "stage-2",
     [
       "env",
       {
         "targets": {
-          "node": "current",
-          "browsers": ["> 1%", "last 2 versions"]
+          "browsers": ["> 1%", "last 2 versions"],
+          "node": "current"
         }
       }
-    ],
-    "preact",
-    "stage-2"
+    ]
   ],
   "plugins": [
     "dynamic-import-node",
     "transform-class-properties",
     "transform-object-assign",
-    "styled-components",
+    [
+      "emotion",
+      {
+        "hoist": true
+      }
+    ],
     [
       "transform-react-jsx",
       {

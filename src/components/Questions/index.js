@@ -1,6 +1,6 @@
 import { h, Component } from 'preact'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import { Container } from '../'
 
@@ -62,7 +62,7 @@ const Title = styled.div`
 `
 
 // prettier-ignore
-const Answer = Wysiwyg.extend`
+const Answer = styled(Wysiwyg)`
   padding-bottom: 40px;
   padding-right: 40px;
   transition-duration: 300ms;

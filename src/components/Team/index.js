@@ -1,6 +1,6 @@
 import { h, Component } from 'preact'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import { Icon } from '../'
 
@@ -82,7 +82,7 @@ const Image = styled.img`
 `
 
 // prettier-ignore
-const Name = BodyText.extend`
+const Name = styled(BodyText)`
   margin-top: 20px;
   font-family: ${fontFamily.openSans};
   font-weight: ${fontWeight.bold};
@@ -162,7 +162,7 @@ const BackButton = styled.div`
   cursor: pointer;
 `
 
-const LocationName = BodyText.extend`
+const LocationName = styled(BodyText)`
   font-weight: ${fontWeight.bold};
   text-transform: uppercase;
 `
@@ -203,7 +203,7 @@ const Filter = styled.div`
 `
 
 // prettier-ignore
-const DepartmentName = BodyText.extend`
+const DepartmentName = styled(BodyText)`
   font-size: ${toEms('14px')};
   text-decoration: underline;
 

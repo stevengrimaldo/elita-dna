@@ -1,5 +1,5 @@
 import { h, Component } from 'preact'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import {
   BodyText,
@@ -14,7 +14,7 @@ import { Button } from '../'
 
 import { Wrapper } from './elements'
 
-const ContactInfo = Wrapper.extend`
+const ContactInfo = styled(Wrapper)`
   text-align: right;
   margin-top: 20px;
 `
@@ -23,7 +23,7 @@ const Caption = styled.div`
   text-align: left;
 `
 
-const PhoneNumber = SubHeadline.extend`
+const PhoneNumber = styled(SubHeadline)`
   font-weight: ${fontWeight.regular};
   font-family: ${fontFamily.openSans};
 `
@@ -39,7 +39,7 @@ const Header = styled.div`
   padding: 0 10px;
 `
 
-const Title = Headline.extend`
+const Title = styled(Headline)`
   margin-bottom: 30px;
 `
 

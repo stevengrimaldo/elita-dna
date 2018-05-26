@@ -7,11 +7,19 @@ import {
 } from 'react-google-maps'
 
 const Map = withScriptjs(
-  withGoogleMap(props => (
-    <GoogleMap defaultZoom={16} defaultCenter={props.mapPosition}>
-      <Marker position={props.mapPosition} />
-    </GoogleMap>
-  ))
+  withGoogleMap(props => {
+    let response
+    if (props.mapPosition) {
+      response = (
+        <GoogleMap defaultZoom={16} defaultCenter={props.mapPosition}>
+          <Marker position={props.mapPosition} />
+        </GoogleMap>
+      )
+    } else {
+      response = <p>loading...</p>
+    }
+    return response
+  })
 )
 
 export default Map

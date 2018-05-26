@@ -1,7 +1,7 @@
 import { h, Component } from 'preact'
 import Slider from 'react-slick'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import { Icon } from '../'
 
@@ -145,7 +145,7 @@ const Container = styled.div`
   }
 `
 
-const Author = FeaturedText.extend`
+const Author = styled(FeaturedText)`
   font-size: ${toEms('22px')};
   font-weight: ${fontWeight.bold};
 `

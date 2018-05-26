@@ -1,5 +1,8 @@
 import { BrainStorm, GradCap, MedicalBag, ShieldPerson } from './icons'
 
+export const googleMapsURL =
+  'https://maps.googleapis.com/maps/api/js?key=AIzaSyCok5PyWTvryvbsRzaVAkJbpuZjfklnmJM'
+
 export const faqs = {
   questions: [
     {

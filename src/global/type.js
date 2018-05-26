@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import fonts from './fonts'
 
@@ -95,7 +95,7 @@ export const BodyText = styled.p`
   }
 `
 
-export const LegalText = BodyText.extend`
+export const LegalText = styled(BodyText)`
   font-size: 12px;
 `
 

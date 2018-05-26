@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 import PropTypes from 'prop-types'
 
 const Wrapper = styled.div`

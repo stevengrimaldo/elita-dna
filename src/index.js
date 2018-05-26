@@ -1,6 +1,6 @@
 import 'babel-polyfill'
 import { h, render } from 'preact'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'emotion-theming'
 
 import App from './App'
 import theme from './global/theme'
@@ -19,13 +19,4 @@ if (typeof document !== 'undefined') {
   if (module.hot) {
     module.hot.accept()
   }
-
-  // This clears out the old rendered DOM on save for HMR
-  // if (module.hot) {
-  //   module.hot.dispose(() => {
-  //     while (document.body.firstChild) {
-  //       document.body.removeChild(document.body.firstChild)
-  //     }
-  //   })
-  // }
 }

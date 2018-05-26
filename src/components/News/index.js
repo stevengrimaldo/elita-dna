@@ -1,6 +1,6 @@
 import { h, Component } from 'preact'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'preact-emotion'
 
 import { Button } from '../'
 
@@ -26,7 +26,7 @@ const ArticleButton = styled(Button)`
   margin-top: 10px;
 `
 
-const Source = BodyText.extend`
+const Source = styled(BodyText)`
   margin-bottom: 10px;
 `
 
@@ -56,7 +56,7 @@ const Image = styled.figure`
   }
 `
 
-const Header = Headline.extend`
+const Header = styled(Headline)`
   margin-bottom: 60px;
 `
 
