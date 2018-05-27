@@ -51,7 +51,7 @@ const TextArea = ({
   valid,
   value,
 }) => (
-  <Wrapper alignRight={alignRight} order={order} size={size}>
+  <Wrapper alignRight={alignRight} order={order} size={size} textArea>
     <Label htmlFor={name}>
       {label}
       {required && '*'}

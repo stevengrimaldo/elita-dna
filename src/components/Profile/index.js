@@ -4,21 +4,30 @@ import styled from 'preact-emotion'
 
 import { CalloutText, Wysiwyg } from '../../global/type'
 
-import { parseContent } from '../../global/utils'
+import { media, parseContent } from '../../global/utils'
 
 import { fontFamily, fontWeight } from '../../global/theme'
 
+// prettier-ignore
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${media.down.md`
+    flex-direction: column;
+  `}
 `
 
+// prettier-ignore
 const ImageContainer = styled.div`
   border-radius: 50%;
   overflow: hidden;
   margin-right: 50px;
-  flex: 1 1 385px;
+  flex: 0 1 385px;
+  min-width: 200px;
+  max-width: 385px;
+  width: 100%;
   position: relative;
 
   &::before {
@@ -27,6 +36,12 @@ const ImageContainer = styled.div`
     width: 100%;
     padding-top: 100%;
   }
+
+  ${media.down.md`
+    flex-basis: auto;
+    margin-right: 0;
+    margin-bottom: 50px;
+  `}
 `
 
 const Image = styled.img`
@@ -43,9 +58,15 @@ const Image = styled.img`
   object-fit: cover;
 `
 
+// prettier-ignore
 const Content = styled.div`
   flex: 1 1 1195px;
   text-align: left;
+
+  ${media.down.md`
+    text-align: center;
+    flex-basis: auto;
+  `}
 `
 
 const Title = styled(CalloutText)`

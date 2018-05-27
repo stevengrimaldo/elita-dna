@@ -6,6 +6,8 @@ import Intro, { introData } from './Intro'
 
 import { Container } from '../'
 
+import { media } from '../../global/utils'
+
 import { setImageAlignment, setSpacing } from './utils'
 
 // prettier-ignore
@@ -25,6 +27,12 @@ const Image = styled.div`
   z-index: -1;
 
   ${props => setImageAlignment(props)}
+
+  ${props => media.down.xl`
+    ${props.align ? `
+      background: none;
+    ` : ``}
+  `}
 `
 
 const Section = ({

@@ -1,25 +1,8 @@
 import styled from 'preact-emotion'
 
-const setSize = ({ size }) => {
-  let css = ''
+import { media } from '../../../../global/utils'
 
-  if (size) {
-    switch (size) {
-      case 'double':
-        css += `flex: 0 1 ${2 / 3 * 100}%;`
-        break
-      case 'full':
-        css += 'flex: 1 1 100%;'
-        break
-      default:
-        css += ''
-    }
-  } else {
-    css += `flex: 0 1 ${1 / 3 * 100}%;`
-  }
-
-  return css
-}
+import { setSize } from './utils'
 
 // prettier-ignore
 const Wrapper = styled.div`
@@ -27,6 +10,24 @@ const Wrapper = styled.div`
 
   padding: 20px 10px;
   position: relative;
+
+  ${props => media.down.md`
+    ${props.size ? `
+      ${props.size === 'double' ? `
+        flex-basis: 50%;
+      ` : ``}
+    ` : `
+      flex-basis: 50%;
+    `}
+
+    ${props.textArea ? `
+      flex-basis: 100%;
+    ` : ``}
+  `}
+
+  ${props => media.down.xs`
+    flex-basis: 100%;
+  `}
 `
 
 export default Wrapper

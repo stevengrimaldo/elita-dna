@@ -6,15 +6,21 @@ import { Icon } from '../'
 
 import { BodyText, Headline } from '../../global/type'
 
-import { toEms, shadeOf } from '../../global/utils'
+import { toEms, media, shadeOf } from '../../global/utils'
 
 import { color, fontFamily, fontWeight } from '../../global/theme'
 
 import { LeftArrow } from '../../global/icons'
 
+// prettier-ignore
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
+
+  ${media.down.sm`
+    flex-direction: column;
+    justify-content: center;
+  `}
 `
 
 const DetailListItem = styled.span`
@@ -29,12 +35,17 @@ const DetailListItem = styled.span`
   }
 `
 
+// prettier-ignore
 const Members = styled.div`
   flex: 0 1 925px;
   display: flex;
   flex-wrap: wrap;
   margin-top: -20px;
   align-items: flex-start;
+
+  ${media.down.sm`
+    justify-content: center;
+  `}
 `
 
 const ImageContainer = styled.figure`
@@ -102,7 +113,7 @@ const BioName = styled.div`
 const Member = styled.div`
   padding: 20px;
   text-align: center;
-  flex: 1 0 192px;
+  flex: 1 0 195px;
   max-width: 232px;
 
   ${props => props.hasDetails && `
@@ -115,11 +126,31 @@ const Member = styled.div`
       }
     }
   `}
+
+  ${media.down.xl`
+    flex-basis: ${1 / 3 * 100}%;
+  `}
+
+  ${media.down.md`
+    flex-basis: ${1 / 2 * 100}%;
+  `}
+
+  ${media.down.xs`
+    flex-basis: 100%;
+    margin: auto;
+  `}
 `
 
+// prettier-ignore
 const Filters = styled.div`
-  flex: 0 1 275px;
+  flex: 0 1 295px;
   text-align: left;
+  padding-right: 20px;
+
+  ${media.down.sm`
+    padding-right: 0;
+    margin-bottom: 40px;
+  `}
 `
 
 // prettier-ignore

@@ -80,6 +80,10 @@ const Answer = styled(Wysiwyg)`
   `}
 `
 
+const TitleText = styled(FeaturedText)`
+  padding-right: 40px;
+`
+
 const Header = styled.div`
   padding: 40px 0;
   text-align: center;
@@ -109,7 +113,7 @@ class Questions extends Component {
                 <Title
                   active={this.state.activeQuestion === i}
                   onClick={() => this.openQuestion(i)}>
-                  <FeaturedText>{question.title}</FeaturedText>
+                  <TitleText>{question.title}</TitleText>
                 </Title>
                 <Answer
                   active={this.state.activeQuestion === i}

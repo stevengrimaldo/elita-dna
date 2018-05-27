@@ -8,15 +8,22 @@ import {
   SubHeadline,
 } from '../../global/type'
 
+import { media } from '../../global/utils'
+
 import { fontWeight, fontFamily } from '../../global/theme'
 
 import { Button } from '../'
 
 import { Wrapper } from './elements'
 
+// prettier-ignore
 const ContactInfo = styled(Wrapper)`
   text-align: right;
   margin-top: 20px;
+
+  ${media.down.md`
+    text-align: left;
+  `}
 `
 
 const Caption = styled.div`

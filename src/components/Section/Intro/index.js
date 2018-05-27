@@ -8,7 +8,7 @@ import { MainHeadline, Wysiwyg } from '../../../global/type'
 
 import { spacing } from '../../../global/theme'
 
-import { parseContent } from '../../../global/utils'
+import { media, parseContent } from '../../../global/utils'
 
 const marginBottom = `margin-bottom: 30px;`
 
@@ -31,6 +31,12 @@ const Wrapper = styled.div`
   + div {
     margin-top: ${spacing.verticalPadding};
   }
+
+  ${media.down.sm`
+    + div {
+      margin-top: ${spacing.verticalPaddingHalf};
+    }
+  `}
 `
 
 const Intro = ({ bgColor, data }) => (

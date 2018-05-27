@@ -6,15 +6,24 @@ import { Button } from '../'
 
 import { FeaturedText, Headline } from '../../global/type'
 
+import { media } from '../../global/utils'
+
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
 `
 
+// prettier-ignore
 const Document = styled.div`
-  flex: 0 1 415px;
+  flex: 1 1 ${1 / 3 * 100}%;
+  max-width: 415px;
   text-align: center;
-  padding: 0 50px;
+  padding: 30px;
+
+  ${media.down.xs`
+    flex-basis: 100%;
+    margin: auto;
+  `}
 `
 
 const DocumentdButton = styled(Button)`

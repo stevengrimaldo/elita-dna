@@ -2,9 +2,7 @@ import { h } from 'preact'
 import PropTypes from 'prop-types'
 import styled from 'preact-emotion'
 
-import { type } from '../../global/theme'
-
-import { fontGen } from '../../global/utils'
+import { media } from '../../global/utils'
 
 import { genButton } from './utils'
 
@@ -14,8 +12,11 @@ const Container = styled.div`
 
 // prettier-ignore
 const Text = styled.button`
-  ${fontGen(type.button)}
   ${props => genButton(props)}
+
+  ${media.down.xs`
+    font-size: 14px;
+  `}
 `
 
 // prettier-ignore

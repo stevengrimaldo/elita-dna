@@ -7,7 +7,7 @@ import { Icon } from '../'
 
 import { ChatBubble } from '../../global/icons'
 
-import { convertLh, fontGen, setWidth, toEms } from '../../global/utils'
+import { convertLh, fontGen, media, setWidth, toEms } from '../../global/utils'
 
 import {
   color,
@@ -59,6 +59,7 @@ const Container = styled.div`
       height: auto;
       min-height: 1px;
       display: none;
+      padding: 0 12vw;
     }
 
     &-initialized {
@@ -105,11 +106,11 @@ const Container = styled.div`
     }
 
     &-prev {
-      left: 5.5555555556%;
+      left: ${setWidth(spacing.horizontalPadding)};
     }
 
     &-next {
-      right: 5.5555555556%;
+      right: ${setWidth(spacing.horizontalPadding)};
       transform: translateY(-100%) rotate(180deg);
     }
 
@@ -155,6 +156,7 @@ const Review = styled.div`
   flex: 1 1 auto;
 `
 
+// prettier-ignore
 const Quote = styled.blockquote`
   max-width: calc(1060px + 5.555555555555555% * 2);
   width: 100%;
@@ -174,6 +176,14 @@ const Quote = styled.blockquote`
   &::after {
     content: close-quote;
   }
+
+  ${media.down.sm`
+    font-size: 20px;
+  `}
+
+  ${media.down.xxs`
+    font-size: 16px;
+  `}
 `
 
 // prettier-ignore

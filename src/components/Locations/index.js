@@ -3,16 +3,40 @@ import PropTypes from 'prop-types'
 import styled from 'preact-emotion'
 import axios from 'axios'
 
-import { Map } from '../'
+import { DirectionsLink, Map } from '../'
 
 import { BodyText, FeaturedText } from '../../global/type'
 
-import { setWidth, shadeOf } from '../../global/utils'
+import {
+  media,
+  parseContent,
+  setWidth,
+  shadeOf,
+  toEms,
+} from '../../global/utils'
 
 import { color, spacing } from '../../global/theme'
 
 import { googleMapsURL } from '../../global/data'
 
+// prettier-ignore
+const GetDirections = styled.span`
+  display: none;
+  margin-left: 5px;
+  text-transform: initial;
+  font-size: ${toEms('12px')};
+  transform: translate3d(0, -2px, 0);
+
+  a {
+    color: ${color.persimmon};
+  }
+
+  ${media.down.lg`
+    display: inline-block;
+  `}
+`
+
+// prettier-ignore
 const MapWrapper = styled.div`
   position: absolute;
   right: 0;
@@ -26,6 +50,10 @@ const MapWrapper = styled.div`
   &.active {
     z-index: 1;
   }
+
+  ${media.down.lg`
+    display: none;
+  `}
 `
 
 const MapCode = styled.div`
@@ -39,11 +67,12 @@ const MapCode = styled.div`
   z-index: -1;
 `
 
+// prettier-ignore
 const MapDetails = styled.div`
   background-color: transparent;
   padding: 15px 15px 12px;
   cursor: pointer;
-  max-width: 520px;
+  max-width: calc(40% - 5.555555555555555%);
   width: 100%;
   transition: all 250ms;
   text-align: left;
@@ -51,6 +80,10 @@ const MapDetails = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
+
+  ${media.down.lg`
+    max-width: 100%;
+  `}
 `
 
 const LocationName = styled(FeaturedText)`
@@ -78,9 +111,14 @@ const Location = styled.div`
   }
 `
 
+// prettier-ignore
 const List = styled.div`
   padding-left: ${setWidth(spacing.horizontalPadding)};
   position: relative;
+
+  ${media.down.lg`
+    padding-right: ${setWidth(spacing.horizontalPadding)};
+  `}
 `
 
 class Locations extends Component {
@@ -93,7 +131,10 @@ class Locations extends Component {
     this.props.data.map((location, i) => {
       axios({
         data: { address: location.address },
-        headers: { 'content-type': 'application/json' },
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'content-type': 'application/json',
+        },
         method: 'POST',
         url: 'https://us-central1-elite-dna-therapy.cloudfunctions.net/geocode',
       })
@@ -129,8 +170,15 @@ class Locations extends Component {
           return (
             <Location className={active && 'active'} key={i}>
               <MapDetails onClick={() => this.showMap(i)}>
-                <LocationName>{location.name}</LocationName>
-                <BodyText>{location.address}</BodyText>
+                <LocationName>
+                  {location.name}
+                  <GetDirections>
+                    - <DirectionsLink address={location.address} />
+                  </GetDirections>
+                </LocationName>
+                <BodyText
+                  dangerouslySetInnerHTML={parseContent(location.address)}
+                />
               </MapDetails>
               <MapWrapper>
                 <MapCode className={active && 'active'}>

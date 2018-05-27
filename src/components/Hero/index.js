@@ -10,13 +10,18 @@ import { color } from '../../global/theme'
 
 import { CalloutText, PageTitle, Wysiwyg } from '../../global/type'
 
-import { parseContent } from '../../global/utils'
+import { media, parseContent } from '../../global/utils'
 
 import { addSlant } from './utils'
 
 // prettier-ignore
 const Wrapper = styled.section`
   ${props => addSlant(props)}
+
+
+  ${props => media.down.lg`
+    ${props.image ? `min-height: 425px;` : ``};
+  `}
 `
 
 const Content = styled.div`

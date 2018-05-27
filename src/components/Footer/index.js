@@ -4,7 +4,11 @@ import PropTypes from 'prop-types'
 
 import { BodyText } from '../../global/type'
 
+import { media } from '../../global/utils'
+
 import { color } from '../../global/theme'
+
+const PrivacyPolicy = '/pdfs/privacy-policy.pdf'
 
 const Container = styled.footer`
   background-color: ${color.strikemaster};
@@ -13,11 +17,25 @@ const Container = styled.footer`
   color: ${color.white};
 `
 
+// prettier-ignore
+const FooterText = styled(BodyText)`
+  a {
+    text-decoration: underline;
+  }
+
+  ${media.down.xxs`
+    font-size: 12px;
+  `}
+`
+
 const Footer = ({ year }) => (
   <Container>
-    <BodyText inverted>
-      &copy; {year} Elite DNA Therapy. All rights reserved.
-    </BodyText>
+    <FooterText inverted>
+      &copy; {year} Elite DNA Therapy. All rights reserved.{' '}
+      <a href={PrivacyPolicy} download="" target="_blank" native>
+        Privacy Policy
+      </a>.
+    </FooterText>
   </Container>
 )
 

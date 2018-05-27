@@ -8,23 +8,32 @@ import { FeaturedText, Wysiwyg } from '../../global/type'
 
 import { color } from '../../global/theme'
 
-import { parseContent } from '../../global/utils'
+import { media, parseContent } from '../../global/utils'
 
 const Container = styled.div`
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 `
 
+// prettier-ignore
 const Solution = styled.div`
-  display: inline-block;
-  vertical-align: top;
-  max-width: 320px;
-  width: 100%;
-  text-align: center;
-  padding: 20px;
+  flex: 1 1 25%;
+  padding: 1.5vw;
 
   &:last-child {
     margin-right: 0;
   }
+
+  ${media.down.lg`
+    flex-basis: 50%;
+    padding: 2.5vw;
+  `}
+
+  ${media.down.xs`
+    flex-basis: 100%;
+    padding: 5vw 2.5vw;
+  `}
 `
 
 const IconContainer = styled(Icon)`

@@ -8,10 +8,11 @@ import { FeaturedText, Headline, Wysiwyg } from '../../global/type'
 
 import { baseSize, color } from '../../global/theme'
 
-import { parseContent } from '../../global/utils'
+import { media, parseContent } from '../../global/utils'
 
 import { buttonData } from '../Button'
 
+// prettier-ignore
 const Resource = styled.div`
   margin-bottom: 40px;
   text-align: left;
@@ -20,20 +21,39 @@ const Resource = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
+
+  ${media.down.xxs`
+    flex-direction: column;
+    text-align: center;
+  `}
 `
 
+// prettier-ignore
 const ResourceIcon = styled(Icon)`
   margin-right: ${70 / baseSize * 100}%;
-  flex: 1 1 50px;
+  flex: 1 0 50px;
+  max-width: 100px;
+  width: 100%;
 
   svg {
     fill: ${color.strikemaster};
   }
+
+  ${media.down.xxs`
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+  `}
 `
 
+// prettier-ignore
 const Copy = styled.div`
   flex: 1 1 100%;
   vertical-align: top;
+
+  ${media.down.xxs`
+    flex-basis: auto;
+  `}
 `
 
 const Title = styled(FeaturedText)`

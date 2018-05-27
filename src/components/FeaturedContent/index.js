@@ -8,7 +8,7 @@ import { buttonData } from '../Button'
 
 import { Wysiwyg, MainHeadline } from '../../global/type'
 
-import { parseContent } from '../../global/utils'
+import { media, parseContent } from '../../global/utils'
 
 import { color } from '../../global/theme'
 
@@ -17,7 +17,7 @@ const Container = styled.div`
   width: 100%;
 
   ${props => !props.full && `
-    max-width: 650px;
+    max-width: 675px;
     margin-left: auto;
     margin-right: auto;
   `}
@@ -55,7 +55,7 @@ const Text = styled(Wysiwyg)`
       flex-wrap: wrap;
 
       li {
-        flex-basis: calc(((1 / 3) * 100%) - 50px);
+        flex-basis: calc(((1 / 3) * 100%) - 25px);
         display: inline-block;
         vertical-align: top;
         padding-left: calc((25 / 1440) * 100%);
@@ -63,24 +63,46 @@ const Text = styled(Wysiwyg)`
     }
   `}
 
-  ul li {
-    margin-bottom: 15px;
-    list-style-position: initial;
-    list-style-type: none;
-    text-indent: 0;
-    position: relative;
+  ul {
+    li {
+      margin-bottom: 15px;
+      list-style-position: initial;
+      list-style-type: none;
+      text-indent: 0;
+      position: relative;
 
-    &::before {
-      content: '';
-      width: 8px;
-      height: 8px;
-      background-color: ${color.persimmon};
-      border-radius: 50%;
-      top: 8px;
-      margin-left: -15px;
-      position: absolute;
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: ${color.persimmon};
+        border-radius: 50%;
+        top: 8px;
+        margin-left: -15px;
+        position: absolute;
+      }
     }
   }
+
+  ${props => media.down.md`
+    ${props.full ? `
+      ul {
+        li {
+          flex-basis: calc(((1 / 2) * 100%) - 25px);
+        }
+      }
+    ` : ``}
+  `}
+
+  ${props => media.down.xs`
+    ${props.full ? `
+      ul {
+        li {
+          flex-basis: calc(((2 / 2) * 100%) - 25px);
+        }
+      }
+    ` : ``}
+  `}
 `
 
 const Title = styled(MainHeadline)`

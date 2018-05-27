@@ -1,10 +1,14 @@
-import { color } from '../../global/theme'
+import { color, type as font } from '../../global/theme'
+
+import { fontGen } from '../../global/utils'
 
 const downloadIcon = '/svg/download-arrow.svg'
 const rightArrowIcon = '/svg/right-arrow.svg'
 
 export const genButton = ({ type }) => {
   let css = ''
+
+  css += fontGen(font.button)
 
   switch (type) {
     case 'inline':

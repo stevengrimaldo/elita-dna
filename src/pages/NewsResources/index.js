@@ -1,6 +1,6 @@
 import { h } from 'preact'
 
-import { Hero, News, Resources, Section } from '../../components'
+import { Articles, Hero, Resources, Section } from '../../components'
 import PageWrapper from '../../global/template'
 
 // data
@@ -13,7 +13,7 @@ const NewsResources = () => (
       <Resources data={data.helpfulTools} />
     </Section>
     <Section bgColor="tan" slantTop="right">
-      <News data={data.articles} />
+      <Articles data={data.articles} />
     </Section>
   </PageWrapper>
 )

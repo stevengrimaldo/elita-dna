@@ -6,20 +6,32 @@ import { Button } from '../'
 
 import { BodyText, FeaturedText, Headline } from '../../global/type'
 
+import { media } from '../../global/utils'
+
 import { buttonData } from '../Button'
 
-const Articles = styled.div`
+const ArticlesWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 `
 
+// prettier-ignore
 const Article = styled.div`
   max-width: 385px;
-  flex: 1 1 auto;
+  flex: 1 1 ${1 / 3 * 100}%;
   text-align: center;
   padding: 30px;
+
+  ${media.down.md`
+    flex-basis: 50%;
+    margin: auto;
+  `}
+
+  ${media.down.xs`
+    flex-basis: 100%;
+  `}
 `
 
 const ArticleButton = styled(Button)`
@@ -54,6 +66,10 @@ const Image = styled.figure`
     position: absolute;
     object-fit: cover;
   }
+
+  ${media.down.md`
+    margin-bottom: 20px;
+  `};
 `
 
 const Header = styled(Headline)`
@@ -64,7 +80,7 @@ const LoadMoreButton = styled(Button)`
   margin-top: 60px;
 `
 
-class News extends Component {
+class Articles extends Component {
   state = {
     offsetItemsShown: 6,
   }
@@ -84,7 +100,7 @@ class News extends Component {
     return (
       <div>
         <Header>Noteworthy Articles</Header>
-        <Articles>
+        <ArticlesWrapper>
           {news.map((article, i) => {
             Object.assign(article.link, { type: 'resource' })
             return (
@@ -98,7 +114,7 @@ class News extends Component {
               </Article>
             )
           })}
-        </Articles>
+        </ArticlesWrapper>
         {hasMore && (
           <LoadMoreButton
             data={{ text: 'Load More' }}
@@ -110,7 +126,7 @@ class News extends Component {
   }
 }
 
-News.propTypes = {
+Articles.propTypes = {
   date: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.string,
@@ -121,4 +137,4 @@ News.propTypes = {
   ),
 }
 
-export default News
+export default Articles
