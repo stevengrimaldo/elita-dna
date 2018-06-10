@@ -43,10 +43,6 @@ export const data = {
             value: 'Mental Health',
           },
           {
-            label: 'Nutrition Counseling',
-            value: 'Nutrition Counseling',
-          },
-          {
             label: 'Occupational Therapy',
             value: 'Occupational Therapy',
           },

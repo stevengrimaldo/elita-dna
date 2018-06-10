@@ -18,7 +18,7 @@ export const locations = [
   },
   {
     address: '2830 Winkler Ave. Suite 207, Fort Myes, FL 34292',
-    departments: [],
+    departments: ['Psychiatry'],
     name: 'Fort Myers - Metro Gardens',
   },
   {

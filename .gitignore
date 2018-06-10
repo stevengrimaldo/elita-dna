@@ -10,3 +10,4 @@ firebase-debug.log
 /dist
 package-lock.json
 /old/node_modules
+*.DS_Store

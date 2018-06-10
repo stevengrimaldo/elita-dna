@@ -1,5 +1,5 @@
 const heroImage = '/img/our-team/OurTeamHero.jpg'
-const nextStepsImage = '/img/our-team/NextSteps.png'
+const nextStepsImage = '/img/NextSteps.png'
 
 export const data = {
   hero: {

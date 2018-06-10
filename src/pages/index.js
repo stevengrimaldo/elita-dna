@@ -9,9 +9,6 @@ export { default as Home } from './Home'
 export { default as MentalHealth } from './CareServices/MentalHealth'
 export { default as NewsResources } from './NewsResources'
 export {
-  default as NutritionCounseling,
-} from './CareServices/NutritionCounseling'
-export {
   default as OccupationalTherapy,
 } from './CareServices/OccupationalTherapy'
 export { default as OurTeam } from './OurTeam'

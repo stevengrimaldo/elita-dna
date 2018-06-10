@@ -57,20 +57,6 @@ export const data = {
       {
         copy: {
           link: {
-            path: '/care-services/nutrition-counseling',
-            text: 'Discover More',
-            type: 'resource',
-          },
-          text: `
-            <p>Let us help you and your child stay healthy, how to choose foods wisely and maintain a healthy lifestyle.</p>
-          `,
-          title: 'Nutrition Counseling',
-        },
-        icon: Apple,
-      },
-      {
-        copy: {
-          link: {
             path: '/care-services/speech-therapy',
             text: 'Discover More',
             type: 'resource',

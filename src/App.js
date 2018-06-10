@@ -1,7 +1,7 @@
 import { h, Component } from 'preact'
 import Router from 'preact-router'
 import AsyncRoute from 'preact-async-route'
-import Helmet from 'preact-helmet'
+import { Helmet } from 'react-helmet'
 
 import Home from './pages/Home'
 import Header from './components/Header'
@@ -36,9 +36,9 @@ class App extends Component {
     }
   }
 
-  render(props) {
+  render(props, state) {
     return (
-      <div>
+      <div class="container">
         <Helmet>
           <meta charset="utf-8" />
           <meta httpequiv="X-UA-Compatible" content="IE=edge" />
