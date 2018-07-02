@@ -42,6 +42,7 @@ const Source = styled(BodyText)`
   margin-bottom: 10px;
 `
 
+// prettier-ignore
 const Image = styled.figure`
   margin-bottom: 40px;
   overflow: hidden;
@@ -69,7 +70,7 @@ const Image = styled.figure`
 
   ${media.down.md`
     margin-bottom: 20px;
-  `};
+  `}
 `
 
 const Header = styled(Headline)`

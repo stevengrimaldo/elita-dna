@@ -50,19 +50,19 @@ export const resetCSS = `
     color: inherit;
   }
   sup, sub {
-    position: relative !important;
+    position: relative;
     margin: 0;
     padding: 0;
-    font: inherit !important;
+    font: inherit;
     color: inherit;
-    line-height: inherit !important;
+    line-height: inherit;
     letter-spacing: inherit;
     text-transform: none;
     top: auto !important;
     left: auto;
     right: auto;
     bottom: auto;
-    vertical-align: baseline !important;
+    vertical-align: baseline;
   }
   a {
     text-decoration: none;
