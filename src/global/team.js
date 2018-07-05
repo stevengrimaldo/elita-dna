@@ -1,27 +1,53 @@
 const imgPath = '/img/employees/'
+const badHeightPath = imgPath + 'bad-height/'
+const reallyBadHeightPath = imgPath + 'bad-height/really-bad/'
 
 const femaleProfile = `${imgPath}female-profile.jpg`
 const maleProfile = `${imgPath}male-profile.jpg`
 
+// Bad Height
+const AmandaCruz = `${badHeightPath}Amanda-Cruz.jpg`
+const AndrewFerber = `${badHeightPath}Andrew-Ferber.jpg`
+const BeckyRobertson = `${badHeightPath}Becky-Robertson.jpg`
+const ChristaWhelan = `${badHeightPath}Christa-Whelan.jpg`
+const ChristianRomero = `${badHeightPath}Christian-Romero.jpg`
+const ChristopherGrove = `${badHeightPath}Christopher-Grove.jpg`
+const EmilyAilinger = `${badHeightPath}Emily-Ailinger.jpg`
+const GinaValo = `${badHeightPath}Gina-Valo.jpg`
+const HannahThielman = `${badHeightPath}Hannah-Thielman.jpg`
+const JacquelineBannister = `${badHeightPath}Jacqueline-Bannister.jpg`
+const JenniferMoes = `${badHeightPath}Jennifer-Moes.jpg`
+const JenniferThompson = `${badHeightPath}Jennifer-Thompson.jpg`
+const JessicaBareto = `${badHeightPath}Jessica-Bareto.jpg`
+const LindsayGaines = `${badHeightPath}Lindsay-Gaines.jpg`
+const MarieBoisbel = `${badHeightPath}Marie-Boisbel.jpg`
+const MelanieOrben = `${badHeightPath}Melanie-Orben.jpg`
+const NathanLewis = `${badHeightPath}Nathan-Lewis.jpg`
+const NicoleCochran = `${badHeightPath}Nicole-Cochran.jpg`
+const NicoleMillich = `${badHeightPath}Nicole-Millich.jpg`
+const ShainaDulong = `${badHeightPath}Shaina-Dulong.jpg`
+const ShaneWalters = `${badHeightPath}Shane-Walters.jpg`
+const SoniaGarcia = `${badHeightPath}Sonia-Garcia.jpg`
+const SonicaSharma = `${badHeightPath}Sonica-Sharma.jpg`
+
+// Really Bad Height
+const MatthewTargoff = `${reallyBadHeightPath}Matthew-Targoff.jpg`
+
 const AdamRedman = `${imgPath}Adam-Redman.jpg`
 const AliOrby = `${imgPath}Ali-Orby.jpg`
-const AmandaCruz = `${imgPath}Amanda-Cruz.jpg`
 const AminaRishi = `${imgPath}Amina-Rishi.jpg`
-const AndrewFerber = `${imgPath}Andrew-Ferber.jpg`
+const AngelaMolina = `${imgPath}Angela-Molina.jpg`
 const AnnaZiegler = `${imgPath}Anna-Ziegler.jpg`
 const AnnikaMatos = `${imgPath}Annika-Matos.jpg`
-const AprilSchwartz = `${imgPath}April-Schwartz.jpg`
+const AprilTolles = `${imgPath}April-Tolles.jpg`
 const AshleighDePalma = `${imgPath}Ashleigh-DePalma.jpg`
-const BeckyRobertson = `${imgPath}Becky-Robertson.jpg`
 const BernardoArias = `${imgPath}Bernardo-Arias.jpg`
 const CandySchings = `${imgPath}Candy-Schings.jpg`
 const CarlaRosier = `${imgPath}Carla-Rosier.jpg`
 const CassieSehlmeyer = `${imgPath}Cassie-Sehlmeyer.jpg`
 const ChelseaRhoden = `${imgPath}Chelsea-Rhoden.jpg`
-const ChristopherGrove = `${imgPath}Christopher-Grove.jpg`
-const ChristaWhelan = `${imgPath}Christa-Whelan.jpg`
-const ChristianRomero = `${imgPath}Christian-Romero.jpg`
 const CristinaJohansson = `${imgPath}Cristina-Johansson.jpg`
+const DanielleKline = `${imgPath}Danielle-Kline.jpg`
 const DawnStarr = `${imgPath}Dawn-Starr.jpg`
 const DeliaToledo = `${imgPath}Delia-Toledo.jpg`
 const DianeRizzitano = `${imgPath}Diane-Rizzitano.jpg`
@@ -30,59 +56,65 @@ const DorothySmith = `${imgPath}Dorothy-Smith.jpg`
 const EdwardPearce = `${imgPath}Edward-Pearce.jpg`
 const ElizabethDosoretz = `${imgPath}Elizabeth-Dosoretz.jpg`
 const EllenFerguson = `${imgPath}Ellen-Ferguson.jpg`
-const EmilyAilinger = `${imgPath}Emily-Ailinger.jpg`
 const EricaKress = `${imgPath}Erica-Kress.jpg`
-const GinaValo = `${imgPath}Gina-Valo.jpg`
-const HannahThielman = `${imgPath}Hannah-Thielman.jpg`
+const GabbyOgnibene = `${imgPath}Gabby-Ognibene.jpg`
+const GabrielNieto = `${imgPath}Gabriel-Nieto.jpg`
+const GabrielRivera = `${imgPath}Gabriel-Rivera.jpg`
+const GuillermoDiazCruz = `${imgPath}Guillermo-Diaz-Cruz.jpg`
+const HarveyShapiro = `${imgPath}Harvey-Shapiro.jpg`
 const HeatherBrien = `${imgPath}Heather-Brien.jpg`
-const JacquelineBannister = `${imgPath}Jacqueline-Bannister.jpg`
+const IdelmysGonzalez = `${imgPath}Idelmys-Gonzalez.jpg`
 const JairoCastillo = `${imgPath}Jairo-Castillo.jpg`
+const JamesKnox = `${imgPath}James-Knox.jpg`
 const JamieMcKenzie = `${imgPath}Jamie-McKenzie.jpg`
 const JanPaulMojico = `${imgPath}Jan-Paul-Mojico.jpg`
 const JasonMoon = `${imgPath}Jason-Moon.jpg`
+const JeffreyHutter = `${imgPath}Jeffrey-Hutter.jpg`
 const JeffreyLapham = `${imgPath}Jeffrey-Lapham.jpg`
 const JenniferBullistron = `${imgPath}Jennifer-Bullistron.jpg`
 const JenniferCordeiro = `${imgPath}Jennifer-Cordeiro.jpg`
-const JenniferMoes = `${imgPath}Jennifer-Moes.jpg`
-const JenniferThompson = `${imgPath}Jennifer-Thompson.jpg`
 const JillMandeville = `${imgPath}Jill-Mandeville.jpg`
+const JordenWarta = `${imgPath}Jorden-Warta.jpg`
 const JoseButron = `${imgPath}Jose-Butron.jpg`
+const JudithLenz = `${imgPath}Judith-Lenz.jpg`
 const JudithTibera = `${imgPath}Judith-Tibera.jpg`
 const KarinSmith = `${imgPath}Karin-Smith.jpg`
+const KatieHart = `${imgPath}Katie-Hart.jpg`
+const KenCarr = `${imgPath}Ken-Carr.jpg`
 const KimberlyClement = `${imgPath}Kimberly-Clement.jpg`
+const KristySantana = `${imgPath}Kristy-Santana.jpg`
 const LilianaAcosta = `${imgPath}Liliana-Acosta.jpg`
-const LindsayGaines = `${imgPath}Lindsay-Gaines.jpg`
 const LisaDiamond = `${imgPath}Lisa-Diamond.jpg`
 const LuisNavarrete = `${imgPath}Luis-Navarrete.jpg`
+const MarcelaCheca = `${imgPath}Marcela-Checa.jpg`
 const MargaretForszpaniak = `${imgPath}Margaret-Forszpaniak.jpg`
-const MarieBoisbel = `${imgPath}Marie-Boisbel.jpg`
 const MarieReeseGorski = `${imgPath}Marie-Reese-Gorski.jpg`
-const MatthewTargoff = `${imgPath}Matthew-Targoff.jpg`
-const MelanieOrben = `${imgPath}Melanie-Orben.jpg`
+const MarkGiordano = `${imgPath}Mark-Giordano.jpg`
+const MathewMurel = `${imgPath}Mathew-Murel.jpg`
 const MichaelSchmidt = `${imgPath}Michael-Schmidt.jpg`
-const NathanLewis = `${imgPath}Nathan-Lewis.jpg`
 const NelsonMonroy = `${imgPath}Nelson-Monroy.jpg`
 const NicoleBolooki = `${imgPath}Nicole-Bolooki.jpg`
-const NicoleCochran = `${imgPath}Nicole-Cochran.jpg`
-const NicoleMillich = `${imgPath}Nicole-Millich.jpg`
+const NicoleCogswell = `${imgPath}Nicole-Cogswell.jpg`
 const NoelHelmic = `${imgPath}Noel-Helmic.jpg`
+const OmarRieche = `${imgPath}Omar-Rieche.jpg`
 const PatriciaSullivan = `${imgPath}Patricia-Sullivan.jpg`
+const PetaGayBezek = `${imgPath}Peta-Gay-Bezek.jpg`
 const PhillipCirrone = `${imgPath}Phillip-Cirrone.jpg`
 const RichardGonzalez = `${imgPath}Richard-Gonzalez.jpg`
+const SamanthaLink = `${imgPath}Samantha-Link.jpg`
 const SandraLanders = `${imgPath}Sandra-Landers.jpg`
 const ScarlettOlivaress = `${imgPath}Scarlett-Olivaress.jpg`
 const ScottKane = `${imgPath}Scott-Kane.jpg`
-const ShainaDulong = `${imgPath}Shaina-Dulong.jpg`
-const ShaneWalters = `${imgPath}Shane-Walters.jpg`
+const ShantellPepe = `${imgPath}Shantell-Pepe.jpg`
 const SharonBloom = `${imgPath}Sharon-Bloom.jpg`
-const SoniaGarcia = `${imgPath}Sonia-Garcia.jpg`
-const SonicaSharma = `${imgPath}Sonica-Sharma.jpg`
 const StephanieFrost = `${imgPath}Stephanie-Frost.jpg`
 const TiffanyScott = `${imgPath}Tiffany-Scott.jpg`
 const TomEdson = `${imgPath}Tom-Edson.jpg`
 const WayneMeddock = `${imgPath}Wayne-Meddock.jpg`
+const YenisTorres = `${imgPath}Yenis-Torres.jpg`
 
 const ourTeam = [
+  // primary roles (client ordered)
   {
     department: 'Admin',
     details: {
@@ -150,101 +182,48 @@ const ourTeam = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
+    image: OmarRieche,
+    location: 'Our Team',
+    name: 'Dr. Omar Rieche',
+    position: 'Medical Director',
+  },
+  {
+    department: 'Admin',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: KenCarr,
+    location: 'Our Team',
+    name: 'Ken Carr',
+    position: 'CFO',
+  },
+  {
+    department: 'Admin',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
     image: NicoleBolooki,
     location: 'Our Team',
     name: 'Nicole Bolooki',
     position: 'Director of Payroll & Accounting',
   },
-  {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: CandySchings,
-    location: 'Our Team',
-    name: 'Candy Schings',
-    position: 'Director of Revenue Cycle',
-  },
-  {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: DianeRizzitano,
-    location: 'Our Team',
-    name: 'Diane Rizzitano',
-    position: 'Credentialing & Contracting',
-  },
-  {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: CristinaJohansson,
-    location: 'Our Team',
-    name: 'Cristina Johansson',
-    position: 'Provider Onboarding and Compliance Auditor',
-  },
-  {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: MichaelSchmidt,
-    location: 'Our Team',
-    name: 'Michael Schmidt',
-    position: 'Director of Quality Assurance',
-  },
-  {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: CassieSehlmeyer,
-    location: 'Our Team',
-    name: 'Cassie Sehlmeyer',
-    position: 'Executive Assistant',
-  },
+  // a-z
   {
     department: 'Admin',
     details: {
@@ -261,7 +240,7 @@ const ourTeam = [
     image: BeckyRobertson,
     location: 'Our Team',
     name: 'Becky Robertson',
-    position: 'Chief Compliance and Privacy Officer',
+    position: 'Chief Compliance & Privacy Officer',
   },
   {
     department: 'Admin',
@@ -294,6 +273,42 @@ const ourTeam = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
+    image: CandySchings,
+    location: 'Our Team',
+    name: 'Candy Schings',
+    position: 'Director of Revenue Cycle',
+  },
+  {
+    department: 'Admin',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: CassieSehlmeyer,
+    location: 'Our Team',
+    name: 'Cassie Sehlmeyer',
+    position: 'Executive Assistant',
+  },
+  {
+    department: 'Admin',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
     image: ChristaWhelan,
     location: 'Our Team',
     name: 'Christa Whelan',
@@ -312,10 +327,64 @@ const ourTeam = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
+    image: CristinaJohansson,
+    location: 'Our Team',
+    name: 'Cristina Johansson',
+    position: 'Provider Onboarding and Compliance Auditor',
+  },
+  {
+    department: 'Admin',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
     image: DawnStarr,
     location: 'Our Team',
     name: 'Dawn Starr',
     position: 'Clinic Manager',
+  },
+  {
+    department: 'Admin',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: DianeRizzitano,
+    location: 'Our Team',
+    name: 'Diane Rizzitano',
+    position: 'Credentialing & Contracting',
+  },
+  {
+    department: 'Admin',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: GabrielNieto,
+    location: 'Our Team',
+    name: 'Gabriel Nieto',
+    position: '',
   },
   {
     department: 'Admin',
@@ -370,6 +439,24 @@ const ourTeam = [
     location: 'Our Team',
     name: 'Lisa Diamond',
     position: '',
+  },
+  {
+    department: 'Admin',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: MichaelSchmidt,
+    location: 'Our Team',
+    name: 'Michael Schmidt',
+    position: 'Director of Quality Assurance',
   },
   {
     department: 'Admin',
@@ -479,6 +566,24 @@ const capeCoral = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
+    image: JamesKnox,
+    location: 'Cape Coral',
+    name: 'James Knox',
+    position: 'NP',
+  },
+  {
+    department: 'Psychotherapy',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
     image: JamieMcKenzie,
     location: 'Cape Coral',
     name: 'Jamie McKenzie',
@@ -497,7 +602,7 @@ const capeCoral = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
-    image: femaleProfile,
+    image: JudithLenz,
     location: 'Cape Coral',
     name: 'Judith Lenz',
     position: '',
@@ -587,7 +692,25 @@ const capeCoral = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
-    image: femaleProfile,
+    image: MathewMurel,
+    location: 'Cape Coral',
+    name: 'Mathew Murel',
+    position: '',
+  },
+  {
+    department: 'Care Coordinators',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: NicoleCogswell,
     location: 'Cape Coral',
     name: 'Nicole Cogswell',
     position: '',
@@ -714,6 +837,24 @@ const fortMeyers = [
     location: 'Fort Myers',
     name: 'Dr. Marie "Reese" Gorski',
     position: 'ARNP',
+  },
+  {
+    department: 'Psychotherapy',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: MarkGiordano,
+    location: 'Fort Myers',
+    name: 'Dr. Mark Giordano',
+    position: '',
   },
   {
     department: 'Psychiatry',
@@ -847,9 +988,9 @@ const fortMeyers = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
-    image: AprilSchwartz,
+    image: AprilTolles,
     location: 'Fort Myers',
-    name: 'April Schwartz',
+    name: 'April Tolles',
     position: 'COTA',
   },
   {
@@ -1024,6 +1165,24 @@ const fortMeyers = [
     position: 'LCSW',
   },
   {
+    department: 'Occupational Therapy',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: GabbyOgnibene,
+    location: 'Fort Myers',
+    name: 'Gabby Ognibene',
+    position: '',
+  },
+  {
     department: 'Psychiatry',
     details: {
       clientPopulationsSeen: [],
@@ -1036,7 +1195,7 @@ const fortMeyers = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
-    image: femaleProfile,
+    image: GabrielRivera,
     location: 'Fort Myers',
     name: 'Gabriel Rivera',
     position: 'NP',
@@ -1072,7 +1231,7 @@ const fortMeyers = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
-    image: maleProfile,
+    image: GuillermoDiazCruz,
     location: 'Fort Myers',
     name: 'Guillermo Diaz-Cruz',
     position: '',
@@ -1113,6 +1272,24 @@ const fortMeyers = [
     location: 'Fort Myers',
     name: 'Heather Brien',
     position: '',
+  },
+  {
+    department: 'Behavior Therapy',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: IdelmysGonzalez,
+    location: 'Fort Myers',
+    name: 'Idelmys Gonzalez',
+    position: 'RBT',
   },
   {
     department: 'Psychiatry',
@@ -1167,6 +1344,24 @@ const fortMeyers = [
     location: 'Fort Myers',
     name: 'Jan Paul Mojico',
     position: 'LCSW',
+  },
+  {
+    department: 'Psychology',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: JeffreyHutter,
+    location: 'Fort Myers',
+    name: 'Jeffrey Hutter',
+    position: 'RCSWI',
   },
   {
     department: 'Psychotherapy',
@@ -1245,6 +1440,24 @@ const fortMeyers = [
     position: 'MSW',
   },
   {
+    department: 'Care Coordinators',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: JessicaBareto,
+    location: 'Fort Myers',
+    name: 'Jessica Bareto',
+    position: '',
+  },
+  {
     department: 'Speech',
     details: {
       clientPopulationsSeen: [],
@@ -1261,6 +1474,24 @@ const fortMeyers = [
     location: 'Fort Myers',
     name: 'Jill Mandeville',
     position: 'SLPA',
+  },
+  {
+    department: 'Care Coordinators',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: JordenWarta,
+    location: 'Fort Myers',
+    name: 'Jorden Warta',
+    position: '',
   },
   {
     department: 'Behavior Therapy',
@@ -1329,9 +1560,45 @@ const fortMeyers = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
+    image: KristySantana,
+    location: 'Fort Myers',
+    name: 'Kristy Santana',
+    position: '',
+  },
+  {
+    department: 'Care Coordinators',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
     image: LindsayGaines,
     location: 'Fort Myers',
     name: 'Lindsay Gaines',
+    position: '',
+  },
+  {
+    department: 'Care Coordinators',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: MarcelaCheca,
+    location: 'Fort Myers',
+    name: 'Marcela Checa',
     position: '',
   },
   {
@@ -1383,10 +1650,10 @@ const fortMeyers = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
-    image: femaleProfile,
+    image: PetaGayBezek,
     location: 'Fort Myers',
     name: 'Peta Gay Bezek',
-    position: '',
+    position: 'PMHNP',
   },
   {
     department: 'Speech',
@@ -1401,7 +1668,7 @@ const fortMeyers = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
-    image: femaleProfile,
+    image: SamanthaLink,
     location: 'Fort Myers',
     name: 'Samantha Link',
     position: 'SLP',
@@ -1480,6 +1747,24 @@ const fortMeyers = [
     position: 'BCBA',
   },
   {
+    department: 'Care Coordinators',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: ShantellPepe,
+    location: 'Fort Myers',
+    name: 'Shantell Pepe',
+    position: 'LMHC',
+  },
+  {
     department: 'Psychiatry',
     details: {
       clientPopulationsSeen: [],
@@ -1533,6 +1818,24 @@ const fortMeyers = [
     name: 'Wayne Meddock',
     position: 'LMHC',
   },
+  {
+    department: 'Behavior Therapy',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: YenisTorres,
+    location: 'Fort Myers',
+    name: 'Yenis Torres',
+    position: 'ABA',
+  },
 ]
 
 const metroGardens = [
@@ -1550,7 +1853,7 @@ const metroGardens = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
-    image: maleProfile,
+    image: HarveyShapiro,
     location: 'Fort Myers - Metro Gardens',
     name: 'Dr. Harvey Shapiro',
     position: '',
@@ -1592,6 +1895,24 @@ const naples = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
+    image: AngelaMolina,
+    location: 'Naples',
+    name: 'Angela Molina',
+    position: '',
+  },
+  {
+    department: 'Psychotherapy',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
     image: AnnikaMatos,
     location: 'Naples',
     name: 'Annika Matos',
@@ -1610,7 +1931,7 @@ const naples = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
-    image: femaleProfile,
+    image: DanielleKline,
     location: 'Naples',
     name: 'Danielle Kline',
     position: '',
@@ -1664,7 +1985,7 @@ const naples = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
-    image: femaleProfile,
+    image: KatieHart,
     location: 'Naples',
     name: 'Katie Hart',
     position: 'ARNP',
@@ -1823,24 +2144,6 @@ const portCharlotte = [
     position: 'RMHCI',
   },
   {
-    department: 'Psychotherapy',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: EllenFerguson,
-    location: 'Port Charlotte',
-    name: 'Ellen Ferguson',
-    position: 'RMHCI',
-  },
-  {
     department: 'Psychiatry',
     details: {
       clientPopulationsSeen: [],
@@ -1916,7 +2219,6 @@ const venice = [
     name: 'Delia Toledo',
     position: 'M.D.',
   },
-  // a-z
 ]
 
 export const team = []

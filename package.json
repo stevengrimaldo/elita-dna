@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "copy": "cpx 'static/**/**/**/*' dist",
-    "start": "parcel index.html --open && npm run copy",
+    "start": "npm run copy && parcel index.html --open",
     "build": "parcel build src/index.js --out-dir static/dist",
     "package-src": "babel src -d functions/src --plugins=dynamic-import-node,transform-class-properties,transform-object-assign,transform-runtime,emotion --copy-files --ignore node_modules",
     "preserve": "npm run build && npm run package-src",
