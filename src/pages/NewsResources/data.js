@@ -9,9 +9,7 @@ const ArticleImageSix = '/img/news-resources/article-6.jpg'
 
 const IntegratedServices = '/pdfs/IntegratedServices-Ap2005.pdf'
 const UDLFactSheet = '/pdfs/UDL-fact-sheet.pdf'
-const SeptemberNewsletter = '/pdfs/Elite-DNA-September-2017-Newsletter.pdf'
-const OctoberNewsletter = '/pdfs/October-2017-Newsletter.pdf'
-const NovemberNewsletter = '/pdfs/November-2017-Newsletter.pdf'
+const QuarterThreeNewsletter = '/pdfs/2018-Q3-Newsletter.pdf'
 
 export const data = {
   articles: [
@@ -113,42 +111,14 @@ export const data = {
       {
         copy: {
           link: {
-            path: SeptemberNewsletter,
+            path: QuarterThreeNewsletter,
             text: 'Download',
             type: 'download',
           },
           text: `
-            <p>This is the September edition of our newsletter.</p>
+            <p>This is the third quarter edition of our newsletter.</p>
           `,
-          title: 'September 2017 Newsletter',
-        },
-        icon: Pdf,
-      },
-      {
-        copy: {
-          link: {
-            path: OctoberNewsletter,
-            text: 'Download',
-            type: 'download',
-          },
-          text: `
-            <p>This is the October edition of our newsletter.</p>
-          `,
-          title: 'October 2017 Newsletter',
-        },
-        icon: Pdf,
-      },
-      {
-        copy: {
-          link: {
-            path: NovemberNewsletter,
-            text: 'Download',
-            type: 'download',
-          },
-          text: `
-            <p>This is the November edition of our newsletter.</p>
-          `,
-          title: 'November 2017 Newsletter',
+          title: '2018 Q3 Newsletter',
         },
         icon: Pdf,
       },

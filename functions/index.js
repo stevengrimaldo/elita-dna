@@ -113,6 +113,15 @@ exports.ssrapp = functions.https.onRequest((req, res) => {
     `<!DOCTYPE html>
     <html ${helmet.htmlAttributes.toString()}>
       <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101038822-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-101038822-1');
+        </script>
         ${helmet.title.toString()}
         ${helmet.meta.toString()}
         ${helmet.link.toString()}

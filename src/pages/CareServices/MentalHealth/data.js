@@ -1,30 +1,8 @@
 import { CheckListHeart } from '../../../global/icons'
 
 const heroImage = '/img/care-services/mental-health/MentalHealthHero.jpg'
-const AdultMentalHealth =
-  '/img/care-services/mental-health/adult-mental-health.png'
-const ChildMentalHealth =
-  '/img/care-services/mental-health/child-mental-health.png'
-
-const MentalHealthIntakeFormAdult = '/pdfs/Mental-Health-Intake-Form-Adult.pdf'
-const MentalHealthIntakeFormChild = '/pdfs/Mental-Health-Intake-Form-Child.pdf'
 
 export const data = {
-  clientIntakeForms: {
-    documents: [
-      {
-        image: AdultMentalHealth,
-        link: MentalHealthIntakeFormAdult,
-        title: 'Adult Intake Form',
-      },
-      {
-        image: ChildMentalHealth,
-        link: MentalHealthIntakeFormChild,
-        title: 'Child Mental Health Form',
-      },
-    ],
-    title: 'Client intake forms:',
-  },
   commonTreatmentIssues: {
     text: `
       <h3>Common treatment issues:</h3>

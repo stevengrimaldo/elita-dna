@@ -1,6 +1,6 @@
 import { h } from 'preact'
 
-import { Documents, FeaturedContent, Hero, Section } from '../../../components'
+import { FeaturedContent, Hero, Section } from '../../../components'
 import PageWrapper from '../../../global/template'
 
 // data
@@ -15,9 +15,6 @@ const MentalHealth = () => (
     </Section>
     <Section bgColor="white" slantTop="left">
       <FeaturedContent align="left" data={data.commonTreatmentIssues} full />
-    </Section>
-    <Section bgColor="white" slantBottom="left">
-      <Documents data={data.clientIntakeForms} />
     </Section>
     <Section bgColor="tan" slantTop="right">
       <FeaturedContent data={haveQuestions} />

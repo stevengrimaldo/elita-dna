@@ -1,4 +1,4 @@
-import { h, Component } from 'preact'
+import { h } from 'preact'
 
 import {
   FeaturedContent,
@@ -13,6 +13,7 @@ import PageWrapper from '../../global/template'
 import { data } from './data'
 import { solutions } from '../../global/data'
 import { locations } from '../../global/locations'
+import { team } from '../../global/team'
 
 const admin = [
   {
@@ -23,46 +24,24 @@ const admin = [
 
 const allLocations = admin.concat(locations)
 
-class OurTeam extends Component {
-  state = {
-    team: null,
-  }
-
-  componentWillMount() {
-    // this is uuuuugggee - so we want to dynamically import this instead
-    import('../../global/team').then(({ team }) => {
-      this.setState({ team })
-    })
-  }
-
-  render(props, state) {
-    return (
-      <PageWrapper className="our-team" meta={data.meta}>
-        <Hero data={data.hero} />
-        <Section
-          align="left"
-          bgColor="white"
-          slantTop="right"
-          slantBottom="right">
-          {state.team ? (
-            <Team team={state.team} locations={allLocations} />
-          ) : (
-            <p>loading...</p>
-          )}
-        </Section>
-        <Section
-          intro={solutions.intro}
-          bgColor="orange"
-          slantTop="left"
-          slantBottom="left">
-          <Solutions data={solutions.content} inverted />
-        </Section>
-        <Section bgColor="white" image={data.nextSteps.image} slantTop="right">
-          <FeaturedContent data={data.nextSteps.copy} />
-        </Section>
-      </PageWrapper>
-    )
-  }
-}
+const OurTeam = () => (
+  <PageWrapper className="our-team" meta={data.meta}>
+    <Hero data={data.hero} />
+    <Section align="left" bgColor="white" slantTop="right" slantBottom="right">
+      <Team team={team} locations={allLocations} />
+    </Section>
+    <Section
+      intro={solutions.intro}
+      bgColor="orange"
+      slantTop="left"
+      slantBottom="left"
+    >
+      <Solutions data={solutions.content} inverted />
+    </Section>
+    <Section bgColor="white" image={data.nextSteps.image} slantTop="right">
+      <FeaturedContent data={data.nextSteps.copy} />
+    </Section>
+  </PageWrapper>
+)
 
 export default OurTeam

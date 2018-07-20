@@ -2,10 +2,10 @@ const AdultMentalHealth = '/img/news-resources/forms/adult-mental-health.png'
 const ChildMentalHealth = '/img/news-resources/forms/child-mental-health.png'
 const OccupationalTherapy = '/img/news-resources/forms/occupational-therapy.png'
 
-const OccupationTherapyIntakeForm = '/pdfs/Occupational-Therapy-Intake-Form.pdf'
-// const SpeechTherapyIntakeForm = '/pdfs/Speech-Therapy-Intake-Form.pdf'
-const MentalHealthIntakeFormAdult = '/pdfs/Mental-Health-Intake-Form-Adult.pdf'
-const MentalHealthIntakeFormChild = '/pdfs/Mental-Health-Intake-Form-Child.pdf'
+const AdultIntakePacket = '/pdfs/Adult-Intake-Packet.pdf'
+const ChildIntakePacket = '/pdfs/Child-Intake-Packet.pdf'
+const RequestForRecords = '/pdfs/Request-for-Records-Form.pdf'
+const NoticeOfPrivacyPractices = '/pdfs/Notice-of-Privacy-Practices.pdf'
 
 export const data = {
   hero: {
@@ -22,19 +22,24 @@ export const data = {
   intakeForms: {
     documents: [
       {
-        image: OccupationalTherapy,
-        link: OccupationTherapyIntakeForm,
-        title: 'Occupational Therapy',
-      },
-      {
         image: AdultMentalHealth,
-        link: MentalHealthIntakeFormAdult,
-        title: 'Adult Intake Form',
+        link: AdultIntakePacket,
+        title: 'Adult Intake Packet',
       },
       {
         image: ChildMentalHealth,
-        link: MentalHealthIntakeFormChild,
-        title: 'Child Mental Health Form',
+        link: ChildIntakePacket,
+        title: 'Child Intake Packet',
+      },
+      {
+        image: OccupationalTherapy,
+        link: RequestForRecords,
+        title: 'Request for Records Form',
+      },
+      {
+        image: OccupationalTherapy,
+        link: NoticeOfPrivacyPractices,
+        title: 'Notice of Privacy Practices',
       },
     ],
     title: '',

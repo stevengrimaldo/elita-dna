@@ -8,7 +8,7 @@ import { media } from '../../global/utils'
 
 import { color } from '../../global/theme'
 
-const PrivacyPolicy = '/pdfs/privacy-policy.pdf'
+const NoticeOfPrivacyPractices = '/pdfs/Notice-of-Privacy-Practices.pdf'
 
 const Container = styled.footer`
   background-color: ${color.strikemaster};
@@ -20,7 +20,9 @@ const Container = styled.footer`
 // prettier-ignore
 const FooterText = styled(BodyText)`
   a {
-    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   ${media.down.xxs`
@@ -32,9 +34,19 @@ const Footer = ({ year }) => (
   <Container>
     <FooterText inverted>
       &copy; {year} Elite DNA Therapy. All rights reserved.{' '}
-      <a href={PrivacyPolicy} download="" target="_blank" native>
-        Privacy Policy
-      </a>.
+      <strong>Compliance Hotline:</strong> 1-888-453-3114.
+      <br />
+      <a href={NoticeOfPrivacyPractices} download="" target="_blank" native>
+        Notice of Privacy Practices
+      </a>{' '}
+      |{' '}
+      <a href="mailto:compliance@elitednatherapy.com">
+        Compliance@elitednatherapy.com
+      </a>{' '}
+      |{' '}
+      <a href="mailto:privacy@elitednatherapy.com">
+        Privacy@elitednatherapy.com
+      </a>
     </FooterText>
   </Container>
 )

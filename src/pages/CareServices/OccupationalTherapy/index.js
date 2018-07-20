@@ -1,6 +1,6 @@
 import { h } from 'preact'
 
-import { Documents, FeaturedContent, Hero, Section } from '../../../components'
+import { FeaturedContent, Hero, Section } from '../../../components'
 import PageWrapper from '../../../global/template'
 
 // data
@@ -15,9 +15,6 @@ const OccupationalTherapy = () => (
     </Section>
     <Section align="left">
       <FeaturedContent data={data.servicesAndSpecialties} full />
-    </Section>
-    <Section>
-      <Documents data={data.clientIntakeForms} />
     </Section>
     <Section bgColor="tan" slantTop="right">
       <FeaturedContent data={haveQuestions} />

@@ -1,22 +1,8 @@
 import { Toy } from '../../../global/icons'
 
 const heroImage = '/img/care-services/occupational-therapy/OccupationalHero.jpg'
-const OccupationalTherapy =
-  '/img/care-services/occupational-therapy/occupational-therapy.png'
-
-const OccupationTherapyIntakeForm = '/pdfs/Occupational-Therapy-Intake-Form.pdf'
 
 export const data = {
-  clientIntakeForms: {
-    documents: [
-      {
-        image: OccupationalTherapy,
-        link: OccupationTherapyIntakeForm,
-        title: 'Occupational Therapy',
-      },
-    ],
-    title: 'Client intake forms:',
-  },
   enjoyLife: {
     icon: Toy,
     text: `
@@ -30,11 +16,6 @@ export const data = {
         {
           path: '/contact-us',
           text: 'Make An Appointment',
-        },
-        {
-          path: OccupationTherapyIntakeForm,
-          text: 'Download Intake Form',
-          type: 'download',
         },
       ],
       subTitle: '',

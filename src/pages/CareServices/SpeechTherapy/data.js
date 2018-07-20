@@ -1,7 +1,5 @@
 const heroImage = '/img/care-services/speech-therapy/SpeechTherapyHero.jpg'
 
-const SpeechTherapyIntakeForm = '/pdfs/Speech-Therapy-Intake-Form.pdf'
-
 export const data = {
   conditionSpecializations: {
     questions: [
@@ -98,11 +96,6 @@ export const data = {
         {
           path: '/contact-us',
           text: 'Make An Appointment',
-        },
-        {
-          path: SpeechTherapyIntakeForm,
-          text: 'Download Intake Form',
-          type: 'download',
         },
       ],
       subTitle: '',

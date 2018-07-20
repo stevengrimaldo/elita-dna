@@ -1,21 +1,19 @@
 import {
-  Apple,
   ShieldHeart,
   Blocks,
   SpeechBubble,
   PuzzlePieces,
 } from '../../global/icons'
 
-const OccupationTherapyIntakeForm = '/pdfs/Occupational-Therapy-Intake-Form.pdf'
-const SpeechTherapyIntakeForm = '/pdfs/Speech-Therapy-Intake-Form.pdf'
-const MentalHealthIntakeFormAdult = '/pdfs/Mental-Health-Intake-Form-Adult.pdf'
-const MentalHealthIntakeFormChild = '/pdfs/Mental-Health-Intake-Form-Child.pdf'
+const AdultIntakePacket = '/pdfs/Adult-Intake-Packet.pdf'
+const ChildIntakePacket = '/pdfs/Child-Intake-Packet.pdf'
+const RequestForRecords = '/pdfs/Request-for-Records-Form.pdf'
+const NoticeOfPrivacyPractices = '/pdfs/Notice-of-Privacy-Practices.pdf'
 
 const heroImage = '/img/home/HomepageHero.jpg'
 
 export const data = {
   getInTouch: {
-    icon: null,
     links: [],
     text: `
       <p>6360 Techster Blvd, Suites 1 & 2 , Fort Myers, FL 33966<br />
@@ -86,20 +84,20 @@ export const data = {
   },
   mainTools: [
     {
-      link: OccupationTherapyIntakeForm,
-      title: 'Occupational Therapy Intake Form',
+      link: AdultIntakePacket,
+      title: 'Adult Intake Packet',
     },
     {
-      link: SpeechTherapyIntakeForm,
-      title: 'Speech Therapy Intake Form',
+      link: ChildIntakePacket,
+      title: 'Child Intake Packet',
     },
     {
-      link: MentalHealthIntakeFormAdult,
-      title: 'Mental Health Intake Form (Adult)',
+      link: RequestForRecords,
+      title: 'Request for Public Records Form',
     },
     {
-      link: MentalHealthIntakeFormChild,
-      title: 'Mental Health Intake Form (Child)',
+      link: NoticeOfPrivacyPractices,
+      title: 'Notice of Privacy Practices',
     },
   ],
   mentalHealthServices: {
