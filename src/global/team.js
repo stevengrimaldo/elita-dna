@@ -27,7 +27,6 @@ const NathanLewis = `${badHeightPath}Nathan-Lewis.jpg`
 const NicoleCochran = `${badHeightPath}Nicole-Cochran.jpg`
 const NicoleMillich = `${badHeightPath}Nicole-Millich.jpg`
 const ShainaDulong = `${badHeightPath}Shaina-Dulong.jpg`
-const ShaneWalters = `${badHeightPath}Shane-Walters.jpg`
 const SoniaGarcia = `${badHeightPath}Sonia-Garcia.jpg`
 const SonicaSharma = `${badHeightPath}Sonica-Sharma.jpg`
 
@@ -37,7 +36,6 @@ const MatthewTargoff = `${reallyBadHeightPath}Matthew-Targoff.jpg`
 // Correct Height
 const AdamRedman = `${imgPath}Adam-Redman.jpg`
 const AliOrby = `${imgPath}Ali-Orby.jpg`
-const AminaRishi = `${imgPath}Amina-Rishi.jpg`
 const AngelaMolina = `${imgPath}Angela-Molina.jpg`
 const AnnaZiegler = `${imgPath}Anna-Ziegler.jpg`
 const AnnikaMatos = `${imgPath}Annika-Matos.jpg`
@@ -63,6 +61,7 @@ const EricaKress = `${imgPath}Erica-Kress.jpg`
 const GabbyOgnibene = `${imgPath}Gabby-Ognibene.jpg`
 const GabrielNieto = `${imgPath}Gabriel-Nieto.jpg`
 const GabrielRivera = `${imgPath}Gabriel-Rivera.jpg`
+const GracePasquali = `${imgPath}Grace-Pasquali.jpg`
 const GuillermoDiazCruz = `${imgPath}Guillermo-Diaz-Cruz.jpg`
 const HarveyShapiro = `${imgPath}Harvey-Shapiro.jpg`
 const HeatherBrien = `${imgPath}Heather-Brien.jpg`
@@ -654,7 +653,7 @@ const capeCoral = [
     },
     image: femaleProfile,
     location: 'Cape Coral',
-    name: 'Lily Sanchez',
+    name: 'Liliana Acosta',
     position: '',
   },
   {
@@ -990,24 +989,6 @@ const fortMeyers = [
     position: 'MSW',
   },
   {
-    department: 'Psychiatry',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: AminaRishi,
-    location: 'Fort Myers',
-    name: 'Amina Rishi',
-    position: 'PA-C',
-  },
-  {
     department: 'Occupational Therapy',
     details: {
       clientPopulationsSeen: [],
@@ -1150,7 +1131,7 @@ const fortMeyers = [
     position: '',
   },
   {
-    department: 'Behavior Therapy',
+    department: 'Speech Therapy',
     details: {
       clientPopulationsSeen: [],
       colleges: ['Nova Southwestern'],
@@ -1165,7 +1146,7 @@ const fortMeyers = [
     image: femaleProfile,
     location: 'Fort Myers',
     name: 'Crista Macias',
-    position: '',
+    position: 'SLP-A',
   },
   {
     department: 'Behavior Therapy',
@@ -1263,7 +1244,7 @@ const fortMeyers = [
     position: 'LCSW',
   },
   {
-    department: 'Occupational Therapy',
+    department: 'Behavior Therapy',
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1278,7 +1259,7 @@ const fortMeyers = [
     image: GabbyOgnibene,
     location: 'Fort Myers',
     name: 'Gabby Ognibene',
-    position: '',
+    position: 'RBT',
   },
   {
     department: 'Psychiatry',
@@ -1320,6 +1301,24 @@ const fortMeyers = [
     location: 'Fort Myers',
     name: 'Gina Valo',
     position: 'ARNP',
+  },
+  {
+    department: 'Occupational Therapy',
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: GracePasquali,
+    location: 'Fort Myers',
+    name: 'Grace Pasquali',
+    position: 'COTA',
   },
   {
     department: 'Psychotherapy',
@@ -1850,24 +1849,6 @@ const fortMeyers = [
     position: '',
   },
   {
-    department: 'Behavior Therapy',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: ['Kaplan University'],
-      degrees: ['Masters of Psychology'],
-      favoriteQuote: '',
-      hobbies: ['Powerlifting', 'Cooking'],
-      hometown: 'Kingston, Jamaica',
-      patientAgesSeen: ['12+ Outside of Elite', 'Mostly children'],
-      specialCertifications: ['Board Certified Behavior Analyst'],
-      therapyModalityUsed: [],
-    },
-    image: ShaneWalters,
-    location: 'Fort Myers',
-    name: 'Shane Walters',
-    position: 'BCBA',
-  },
-  {
     department: 'Care Coordinators',
     details: {
       clientPopulationsSeen: [],
@@ -1988,6 +1969,24 @@ const naples = [
     department: 'Psychiatry',
     details: {
       clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: KatieHart,
+    location: 'Naples',
+    name: 'Dr. Katie Hart',
+    position: 'ARNP',
+  },
+  {
+    department: 'Psychiatry',
+    details: {
+      clientPopulationsSeen: [],
       colleges: ['Rollins College'],
       degrees: ['D.O.', 'Masters in Chemistry & Molecular Biology'],
       favoriteQuote: '',
@@ -2092,24 +2091,6 @@ const naples = [
     location: 'Naples',
     name: 'Jordan Warta',
     position: '',
-  },
-  {
-    department: 'Psychiatry',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: KatieHart,
-    location: 'Naples',
-    name: 'Katie Hart',
-    position: 'ARNP',
   },
   {
     department: 'Psychiatry',
