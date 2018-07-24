@@ -15,6 +15,7 @@ import MentalHealth from './pages/CareServices/MentalHealth'
 import NewsResources from './pages/NewsResources'
 import OccupationalTherapy from './pages/CareServices/OccupationalTherapy'
 import OurTeam from './pages/OurTeam'
+import PrivacyCompliance from './pages/NewsResources/PrivacyCompliance'
 import SpeechTherapy from './pages/CareServices/SpeechTherapy'
 import Teletherapy from './pages/CareServices/Teletherapy'
 import TranscranialMagneticStimulation from './pages/CareServices/TranscranialMagneticStimulation'
@@ -69,6 +70,10 @@ class App extends Component {
             <AsyncRoute component={Careers} path="/careers" />
             <AsyncRoute component={ContactUs} path="/contact-us" />
             <AsyncRoute component={Forms} path="/news-resources/forms" />
+            <AsyncRoute
+              component={PrivacyCompliance}
+              path="/news-resources/privacy-compliance"
+            />
             <AsyncRoute
               component={MentalHealth}
               path="/care-services/mental-health"

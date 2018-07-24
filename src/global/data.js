@@ -76,6 +76,10 @@ export const navigation = [
         path: '/news-resources/forms',
         text: 'Forms',
       },
+      {
+        path: '/news-resources/privacy-compliance',
+        text: 'Privacy & Compliance',
+      },
     ],
     path: '/news-resources',
     text: 'News & Resources',

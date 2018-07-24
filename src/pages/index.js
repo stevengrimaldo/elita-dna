@@ -12,6 +12,7 @@ export {
   default as OccupationalTherapy,
 } from './CareServices/OccupationalTherapy'
 export { default as OurTeam } from './OurTeam'
+export { default as PrivacyCompliance } from './NewsResources/PrivacyCompliance'
 export { default as SpeechTherapy } from './CareServices/SpeechTherapy'
 export { default as Teletherapy } from './CareServices/Teletherapy'
 export {
