@@ -1,3 +1,5 @@
+const NoticeOfPrivacyPractices = '/pdfs/Notice-of-Privacy-Practices.pdf'
+
 export const data = {
   hero: {
     copy: {
@@ -28,13 +30,13 @@ export const data = {
       <p><strong>Who may access confidential information?</strong><br />Only those people who need access for business reasons and who have been authorized to receive it.</p>
       <p><strong>What information about a patient must be kept confidential?</strong><br />Essentially any information that is patient-identifiable, even the patient’s address, is confidential and must be protected. This includes diagnoses, test results and billing information. Only when the patient has agreed may it be used or disclosed for specific purposes.</p>
       <p><strong>Where can I learn more about HIPAA?</strong><br />You can learn more by visiting <a href="www.hhs.gov/ocr/hipaa" target="_blank">www.hhs.gov/ocr/hipaa</a> or <a href="www.hipaasummit.com" target="_blank">www.hipaasummit.com</a>.</p>
-      <p><strong>Our Privacy Practices & Complaint</strong><br />For more information on our Privacy Practices, as well as how to file a Privacy Complaint, please CLICK HERE</p>
+      <p><strong>Our Privacy Practices & Complaint</strong><br />For more information on our Privacy Practices, as well as how to file a Privacy Complaint, please <a href="${NoticeOfPrivacyPractices}" download target="_blank">click here</a>.</p>
       <br />
       <br />
       <h2>PRIVACY STATEMENT</h2>
-      <p>To learn more about Elite DNA Therapy Services, LLC’s Privacy standards and practices, please CLICK HERE read our Notice of Privacy Practices.  It includes all the most up-to-date information regarding our privacy rules and regulations.</p>
+      <p>To learn more about Elite DNA Therapy Services, LLC’s Privacy standards and practices, please <a href="${NoticeOfPrivacyPractices}" download target="_blank">click here</a> read our Notice of Privacy Practices.  It includes all the most up-to-date information regarding our privacy rules and regulations.</p>
       <p><strong>Privacy Complaints</strong><br />You have the right to tell Elite DNA Therapy Services, LLC and the United States Secretary of Health and Human Services if you believe we have violated your privacy rights. There is no risk in filing a complaint.</p>
-      <p>To file a complaint, contact us at 239-223-2751 or Anonymous HOTLINE 888-453-3114 or email <a href="mailto:privacy@elitednatherapy.com">Privacy@elitednatherapy.com</a> or <a href="compliance@elitednatherapy.com">Compliance@elitednatherapy.com</a></p>
+      <p>To file a complaint, contact us at 239-223-2751 or Anonymous HOTLINE 888-453-3114 or email <a href="mailto:privacy@elitednatherapy.com">Privacy@elitednatherapy.com</a> or <a href="mailto:compliance@elitednatherapy.com">Compliance@elitednatherapy.com</a></p>
       <p>To file a complaint with the United States Secretary of Health and Human Services, please address your complaint to:</p>
       <p>
         Region 4, Office for Civil Rights
