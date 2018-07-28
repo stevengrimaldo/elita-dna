@@ -4,9 +4,11 @@ import styled from 'preact-emotion'
 
 import { Button } from '../'
 
+import { color } from '../../global/theme'
+
 import { FeaturedText, Headline } from '../../global/type'
 
-import { media } from '../../global/utils'
+import { media, shadeOf } from '../../global/utils'
 
 const Container = styled.div`
   display: flex;
@@ -34,6 +36,7 @@ const Image = styled.div`
   margin-bottom: 25px;
 
   img {
+    box-shadow: 0 0 8px 0px ${shadeOf(color.black, 0.3)};
     width: 100%;
   }
 `

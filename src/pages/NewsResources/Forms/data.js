@@ -1,6 +1,11 @@
-const AdultMentalHealth = '/img/news-resources/forms/adult-mental-health.png'
-const ChildMentalHealth = '/img/news-resources/forms/child-mental-health.png'
-const OccupationalTherapy = '/img/news-resources/forms/occupational-therapy.png'
+const AdultIntakePacketThumb =
+  '/img/news-resources/forms/adult-intake-packet-thumb.jpg'
+const ChildIntakePacketThumb =
+  '/img/news-resources/forms/child-intake-packet-thumb.jpg'
+const RequestForRecordsTHumb =
+  '/img/news-resources/forms/request-for-records-form-thumb.jpg'
+const NoticeOfPrivacyPracticesThumb =
+  '/img/news-resources/forms/notice-of-privacy-practices-thumb.jpg'
 
 const AdultIntakePacket = '/pdfs/Adult-Intake-Packet.pdf'
 const ChildIntakePacket = '/pdfs/Child-Intake-Packet.pdf'
@@ -22,22 +27,22 @@ export const data = {
   intakeForms: {
     documents: [
       {
-        image: AdultMentalHealth,
+        image: AdultIntakePacketThumb,
         link: AdultIntakePacket,
         title: 'Adult Intake Packet',
       },
       {
-        image: ChildMentalHealth,
+        image: ChildIntakePacketThumb,
         link: ChildIntakePacket,
         title: 'Child Intake Packet',
       },
       {
-        image: OccupationalTherapy,
+        image: RequestForRecordsTHumb,
         link: RequestForRecords,
         title: 'Request for Records Form',
       },
       {
-        image: OccupationalTherapy,
+        image: NoticeOfPrivacyPracticesThumb,
         link: NoticeOfPrivacyPractices,
         title: 'Notice of Privacy Practices',
       },

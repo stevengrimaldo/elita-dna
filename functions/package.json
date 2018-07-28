@@ -12,7 +12,7 @@
     "emotion-theming": "^9.1.2",
     "firebase": "^5.0.2",
     "firebase-admin": "^5.12.1",
-    "firebase-functions": "^1.0.3",
+    "firebase-functions": "^2.0.1",
     "module-alias": "^2.0.6",
     "nodemailer": "^4.6.4",
     "polished": "^1.9.2",

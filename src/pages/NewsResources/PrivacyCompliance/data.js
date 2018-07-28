@@ -79,6 +79,6 @@ export const data = {
       <p>Section 1557, Part of the Affordable Care Act, prohibits discrimination based on race, color, gender, national origin, age, religion, creed, disability, veteran's status, sexual orientation, gender identity or gender expression, race, color, national origin, sex, sexual orientation or identity, or disability.</p>
       <p>Contact Chief Compliance and Privacy Officer with concerns or questions.</p>
     `,
-    title: 'We are proud to introduce Teletherapy',
+    title: '',
   },
 }

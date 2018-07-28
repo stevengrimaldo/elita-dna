@@ -1,4 +1,8 @@
-const imgPath = '/img/employees/'
+import { departments } from './departments'
+
+import { locationNames } from './locations'
+
+const imgPath = '/img/providers/'
 const badHeightPath = imgPath + 'bad-height/'
 const reallyBadHeightPath = imgPath + 'bad-height/really-bad/'
 
@@ -7,12 +11,10 @@ const maleProfile = `${imgPath}male-profile.jpg`
 
 // Bad Height
 const AmandaCruz = `${badHeightPath}Amanda-Cruz.jpg`
-const AndrewFerber = `${badHeightPath}Andrew-Ferber.jpg`
 const BeckyRobertson = `${badHeightPath}Becky-Robertson.jpg`
 const ChristaWhelan = `${badHeightPath}Christa-Whelan.jpg`
+const ChrisGroves = `${badHeightPath}Chris-Groves.jpg`
 const ChristianRomero = `${badHeightPath}Christian-Romero.jpg`
-const ChristopherGrove = `${badHeightPath}Christopher-Grove.jpg`
-const EmilyAilinger = `${badHeightPath}Emily-Ailinger.jpg`
 const GinaValo = `${badHeightPath}Gina-Valo.jpg`
 const HannahThielman = `${badHeightPath}Hannah-Thielman.jpg`
 const JacquelineBannister = `${badHeightPath}Jacqueline-Bannister.jpg`
@@ -35,7 +37,7 @@ const MatthewTargoff = `${reallyBadHeightPath}Matthew-Targoff.jpg`
 
 // Correct Height
 const AdamRedman = `${imgPath}Adam-Redman.jpg`
-const AliOrby = `${imgPath}Ali-Orby.jpg`
+const AliOrbe = `${imgPath}Ali-Orbe.jpg`
 const AngelaMolina = `${imgPath}Angela-Molina.jpg`
 const AnnaZiegler = `${imgPath}Anna-Ziegler.jpg`
 const AnnikaMatos = `${imgPath}Annika-Matos.jpg`
@@ -51,7 +53,6 @@ const CristinaJohansson = `${imgPath}Cristina-Johansson.jpg`
 const DanielleKline = `${imgPath}Danielle-Kline.jpg`
 const DawnStarr = `${imgPath}Dawn-Starr.jpg`
 const DeliaToledo = `${imgPath}Delia-Toledo.jpg`
-const DianeRizzitano = `${imgPath}Diane-Rizzitano.jpg`
 const DominiqueGasdia = `${imgPath}Dominique-Gasdia.jpg`
 const DorothySmith = `${imgPath}Dorothy-Smith.jpg`
 const EdwardPearce = `${imgPath}Edward-Pearce.jpg`
@@ -116,9 +117,9 @@ const WayneMeddock = `${imgPath}Wayne-Meddock.jpg`
 const YenisTorres = `${imgPath}Yenis-Torres.jpg`
 
 const ourTeam = [
-  // primary roles (client ordered)
+  // client ordered
   {
-    department: 'Admin',
+    department: departments.admin,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -131,12 +132,12 @@ const ourTeam = [
       therapyModalityUsed: [],
     },
     image: ElizabethDosoretz,
-    location: 'Our Team',
+    location: locationNames.ourTeam,
     name: 'Elizabeth Dosoretz',
-    position: 'CEO & Owner',
+    position: 'Chief Executive Office & Owner',
   },
   {
-    department: 'Admin',
+    department: departments.admin,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -149,12 +150,12 @@ const ourTeam = [
       therapyModalityUsed: [],
     },
     image: JasonMoon,
-    location: 'Our Team',
+    location: locationNames.ourTeam,
     name: 'Jason Moon',
     position: 'President',
   },
   {
-    department: 'Admin',
+    department: departments.admin,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -167,12 +168,12 @@ const ourTeam = [
       therapyModalityUsed: [],
     },
     image: PhillipCirrone,
-    location: 'Our Team',
+    location: locationNames.ourTeam,
     name: 'Philip Cirrone',
-    position: 'Director of Business Development & Operations',
+    position: 'Chief Operating Officer',
   },
   {
-    department: 'Admin',
+    department: departments.admin,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -185,12 +186,12 @@ const ourTeam = [
       therapyModalityUsed: [],
     },
     image: OmarRieche,
-    location: 'Our Team',
+    location: locationNames.ourTeam,
     name: 'Dr. Omar Rieche',
     position: 'Medical Director',
   },
   {
-    department: 'Admin',
+    department: departments.admin,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -203,31 +204,12 @@ const ourTeam = [
       therapyModalityUsed: [],
     },
     image: KenCarr,
-    location: 'Our Team',
+    location: locationNames.ourTeam,
     name: 'Ken Carr',
-    position: 'CFO',
+    position: 'Chief Financial Officer',
   },
   {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: NicoleBolooki,
-    location: 'Our Team',
-    name: 'Nicole Bolooki',
-    position: 'Director of Payroll & Accounting',
-  },
-  // a-z
-  {
-    department: 'Admin',
+    department: departments.admin,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -240,30 +222,12 @@ const ourTeam = [
       therapyModalityUsed: [],
     },
     image: BeckyRobertson,
-    location: 'Our Team',
+    location: locationNames.ourTeam,
     name: 'Becky Robertson',
     position: 'Chief Compliance & Privacy Officer',
   },
   {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: maleProfile,
-    location: 'Our Team',
-    name: 'Brumy Maldonado',
-    position: 'Call Center and Referrals Director',
-  },
-  {
-    department: 'Admin',
+    department: departments.admin,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -276,12 +240,12 @@ const ourTeam = [
       therapyModalityUsed: [],
     },
     image: CandySchings,
-    location: 'Our Team',
+    location: locationNames.ourTeam,
     name: 'Candy Schings',
     position: 'Director of Revenue Cycle',
   },
   {
-    department: 'Admin',
+    department: departments.admin,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -293,103 +257,13 @@ const ourTeam = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
-    image: CassieSehlmeyer,
-    location: 'Our Team',
-    name: 'Cassie Sehlmeyer',
-    position: 'Executive Assistant',
+    image: NicoleBolooki,
+    location: locationNames.ourTeam,
+    name: 'Nicole Bolooki',
+    position: 'Director of Payroll & Accounting',
   },
   {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: ChristaWhelan,
-    location: 'Our Team',
-    name: 'Christa Whelan',
-    position: 'Credentialing & Contracting Manager',
-  },
-  {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: CristinaJohansson,
-    location: 'Our Team',
-    name: 'Cristina Johansson',
-    position: 'Provider Onboarding and Compliance Auditor',
-  },
-  {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: DawnStarr,
-    location: 'Our Team',
-    name: 'Dawn Starr',
-    position: 'Clinic Manager',
-  },
-  {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: DianeRizzitano,
-    location: 'Our Team',
-    name: 'Diane Rizzitano',
-    position: 'Credentialing & Contracting',
-  },
-  {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: GabrielNieto,
-    location: 'Our Team',
-    name: 'Gabriel Nieto',
-    position: '',
-  },
-  {
-    department: 'Admin',
+    department: departments.admin,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -402,12 +276,48 @@ const ourTeam = [
       therapyModalityUsed: [],
     },
     image: femaleProfile,
-    location: 'Our Team',
-    name: 'Isabel Edwards',
-    position: 'IT Specialist',
+    location: locationNames.ourTeam,
+    name: 'Lily Lance',
+    position: 'Human Resources Administrator',
   },
   {
-    department: 'Admin',
+    department: departments.admin,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: ChristaWhelan,
+    location: locationNames.ourTeam,
+    name: 'Christa Whelan',
+    position: 'Credentialing & Contracting Manager',
+  },
+  {
+    department: departments.admin,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: DawnStarr,
+    location: locationNames.ourTeam,
+    name: 'Dawn Starr',
+    position: 'Clinic Manager',
+  },
+  {
+    department: departments.admin,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -420,48 +330,12 @@ const ourTeam = [
       therapyModalityUsed: [],
     },
     image: JenniferBullistron,
-    location: 'Our Team',
+    location: locationNames.ourTeam,
     name: 'Jennifer Bullistron',
     position: 'Clinic Manager',
   },
   {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: LisaDiamond,
-    location: 'Our Team',
-    name: 'Lisa Diamond',
-    position: '',
-  },
-  {
-    department: 'Admin',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: MichaelSchmidt,
-    location: 'Our Team',
-    name: 'Michael Schmidt',
-    position: 'Director of Quality Assurance',
-  },
-  {
-    department: 'Admin',
+    department: departments.admin,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -474,16 +348,142 @@ const ourTeam = [
       therapyModalityUsed: [],
     },
     image: NathanLewis,
-    location: 'Our Team',
+    location: locationNames.ourTeam,
     name: 'Nathan Lewis',
     position: 'Physician Liaison',
+  },
+  {
+    department: departments.admin,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: CristinaJohansson,
+    location: locationNames.ourTeam,
+    name: 'Cristina Johansson',
+    position: 'Provider Onboarding & Compliance Auditor',
+  },
+  {
+    department: departments.admin,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: MichaelSchmidt,
+    location: locationNames.ourTeam,
+    name: 'Michael Schmidt',
+    position: 'Director of Quality Assurance',
+  },
+  {
+    department: departments.admin,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: maleProfile,
+    location: locationNames.ourTeam,
+    name: 'Brumy Maldonado',
+    position: 'Call Center & Referrals Director',
+  },
+  {
+    department: departments.admin,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: GabrielNieto,
+    location: locationNames.ourTeam,
+    name: 'Gabriel Nieto',
+    position: 'Director of Speech, Occupational, & ABA Therapy',
+  },
+  {
+    department: departments.admin,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: femaleProfile,
+    location: locationNames.ourTeam,
+    name: 'Isabel Edwards',
+    position: 'IT Specialist',
+  },
+  {
+    department: departments.admin,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: LisaDiamond,
+    location: locationNames.ourTeam,
+    name: 'Lisa Diamond',
+    position: '',
+  },
+  {
+    department: departments.admin,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: CassieSehlmeyer,
+    location: locationNames.ourTeam,
+    name: 'Cassie Sehlmeyer',
+    position: 'Executive Assistant',
   },
 ]
 
 const capeCoral = [
   // doctors
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -496,13 +496,13 @@ const capeCoral = [
       therapyModalityUsed: [],
     },
     image: NelsonMonroy,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Nelson Monroy',
     position: 'M.D.',
   },
   // a-z
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Florida International University'],
@@ -514,13 +514,13 @@ const capeCoral = [
       specialCertifications: ['Licensed Mental Health Counselor'],
       therapyModalityUsed: ['CBT', 'Play therapy', 'Person centered'],
     },
-    image: AliOrby,
-    location: 'Cape Coral',
-    name: 'Ali Orby',
-    position: 'RMHCI',
+    image: AliOrbe,
+    location: locationNames.capeCoral,
+    name: 'Ali Orbe',
+    position: 'LMHC',
   },
   {
-    department: 'Speech',
+    department: departments.speech,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -533,12 +533,12 @@ const capeCoral = [
       therapyModalityUsed: [],
     },
     image: AnnaZiegler,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Anna Ziegler',
     position: 'SLP',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['University of Pittsburgh'],
@@ -561,13 +561,13 @@ const capeCoral = [
         'Parent Management Training',
       ],
     },
-    image: ChristopherGrove,
-    location: 'Cape Coral',
-    name: 'Christopher Grove',
-    position: 'RSW',
+    image: ChrisGroves,
+    location: locationNames.capeCoral,
+    name: 'Chris Groves',
+    position: 'MSW',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -580,12 +580,12 @@ const capeCoral = [
       therapyModalityUsed: [],
     },
     image: JamesKnox,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'James Knox',
     position: 'NP',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['State University of New York at Oswego'],
@@ -604,12 +604,12 @@ const capeCoral = [
       ],
     },
     image: JamieMcKenzie,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Jamie McKenzie',
     position: 'LMHC',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -622,12 +622,12 @@ const capeCoral = [
       therapyModalityUsed: [],
     },
     image: JudithLenz,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Judith Lenz',
     position: '',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Argosy University', 'Nova Southeastern University'],
@@ -646,12 +646,12 @@ const capeCoral = [
       ],
     },
     image: LilianaAcosta,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Liliana Acosta',
     position: 'RMHCI',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Argosy University', 'Nova Southeastern University'],
@@ -664,12 +664,12 @@ const capeCoral = [
       therapyModalityUsed: [],
     },
     image: femaleProfile,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Liliana Acosta',
     position: '',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Barry University'],
@@ -686,12 +686,12 @@ const capeCoral = [
       therapyModalityUsed: ['CBT', 'Trauma Focused CBT'],
     },
     image: LuisNavarrete,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Luis Navarrete',
     position: 'LMHC',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -704,12 +704,12 @@ const capeCoral = [
       therapyModalityUsed: [],
     },
     image: femaleProfile,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Margaret Barrow',
     position: 'ARNP',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -722,12 +722,12 @@ const capeCoral = [
       therapyModalityUsed: [],
     },
     image: MathewMurel,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Mathew Murel',
     position: '',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -740,12 +740,12 @@ const capeCoral = [
       therapyModalityUsed: [],
     },
     image: NicoleCogswell,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Nicole Cogswell',
     position: '',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Michigan State University'],
@@ -758,12 +758,12 @@ const capeCoral = [
       therapyModalityUsed: ['General Psychotherapy'],
     },
     image: NoelHelmic,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Noel Helmic',
     position: 'ARNP',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Johnson State College'],
@@ -776,12 +776,12 @@ const capeCoral = [
       therapyModalityUsed: [],
     },
     image: TomEdson,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Tom Edson',
     position: '',
   },
   {
-    department: 'Speech',
+    department: departments.speech,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -794,7 +794,7 @@ const capeCoral = [
       therapyModalityUsed: [],
     },
     image: femaleProfile,
-    location: 'Cape Coral',
+    location: locationNames.capeCoral,
     name: 'Vickie Campbell',
     position: 'SLP',
   },
@@ -803,42 +803,43 @@ const capeCoral = [
 const fortMeyers = [
   // doctors
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
-      colleges: ['Columbia College of Physicians and Surgeons'],
-      degrees: ['MD'],
-      favoriteQuote: 'Adversity is a gift to all those on the path.',
-      hobbies: [
-        'Celebrating Life',
-        'Meditating',
-        'Gardening',
-        'Kayaking',
-        'Hiking',
-        'Bicycling',
-        'Netflix',
-        'Yoga',
-      ],
-      hometown: 'New York',
-      patientAgesSeen: ['All ages'],
-      specialCertifications: [
-        'American Board of Psychiatry and Neurology',
-        'Associate Professor of Psychiatry – Albert Einstein College of Medicine – Retired',
-        'Director of Osho Institute for the Art of Living and Dying',
-      ],
-      therapyModalityUsed: [
-        'Family Therapy',
-        'Pharmaco Therapy',
-        'Healing Through Expansion of Consciousness',
-      ],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
     },
-    image: AndrewFerber,
-    location: 'Fort Myers',
-    name: 'Dr. Andrew Ferber',
-    position: 'M.D.',
+    image: MatthewTargoff,
+    location: locationNames.fortMeyers,
+    name: 'Dr. Matthew Targoff',
+    position: 'D.O.',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: MarkGiordano,
+    location: locationNames.fortMeyers,
+    name: 'Dr. Mark Giordano',
+    position: '',
+  },
+  {
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [
@@ -863,48 +864,12 @@ const fortMeyers = [
       therapyModalityUsed: ['CBT', 'Mindfullness'],
     },
     image: MarieReeseGorski,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Dr. Marie "Reese" Gorski',
     position: 'ARNP',
   },
   {
-    department: 'Psychotherapy',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: MarkGiordano,
-    location: 'Fort Myers',
-    name: 'Dr. Mark Giordano',
-    position: '',
-  },
-  {
-    department: 'Psychiatry',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: MatthewTargoff,
-    location: 'Fort Myers',
-    name: 'Dr. Matthew Targoff',
-    position: '',
-  },
-  {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: [
@@ -923,13 +888,40 @@ const fortMeyers = [
       therapyModalityUsed: ['CBT', 'Psychodynamic Psychotherapy'],
     },
     image: SharonBloom,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Dr. Sharon Bloom',
+    position: 'PsyD',
+  },
+  {
+    department: departments.psychotherapy,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [
+        'Leslie University',
+        'William James College of Professional Psychology',
+      ],
+      degrees: [
+        'Masters of Counseling Psychology',
+        'Doctorate in Clinical Psychology',
+      ],
+      favoriteQuote: "I'd be brief, but I don’t have time.",
+      hobbies: ['Grilling', 'Music'],
+      hometown: 'Massachusetts',
+      patientAgesSeen: ['Latency (10+ years through Lifespan)'],
+      specialCertifications: ['Dialectical Behavipr Therapy'],
+      therapyModalityUsed: [
+        'Multiple Cognitive Therapies',
+        'Behavioral Interventions',
+      ],
+    },
+    image: ChristianRomero,
+    location: locationNames.fortMeyers,
+    name: 'Dr. Christian Romero',
     position: 'PsyD',
   },
   // a-z
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [
         'Anxiety',
@@ -954,12 +946,12 @@ const fortMeyers = [
       therapyModalityUsed: ['ACT', 'CPT', 'Solution Focused Behavior Plans'],
     },
     image: AdamRedman,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Adam Redman',
     position: 'RMHCI',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -972,12 +964,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: femaleProfile,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Alexandra Bithorn',
-    position: '',
+    position: 'RMHCI',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: [
@@ -1000,12 +992,12 @@ const fortMeyers = [
       ],
     },
     image: AmandaCruz,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Amanda Cruz',
     position: 'MSW',
   },
   {
-    department: 'Occupational Therapy',
+    department: departments.occupational,
     details: {
       clientPopulationsSeen: [],
       colleges: [
@@ -1029,12 +1021,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: AprilTolles,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'April Tolles',
     position: 'COTA',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['University of Southern California'],
@@ -1053,12 +1045,12 @@ const fortMeyers = [
       ],
     },
     image: AshleighDePalma,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Ashleigh DePalma',
     position: 'MSW',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Hodges University'],
@@ -1079,12 +1071,12 @@ const fortMeyers = [
       therapyModalityUsed: ['CBT', 'Secondary Solution Focused'],
     },
     image: CarlaRosier,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Carla Rosier',
-    position: 'RMHCI',
+    position: 'LMHC',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: ['University of South Florida'],
@@ -1097,12 +1089,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: ChelseaRhoden,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Chelsea Rhoden',
     position: '',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1115,39 +1107,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: ChrisJijon,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Chris Jijon',
     position: 'PA-C',
   },
   {
-    department: 'Psychotherapy',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [
-        'Leslie University',
-        'William James College of Professional Psychology',
-      ],
-      degrees: [
-        'Masters of Counseling Psychology',
-        'Doctorate in Clinical Psychology',
-      ],
-      favoriteQuote: "I'd be brief, but I don’t have time.",
-      hobbies: ['Grilling', 'Music'],
-      hometown: 'Massachusetts',
-      patientAgesSeen: ['Latency (10+ years through Lifespan)'],
-      specialCertifications: ['Dialectical Behavipr Therapy'],
-      therapyModalityUsed: [
-        'Multiple Cognitive Therapies',
-        'Behavioral Interventions',
-      ],
-    },
-    image: ChristianRomero,
-    location: 'Fort Myers',
-    name: 'Christian Romero',
-    position: '',
-  },
-  {
-    department: 'Speech Therapy',
+    department: departments.speech,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Nova Southwestern'],
@@ -1160,12 +1125,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: femaleProfile,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Crista Macias',
     position: 'SLP-A',
   },
   {
-    department: 'Behavior Therapy',
+    department: departments.behavior,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Kaplan University', 'Kean University'],
@@ -1194,12 +1159,12 @@ const fortMeyers = [
       ],
     },
     image: DominiqueGasdia,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Dominique Gasdia',
     position: 'RBT',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['University of Kentucky', 'University of South Florida'],
@@ -1215,30 +1180,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: DorothySmith,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Dorothy Smith',
     position: 'LCSW',
   },
   {
-    department: 'Psychotherapy',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: EmilyAilinger,
-    location: 'Fort Myers',
-    name: 'Emily Ailinger',
-    position: 'MSW',
-  },
-  {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: ['ADHD', 'ODD', 'Anxiety'],
       colleges: [
@@ -1255,12 +1202,12 @@ const fortMeyers = [
       therapyModalityUsed: ['CBT'],
     },
     image: EricaKress,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Erica Kress',
     position: 'LCSW',
   },
   {
-    department: 'Behavior Therapy',
+    department: departments.behavior,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1273,12 +1220,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: GabbyOgnibene,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Gabby Ognibene',
     position: 'RBT',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1291,12 +1238,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: GabrielRivera,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Gabriel Rivera',
     position: 'NP',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [
@@ -1314,12 +1261,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: GinaValo,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Gina Valo',
     position: 'ARNP',
   },
   {
-    department: 'Occupational Therapy',
+    department: departments.occupational,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1332,12 +1279,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: GracePasquali,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Grace Pasquali',
     position: 'COTA',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1350,12 +1297,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: GuillermoDiazCruz,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Guillermo Diaz-Cruz',
-    position: '',
+    position: 'MSW',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Florida Gulf Coast University'],
@@ -1369,12 +1316,12 @@ const fortMeyers = [
       therapyModalityUsed: ['Ecletic'],
     },
     image: HannahThielman,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Hannah Thielman',
-    position: '',
+    position: 'RMHCI',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: ['FGCU', 'Hodges University'],
@@ -1393,12 +1340,12 @@ const fortMeyers = [
       ],
     },
     image: HeatherBrien,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Heather Brien',
     position: '',
   },
   {
-    department: 'Behavior Therapy',
+    department: departments.behavior,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1411,12 +1358,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: IdelmysGonzalez,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Idelmys Gonzalez',
     position: 'RBT',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Florida Atlantic University'],
@@ -1429,12 +1376,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: JacquelineBannister,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Jacqueline Bannister',
     position: 'NP',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Hodges University'],
@@ -1447,12 +1394,12 @@ const fortMeyers = [
       therapyModalityUsed: ['CBT', 'Solution Focused', 'Gestalt'],
     },
     image: JairoCastillo,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Jairo Castillo',
     position: 'RMHCI',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1465,12 +1412,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: JanPaulMojico,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Jan Paul Mojico',
     position: 'LCSW',
   },
   {
-    department: 'Psychology',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1483,12 +1430,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: JeffreyHutter,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Jeffrey Hutter',
     position: 'RCSWI',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Florida State University', 'Florida Gulf Coast University'],
@@ -1504,12 +1451,12 @@ const fortMeyers = [
       therapyModalityUsed: ['Eclectic'],
     },
     image: JeffreyLapham,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Jeffrey Lapham',
     position: 'LMHC',
   },
   {
-    department: 'Speech',
+    department: departments.speech,
     details: {
       clientPopulationsSeen: [],
       colleges: ['University of South Florida'],
@@ -1522,12 +1469,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: JenniferCordeiro,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Jennifer Cordeiro',
     position: 'SLP',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Grand Valley State University'],
@@ -1541,12 +1488,12 @@ const fortMeyers = [
       therapyModalityUsed: ['CBT', 'Eclectic'],
     },
     image: JenniferMoes,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Jennifer Moes',
     position: 'CPNP',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Barry University'],
@@ -1563,12 +1510,12 @@ const fortMeyers = [
       ],
     },
     image: JenniferThompson,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Jennifer Thompson',
     position: 'MSW',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1581,12 +1528,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: JessicaBareto,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Jessica Bareto',
     position: '',
   },
   {
-    department: 'Speech',
+    department: departments.speech,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Worcester University'],
@@ -1599,12 +1546,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: JillMandeville,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Jill Mandeville',
     position: 'SLPA',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1617,12 +1564,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: JordenWarta,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Jorden Warta',
     position: '',
   },
   {
-    department: 'Behavior Therapy',
+    department: departments.behavior,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Argosy University', 'FIT for BCBA'],
@@ -1635,12 +1582,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: JoseButron,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Jose Butron',
     position: 'BCBA',
   },
   {
-    department: 'Occupational Therapy',
+    department: departments.occupational,
     details: {
       clientPopulationsSeen: [],
       colleges: [
@@ -1659,12 +1606,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: KarinSmith,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Karin Smith',
     position: 'COTA',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['University of Houston-Victoria', 'Gannon University'],
@@ -1686,30 +1633,12 @@ const fortMeyers = [
       ],
     },
     image: KimberlyClement,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Kimberly Clement',
     position: 'LMHC',
   },
   {
-    department: 'Psychotherapy',
-    details: {
-      clientPopulationsSeen: [],
-      colleges: [],
-      degrees: [],
-      favoriteQuote: '',
-      hobbies: [],
-      hometown: '',
-      patientAgesSeen: [],
-      specialCertifications: [],
-      therapyModalityUsed: [],
-    },
-    image: KristinBryan,
-    location: 'Fort Myers',
-    name: 'Kristin Bryan',
-    position: 'ARNP',
-  },
-  {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1722,12 +1651,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: KristySantana,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Kristy Santana',
     position: '',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: ['FGCU'],
@@ -1740,12 +1669,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: LindsayGaines,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Lindsay Gaines',
     position: '',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1758,12 +1687,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: MarcelaCheca,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Marcela Checa',
     position: '',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Hodges University'],
@@ -1777,12 +1706,12 @@ const fortMeyers = [
       therapyModalityUsed: ['CBT', 'DBT', 'Solution Focused'],
     },
     image: MarieBoisbel,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Marie Boisbel',
-    position: 'MHC',
+    position: 'RMHCI',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1795,12 +1724,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: NicoleMillich,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Nicole Millich',
     position: 'ARNP',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1813,12 +1742,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: PetaGayBezek,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Peta Gay Bezek',
     position: 'PMHNP',
   },
   {
-    department: 'Speech',
+    department: departments.speech,
     details: {
       clientPopulationsSeen: [],
       colleges: ['University of New Paltz', 'University at Albany'],
@@ -1839,12 +1768,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: SamanthaLink,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Samantha Link',
     position: 'SLP',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Hodges University'],
@@ -1858,12 +1787,12 @@ const fortMeyers = [
       therapyModalityUsed: ['EMDR', 'Mindfulness', 'Solution Focused', 'CBT'],
     },
     image: ScarlettOlivaress,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Scarlett Olivaress',
     position: 'RMHCI',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1876,12 +1805,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: ScottKane,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Scott Kane',
     position: 'PA-C',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: ['FGCU'],
@@ -1895,12 +1824,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: ShainaDulong,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Shaina Dulong',
     position: '',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1913,12 +1842,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: ShantellPepe,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Shantell Pepe',
     position: 'LMHC',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Turabo University'],
@@ -1935,12 +1864,12 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: SoniaGarcia,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Sonia Garcia',
     position: 'ARNP',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['University of Florida', 'Barry University'],
@@ -1957,12 +1886,12 @@ const fortMeyers = [
       therapyModalityUsed: ['Behavioral Intervention', 'CBT'],
     },
     image: TiffanyScott,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Tiffany Scott',
     position: 'LCSW',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Butler University'],
@@ -1976,12 +1905,12 @@ const fortMeyers = [
       therapyModalityUsed: ['CBT', 'Behavioral Therapy', 'Trauma Focused CBT'],
     },
     image: WayneMeddock,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Wayne Meddock',
     position: 'LMHC',
   },
   {
-    department: 'Behavior Therapy',
+    department: departments.behavior,
     details: {
       clientPopulationsSeen: [],
       colleges: ['University of La Habana'],
@@ -1994,7 +1923,7 @@ const fortMeyers = [
       therapyModalityUsed: [],
     },
     image: YenisTorres,
-    location: 'Fort Myers',
+    location: locationNames.fortMeyers,
     name: 'Yenis Torres',
     position: 'ABA',
   },
@@ -2003,7 +1932,7 @@ const fortMeyers = [
 const metroGardens = [
   // doctors
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -2016,17 +1945,35 @@ const metroGardens = [
       therapyModalityUsed: [],
     },
     image: HarveyShapiro,
-    location: 'Fort Myers - Metro Gardens',
+    location: locationNames.metroGardens,
     name: 'Dr. Harvey Shapiro',
     position: '',
   },
   // a-z
+  {
+    department: departments.psychiatry,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: KristinBryan,
+    location: locationNames.metroGardens,
+    name: 'Kristin Bryan',
+    position: 'ARNP',
+  },
 ]
 
 const naples = [
   // doctors
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Ohio State University'],
@@ -2040,12 +1987,12 @@ const naples = [
       therapyModalityUsed: [],
     },
     image: KatieHart,
-    location: 'Naples',
+    location: locationNames.naples,
     name: 'Dr. Katie Hart',
     position: 'ARNP',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Rollins College'],
@@ -2058,13 +2005,13 @@ const naples = [
       therapyModalityUsed: ['CBT', 'Psychodynamic'],
     },
     image: MargaretForszpaniak,
-    location: 'Naples',
+    location: locationNames.naples,
     name: 'Dr. Margaret Forszpaniak',
     position: '',
   },
   // a-z
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -2077,12 +2024,12 @@ const naples = [
       therapyModalityUsed: [],
     },
     image: AngelaMolina,
-    location: 'Naples',
+    location: locationNames.naples,
     name: 'Angela Molina',
-    position: '',
+    position: 'RMHCI',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Florida Gulf Coast University'],
@@ -2095,12 +2042,12 @@ const naples = [
       therapyModalityUsed: ['Eclectic'],
     },
     image: AnnikaMatos,
-    location: 'Naples',
+    location: locationNames.naples,
     name: 'Annika Matos',
     position: 'RMHCI',
   },
   {
-    department: 'Occupational Therapy',
+    department: departments.occupational,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -2113,12 +2060,12 @@ const naples = [
       therapyModalityUsed: [],
     },
     image: DanielleKline,
-    location: 'Naples',
+    location: locationNames.naples,
     name: 'Danielle Kline',
     position: '',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -2131,12 +2078,12 @@ const naples = [
       therapyModalityUsed: [],
     },
     image: EdwardPearce,
-    location: 'Naples',
+    location: locationNames.naples,
     name: 'Edward "Ted" Pearce',
     position: 'PA-C',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -2149,12 +2096,12 @@ const naples = [
       therapyModalityUsed: [],
     },
     image: maleProfile,
-    location: 'Naples',
+    location: locationNames.naples,
     name: 'Jordan Warta',
     position: '',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -2167,12 +2114,12 @@ const naples = [
       therapyModalityUsed: [],
     },
     image: MelanieOrben,
-    location: 'Naples',
+    location: locationNames.naples,
     name: 'Melanie Orben',
     position: 'ARNP',
   },
   {
-    department: 'Care Coordinators',
+    department: departments.care,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -2185,12 +2132,12 @@ const naples = [
       therapyModalityUsed: [],
     },
     image: NicoleCochran,
-    location: 'Naples',
+    location: locationNames.naples,
     name: 'Nicole Cochran',
     position: 'RMHCI',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -2203,12 +2150,12 @@ const naples = [
       therapyModalityUsed: [],
     },
     image: RichardGonzalez,
-    location: 'Naples',
+    location: locationNames.naples,
     name: 'Richard Gonzalez',
     position: 'RMHCI',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['University of Central Florida'],
@@ -2225,12 +2172,12 @@ const naples = [
       ],
     },
     image: SonicaSharma,
-    location: 'Naples',
+    location: locationNames.naples,
     name: 'Sonica Sharma',
     position: 'MSW',
   },
   {
-    department: 'Occupational Therapy',
+    department: departments.occupational,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -2243,7 +2190,7 @@ const naples = [
       therapyModalityUsed: [],
     },
     image: StephanieFrost,
-    location: 'Naples',
+    location: locationNames.naples,
     name: 'Stephanie Frost',
     position: 'OTR',
   },
@@ -2254,7 +2201,7 @@ const parkRoyal = []
 const portCharlotte = [
   // doctors
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Boston University'],
@@ -2267,13 +2214,49 @@ const portCharlotte = [
       therapyModalityUsed: ['Eclectic'],
     },
     image: BernardoArias,
-    location: 'Port Charlotte',
+    location: locationNames.portCharlotte,
     name: 'Dr. Bernardo Arias',
     position: 'M.D.',
   },
   // a-z
   {
-    department: 'Psychiatry',
+    department: departments.psychotherapy,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: maleProfile,
+    location: locationNames.portCharlotte,
+    name: 'Alan Crandall',
+    position: 'LMHC',
+  },
+  {
+    department: departments.psychiatry,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: femaleProfile,
+    location: locationNames.portCharlotte,
+    name: 'Amanda Dittmer',
+    position: 'ARNP',
+  },
+  {
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Wheeling Jesuit University'],
@@ -2290,12 +2273,12 @@ const portCharlotte = [
       therapyModalityUsed: [],
     },
     image: femaleProfile,
-    location: 'Port Charlotte',
+    location: locationNames.portCharlotte,
     name: 'Barbara Tackett',
-    position: 'NP',
+    position: 'ARNP',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Indiana University', 'Purdue University'],
@@ -2309,12 +2292,12 @@ const portCharlotte = [
       therapyModalityUsed: ['CBT', 'Eclectic'],
     },
     image: EllenFerguson,
-    location: 'Port Charlotte',
+    location: locationNames.portCharlotte,
     name: 'Ellen Ferguson',
     position: 'RMHCI',
   },
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -2327,12 +2310,30 @@ const portCharlotte = [
       therapyModalityUsed: [],
     },
     image: JudithTibera,
-    location: 'Port Charlotte',
+    location: locationNames.portCharlotte,
     name: 'Judith Tibera',
     position: 'ARNP',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: femaleProfile,
+    location: locationNames.portCharlotte,
+    name: 'Lisa Morazes',
+    position: 'LCSW',
+  },
+  {
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['Anna Maria College'],
@@ -2349,12 +2350,12 @@ const portCharlotte = [
       therapyModalityUsed: ['CBT', 'EMDR'],
     },
     image: PatriciaSullivan,
-    location: 'Port Charlotte',
+    location: locationNames.portCharlotte,
     name: 'Patricia Sullivan',
     position: 'LMHC',
   },
   {
-    department: 'Psychotherapy',
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: ['University of Toronto', 'University of Western Ontario'],
@@ -2367,7 +2368,7 @@ const portCharlotte = [
       therapyModalityUsed: ['CBT', 'Eclectic'],
     },
     image: SandraLanders,
-    location: 'Port Charlotte',
+    location: locationNames.portCharlotte,
     name: 'Sandra Landers',
     position: 'LCSW',
   },
@@ -2376,7 +2377,7 @@ const portCharlotte = [
 const venice = [
   // doctors
   {
-    department: 'Psychiatry',
+    department: departments.psychiatry,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -2389,9 +2390,28 @@ const venice = [
       therapyModalityUsed: [],
     },
     image: DeliaToledo,
-    location: 'Venice',
+    location: locationNames.venice,
     name: 'Delia Toledo',
     position: 'M.D.',
+  },
+  // a-z
+  {
+    department: departments.psychotherapy,
+    details: {
+      clientPopulationsSeen: [],
+      colleges: [],
+      degrees: [],
+      favoriteQuote: '',
+      hobbies: [],
+      hometown: '',
+      patientAgesSeen: [],
+      specialCertifications: [],
+      therapyModalityUsed: [],
+    },
+    image: femaleProfile,
+    location: locationNames.venice,
+    name: 'Maria Clapp',
+    position: 'LMHC',
   },
 ]
 
