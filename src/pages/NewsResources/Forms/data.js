@@ -39,7 +39,7 @@ export const data = {
       {
         image: RequestForRecordsTHumb,
         link: RequestForRecords,
-        title: 'Request for Records Form',
+        title: 'Request for Medical Records Form',
       },
       {
         image: NoticeOfPrivacyPracticesThumb,

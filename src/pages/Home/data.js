@@ -93,7 +93,7 @@ export const data = {
     },
     {
       link: RequestForRecords,
-      title: 'Request for Public Records Form',
+      title: 'Request for Medical Records Form',
     },
     {
       link: NoticeOfPrivacyPractices,

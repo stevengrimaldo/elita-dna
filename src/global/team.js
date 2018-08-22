@@ -108,7 +108,6 @@ const SamanthaLink = `${imgPath}Samantha-Link.jpg`
 const SandraLanders = `${imgPath}Sandra-Landers.jpg`
 const ScarlettOlivaress = `${imgPath}Scarlett-Olivaress.jpg`
 const ScottKane = `${imgPath}Scott-Kane.jpg`
-const ShantellPepe = `${imgPath}Shantell-Pepe.jpg`
 const SharonBloom = `${imgPath}Sharon-Bloom.jpg`
 const StephanieFrost = `${imgPath}Stephanie-Frost.jpg`
 const TiffanyScott = `${imgPath}Tiffany-Scott.jpg`
@@ -890,7 +889,7 @@ const fortMeyers = [
     image: SharonBloom,
     location: locationNames.fortMeyers,
     name: 'Dr. Sharon Bloom',
-    position: 'PsyD',
+    position: 'Chief Clinical Officer',
   },
   {
     department: departments.psychotherapy,
@@ -1829,7 +1828,7 @@ const fortMeyers = [
     position: '',
   },
   {
-    department: departments.care,
+    department: departments.psychotherapy,
     details: {
       clientPopulationsSeen: [],
       colleges: [],
@@ -1841,10 +1840,10 @@ const fortMeyers = [
       specialCertifications: [],
       therapyModalityUsed: [],
     },
-    image: ShantellPepe,
+    image: femaleProfile,
     location: locationNames.fortMeyers,
     name: 'Shantell Pepe',
-    position: 'LMHC',
+    position: 'MS',
   },
   {
     department: departments.psychiatry,
